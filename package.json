@@ -29,7 +29,7 @@
     "@angular/router": "~8.2.14",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "wvr-elements": "0.0.1",
+    "wvr-elements": "0.0.2",
     "zone.js": "~0.9.1",
     "document-register-element": "^1.7.2"
   },
@@ -42,6 +42,7 @@
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^5.0.0",
+    "concat": "^1.0.3",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",

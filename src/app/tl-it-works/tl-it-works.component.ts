@@ -7,5 +7,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.Native
 })
 export class TamuItWorksComponent {
-  title = 'tamu-it-works-component';
+  title = 'tl-it-works-component';
 }

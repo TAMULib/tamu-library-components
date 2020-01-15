@@ -1,31 +1,30 @@
 import { TestBed, async } from '@angular/core/testing';
 import { TamuItWorksComponent } from './tl-it-works.component';
 
+import { ItWorksModule } from 'wvr-elements'; 
+
 describe('TamuItWorksComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        TamuItWorksComponent
+      imports: [
+        ItWorksModule
       ],
+      declarations: [
+        TamuItWorksComponent,
+      ]
     }).compileComponents();
   }));
 
-  // it('should create the app', () => {
-  //   const fixture = TestBed.createComponent(TamuItWorksComponent);
-  //   const app = fixture.debugElement.componentInstance;
-  //   expect(app).toBeTruthy();
-  // });
+  it('should create the TamuItWorksComponent', () => {
+    const fixture = TestBed.createComponent(TamuItWorksComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
+  });
 
-  // it(`should have as title 'tamu-components'`, () => {
-  //   const fixture = TestBed.createComponent(TamuItWorksComponent);
-  //   const app = fixture.debugElement.componentInstance;
-  //   expect(app.title).toEqual('tamu-components');
-  // });
+  it(`should have as title 'tl-it-works-component'`, () => {
+    const fixture = TestBed.createComponent(TamuItWorksComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('tl-it-works-component');
+  });
 
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(TamuItWorksComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('.content span').textContent).toContain('tamu-components app is running!');
-  // });
 });
