@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'tl-it-works-element',
@@ -8,4 +8,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class TamuItWorksComponent {
   title = 'tl-it-works-component';
+
+  @Input() text = "";
 }
