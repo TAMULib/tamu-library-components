@@ -1,5 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
-import { TamuItWorksComponent } from './tamu-it-works.component';
+import { TamuItWorksComponent } from './tl-it-works.component';
 
 describe('TamuItWorksComponent', () => {
   beforeEach(async(() => {

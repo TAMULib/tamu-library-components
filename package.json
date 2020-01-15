@@ -2,12 +2,19 @@
   "name": "tamu-library-components",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "build": "ng build --prod --output-hashing none",
+    "build:clean": "npm run clean && npm run build",
+    "build:tl-components": "node bld/build-tl-components.js",
+    "clean": "rm -rf dist",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng": "ng",
+    "postbuild": "npm run build:tl-components",
+    "start": "ng serve",
+    "start:docker": "docker run  -p 80:80 --name weaver-components-1  weaver-components",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:e2e": "ng e2e",
+    "test:unit": "npm run test:watch -- --watch=false",
+    "test:watch": "ng test"
   },
   "private": true,
   "dependencies": {
