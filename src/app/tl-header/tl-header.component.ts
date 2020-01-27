@@ -7,7 +7,8 @@ import { Component, ViewEncapsulation, Input } from '@angular/core';
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TamuHeaderComponent {
-  private logoSrc = "https://yt3.ggpht.com/-e2gGcJKR-rM/AAAAAAAAAAI/AAAAAAAAAAA/WXCERh8f31k/s68-c-k-no-mo-rj-c0xffffff/photo.jpg";
-  private logoText = " | A&M Libraries";
+  logoSrc = "https://library.tamu.edu/assets/bootstrap/images/tam-lg.png";
+  logoText = " Texas A&M University Libraries";
+  primaryColor = "#500000";
   @Input() pageTitle = "TL Header Component";
 }
