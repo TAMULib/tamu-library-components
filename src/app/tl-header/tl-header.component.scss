@@ -1,5 +1,8 @@
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap.scss";
 
 wvr-header {
   --wvr-navbar-padding: 0px;
+  --top-nav-height: 50px;
+  --title-row-height: 85px;
+  --bottom-nav-height: 65px;
 }

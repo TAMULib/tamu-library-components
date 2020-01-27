@@ -1,10 +1,15 @@
 {
   "name": "tamu-library-components",
   "version": "0.0.0",
+  "watch": {
+    "build:tl-components-dev": "./dist/tl-components"
+  },
   "scripts": {
     "build": "ng build --prod --output-hashing none",
     "build:clean": "npm run clean && npm run build",
     "build:tl-components": "node bld/build-tl-components.js",
+    "build:tl-components-dev": "node bld/build-tl-components-dev.js",
+    "watch:dev": "npm-watch",
     "clean": "rm -rf dist",
     "lint": "ng lint",
     "ng": "ng",
@@ -53,6 +58,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "npm-watch": "^0.6.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
