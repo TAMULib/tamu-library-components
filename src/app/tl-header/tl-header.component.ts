@@ -9,7 +9,7 @@ import { Component, ViewEncapsulation, Input } from '@angular/core';
 export class TamuHeaderComponent {
   logoSrc = "https://php.library.tamu.edu/searcher/_application/resources/css/tamu-logo-with-bar.png";
   logoText = " Texas A&M University Libraries";
-  primaryColor = "#500000";
+  primaryColor = "var(--tl-primary)";
   secondaryColor = "#3c0001";
   grayColor = "#ededed";
   topNavPrimaryColor = "#FFC222";

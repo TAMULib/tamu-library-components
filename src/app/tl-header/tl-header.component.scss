@@ -1,24 +1,29 @@
 @import "~bootstrap/scss/bootstrap.scss";
-@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+@import "../shared/styles/tl-variables.scss";
 
 wvr-header {
+  // Weaver Component Overrides
   --wvr-navbar-padding: 0px;
+  --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
+  --wvr-nav-link-font-size: var(--tl-nav-link-font-size);
+
+  // Weaver Header Element Overrides
   --top-nav-height: 50px;
   --title-row-height: 85px;
   --bottom-nav-height: 65px;
-  --wvr-font-family-sans-serif: 'Lato', sans-serif
-}
 
-wvr-nav-list[slot="top-navigation"] wvr-nav-li {
-  --wvr-nav-link-font-color: var(--wvr-light);
-  --wvr-nav-link-bg-hover: #FFC222;
-  --wvr-nav-link-color-hover: var(--wvr-dark);
-  --wvr-nav-link-font-size: 14px;
-}
+  // Weaver Nav List overrides for top navication
+  wvr-nav-list[slot="top-navigation"] wvr-nav-li {
+    --wvr-nav-link-font-color: var(--tl-white);
+    --wvr-nav-link-color-hover: var(--tl-black);
+    --wvr-nav-link-bg-hover: var(--tl-deep-yellow);
+  }
+  
+  // Weaver Nav List overrides for bottom navication
+  wvr-nav-list[slot="bottom-navigation"] ::slotted(wvr-nav-li) {
+    --wvr-nav-link-font-color: var(--wvr-black);
+    --wvr-nav-link-color-hover: var(--wvr-white);
+    --wvr-nav-link-bg-hover: var(--tl-deep-grey);
+  }
 
-wvr-nav-list[slot="bottom-navigation"] ::slotted(wvr-nav-li) {
-  --wvr-nav-link-font-color: var(--wvr-dark);
-  --wvr-nav-link-bg-hover: #4D4D4D;
-  --wvr-nav-link-color-hover: var(--wvr-light);
-  --wvr-nav-link-font-size: 14px;
 }
