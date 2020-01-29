@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 
 import { createCustomElement } from '@angular/elements';
-import { TamuItWorksComponent } from './tamu-it-works.component';
+import { TamuItWorksComponent } from './tl-it-works.component';
 
 import { ItWorksModule } from 'wvr-elements'; 
 
@@ -17,6 +17,6 @@ import { ItWorksModule } from 'wvr-elements';
 export class TamuItWorksModule {
   constructor(injector: Injector) {
     const TamuItWorksElement = createCustomElement(TamuItWorksComponent, {injector});
-    customElements.define('tamu-it-works', TamuItWorksElement);
+    customElements.define('tl-it-works', TamuItWorksElement);
   }
 }
