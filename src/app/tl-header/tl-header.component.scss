@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+
+wvr-header {
+  --wvr-navbar-padding: 0px;
+  --top-nav-height: 50px;
+  --title-row-height: 85px;
+  --bottom-nav-height: 65px;
+  --wvr-font-family-sans-serif: 'Lato', sans-serif
+}
+
+wvr-nav-list[slot="top-navigation"] wvr-nav-li {
+  --wvr-nav-link-font-color: var(--wvr-light);
+  --wvr-nav-link-bg-hover: #FFC222;
+  --wvr-nav-link-color-hover: var(--wvr-dark);
+  --wvr-nav-link-font-size: 14px;
+}
+
+wvr-nav-list[slot="bottom-navigation"] ::slotted(wvr-nav-li) {
+  --wvr-nav-link-font-color: var(--wvr-dark);
+  --wvr-nav-link-bg-hover: #4D4D4D;
+  --wvr-nav-link-color-hover: var(--wvr-light);
+  --wvr-nav-link-font-size: 14px;
+}
