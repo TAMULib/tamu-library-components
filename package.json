@@ -13,7 +13,7 @@
     "lint": "ng lint",
     "ng": "ng",
     "postbuild": "npm run build:tl-components",
-    "start": "ng serve -port 3000",
+    "start": "ng serve --port 3000",
     "start:static": "static-server -p 8080",
     "start:docker": "docker run  -p 80:80 --name weaver-components-1  weaver-components",
     "test": "npm run test:unit && npm run test:e2e",
@@ -38,7 +38,6 @@
     "document-register-element": "^1.14.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "wvr-elements": "0.0.4",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
