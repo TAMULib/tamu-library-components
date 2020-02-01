@@ -5,6 +5,8 @@
     <wvr-nav-li-element href="#help">Help</wvr-nav-li-element>
   </wvr-nav-list-element>
   <wvr-nav-list-element bottom-navigation theme="DARK">
-    <ng-content select="wvr-nav-li"></ng-content>
+    <ng-container wvr-nav-items>
+      <ng-content select="wvr-nav-li"></ng-content>
+    </ng-container>
   </wvr-nav-list-element>
 </wvr-header-element>

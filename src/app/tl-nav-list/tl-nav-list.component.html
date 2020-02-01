@@ -1,3 +1,5 @@
 <wvr-nav-list-element [aligned]="aligned" [vertical]="vertical">
-  <ng-content></ng-content>
+  <ng-container wvr-nav-items>
+    <ng-content select="wvr-nav-li"></ng-content>
+  </ng-container>
 </wvr-nav-list-element>
