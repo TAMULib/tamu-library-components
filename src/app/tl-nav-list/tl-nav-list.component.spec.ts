@@ -1,6 +1,6 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { WvrLibModule } from 'wvr-elements';
-import { Alignment } from './alignment.enum';
+import { Alignment, WvrNavListComponent } from 'wvr-elements';
 import { TamuNavListComponent } from './tl-nav-list.component';
 
 describe('TamuNavListComponent', () => {
@@ -9,8 +9,8 @@ describe('TamuNavListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [WvrLibModule],
-      declarations: [TamuNavListComponent]
+      declarations: [TamuNavListComponent, WvrNavListComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -31,4 +31,5 @@ describe('TamuNavListComponent', () => {
   it(`should have as vertical false`, () => {
     expect(component.vertical).toEqual(false);
   });
+
 });

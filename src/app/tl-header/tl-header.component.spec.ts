@@ -1,5 +1,6 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { WvrLibModule } from 'wvr-elements';
+import { WvrHeaderComponent, WvrNavLiComponent, WvrNavListComponent } from 'wvr-elements';
 import { TamuHeaderComponent } from './tl-header.component';
 
 describe('TamuHeaderComponent', () => {
@@ -8,8 +9,8 @@ describe('TamuHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [WvrLibModule],
-      declarations: [TamuHeaderComponent]
+      declarations: [TamuHeaderComponent, WvrHeaderComponent, WvrNavListComponent, WvrNavLiComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 
