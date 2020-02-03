@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
-import { WvrLibModule } from 'wvr-elements';
+import { WvrLibModule } from '@wvr/elements';
 
 import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TamuHeaderComponent } from './tl-header/tl-header.component';

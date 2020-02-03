@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { ItWorksComponent } from 'wvr-elements';
+import { ItWorksComponent } from '@wvr/elements';
 import { TamuItWorksComponent } from './tl-it-works.component';
 
 describe('TamuItWorksComponent', () => {

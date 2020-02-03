@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Alignment, WvrNavListComponent } from 'wvr-elements';
+import { Alignment, WvrNavListComponent } from '@wvr/elements';
 import { TamuNavListComponent } from './tl-nav-list.component';
 
 describe('TamuNavListComponent', () => {

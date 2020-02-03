@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Alignment } from 'wvr-elements';
+import { Alignment } from '@wvr/elements';
 
 @Component({
   // tslint:disable-next-line: component-selector

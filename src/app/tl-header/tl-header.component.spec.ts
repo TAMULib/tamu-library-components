@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { WvrHeaderComponent, WvrNavLiComponent, WvrNavListComponent } from 'wvr-elements';
+import { WvrHeaderComponent, WvrNavLiComponent, WvrNavListComponent } from '@wvr/elements';
 import { TamuHeaderComponent } from './tl-header.component';
 
 describe('TamuHeaderComponent', () => {
