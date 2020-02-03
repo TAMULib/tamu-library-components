@@ -1,26 +1,35 @@
-import { TestBed, async } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Alignment, WvrNavListComponent } from 'wvr-elements';
 import { TamuNavListComponent } from './tl-nav-list.component';
 
-describe('TamuItWorksComponent', () => {
+describe('TamuNavListComponent', () => {
+  let component: TamuNavListComponent;
+  let fixture: ComponentFixture<TamuNavListComponent>;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [],
-      declarations: [
-        TamuNavListComponent,
-      ]
+      declarations: [TamuNavListComponent, WvrNavListComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 
-  it('should create the TamuItWorksComponent', () => {
-    const fixture = TestBed.createComponent(TamuNavListComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TamuNavListComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
-  it(`should have as title 'tl-nav-list-component'`, () => {
-    const fixture = TestBed.createComponent(TamuNavListComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('tl-nav-list-component');
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it(`should have as aligned 'LEFT'`, () => {
+    expect(component.aligned).toEqual(Alignment.LEFT);
+  });
+
+  it(`should have as vertical false`, () => {
+    expect(component.vertical).toEqual(false);
   });
 
 });

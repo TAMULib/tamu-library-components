@@ -12,7 +12,7 @@ describe('workspace-project App', () => {
 
   it('should display tl it works component', () => {
     page.navigateTo();
-    expect(page.getItWorksText()).toEqual('Weaver Components Work!!!');
+    expect(page.getItWorksText()).toEqual('TAMU Library Components Work Really Well!!!');
   });
 
   afterEach(async () => {

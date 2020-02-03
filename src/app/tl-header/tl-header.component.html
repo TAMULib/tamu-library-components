@@ -1,11 +1,12 @@
-<wvr-header logoSrc="{{logoSrc}}" logoText="{{logoText}}" headerTitle="{{pageTitle}}" primary="{{primaryColor}}"
-  secondary="{{secondaryColor}}" gray="{{grayColor}}">
-  <wvr-nav-list slot="top-navigation" aligned="RIGHT">
-    <wvr-nav-li href="#action">Action</wvr-nav-li>
-    <wvr-nav-li href="#link">Link</wvr-nav-li>
-    <wvr-nav-li href="#action">Action</wvr-nav-li>
-  </wvr-nav-list>
-  <wvr-nav-list slot="bottom-navigation" theme="DARK">
-    <slot></slot>
-  </wvr-nav-list>
-</wvr-header>
+<wvr-header-element [logoSrc]="logoSrc" [logoText]="logoText" [headerTitle]="pageTitle" [primary]="primaryColor" [secondary]="secondaryColor" [gray]="grayColor">
+  <wvr-nav-list-element top-navigation aligned="RIGHT">
+    <wvr-nav-li-element href="#action">Action</wvr-nav-li-element>
+    <wvr-nav-li-element href="#link">Link</wvr-nav-li-element>
+    <wvr-nav-li-element href="#help">Help</wvr-nav-li-element>
+  </wvr-nav-list-element>
+  <wvr-nav-list-element bottom-navigation theme="DARK">
+    <ng-container wvr-nav-items>
+      <ng-content select="wvr-nav-li"></ng-content>
+    </ng-container>
+  </wvr-nav-list-element>
+</wvr-header-element>
