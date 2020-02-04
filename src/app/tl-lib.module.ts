@@ -1,11 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { WvrLibModule } from '@wvr/elements';
-
-import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TamuHeaderComponent } from './tl-header/tl-header.component';
+import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 
 const elements = [
