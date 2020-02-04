@@ -8,5 +8,5 @@ export class AppPage {
   getItWorksText() {
     return element(by.css('tl-it-works')).getText() as Promise<string>;
   }
-  
+
 }
