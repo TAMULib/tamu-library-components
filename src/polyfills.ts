@@ -55,11 +55,12 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
+/* tslint:disable: no-import-side-effect */
 import 'zone.js/dist/zone';  // Included with Angular CLI.
-
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
 
 import 'ie11-custom-properties';
+/* tslint:enable: no-import-side-effect */

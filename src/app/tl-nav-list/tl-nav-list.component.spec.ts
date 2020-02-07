@@ -11,7 +11,9 @@ describe('TamuNavListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [TamuNavListComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    }).compileComponents();
+    })
+      .compileComponents()
+      .catch(err => { console.error(err); });
   }));
 
   beforeEach(() => {
@@ -21,15 +23,18 @@ describe('TamuNavListComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component)
+      .toBeTruthy();
   });
 
-  it(`should have as aligned 'LEFT'`, () => {
-    expect(component.aligned).toEqual(Alignment.LEFT);
+  it("should have as aligned 'LEFT'", () => {
+    expect(component.aligned)
+      .toEqual(Alignment.LEFT);
   });
 
-  it(`should have as vertical false`, () => {
-    expect(component.vertical).toEqual(false);
+  it("should have as 'vertical false' ", () => {
+    expect(component.vertical)
+      .toEqual(false);
   });
 
 });

@@ -8,15 +8,14 @@ import { Component, Input } from '@angular/core';
 })
 export class TamuHeaderComponent {
 
-  public logoSrc = 'https://php.library.tamu.edu/searcher/_application/resources/css/tamu-logo-with-bar.png';
-  public logoText = ' Texas A&M University Libraries';
-  public primaryColor = 'var(--tl-primary)';
-  public secondaryColor = '#3c0001';
-  public grayColor = '#ededed';
-  public topNavPrimaryColor = '#FFC222';
-  public bottomNavPrimaryColor = '#4D4D4D';
+  logoSrc = 'https://php.library.tamu.edu/searcher/_application/resources/css/tamu-logo-with-bar.png';
+  logoText = ' Texas A&M University Libraries';
+  primaryColor = 'var(--tl-primary)';
+  secondaryColor = '#3c0001';
+  grayColor = '#ededed';
+  topNavPrimaryColor = '#FFC222';
+  bottomNavPrimaryColor = '#4D4D4D';
 
-  @Input()
-  public pageTitle = 'TL Header Component';
+  @Input() pageTitle = 'TL Header Component';
 
 }

@@ -10,7 +10,9 @@ describe('TamuItWorksComponent', () => {
     TestBed.configureTestingModule({
       declarations: [TamuItWorksComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    }).compileComponents();
+    })
+      .compileComponents()
+      .catch(err => { console.error(err); });
   }));
 
   beforeEach(() => {
@@ -20,15 +22,18 @@ describe('TamuItWorksComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component)
+      .toBeTruthy();
   });
 
-  it(`should have as title 'tl-it-works-component'`, () => {
-    expect(component.title).toEqual('tl-it-works-component');
+  it("should have as title 'tl-it-works-component'", () => {
+    expect(component.title)
+      .toEqual('tl-it-works-component');
   });
 
-  it(`should have as text ''`, () => {
-    expect(component.text).toEqual('');
+  it("should have as text ''", () => {
+    expect(component.text)
+      .toEqual('');
   });
 
 });

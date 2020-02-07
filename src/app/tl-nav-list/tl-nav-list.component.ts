@@ -9,10 +9,8 @@ import { Alignment } from '@wvr/elements';
 })
 export class TamuNavListComponent {
 
-  @Input()
-  public aligned: Alignment = Alignment.LEFT;
+  @Input() aligned: Alignment = Alignment.LEFT;
 
-  @Input()
-  public vertical = false;
+  @Input() vertical = false;
 
 }

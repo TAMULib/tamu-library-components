@@ -8,5 +8,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(TamuLibModule)
-  .catch(err => console.error(err));
+platformBrowserDynamic()
+  .bootstrapModule(TamuLibModule)
+  .catch(err => { console.error(err); });
