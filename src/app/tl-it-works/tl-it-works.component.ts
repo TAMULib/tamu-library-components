@@ -8,9 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class TamuItWorksComponent {
 
-  public title = 'tl-it-works-component';
+  title = 'tl-it-works-component';
 
-  @Input()
-  public text = '';
+  @Input() text = '';
 
 }

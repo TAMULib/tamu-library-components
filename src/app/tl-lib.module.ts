@@ -39,7 +39,7 @@ const components = [
 export class TamuLibModule {
 
   constructor(injector: Injector) {
-    elements.forEach((element) => {
+    elements.forEach(element => {
       try {
         customElements.define(element.selector, createCustomElement(element.component, { injector }));
       } catch (e) {
@@ -48,8 +48,8 @@ export class TamuLibModule {
     });
   }
 
-  ngDoBootstrap() {
-
+  ngDoBootstrap(): void {
+    // OVERRIDE
   }
 
 }
