@@ -6,6 +6,18 @@
     "angular-tslint-rules"
   ],
   "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "tl",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "tl",
+      "kebab-case"
+    ],
     "comment-type": [
       true,
       "singleline",
