@@ -32,12 +32,6 @@
       true,
       "dev"
     ],
-    "no-object-literal-type-assertion": [
-      true,
-      {
-        "allow-arguments": true
-      }
-    ],
     "ordered-imports": [
       true,
       {
