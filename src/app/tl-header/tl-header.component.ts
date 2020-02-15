@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  // tslint:disable-next-line: component-selector
   selector: 'tl-header-element',
   templateUrl: './tl-header.component.html',
   styleUrls: ['./tl-header.component.scss']
