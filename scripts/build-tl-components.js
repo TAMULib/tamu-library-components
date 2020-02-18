@@ -1,5 +1,10 @@
-// const fs = require('fs-extra');
+const fs = require('fs-extra');
 const concat = require('concat');
+const package = require('../package.json');
+
+const majorVersion = package.version.split('.')[0];
+const dirName = `${majorVersion}x`;
+const dirPath = `dist/bundle/${dirName}`;
 
 (async function build() {
   const files = [
@@ -11,8 +16,8 @@ const concat = require('concat');
     'dist/tl-components/main-es5.js'
   ];
 
-  await concat(files, 'dist/tl-components.js');
+  fs.ensureDir(dirPath);
 
-  // await fs.remove("dist/tl-components");
+  await concat(files, `${dirPath}/tl-components.js`);
 
 })();
