@@ -41,9 +41,9 @@ describe('TamuHeaderComponent', () => {
       .toEqual('var(--tl-primary)');
   });
 
-  it("should have as secondaryColor '#3c0001'", () => {
+  it("should have as secondaryColor 'var(--tl-secondary)'", () => {
     expect(component.secondaryColor)
-      .toEqual('#3c0001');
+      .toEqual('var(--tl-secondary)');
   });
 
   it("should have as grayColor '#ededed'", () => {
