@@ -10,7 +10,7 @@ export class TamuHeaderComponent {
   logoSrc = 'https://php.library.tamu.edu/searcher/_application/resources/css/tamu-logo-with-bar.png';
   logoText = ' Texas A&M University Libraries';
   primaryColor = 'var(--tl-primary)';
-  secondaryColor = '#3c0001';
+  secondaryColor = 'var(--tl-secondary)';
   grayColor = '#ededed';
   topNavPrimaryColor = '#FFC222';
   bottomNavPrimaryColor = '#4D4D4D';
