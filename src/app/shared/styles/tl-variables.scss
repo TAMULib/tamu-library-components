@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:host {
+  // Default TL Colors Variables
+  --tl-black: #000;
+  --tl-deep-yellow: #ffc222;
+  --tl-deep-grey: #4d4d4d;
+  --tl-primary: #500000;
+  --tl-secondary: #3C0001;
+  --tl-white: #fff;
+
+
+  // Default TL Font Variables
+  --tl-default-font-size: 16px;
+  --tl-font-family-sans-serif: 'Lato', sans-serif;
+  --tl-nav-link-font-size: 14px;
+  --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
+}

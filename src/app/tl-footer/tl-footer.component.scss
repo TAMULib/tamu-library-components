@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "../shared/styles/tl-variables.scss";
+
+:host {
+  wvr-footer-element {
+    // Weaver Component overrides
+    --wvr-navbar-padding: 0px;
+    --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
+    --wvr-nav-link-font-size: var(--tl-nav-link-font-size);
+    --footer-height: 50px;
+  }
+}
+
+:host ::ng-deep {
+  wvr-nav-list-element wvr-nav-li {
+    --wvr-nav-link-font-color: var(--tl-white);
+    --wvr-nav-link-color-hover: var(--tl-deep-yellow);
+    --wvr-nav-link-bg-hover: transparent;
+    --wvr-nav-link-text-decoration-hover: underline;
+    --wvr-nav-li-width: max-content;
+  }
+}

@@ -1,30 +1,39 @@
-import { TestBed, async } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TamuItWorksComponent } from './tl-it-works.component';
 
-import { ItWorksModule } from 'wvr-elements'; 
-
 describe('TamuItWorksComponent', () => {
+  let component: TamuItWorksComponent;
+  let fixture: ComponentFixture<TamuItWorksComponent>;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        ItWorksModule
-      ],
-      declarations: [
-        TamuItWorksComponent,
-      ]
-    }).compileComponents();
+      declarations: [TamuItWorksComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    })
+      .compileComponents()
+      .catch(err => { console.error(err); });
   }));
 
-  it('should create the TamuItWorksComponent', () => {
-    const fixture = TestBed.createComponent(TamuItWorksComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TamuItWorksComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
-  it(`should have as title 'tl-it-works-component'`, () => {
-    const fixture = TestBed.createComponent(TamuItWorksComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('tl-it-works-component');
+  it('should create', () => {
+    expect(component)
+      .toBeTruthy();
+  });
+
+  it("should have as title 'tl-it-works-component'", () => {
+    expect(component.title)
+      .toEqual('tl-it-works-component');
+  });
+
+  it("should have as text ''", () => {
+    expect(component.text)
+      .toEqual('');
   });
 
 });

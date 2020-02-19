@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/TAMULib/tamu-library-components.svg?branch=master)](https://travis-ci.org/TAMULib/tamu-library-components)
+[![Coverage Status](https://coveralls.io/repos/github/TAMULib/tamu-library-components/badge.svg?branch=master)](https://coveralls.io/github/TAMULib/tamu-library-components?branch=master)
+
 # TamuLibraryComponents
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
