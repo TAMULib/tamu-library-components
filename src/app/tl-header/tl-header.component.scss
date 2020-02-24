@@ -2,33 +2,26 @@
 @import "../shared/styles/tl-variables.scss";
 
 :host {
-
   wvr-header-element {
     // Weaver Component overrides
     --wvr-navbar-padding: 0px;
     --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
     --wvr-nav-link-font-size: var(--tl-nav-link-font-size);
 
-    // Weaver Header Element Overrides
-    --top-nav-height: 50px;
-    --title-row-height: 85px;
-    --bottom-nav-height: 65px;
-
     // Weaver Nav List overrides for top navigation
     wvr-nav-list-element[top-navigation] wvr-nav-li-element {
-      --wvr-nav-link-font-color: var(--tl-white);
+      --wvr-nav-link-color: var(--tl-white);
       --wvr-nav-link-color-hover: var(--tl-black);
-      --wvr-nav-link-bg-hover: var(--tl-deep-yellow);
+      --wvr-nav-link-background-hover: var(--tl-deep-yellow);
     }
 
   }
-
 }
 
 :host ::ng-deep {
   wvr-nav-list-element[bottom-navigation] wvr-nav-li {
-    --wvr-nav-link-font-color: var(--tl-black);
+    --wvr-nav-link-color: var(--tl-black);
     --wvr-nav-link-color-hover: var(--tl-white);
-    --wvr-nav-link-bg-hover: var(--tl-deep-grey);
+    --wvr-nav-link-background-hover: var(--tl-deep-grey);
   }
 }
