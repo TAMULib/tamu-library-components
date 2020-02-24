@@ -9,6 +9,4 @@ export class TamuFooterComponent {
 
   backgroundColor = 'var(--tl-secondary)';
 
-
-
 }
