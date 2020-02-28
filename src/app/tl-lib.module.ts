@@ -7,6 +7,7 @@ import { TamuHeaderComponent } from './tl-header/tl-header.component';
 import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 
+/** This property contains a list of TAMU components and the selector tags. */
 const elements = [
   { component: TamuFooterComponent, selector: 'tl-footer' },
   { component: TamuItWorksComponent, selector: 'tl-it-works' },
@@ -14,6 +15,7 @@ const elements = [
   { component: TamuNavListComponent, selector: 'tl-nav-list' }
 ];
 
+/** This property contains a list of TAMU components classes. */
 const components = [
   TamuFooterComponent,
   TamuItWorksComponent,
@@ -21,6 +23,7 @@ const components = [
   TamuNavListComponent
 ];
 
+/** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
     BrowserModule,

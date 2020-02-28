@@ -18,7 +18,11 @@
     "test:watch": "ng test",
     "test:coverage": "ng test --no-watch --code-coverage",
     "test:report": "cat ./coverage/tamu-library-components/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test:ci": "npm run build && npm run test:coverage"
+    "test:ci": "npm run build && npm run test:coverage",
+    "build:docs": "npm run build:docs-setup && npm run build:docs-development",
+    "build:docs-setup": "node scripts/build-tl-components-docs.js",
+    "build:docs-development": "compodoc -d docs/development -p ./src/tsconfig.docs.json",
+    "build:docs-production": "npm run build:docs && ls -A | grep -v docs | xargs rimraf && mv docs/* . && rimraf docs"
   },
   "private": true,
   "dependencies": {

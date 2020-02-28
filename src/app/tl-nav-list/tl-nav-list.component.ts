@@ -1,6 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Alignment } from '@wvr/elements';
 
+/**
+ * The TamuNavList Component represents a navigation list.
+ * Elements within this list must be of type : wvr-nav-li elements and can be either links of action elements.
+ */
 @Component({
   selector: 'tl-nav-list-element',
   templateUrl: './tl-nav-list.component.html',
@@ -8,8 +12,10 @@ import { Alignment } from '@wvr/elements';
 })
 export class TamuNavListComponent {
 
+  /** The aligned property describing the positioning of the list elements. */
   @Input() aligned: Alignment = Alignment.LEFT;
 
+  /** This allows the display of the list horizontally. */
   @Input() vertical = false;
 
 }
