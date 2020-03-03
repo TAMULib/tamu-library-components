@@ -5,7 +5,7 @@
     "build": "ng build --prod --output-hashing none",
     "build:clean": "npm run clean && npm run build",
     "build:tl-components": "node scripts/build-tl-components.js",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "lint": "ng lint",
     "ng": "ng",
     "postbuild": "npm run build:tl-components",
@@ -66,6 +66,7 @@
     "karma-jasmine": "~3.1.1",
     "karma-jasmine-html-reporter": "^1.5.2",
     "protractor": "^5.4.3",
+    "rimraf": "^3.0.2",
     "ts-node": "~8.6.2",
     "tslint": "~6.0.0",
     "typescript": "~3.7.5"
