@@ -24,4 +24,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
-    branch: sprint3-staging
+    branch: sprint3-26-doc-compodocs
