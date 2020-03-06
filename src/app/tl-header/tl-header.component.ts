@@ -36,10 +36,9 @@ export class TamuHeaderComponent {
   @Input() pageTitle = 'TL Header Component';
 
   /** Used to iterate the header navigation list. */
-  public links: Array<Link>
-    = [
-      new Link('https://library.tamu.edu/about/hours.html', 'Hours'),
-      new Link('https://library.tamu.edu/about/index.html', 'Libraries'),
-      new Link('http://askus.library.tamu.edu/', 'AskUs')
-    ];
+  public toplinks: Array<Link> = [
+    { href: 'https://library.tamu.edu/about/hours.html', value: 'Hours' },
+    { href: 'https://library.tamu.edu/about/index.html', value: 'Libraries' },
+    { href: 'http://askus.library.tamu.edu', value: 'AskUs' }
+  ];
 }

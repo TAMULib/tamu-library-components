@@ -16,15 +16,14 @@ export class TamuFooterComponent {
   backgroundColor = 'var(--tl-primary)';
 
   /** Used to iterate the footer navigation list. */
-  public links: Array<Link>
-    = [
-      new Link('https://howdy.tamu.edu/uPortal/normal/render.uP', 'howdy.tamu.edu'),
-      new Link('https://library.tamu.edu/services/tech_troubleshooting.html', 'Off-Campus Access'),
-      new Link('http://tamu.edu/', 'Texas A& M University'),
-      new Link('http://library.tamu.edu/about/compliance.html', 'Site Policies'),
-      new Link('https://library.tamu.edu/services/accessibility.html', 'Accessibility'),
-      new Link('http://www.thecb.state.tx.us/apps/txcrews/', 'Texas CREWS'),
-      new Link('https://askus.library.tamu.edu/contact/index', 'Comments'),
-      new Link('https://library.tamu.edu/status/', 'Services Status')
-    ];
+  public links: Array<Link> = [
+    { href: 'https://howdy.tamu.edu/uPortal/normal/render.uP', value: 'howdy.tamu.edu' },
+    { href: 'https://library.tamu.edu/services/tech_troubleshooting.html', value: 'Off-Campus Access' },
+    { href: 'http://tamu.edu/', value: 'Texas A& M University' },
+    { href: 'http://library.tamu.edu/about/compliance.html', value: 'Site Policies' },
+    { href: 'https://library.tamu.edu/services/accessibility.html', value: 'Accessibility' },
+    { href: 'http://www.thecb.state.tx.us/apps/txcrews/', value: 'Texas CREWS' },
+    { href: 'https://askus.library.tamu.edu/contact/index', value: 'Comments' },
+    { href: 'https://library.tamu.edu/status/', value: 'Services Status' }
+  ];
 }
