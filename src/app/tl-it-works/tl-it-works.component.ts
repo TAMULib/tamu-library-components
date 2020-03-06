@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 /**
  * Provides a simple component to prove the basic functionality of the TAMU Components.
  */
 @Component({
   selector: 'tl-it-works-element',
   templateUrl: './tl-it-works.component.html',
-  styleUrls: ['./tl-it-works.component.scss']
+  styleUrls: ['./tl-it-works.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TamuItWorksComponent {
 
