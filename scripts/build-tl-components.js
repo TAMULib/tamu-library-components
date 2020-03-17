@@ -17,7 +17,11 @@ const dirPath = `dist/bundle/${dirName}`;
   ];
 
   fs.ensureDir(dirPath);
+  fs.ensureDir(`docs/${dirPath}`);
 
   await concat(files, `${dirPath}/tl-components.js`);
+  // TODO: this should only happen when building docs
+  // the docs script is not aware of the dir path with version
+  fs.copy(`${dirPath}/tl-components.js`, `docs/${dirPath}/tl-components.js`);
 
 })();
