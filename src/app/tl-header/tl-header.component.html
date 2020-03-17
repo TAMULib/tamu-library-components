@@ -1,7 +1,7 @@
 <wvr-header-element [logoSrc]="logoSrc" [logoText]="logoText" [headerTitle]="pageTitle" [primary]="primaryColor"
   [secondary]="secondaryColor" [gray]="grayColor">
   <wvr-nav-list-element top-navigation aligned="RIGHT">
-    <wvr-nav-li-element *ngFor="let link of links; let i = index" href="{{link.href}}">
+    <wvr-nav-li-element *ngFor="let link of toplinks; let i = index" href="{{link.href}}">
       <wvr-text value="{{link.value}}"></wvr-text>
     </wvr-nav-li-element>
   </wvr-nav-list-element>
