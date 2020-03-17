@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'tl-header-element',
   templateUrl: './tl-header.component.html',
-  styleUrls: ['./tl-header.component.scss']
+  styleUrls: ['./tl-header.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TamuHeaderComponent {
 
