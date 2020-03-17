@@ -26,9 +26,9 @@ describe('TlFooterComponent', () => {
       .toBeTruthy();
   });
 
-  it("should have as backgroundColor 'var(--tl-secondary)'", () => {
+  it("should have as backgroundColor 'var(--tl-primary)'", () => {
     expect(component.backgroundColor)
-      .toEqual('var(--tl-secondary)');
+      .toEqual('var(--tl-primary)');
   });
 
 });

@@ -1,4 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Link } from '../shared/link';
 
 @Component({
   selector: 'tl-header-element',
@@ -31,5 +32,12 @@ export class TamuHeaderComponent {
 
   /** This defines the TAMU page  header title and is displayed as page title. */
   @Input() pageTitle = 'TL Header Component';
+
+  links: Array<Link>
+    = [
+      new Link('https://library.tamu.edu/about/hours.html', 'Hours'),
+      new Link('https://library.tamu.edu/about/index.html', 'Libraries'),
+      new Link('http://askus.library.tamu.edu/', 'AskUs')
+    ];
 
 }

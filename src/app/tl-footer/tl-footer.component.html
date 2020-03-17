@@ -1,7 +1,7 @@
 <wvr-footer-element [background]="backgroundColor">
   <wvr-nav-list-element aligned="CENTER">
-    <ng-container wvr-nav-items>
-      <ng-content select="wvr-nav-li"></ng-content>
-    </ng-container>
+    <wvr-nav-li-element *ngFor="let link of links; let i = index" href="{{link.href}}">
+      <wvr-text value="{{link.value}}"></wvr-text>
+    </wvr-nav-li-element>
   </wvr-nav-list-element>
 </wvr-footer-element>
