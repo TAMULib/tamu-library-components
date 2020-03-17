@@ -1,5 +1,5 @@
 /**
- * This is a data structiure used to diplay links .
+ * This is a data structure used to diplay links .
  */
 
 export interface Link {
