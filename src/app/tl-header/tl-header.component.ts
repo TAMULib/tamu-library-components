@@ -16,10 +16,10 @@ export class TamuHeaderComponent {
   logoText = ' Texas A&M University Libraries';
 
   /** This defines the TAMU css variable: --tl-primary. */
-  topNavBackground = 'var(--tl-primary)';
+  titleRowBackground = 'var(--tl-primary)';
 
   /** This defines the css variable: --tl-secondary. */
-  titleRowBackground = 'var(--tl-secondary)';
+  topNavBackground = 'var(--tl-secondary)';
 
   /** This defines the TAMU css variable: grayColor. */
   bottomNavBackground = 'var(--tl-grey)';
