@@ -36,29 +36,19 @@ describe('TamuHeaderComponent', () => {
       .toEqual(' Texas A&M University Libraries');
   });
 
-  it("should have as primaryColor 'var(--tl-primary)'", () => {
-    expect(component.primaryColor)
+  it("should have as titleRowBackground 'var(--tl-primary)'", () => {
+    expect(component.titleRowBackground)
       .toEqual('var(--tl-primary)');
   });
 
-  it("should have as secondaryColor 'var(--tl-secondary)'", () => {
-    expect(component.secondaryColor)
+  it("should have as topNavBackground 'var(--tl-secondary)'", () => {
+    expect(component.topNavBackground)
       .toEqual('var(--tl-secondary)');
   });
 
-  it("should have as grayColor '#ededed'", () => {
-    expect(component.grayColor)
-      .toEqual('#ededed');
-  });
-
-  it("should have as topNavPrimaryColor '#FFC222'", () => {
-    expect(component.topNavPrimaryColor)
-      .toEqual('#FFC222');
-  });
-
-  it("should have as bottomNavPrimaryColor '#4D4D4D'", () => {
-    expect(component.bottomNavPrimaryColor)
-      .toEqual('#4D4D4D');
+  it("should have as bottomNavBackground ''var(--tl-grey)'", () => {
+    expect(component.bottomNavBackground)
+      .toEqual('var(--tl-grey)');
   });
 
   it("should have as pageTitle 'TL Header Component'", () => {

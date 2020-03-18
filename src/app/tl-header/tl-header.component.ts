@@ -16,25 +16,19 @@ export class TamuHeaderComponent {
   logoText = ' Texas A&M University Libraries';
 
   /** This defines the TAMU css variable: --tl-primary. */
-  primaryColor = 'var(--tl-primary)';
+  titleRowBackground = 'var(--tl-primary)';
 
   /** This defines the css variable: --tl-secondary. */
-  secondaryColor = 'var(--tl-secondary)';
+  topNavBackground = 'var(--tl-secondary)';
 
   /** This defines the TAMU css variable: grayColor. */
-  grayColor = '#ededed';
-
-  /** This defines the TAMU css variable: topNavPrimaryColor. */
-  topNavPrimaryColor = '#FFC222';
-
-  /** This defines the TAMU css variable: bottomNavPrimaryColor. */
-  bottomNavPrimaryColor = '#4D4D4D';
+  bottomNavBackground = 'var(--tl-grey)';
 
   /** This defines the TAMU page  header title and is displayed as page title. */
   @Input() pageTitle = 'TL Header Component';
 
   /** Used to iterate the header navigation list. */
-  toplinks: Array<Link> = [
+  topLinks: Array<Link> = [
     { href: 'https://library.tamu.edu/about/hours.html', value: 'Hours' },
     { href: 'https://library.tamu.edu/about/index.html', value: 'Libraries' },
     { href: 'http://askus.library.tamu.edu', value: 'AskUs' }
