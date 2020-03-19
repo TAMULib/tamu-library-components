@@ -12,9 +12,9 @@
 
    // Weaver Nav List overrides for top navigation
    wvr-nav-list-element wvr-nav-li-element {
-    --wvr-nav-link-font-color: var(--tl-white);
+    --wvr-nav-link-color: var(--tl-white);
     --wvr-nav-link-color-hover: var(--tl-deep-yellow);
-    --wvr-nav-link-bg-hover: transparent;
+    --wvr-nav-link-background-hover: transparent;
     --wvr-nav-link-text-decoration-hover: underline;
     --wvr-nav-li-width: max-content;
   }
