@@ -4,8 +4,7 @@ import { Link } from '../shared/link';
 @Component({
   selector: 'tl-header-element',
   templateUrl: './tl-header.component.html',
-  styleUrls: ['./tl-header.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  styleUrls: ['./tl-header.component.scss']
 })
 export class TamuHeaderComponent {
 
@@ -14,6 +13,15 @@ export class TamuHeaderComponent {
 
   /** The text value to be displayed beside the TAMU logo. */
   logoText = ' Texas A&M University Libraries';
+
+  /** This defines the height of the TAMU logo. */
+  logoImgHeight = 'var(--tl-logo-img-height)';
+
+  /** This defines the width of the TAMU logo. */
+  logoImgWidth = 'var(--tl-logo-img-width)';
+
+  /** This defines the margin of the TAMU logo. */
+  logoImgMargin = 'var(--tl-logo-img-margin)';
 
   /** This defines the TAMU css variable: --tl-primary. */
   titleRowBackground = 'var(--tl-primary)';
