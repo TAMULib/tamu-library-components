@@ -4,9 +4,9 @@ const package = require('../package.json');
 
 const majorVersion = package.version.split('.')[0];
 const dirName = `${majorVersion}x`;
-const basePath = 'dist/bundle/';
+const basePath = 'dist/bundle';
 const dirPath = `${basePath}/${dirName}`;
-const latestPath = `${basePath}latest`;
+const latestPath = `${basePath}/latest`;
 
 (async function build() {
   const files = [
@@ -19,13 +19,11 @@ const latestPath = `${basePath}latest`;
   ];
 
   fs.ensureDir(dirPath);
-  fs.ensureDir(latestPath);
-  fs.ensureDir(`docs/${dirPath}`);
 
   await concat(files, `${dirPath}/tl-components.js`);
-  await concat(files, `${latestPath}/tl-components.js`);
   // TODO: this should only happen when building docs
   // the docs script is not aware of the dir path with version
+  fs.copy(`${dirPath}/tl-components.js`, `${latestPath}/tl-components.js`);
   fs.copy(`${dirPath}/tl-components.js`, `docs/${dirPath}/tl-components.js`);
 
 })();
