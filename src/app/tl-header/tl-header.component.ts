@@ -9,7 +9,7 @@ import { Link } from '../shared/link';
 export class TamuHeaderComponent {
 
   /** This is a URL pointing to the location of the logo. */
-  logoSrc = 'https://php.library.tamu.edu/searcher/_application/resources/css/tamu-logo-with-bar.png';
+  logoSrc = 'assets/tamu-logo.svg';
 
   /** The text value to be displayed beside the TAMU logo. */
   logoText = ' Texas A&M University Libraries';
