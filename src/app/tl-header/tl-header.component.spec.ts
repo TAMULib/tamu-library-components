@@ -26,12 +26,12 @@ describe('TamuHeaderComponent', () => {
       .toBeTruthy();
   });
 
-  it("should have as logoSrc 'https://php.library.tamu.edu/searcher/_application/resources/css/tamu-logo-with-bar.png'", () => {
+  it("should have as logoSrc 'assets/tamu-logo.svg'", () => {
     expect(component.logoSrc)
-      .toEqual('https://php.library.tamu.edu/searcher/_application/resources/css/tamu-logo-with-bar.png');
+      .toEqual('assets/tamu-logo.svg');
   });
 
-  it("should have as logoText ' Texas A&M University Libraries'", () => {
+  it("should have as logoText 'Texas A&M University Libraries'", () => {
     expect(component.logoText)
       .toEqual(' Texas A&M University Libraries');
   });
