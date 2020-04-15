@@ -2,9 +2,10 @@ const fs = require('fs-extra');
 const concat = require('concat');
 const package = require('../package.json');
 
+const assetPath = 'dist/tl-components';
+const basePath = 'dist/bundle';
 const majorVersion = package.version.split('.')[0];
 const dirName = `${majorVersion}x`;
-const basePath = 'dist/bundle';
 const dirPath = `${basePath}/${dirName}`;
 const latestPath = `${basePath}/latest`;
 
@@ -26,4 +27,8 @@ const latestPath = `${basePath}/latest`;
   fs.copy(`${dirPath}/tl-components.js`, `${latestPath}/tl-components.js`);
   fs.copy(`${dirPath}/tl-components.js`, `docs/${dirPath}/tl-components.js`);
 
+  // to ensure static assets present in latest and <latest>x folders
+  fs.ensureDir(assetPath);
+  fs.copy(`${assetPath}/assets`, `${dirPath}/assets`);
+  fs.copy(`${assetPath}/assets`, `${latestPath}/assets`);
 })();
