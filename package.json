@@ -1,6 +1,6 @@
 {
   "name": "tamu-library-components",
-  "version": "0.0.2",
+  "version": "0.0.4-rc",
   "scripts": {
     "build": "ng build --prod --output-hashing none",
     "build:clean": "npm run clean && npm run build",
@@ -36,7 +36,7 @@
     "@angular/platform-browser-dynamic": "^9.0.1",
     "@angular/router": "^9.0.1",
     "@ng-bootstrap/ng-bootstrap": "^5.3.0",
-    "@wvr/elements": "0.0.2",
+    "@wvr/elements": "0.0.4-rc",
     "angular-tslint-rules": "^1.20.3",
     "bootstrap": "^4.4.1",
     "classlist.js": "^1.1.20150312",
