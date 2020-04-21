@@ -8,7 +8,8 @@ import { Link } from '../shared/link';
 @Component({
   selector: 'tl-footer-element',
   templateUrl: './tl-footer.component.html',
-  styleUrls: ['./tl-footer.component.scss']
+  styleUrls: ['./tl-footer.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TamuFooterComponent {
 
