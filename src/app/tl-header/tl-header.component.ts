@@ -4,12 +4,13 @@ import { Link } from '../shared/link';
 @Component({
   selector: 'tl-header-element',
   templateUrl: './tl-header.component.html',
-  styleUrls: ['./tl-header.component.scss']
+  styleUrls: ['./tl-header.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TamuHeaderComponent {
 
   /** This is a URL pointing to the location of the logo. */
-  logoSrc = 'assets/tamu-logo.svg';
+  logoSrc = 'https://labs.library.tamu.edu/tl-components/latest/assets/tamu-logo.svg';
 
   /** The text value to be displayed beside the TAMU logo. */
   logoText = ' Texas A&M University Libraries';

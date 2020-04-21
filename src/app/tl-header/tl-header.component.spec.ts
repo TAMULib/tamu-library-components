@@ -26,9 +26,9 @@ describe('TamuHeaderComponent', () => {
       .toBeTruthy();
   });
 
-  it("should have as logoSrc 'assets/tamu-logo.svg'", () => {
+  it("should have as logoSrc 'https://labs.library.tamu.edu/tl-components/latest/assets/tamu-logo.svg'", () => {
     expect(component.logoSrc)
-      .toEqual('assets/tamu-logo.svg');
+      .toEqual('https://labs.library.tamu.edu/tl-components/latest/assets/tamu-logo.svg');
   });
 
   it("should have as logoText 'Texas A&M University Libraries'", () => {
