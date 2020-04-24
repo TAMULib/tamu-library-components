@@ -1,14 +1,10 @@
-<wvr-header-element [logoSrc]="logoSrc" [logoText]="logoText" [headerTitle]="pageTitle" [primary]="primaryColor"
-  [secondary]="secondaryColor" [gray]="grayColor">
+<wvr-header-element [logoSrc]="logoSrc" [logoText]="logoText" [logoImgHeight]="logoImgHeight"
+  [logoImgWidth]="logoImgWidth" [logoImgMargin]="logoImgMargin" [headerTitle]="pageTitle"
+  [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
+  [bottomNavBackground]="bottomNavBackground">
   <wvr-nav-list-element top-navigation aligned="RIGHT">
-    <wvr-nav-li-element href="#action">
-      <wvr-text value="Action"></wvr-text>
-    </wvr-nav-li-element>
-    <wvr-nav-li-element href="#link">
-      <wvr-text value="Link"></wvr-text>
-    </wvr-nav-li-element>
-    <wvr-nav-li-element href="#help">
-      <wvr-text value="Help"></wvr-text>
+    <wvr-nav-li-element *ngFor="let link of topLinks" href="{{link.href}}">
+      <wvr-text value="{{link.value}}"></wvr-text>
     </wvr-nav-li-element>
   </wvr-nav-list-element>
   <wvr-nav-list-element bottom-navigation theme="DARK">

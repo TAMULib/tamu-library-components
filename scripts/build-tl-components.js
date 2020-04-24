@@ -2,9 +2,12 @@ const fs = require('fs-extra');
 const concat = require('concat');
 const package = require('../package.json');
 
+const assetPath = 'dist/tl-components';
+const basePath = 'dist/bundle';
 const majorVersion = package.version.split('.')[0];
 const dirName = `${majorVersion}x`;
-const dirPath = `dist/bundle/${dirName}`;
+const dirPath = `${basePath}/${dirName}`;
+const latestPath = `${basePath}/latest`;
 
 (async function build() {
   const files = [
@@ -19,5 +22,13 @@ const dirPath = `dist/bundle/${dirName}`;
   fs.ensureDir(dirPath);
 
   await concat(files, `${dirPath}/tl-components.js`);
+  // TODO: this should only happen when building docs
+  // the docs script is not aware of the dir path with version
+  fs.copy(`${dirPath}/tl-components.js`, `${latestPath}/tl-components.js`);
+  fs.copy(`${dirPath}/tl-components.js`, `docs/${dirPath}/tl-components.js`);
 
+  // to ensure static assets present in latest and <latest>x folders
+  fs.ensureDir(assetPath);
+  fs.copy(`${assetPath}/assets`, `${dirPath}/assets`);
+  fs.copy(`${assetPath}/assets`, `${latestPath}/assets`);
 })();

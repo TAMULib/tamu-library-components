@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :host {
+  //TAMU logo specification
+  --tl-logo-img-width: 52px;
+  --tl-logo-img-height: 36px;
+  --tl-logo-img-margin: 0 0 0 0;
+
   // Default TL Colors Variables
   --tl-black: #000;
   --tl-deep-yellow: #ffc222;
+  --tl-grey: #ededed;
   --tl-deep-grey: #4d4d4d;
   --tl-primary: #500000;
   --tl-secondary: #3C0001;
