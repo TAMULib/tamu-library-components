@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Alignment } from '@wvr/elements';
 
 /**
@@ -8,7 +8,8 @@ import { Alignment } from '@wvr/elements';
 @Component({
   selector: 'tl-nav-list-element',
   templateUrl: './tl-nav-list.component.html',
-  styleUrls: ['./tl-nav-list.component.scss']
+  styleUrls: ['./tl-nav-list.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TamuNavListComponent {
 
