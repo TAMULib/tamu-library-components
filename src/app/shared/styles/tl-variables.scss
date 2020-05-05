@@ -18,7 +18,18 @@
 
   // Default TL Font Variables
   --tl-default-font-size: 16px;
-  --tl-font-family-sans-serif: 'Lato', sans-serif;
+  --tl-default-font-family-sans-serif: 'Lato', sans-serif;
+
+  --tl-font-family-sans-serif:var(--tl-default-font-family-sans-serif);
+  --tl-font-size: var(--tl-default-font-size);
+
   --tl-nav-link-font-size: 14px;
   --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
+
+  font-family: var(--tl-font-family-sans-serif);
+  font-size: var(--tl-font-size);
+}
+
+html {
+  font-size: var(--tl-default-font-size);
 }

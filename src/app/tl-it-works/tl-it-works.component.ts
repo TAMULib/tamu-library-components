@@ -1,4 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-it-works-element',
@@ -6,7 +7,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./tl-it-works.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class TamuItWorksComponent {
+export class TamuItWorksComponent extends TamuAbstractBaseComponent {
 
   /** The text value to be displayed in the page title. */
   title = 'tl-it-works-component';
