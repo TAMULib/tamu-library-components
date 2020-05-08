@@ -41,7 +41,9 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   topLinks: Array<Link> = [
     { href: 'https://library.tamu.edu/about/hours.html', value: 'Hours' },
     { href: 'https://library.tamu.edu/about/index.html', value: 'Libraries' },
-    { href: 'http://askus.library.tamu.edu', value: 'AskUs' }
+    { href: 'https://library.tamu.edu/#', value: 'Information For' },
+    { href: 'https://library.tamu.edu/mylibrary/', value: 'MyLibrary' },
+    { href: 'http://askus.library.tamu.edu/', value: 'Help' }
   ];
 
 }

@@ -19,6 +19,12 @@
       --wvr-nav-link-color: var(--tl-white);
       --wvr-nav-link-color-hover: var(--tl-black);
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
+      --wvr-nav-li-width: contain;
+      border-right: 1px solid #6a0000;
+    }
+
+    wvr-nav-list-element[top-navigation] wvr-nav-li-element:last-child {
+      border-right: 0px;
     }
 
     wvr-nav-list-element[bottom-navigation] wvr-nav-li {
@@ -33,6 +39,10 @@
 
     .h1 {
       font-size: var(--tl-h1-font-size);
+    }
+
+    .top-nav{
+      border-bottom: 1px solid #333333;
     }
 
   }
