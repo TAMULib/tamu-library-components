@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :host {
+  all: initial; /* 1st rule so subsequent properties are reset. */
   //TAMU logo specification
   --tl-logo-img-width: 52px;
   --tl-logo-img-height: 36px;
@@ -23,13 +24,21 @@
   --tl-font-family-sans-serif:var(--tl-default-font-family-sans-serif);
   --tl-font-size: var(--tl-default-font-size);
 
-  --tl-nav-link-font-size: 14px;
+  // custom defining the header variables
+  --tl-h1-font-size: calc(var(--tl-font-size)*2.25); // font-size: 2.25em !important; - https://library-new.library.tamu.edu/
+  --tl-h2-font-size: calc(var(--tl-font-size)*1.5);
+  --tl-h3-font-size: calc(var(--tl-font-size)*1.17);
+  --tl-h4-font-size: calc(var(--tl-font-size)*1);
+  --tl-h5-font-size: calc(var(--tl-font-size)*0.83);
+  --tl-h6-font-size: calc(var(--tl-font-size)*0.67);
+
+  // custom font size for nav-list items
+  --tl-nav-item-font-size: calc(var(--tl-font-size)*0.875);
+  --tl-text-node-font-size: calc(var(--tl-font-size)*0.875);
+
   --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
 
   font-family: var(--tl-font-family-sans-serif);
   font-size: var(--tl-font-size);
-}
 
-html {
-  font-size: var(--tl-default-font-size);
 }

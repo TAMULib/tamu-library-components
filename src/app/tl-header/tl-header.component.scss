@@ -7,7 +7,7 @@
     // Weaver Component overrides
     --wvr-navbar-padding: 0px;
     --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
-    --wvr-nav-link-font-size: var(--tl-nav-link-font-size);
+    --wvr-nav-link-font-size: var(--tl-nav-item-font-size);
 
     // Weaver Header Element Overrides
     --top-nav-height: 50px;
@@ -27,7 +27,14 @@
       --wvr-nav-link-background-hover: var(--tl-deep-grey);
     }
 
+    .navbar-brand {
+      font-size: var(--tl-default-font-size);
+    }
+
+    .h1 {
+      font-size: var(--tl-h1-font-size);
+    }
+
   }
 
 }
-
