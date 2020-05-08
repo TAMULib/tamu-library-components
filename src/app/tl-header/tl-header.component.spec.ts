@@ -56,4 +56,20 @@ describe('TamuHeaderComponent', () => {
       .toEqual('TL Header Component');
   });
 
+  it("should have conditional font styling", () => {
+    expect(component.inheritFontStyle).toEqual(undefined);
+    expect(component._fontFamily).toEqual('var(--tl-default-font-family-sans-serif)');
+    expect(component._fontSize).toEqual('var(--tl-default-font-size)');
+    
+    component.inheritFontStyle = 'true';
+    fixture.detectChanges();
+    expect(component._fontFamily).toEqual('inherit');
+    expect(component._fontSize).toEqual('inherit');
+    
+    component.inheritFontStyle = 'false';
+    fixture.detectChanges();
+    expect(component._fontFamily).toEqual('var(--tl-default-font-family-sans-serif)');
+    expect(component._fontSize).toEqual('var(--tl-default-font-size)');
+  });
+
 });

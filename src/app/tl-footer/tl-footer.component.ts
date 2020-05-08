@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 /**
  * A fullwidth footer component which attaches to the bottom of the document body.
@@ -11,7 +12,7 @@ import { Link } from '../shared/link';
   styleUrls: ['./tl-footer.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class TamuFooterComponent {
+export class TamuFooterComponent extends TamuAbstractBaseComponent {
 
   /** Used to override the background color. */
   backgroundColor = 'var(--tl-primary)';

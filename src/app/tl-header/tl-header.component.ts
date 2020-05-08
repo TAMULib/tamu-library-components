@@ -1,5 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-header-element',
@@ -7,7 +8,7 @@ import { Link } from '../shared/link';
   styleUrls: ['./tl-header.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class TamuHeaderComponent {
+export class TamuHeaderComponent extends TamuAbstractBaseComponent {
 
   /** This is a URL pointing to the location of the logo. */
   logoSrc = 'https://labs.library.tamu.edu/tl-components/latest/assets/tamu-logo.svg';
