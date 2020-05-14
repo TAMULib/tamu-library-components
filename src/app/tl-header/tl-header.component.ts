@@ -1,5 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-header-element',
@@ -7,7 +8,7 @@ import { Link } from '../shared/link';
   styleUrls: ['./tl-header.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class TamuHeaderComponent {
+export class TamuHeaderComponent extends TamuAbstractBaseComponent {
 
   /** This is a URL pointing to the location of the logo. */
   logoSrc = 'https://labs.library.tamu.edu/tl-components/latest/assets/tamu-logo.svg';
@@ -40,7 +41,9 @@ export class TamuHeaderComponent {
   topLinks: Array<Link> = [
     { href: 'https://library.tamu.edu/about/hours.html', value: 'Hours' },
     { href: 'https://library.tamu.edu/about/index.html', value: 'Libraries' },
-    { href: 'http://askus.library.tamu.edu', value: 'AskUs' }
+    { href: 'https://library.tamu.edu/#', value: 'Information For' },
+    { href: 'https://library.tamu.edu/mylibrary/', value: 'MyLibrary' },
+    { href: 'http://askus.library.tamu.edu/', value: 'Help' }
   ];
 
 }

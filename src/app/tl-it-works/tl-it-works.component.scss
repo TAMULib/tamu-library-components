@@ -1,2 +1,9 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "../shared/styles/tl-variables.scss";
+
+:host {
+  h1.it-works {
+    font-size: var(--tl-font-size);
+    font-family: var(--tl-font-family-sans-serif);
+  }
+}

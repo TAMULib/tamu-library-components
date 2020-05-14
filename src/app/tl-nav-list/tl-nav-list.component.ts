@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Alignment } from '@wvr/elements';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 /**
  * The TamuNavList Component represents a navigation list.
@@ -8,9 +9,10 @@ import { Alignment } from '@wvr/elements';
 @Component({
   selector: 'tl-nav-list-element',
   templateUrl: './tl-nav-list.component.html',
-  styleUrls: ['./tl-nav-list.component.scss']
+  styleUrls: ['./tl-nav-list.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
-export class TamuNavListComponent {
+export class TamuNavListComponent extends TamuAbstractBaseComponent {
 
   /** The aligned property describing the positioning of the list elements. */
   @Input() aligned: Alignment = Alignment.LEFT;
