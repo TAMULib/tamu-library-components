@@ -1,26 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-drop-down-element',
   templateUrl: './tl-drop-down.component.html',
-  styleUrls: ['./tl-drop-down.component.scss']
+  styleUrls: ['./tl-drop-down.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TlDropDownComponent extends TamuAbstractBaseComponent {
 
   hours = `
-<div class="dropdown-menu mega-dropdown-menu row" style="display: none;">
-  <div style="text-align:center; padding:12px;">
-    <p>
-      <strong style="font-size:14px;">While most of our buildings are closed to the public access, we still have robust
-        <a href="https://tamu.libguides.com/c.php?g=1016445">virtual services</a>.
-      </strong>
-    </p>
-    <p>The OAL Lab in BLCC is open 8am - 7pm.<br>BLCC is offering only virtual services.</p>
-    <a class="btn btn-info" href="https://tamu.libguides.com/c.php?g=1016445">View all Virtual Services</a>
-  </div>
-</div>`;
+          <div class="dropdown-menu mega-dropdown-menu row" style="display: none;">
+            <div style="text-align:center; padding:12px;">
+              <p>
+                <strong style="font-size:14px;">While most of our buildings are closed to the public access, we still have robust
+                  <a href="https://tamu.libguides.com/c.php?g=1016445">virtual services</a>.
+                </strong>
+              </p>
+              <p>The OAL Lab in BLCC is open 8am - 7pm.<br>BLCC is offering only virtual services.</p>
+              <a class="btn btn-info" href="https://tamu.libguides.com/c.php?g=1016445">View all Virtual Services</a>
+            </div>
+          </div>`;
 
   // Libraries Section
   librariesLinksOuter: Array<Link> = [

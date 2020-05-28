@@ -1,0 +1,37 @@
+@import "../shared/styles/tl-variables.scss";
+
+:host {
+  wvr-drop-down-element {
+    color: var(--tl-drop-down-link-color);
+    display: var(--tl-drop-down-display);
+    padding: var(--tl-drop-down-padding);
+  }
+
+   // wvr-dropdown-menu-item
+   wvr-dropdown-menu-item:hover {
+     // link hover
+    background:var(--tl-drop-down-link-hover-background);
+    color:var(--tl-drop-down-link-hover-color);
+    text-decoration: var(--tl-drop-down-link-hover-text-decoration);
+  }
+
+  wvr-dropdown-menu {
+    // drop-down area width:varies
+    background: var(--tl-drop-down-area-background);
+  // // -webkit-background-clip: padding-box;
+  // --tl-drop-down-area-background-clip: 'padding-box';
+  // --tl-drop-down-area-border: '1px solid #ccc'; // border: 1px solid rgba(0,0,0,0.15)
+  // --tl-drop-down-area-border-radius: '4px';
+  // // webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+  // --tl-drop-down-area-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  // --tl-drop-down-area-padding: 15px;
+
+  }
+}
+
+
+
+
+
+
+

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import "~bootstrap/scss/bootstrap.scss";
 
 :host {
   all: initial; /* 1st rule so subsequent properties are reset. */
@@ -41,4 +42,25 @@
   font-family: var(--tl-font-family-sans-serif);
   font-size: var(--tl-font-size);
 
+  // brow nav drop-down style properties
+
+  // link
+  --tl-drop-down-link-color: '#ffffff';
+  --tl-drop-down-display: 'block';
+  --tl-drop-down-padding: 10px 15px;
+
+  // link hover
+  --tl-drop-down-link-hover-background:'#ffc222';
+  --tl-drop-down-link-hover-color:'#000';
+  --tl-drop-down-link-hover-text-decoration: none;
+
+  // drop-down area width:varies
+  --tl-drop-down-area-background: '#fff';
+  // -webkit-background-clip: padding-box;
+  --tl-drop-down-area-background-clip: 'padding-box';
+  --tl-drop-down-area-border: '1px solid #ccc'; // border: 1px solid rgba(0,0,0,0.15)
+  --tl-drop-down-area-border-radius: '4px';
+  // webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+  --tl-drop-down-area-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  --tl-drop-down-area-padding: 15px;
 }
