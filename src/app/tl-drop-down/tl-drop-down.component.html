@@ -1,54 +1,21 @@
-<!--
-<wvr-wvr-dropdown-element
-toggle-on="{{toggleOn}}" btn-type="{{btnType}}"
-menu-width="{{menuWidth}}"
-menu-background="tomato"
-menu-border="var(--tl-dropdown-menu-border)"
-menu-border-radius="var(--tl-dropdown-menu-border-radius)"
-menu-border-display="menuBorderDisplay"
-menu-flex-direction="var(--tl-dropdown-menu-flex-direction)"
-menu-padding="{{menuPadding}}"
-menu-item-margin="{{menuItemMargin}}"
-menu-x-offset="-140px"
-menu-animation-speed="350" >
+<wvr-dropdown-element
+  [toggleOn]="toggleOn"
+  [btnType]="btnType"
+  [menuBackground]="'var(--tl-dropdown-menu-background)'"
+  [menuBorder]="'var(--tl-dropdown-menu-border)'"
+  [menuBorderRadius]="'var(--tl-dropdown-menu-border-radius)'"
+  [menuBorderDisplay]="'var(--tl-dropdown-menu-border-display)'"
+  [menuFlexDirection]="'var(--tl-dropdown-menu-flex-direction)'"
+  [menuPadding]="'var(--tl-dropdown-menu-padding)'"
+  [menuWidth]="'var(--tl-dropdown-menu-width)'"
+  [menuXOffset]="'var(--tl-dropdown-menu-x-offset)'"
+  [menuYOffset]="'var(--tl-dropdown-menu-y-offset)'"
+  [menuItemMargin]="'var(--tl-dropdown-menu-item-margin)'"
+>
   <wvr-dropdown-btn>
-    <wvr-text value="Drop Down Button"></wvr-text>
-  </wvr-dropdown-btn>
+    <ng-content select="tl-dropdown-btn"></ng-content>
+  </wvr-dropdown-btn >
   <wvr-dropdown-menu>
-    <wvr-dropdown-menu-item>
-      <wvr-text value="Drop Down Item 1"></wvr-text>
-    </wvr-dropdown-menu-item>
+    <ng-content select="tl-dropdown-menu"></ng-content>
   </wvr-dropdown-menu>
-</wvr-wvr-dropdown-element>
-
-<wvr-wvr-dropdown-element btn-type="link" menu-y-offset="1px">
-  <wvr-dropdown-btn>
-    <wvr-text value="Link"></wvr-text>
-  </wvr-dropdown-btn>
-  <wvr-dropdown-menu>
-    <h1><wvr-text value="HTML Content"></wvr-text></h1>
-  </wvr-dropdown-menu>
-</wvr-wvr-dropdown-element> -->
-
-<wvr-wvr-dropdown-element
-  btn-type="plain"
-  toggle-on="click"
-  menu-animation-speed="250"
-  [menu-background]="'tomato'"
-  menu-border="1px solid var(--wvr-gray-dark)"
-  menu-border-radius="6x"
-  menu-display="flex"
-  menu-flex-direction="column"
-  menu-padding="25px"
-  menu-width="200px"
-  menu-x-offset="0px"
-  menu-y-offset="-1px"
-  menu-item-margin="0 0 10px 0">
-  <wvr-dropdown-btn>
-    <wvr-text value="Dropdown"></wvr-text>
-  </wvr-dropdown-btn>
-  <wvr-dropdown-menu>
-    <h1><wvr-text value="HTML Content"></wvr-text></h1>
-  </wvr-dropdown-menu>
-</wvr-wvr-dropdown-element>
-
+</wvr-dropdown-element>

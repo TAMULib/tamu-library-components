@@ -12,9 +12,12 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   @Input() btnType = 'primary';
 
   /** Used to define the event type which will display the dropdown menu. */
-  @Input() toggleOn = 'mouseover';
+  @Input() toggleOn = 'click';
 
-  @Input() menuAnimationSpeed;
+  /** Used to define the drop down menu box shadow. */
+  @HostBinding('style.--tl-dropdown-menu-box-shadow') @Input() menuBoxShadow;
+
+  // @Input() menuAnimationSpeed;
 
   /** Used to define the drop down menu background. */
   @HostBinding('style.--tl-dropdown-menu-background') @Input() menuBackground;
@@ -26,25 +29,25 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   @HostBinding('style.--tl-dropdown-menu-border-radius') @Input() menuBorderRadius;
 
   /** Used to define the drop-down menu border display */
-  @Input() menuBorderDisplay = 'var(--wvr-dropdown-menu-display)';
+  @HostBinding('style.--tl-dropdown-menu-border-display') @Input() menuBorderDisplay;
 
   /** Used to define the drop-down `menu-border-flexDirection` */
   @HostBinding('style.--tl-dropdown-menu-flex-direction') @Input() menuFlexDirection;
 
   /** Used to define the drop-down menu padding */
-  @Input() menuPadding = 'var(--wvr-dropdown-menu-padding)';
+  @HostBinding('style.--tl-dropdown-menu-padding') @Input() menuPadding;
 
   /** Used to define the drop-down menu width */
-  @Input() menuWidth = 'var(--wvr-dropdown-menu-width)';
+  @HostBinding('style.--tl-dropdown-menu-width') @Input() menuWidth;
 
   /** Used to define the drop-down menu x offset. */
-  @Input() menuXOffset = 'var(--wvr-dropdown-menu-x-offset)';
+  @HostBinding('style.--tl-dropdown-menu-x-offset') @Input() menuXOffset;
 
   /** Used to define the drop-down menu x offset. */
-  @Input() menuYOffset = 'var(--wvr-dropdown-menu-y-offset)';
+  @HostBinding('style.--tl-dropdown-menu-y-offset') @Input() menuYOffset;
 
   /** Used to define the item margin in drop-down menu. */
-  @Input() menuItemMargin = 'var(--wvr-dropdown-menu-item-margin)';
+  @HostBinding('style.--tl-dropdown-menu-item-margin') @Input() menuItemMargin;
 
   /** Used to define the boolean value for the drop down */
   isOpen = false;
