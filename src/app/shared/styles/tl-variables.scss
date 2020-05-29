@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import "~bootstrap/scss/bootstrap.scss";
 
 :host {
   all: initial; /* 1st rule so subsequent properties are reset. */
