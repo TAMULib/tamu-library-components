@@ -17,7 +17,7 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   @Input() menuAnimationSpeed;
 
   /** Used to define the drop down menu background. */
-  // @HostBinding('style.--tl-dropdown-menu-background') @Input() menuBackground;
+  @HostBinding('style.--tl-dropdown-menu-background') @Input() menuBackground;
 
   /** Used to define the drop down menu border. */
   @HostBinding('style.--tl-dropdown-menu-border') @Input() menuBorder;
