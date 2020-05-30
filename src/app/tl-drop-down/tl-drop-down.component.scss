@@ -132,11 +132,10 @@
         border-radius: var(--tl-dropdown-button-border-radius);
         // background: var(--tl-dropdown-primary-button-background);
         // border: var(--tl-dropdown-primary-button-border);
-      }
-
-      wvr-dropdown-btn:hover {
-        border: var(--tl-dropdown-primary-button-hover-background);
-        border-radius: var(--tl-dropdown-primary-button--hover-border);
+        :hover {
+          border: var(--tl-dropdown-primary-button-hover-background);
+          border-radius: var(--tl-dropdown-primary-button--hover-border);
+        }
       }
 
       wvr-dropdown-menu {
