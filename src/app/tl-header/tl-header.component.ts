@@ -37,6 +37,8 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   /** This defines the TAMU page  header title and is displayed as page title. */
   @Input() pageTitle = 'TL Header Component';
 
+  @Input() pageTitleUrl = '/';
+
   /** Used to iterate the header navigation list. */
   topLinks: Array<Link> = [
     { href: 'https://library.tamu.edu/about/hours.html', value: 'Hours' },
