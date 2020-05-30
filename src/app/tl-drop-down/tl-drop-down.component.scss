@@ -2,7 +2,14 @@
 
 :host {
 
-  // Info button
+  // primary button
+  --tl-dropdown-primary-button-background: rgb(38, 90, 135);
+  --tl-dropdown-primary-button-border: 1px solid rgb(30, 72, 108);
+  // primary button : hover
+  --tl-dropdown-primary-button-hover-background: rgb(77, 77, 77);
+  --tl-dropdown-primary-button--hover-border: 1px solid rgb(89, 89, 89);
+
+  // info button
   --tl-dropdown-info-button-color: #000 ;
   --tl-dropdown-info-button-background: rgb(91, 192, 222);
   --tl-dropdown-info-button-border: 1px solid rgb(70, 184, 218);
@@ -18,14 +25,7 @@
   // default button : hover
   --tl-dropdown-default-button-hover-background: rgb(77, 77, 77);
 
-  // Primary button
-  --tl-dropdown-primary-button-background: rgb(38, 90, 135);
-  --tl-dropdown-primary-button-border: 1px solid rgb(30, 72, 108);
-  // primary button : hover
-  --tl-dropdown-primary-button-hover-background: rgb(77, 77, 77);
-  --tl-dropdown-primary-button--hover-border: 1px solid rgb(89, 89, 89);
-
-    // dropdown menu
+  // dropdown menu properties
   --tl-dropdown-menu-width: 180px;
   --tl-dropdown-menu-height: 286px;
   --tl-dropdown-menu-background: rgb(255, 255, 255);
@@ -33,12 +33,13 @@
   --tl-dropdown-menu-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.17);
   --tl-dropdown-menu-border-radius: 4px;
 
+  // drop down button properties
   --tl-dropdown-font-size: 16px;
   --tl-dropdown-button-width: 124px;
   --tl-dropdown-button-height: 48px;
   --tl-dropdown-button-border-radius: 4px;
 
-  // properties
+  // tl-drop-down properties
   --tl-dropdown-menu-animation-speed: var(--wvr-dropdown-menu-animation-speed);
   --tl-dropdown-menu-background: var(--wvr-dropdown-menu-background);
   --tl-dropdown-menu-border-radius: 4px;
@@ -53,39 +54,91 @@
 
   wvr-dropdown-element {
     ::ng-deep {
-      .btn-info {
-          color: var(--tl-dropdown-info-button-color);
-          background: var(--tl-dropdown-info-button-background);
-          border: var(--tl-dropdown-info-button-border);
-          :hover {
-            color: var(--tl-dropdown-info-button-hover-color);
-            background: var(--tl-dropdown-info-button-hover-background);
-            border: var(--tl-dropdown-info-button-hover-border);
-          }
-        }
 
-        .btn-primary {
-          background: var(--tl-dropdown-primary-button-background);
-          border: var(--tl-dropdown-primary-button-border);
-          :hover {
-            background: var(--tl-dropdown-primary-button-hover-background);
-            border: var(--tl-dropdown-primary-button-hover-border);
+      .btn-primary {
+        background: var(--tl-dropdown-primary-button-background);
+        border: var(--tl-dropdown-primary-button-border);
+        :hover {
+          background: var(--tl-dropdown-primary-button-hover-background);
+          border: var(--tl-dropdown-primary-button-hover-border);
+        }
+      }
+
+      .btn-success {
+        a {
+          color: #000000;
+          background-color: #00bd32;
+          :hover, :focus {
+            color:#000000;
+            background-color: #d6ffe0;
+            border-color: #e4002b;
           }
         }
+      }
+
+      .btn-danger {
+        a {
+          color: #ffffff;
+          background-color: #e4002b;
+          :hover, :focus {
+            color: #000000;
+            background-color: #ffdbe2;
+            border-color: #e4002b;
+          }
+        }
+      }
+
+      // .btn-warning
+
+      .btn-info {
+        color: var(--tl-dropdown-info-button-color);
+        background: var(--tl-dropdown-info-button-background);
+        border: var(--tl-dropdown-info-button-border);
+        :hover {
+          color: var(--tl-dropdown-info-button-hover-color);
+          background: var(--tl-dropdown-info-button-hover-background);
+          border: var(--tl-dropdown-info-button-hover-border);
+        }
+      }
+
+      .btn-light {
+        a {
+          color: #500000;
+          background-color: #ffffff;
+          border-color: #500000;
+          :hover, :focus {
+            color:#ffffff;
+            border-color: #500000;
+          }
+        }
+      }
+
+      .btn-dark {
+        a {
+          color: #4d4d4d;
+          background-color: #ffffff;
+          border-color: #4d4d4d;
+          :hover, :focus {
+            color:#ffffff;
+            border-color: #4d4d4d;
+          }
+        }
+      }
 
       wvr-dropdown-btn {
-
         font-size: var(--tl-dropdown-font-size);
         width: var(--tl-dropdown-button-width);
         height:var(--tl-dropdown-button-height);
+        border-radius: var(--tl-dropdown-button-border-radius);
         // background: var(--tl-dropdown-primary-button-background);
         // border: var(--tl-dropdown-primary-button-border);
-        border-radius: var(--tl-dropdown-button-border-radius);
       }
+
       wvr-dropdown-btn:hover {
         border: var(--tl-dropdown-primary-button-hover-background);
         border-radius: var(--tl-dropdown-primary-button--hover-border);
       }
+
       wvr-dropdown-menu {
         box-shadow: var(--tl-dropdown-menu-box-shadow);
         width: var(--tl-dropdown-menu-width);
@@ -93,7 +146,9 @@
         background: var(--tl-dropdown-menu-background);
         border: var(--tl-dropdown-menu-border);
       }
+
     }
+
   }
 }
 
