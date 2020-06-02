@@ -13,7 +13,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
-[Documentation](https://tamulib.github.io/tamu-library-components/).
+[Documentation](https://tamulib.github.io/tamu-library-components/docs/).
+[Reports](https://tamulib.github.io/tamu-library-components/reports/).
 
 ## Development server
 
