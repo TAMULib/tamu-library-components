@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/TAMULib/tamu-library-components.svg?branch=master)](https://travis-ci.org/TAMULib/tamu-library-components)
-[![Coverage Status](https://coveralls.io/repos/github/TAMULib/tamu-library-components/badge.svg?branch=master)](https://coveralls.io/github/TAMULib/tamu-library-components?branch=master) [![Compodoc Coverage](https://tamulib.github.io/tamu-library-components/docs/development/images/coverage-badge-documentation.svg)](https://tamulib.github.io/tamu-library-components/docs/development/coverage.html)
+[![Coverage Status](https://coveralls.io/repos/github/TAMULib/tamu-library-components/badge.svg?branch=master)](https://coveralls.io/github/TAMULib/tamu-library-components?branch=master) 
+[![Compodoc Coverage](https://tamulib.github.io/tamu-library-components/docs/development/images/coverage-badge-documentation.svg)](https://tamulib.github.io/tamu-library-components/docs/development/coverage.html)
 
 # Lighthouse Badges
 [![Performance](https://tamulib.github.io/tamu-library-components/reports/audit/assets/performance.svg)](https://tamulib.github.io/tamu-library-components/reports/audit/#performance)
