@@ -26,7 +26,7 @@
   --tl-dropdown-default-button-hover-background: rgb(77, 77, 77);
 
   // dropdown menu properties
-  --tl-dropdown-menu-width: 180px;
+  --tl-dropdown-menu-width: fit-content;
   --tl-dropdown-menu-height: 286px;
   --tl-dropdown-menu-background: rgb(255, 255, 255);
   --tl-dropdown-menu-border: 1px solid rgb(204, 204, 204);
@@ -55,81 +55,102 @@
   wvr-dropdown-element {
     ::ng-deep {
 
-      .btn-primary {
-        background: var(--tl-dropdown-primary-button-background);
-        border: var(--tl-dropdown-primary-button-border);
-        :hover {
-          background: var(--tl-dropdown-primary-button-hover-background);
-          border: var(--tl-dropdown-primary-button-hover-border);
-        }
-      }
-
-      .btn-success {
-        a {
-          color: #000000;
-          background-color: #00bd32;
-          :hover, :focus {
-            color:#000000;
-            background-color: #d6ffe0;
-            border-color: #e4002b;
-          }
-        }
-      }
-
-      .btn-danger {
-        a {
-          color: #ffffff;
-          background-color: #e4002b;
-          :hover, :focus {
-            color: #000000;
-            background-color: #ffdbe2;
-            border-color: #e4002b;
-          }
-        }
-      }
-
-      // .btn-warning
-
-      .btn-info {
-        color: var(--tl-dropdown-info-button-color);
-        background: var(--tl-dropdown-info-button-background);
-        border: var(--tl-dropdown-info-button-border);
-        :hover {
-          color: var(--tl-dropdown-info-button-hover-color);
-          background: var(--tl-dropdown-info-button-hover-background);
-          border: var(--tl-dropdown-info-button-hover-border);
-        }
-      }
-
-      .btn-light {
-        a {
-          color: #500000;
-          background-color: #ffffff;
-          border-color: #500000;
-          :hover, :focus {
-            color:#ffffff;
-            border-color: #500000;
-          }
-        }
-      }
-
-      .btn-dark {
-        a {
-          color: #4d4d4d;
-          background-color: #ffffff;
-          border-color: #4d4d4d;
-          :hover, :focus {
-            color:#ffffff;
-            border-color: #4d4d4d;
-          }
-        }
-      }
 
       wvr-dropdown-btn, .btn {
         font-size: var(--tl-dropdown-font-size);
         width: var(--tl-dropdown-button-width);
         height:var(--tl-dropdown-button-height);
         border-radius: var(--tl-dropdown-button-border-radius);
+        border: none;
+        line-height: 36px;
+        width: 124px;
+        height: 48px;
+      }
+
+      .btn-primary {
+        background: rgb(80, 0, 0);
+      }
+
+      .btn-primary:hover, 
+      .btn-primary:not(:disabled):not(.disabled):active {
+        background: rgb(77, 77, 77);
+      }
+
+      .btn-secondary {
+        background: rgb(38, 90, 135);
+      }
+
+      .btn-secondary:hover, 
+      .btn-secondary:not(:disabled):not(.disabled):active {
+        background: rgb(77, 77, 77);
+      }
+
+      .btn-info {
+        background: rgb(91, 192, 222);
+        color: #000;
+      }
+
+      .btn-info:hover, 
+      .btn-info:not(:disabled):not(.disabled):active {
+        background: rgb(49, 176, 213);
+        color: #000;
+      }
+
+      .btn-warning {
+        background: rgb(255, 194, 34);
+        color: #000;
+      }
+
+      .btn-warning:hover, 
+      .btn-warning:not(:disabled):not(.disabled):active {
+        background: rgb(255, 232, 170);
+        color: #000;
+      }
+
+      .btn-danger {
+        background: rgb(228, 0, 43);
+      }
+
+      .btn-danger:hover, 
+      .btn-danger:not(:disabled):not(.disabled):active {
+        background: rgb(255, 219, 226);
+        border: 1px solid rgb(228, 0, 43);
+        color: #000;
+      }
+
+      .btn-success {
+        background: rgb(0, 189, 50);
+        color: #000;
+      }
+
+      .btn-success:hover, 
+      .btn-success:not(:disabled):not(.disabled):active {
+        background: rgb(214, 255, 224);
+        border: 1px solid rgb(0, 189, 50);
+        color: #000;
+      }
+
+      .btn-light {
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(80, 0, 0);
+        color: rgb(80, 0, 0);
+      }
+
+      .btn-light:hover, 
+      .btn-light:not(:disabled):not(.disabled):active {
+        background: rgb(80, 0, 0);
+        color: rgb(255, 255, 255);
+      }
+
+      .btn-dark {
+        background: rgb(77, 77, 77);
+      }
+
+      .btn-dark:hover, 
+      .btn-dark:not(:disabled):not(.disabled):active {
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(77, 77, 77);
+        color: rgb(77, 77, 77);
       }
 
       wvr-dropdown-menu, .dropdown-menu {
@@ -138,6 +159,23 @@
         height: var(--tl-dropdown-menu-height);
         background: var(--tl-dropdown-menu-background);
         border: var(--tl-dropdown-menu-border);
+        padding: 5px;
+      }
+
+      .dropdown-menu > * {
+        box-shadow: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .dropdown-menu wvr-dropdown-menu-item {
+        display: block;
+        margin-top: 5px;;
+      }
+
+      .dropdown-menu wvr-dropdown-menu-item:hover {
+        border: 1px solid rgb(77, 77, 77);
       }
 
     }
