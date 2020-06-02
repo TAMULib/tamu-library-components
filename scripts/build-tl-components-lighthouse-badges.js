@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs-extra');
 const glob = require("glob");
 
-const basePath = 'static/tl-components/reports';
+const basePath = 'static/tamu-library-components/reports';
 const lighthousePath = `${basePath}/audit`;
 const lighthouseAssetsPath = `${lighthousePath}/assets`;
 const lighthouseCiPath = './.lighthouseci';

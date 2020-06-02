@@ -1,5 +1,5 @@
 const fs = require('fs-extra');
-const staticPath = 'static/tl-components';
+const staticPath = 'static/tamu-library-components';
 const docPath = `${staticPath}/docs`;
 const reportPath = `${staticPath}/reports`;
 
