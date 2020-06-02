@@ -11,9 +11,11 @@ services:
 
 install:
   - npm install
+
 script:
   - npm run build
   - npm run test:ci
+
 after_success:
   - cat ./static/tamu-library-components/reports/coverage/tamu-library-components/lcov.info | ./node_modules/coveralls/bin/coveralls.js,
   - npm run build:static-production
@@ -29,4 +31,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
-    branch: test-staging
+    branch: sprint6-staging
