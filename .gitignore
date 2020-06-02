@@ -46,4 +46,8 @@ testem.log
 Thumbs.db
 
 coverage/
+development/
 docs/
+static/
+.lighthouseci/
+.vscode/
