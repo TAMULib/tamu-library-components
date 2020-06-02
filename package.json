@@ -22,7 +22,7 @@
     "test:ci": "npm run build && npm run test:coverage",
     "build:docs": "npm run build:docs-setup && npm run build:docs-development",
     "build:docs-setup": "node scripts/build-tl-components-docs.js",
-    "build:docs-development": "compodoc -d docs/development -p ./src/tsconfig.docs.json",
+    "build:docs-development": "compodoc --output ./static/tamu-library-components/docs/development -p ./src/tsconfig.docs.json",
     "build:docs-production": "npm run build:docs && ls -A | grep -v docs | xargs rimraf && mv docs/* . && rimraf docs",
     "build:static": "npm run build:static-docs && npm run build:static-reports",
     "build:static-setup": "node scripts/build-tl-components-static.js",
