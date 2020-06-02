@@ -3,11 +3,11 @@
 
 # Lighthouse Badges
 
-[![Performance](https://tamulib.github.io/tl-components/reports/audit/assets/performance.svg)](https://tamulib.github.io/tl-components/tl-components/reports/audit/#performance)
-[![Accessibility](https://tamulib.github.io/tl-components/reports/audit/assets/accessibility.svg)](https://tamulib.github.io/tl-components/tl-components/reports/audit/#accessibility)
-[![Best Practices](https://tamulib.github.io/tl-components/reports/audit/assets/best-practices.svg)](https://tamulib.github.io/tl-components/tl-components/reports/audit/#best-practices)
-[![SEO](https://tamulib.github.io/tl-components/reports/audit/assets/seo.svg)](https://tamulib.github.io/tl-components/tl-components/reports/audit/#seo)
-[![Progressive Web App](https://tamulib.github.io/tl-components/reports/audit/assets/pwa.svg)](https://tamulib.github.io/tl-components/tl-components/reports/audit/#pwa)
+[![Performance](https://tamulib.github.io/tamu-library-components/reports/audit/assets/performance.svg)](https://tamulib.github.io/tamu-library-components/tamu-library-components/reports/audit/#performance)
+[![Accessibility](https://tamulib.github.io/tamu-library-components/reports/audit/assets/accessibility.svg)](https://tamulib.github.io/tamu-library-components/tamu-library-components/reports/audit/#accessibility)
+[![Best Practices](https://tamulib.github.io/tamu-library-components/reports/audit/assets/best-practices.svg)](https://tamulib.github.io/tamu-library-components/tamu-library-components/reports/audit/#best-practices)
+[![SEO](https://tamulib.github.io/tamu-library-components/reports/audit/assets/seo.svg)](https://tamulib.github.io/tamu-library-components/tamu-library-components/reports/audit/#seo)
+[![Progressive Web App](https://tamulib.github.io/tamu-library-components/reports/audit/assets/pwa.svg)](https://tamulib.github.io/tamu-library-components/tamu-library-components/reports/audit/#pwa)
 
 # TamuLibraryComponents
 
