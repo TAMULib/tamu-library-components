@@ -15,7 +15,6 @@ script:
   - npm run build
   - npm run test:ci
 after_success:
-  - npm run test:report
   - cat ./static/tamu-library-components/reports/coverage/tamu-library-components/lcov.info | ./node_modules/coveralls/bin/coveralls.js,
   - npm run build:static-production
 
