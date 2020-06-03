@@ -159,23 +159,20 @@
         height: var(--tl-dropdown-menu-height);
         background: var(--tl-dropdown-menu-background);
         border: var(--tl-dropdown-menu-border);
-        padding: 5px;
       }
 
       .dropdown-menu > * {
         box-shadow: none;
         border: none;
-        display: flex;
-        flex-direction: column;
       }
 
       .dropdown-menu wvr-dropdown-menu-item {
         display: block;
-        margin-top: 5px;;
+        padding: 10px;
       }
 
       .dropdown-menu wvr-dropdown-menu-item:hover {
-        border: 1px solid rgb(77, 77, 77);
+        background: #efefef;
       }
 
     }
