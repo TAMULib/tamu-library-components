@@ -15,12 +15,67 @@
     --bottom-nav-height: 65px;
 
     // Weaver Nav List overrides for top navigation
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element {
+    wvr-nav-list-element[top-navigation] wvr-nav-li-element,
+    wvr-nav-list-element[top-navigation] .dropdown {
       --wvr-nav-link-color: var(--tl-white);
       --wvr-nav-link-color-hover: var(--tl-black);
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
       border-right: 1px solid #6a0000;
+      line-height: 20px;
+      a {
+        text-decoration: none;
+      }
+
+      wvr-dropdown-btn {
+        padding: 10px 15px;
+        text-align: center;
+        padding: 12px;
+      }
+       > .dropdown-menu {
+        width: 410px;
+        border: 1px solid rgba(0,0,0,.15);
+        text-align: left;
+      }
+
+      .libraries {
+
+        h6 > a {
+          color: #500000;
+          text-decoration: underline;
+        }
+        p {
+          color: #4d4d4d;
+          a{
+            color: #2b5d7d;
+            text-decoration: underline;
+          }
+        }
+      }
+      .informationFor {
+        a {
+          color: #2b5d7d;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #23527c;
+          text-decoration: underline;
+        }
+      }
+      .help {
+
+        wvr-dropdown-menu-item > a {
+          color: #500000;
+          text-decoration: none;
+        }
+        wvr-dropdown-menu-item > a:hover, wvr-dropdown-menu-item > a:focus {
+          display:block;
+          background: #b0b0b0;
+          border-radius: 5px;
+        }
+      }
+
+
     }
 
     wvr-nav-list-element[top-navigation] wvr-nav-li-element:last-child {
