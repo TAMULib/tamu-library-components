@@ -24,22 +24,21 @@
       border-right: 1px solid #6a0000;
       line-height: 20px;
       a {
+        padding: 12px;
         text-decoration: none;
       }
 
       wvr-dropdown-btn {
-        padding: 10px 15px;
         text-align: center;
         padding: 12px;
       }
        > .dropdown-menu {
-        width: 410px;
+        width: 435px;
         border: 1px solid rgba(0,0,0,.15);
         text-align: left;
       }
 
       .libraries {
-
         h6 > a {
           color: #500000;
           text-decoration: underline;
@@ -52,6 +51,7 @@
           }
         }
       }
+
       .informationFor {
         a {
           color: #2b5d7d;
@@ -62,8 +62,8 @@
           text-decoration: underline;
         }
       }
-      .help {
 
+      .help {
         wvr-dropdown-menu-item > a {
           color: #500000;
           text-decoration: none;
@@ -74,8 +74,6 @@
           border-radius: 5px;
         }
       }
-
-
     }
 
     wvr-nav-list-element[top-navigation] wvr-nav-li-element:last-child {
