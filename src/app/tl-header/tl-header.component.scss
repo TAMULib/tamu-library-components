@@ -27,7 +27,6 @@
         padding: 12px;
         text-decoration: none;
       }
-
       wvr-dropdown-btn {
         text-align: center;
         padding: 12px;
@@ -36,6 +35,10 @@
         width: 435px;
         border: 1px solid rgba(0,0,0,.15);
         text-align: left;
+      }
+
+      .hours wvr-dropdown-menu-item {
+        text-align: center;
       }
 
       .libraries {
@@ -49,6 +52,11 @@
             color: #2b5d7d;
             text-decoration: underline;
           }
+        }
+        wvr-dropdown-menu {
+          line-height: 0.6rem;
+          margin-left: -20px;
+          padding: 0px 15px;
         }
       }
 
@@ -64,14 +72,18 @@
       }
 
       .help {
-        wvr-dropdown-menu-item > a {
+        a {
+          border-bottom: 1px solid #e0e0e0;
           color: #500000;
+          display: block;
+          margin: 5px 0px;
           text-decoration: none;
         }
-        wvr-dropdown-menu-item > a:hover, wvr-dropdown-menu-item > a:focus {
-          display:block;
+        a:hover, a:focus {
           background: #b0b0b0;
           border-radius: 5px;
+          display:block;
+          width:100%;
         }
       }
     }
