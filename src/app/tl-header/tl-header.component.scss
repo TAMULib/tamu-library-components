@@ -79,7 +79,8 @@
         wvr-dropdown-menu > wvr-dropdown-menu-item {
           border-bottom: 1px solid #e0e0e0;
           padding: 10px 0px;
-          display: inline;
+          display: inline-block;
+          width:100%;
           a {
             color: #500000;
             padding: 5px 0px;
@@ -93,10 +94,13 @@
             background: var(--tl-white);
           }
         }
-        wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink{
+        wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink {
           padding: 10px 0px;
           background: #b0b0b0;
           border-radius: 5px;
+        }
+        wvr-dropdown-menu > wvr-dropdown-menu-item:first-child {
+          border-bottom: 0px;
         }
       }
     }
