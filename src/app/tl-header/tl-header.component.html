@@ -2,21 +2,27 @@
   [logoImgWidth]="logoImgWidth" [logoImgMargin]="logoImgMargin" [headerTitle]="pageTitle" [headerTitleUrl]="pageTitleUrl"
   [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
   [bottomNavBackground]="bottomNavBackground">
-  <div class="mobile-menu-header">
-    <span>close</span>
-    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
-      <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
-    </svg>
-  </div>
+  
   <wvr-nav-list-element top-navigation>
     <wvr-nav-li-element *ngFor="let link of topLinks" href="{{link.href}}">
       <wvr-text value="{{link.value}}"></wvr-text>
     </wvr-nav-li-element>
   </wvr-nav-list-element>
-  <wvr-nav-list-element bottom-navigation theme="DARK">
+  <wvr-nav-list-element bottom-navigation theme="DARK" [ngClass]="{'closed': mobileMenuClosed}">
+    <wvr-nav-li-element class="mobile-menu-header">
+      <div (click)="toggleMobileMenu()">
+        <span><wvr-text value="Close" font-size="0.75em"></wvr-text></span>
+        <svg class="bi bi-x" width="1.25em" height="1.25em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+          <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+        </svg>
+      </div>
+    </wvr-nav-li-element>
     <ng-container wvr-nav-items>
       <ng-content select="wvr-nav-li"></ng-content>
     </ng-container>
   </wvr-nav-list-element>
 </wvr-header-element>
+<div class="container" class="mobile-menu-button">
+  <svg (click)="toggleMobileMenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu mobile-menu-button"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</div>
