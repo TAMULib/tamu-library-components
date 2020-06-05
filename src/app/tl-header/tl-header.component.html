@@ -2,7 +2,7 @@
   [logoImgWidth]="logoImgWidth" [logoImgMargin]="logoImgMargin" [headerTitle]="pageTitle" [headerTitleUrl]="pageTitleUrl"
   [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
   [bottomNavBackground]="bottomNavBackground">
-  <wvr-nav-list-element top-navigation aligned="RIGHT">
+  <wvr-nav-list-element top-navigation>
     <wvr-nav-li-element *ngFor="let link of topLinks" href="{{link.href}}">
       <wvr-text value="{{link.value}}"></wvr-text>
     </wvr-nav-li-element>
@@ -12,5 +12,4 @@
       <ng-content select="wvr-nav-li"></ng-content>
     </ng-container>
   </wvr-nav-list-element>
-
 </wvr-header-element>

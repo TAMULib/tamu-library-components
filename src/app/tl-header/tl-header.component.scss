@@ -20,11 +20,11 @@
       --wvr-nav-link-color-hover: var(--tl-black);
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
-      border-right: 1px solid #6a0000;
+      border-left: 1px solid #6a0000;
     }
 
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element:last-child {
-      border-right: 0px;
+    wvr-nav-list-element[top-navigation] wvr-nav-li-element:first-child {
+      border-left: 0px;
     }
 
     wvr-nav-list-element[bottom-navigation] wvr-nav-li {
@@ -43,8 +43,43 @@
 
     .top-nav{
       border-bottom: 1px solid #333333;
+      .container {
+        > div {
+          height: inherit;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      --top-nav-height: auto;
+      --wvr-nav-li-width: fit-content;
+      .top-nav{
+        border-bottom: 1px solid #333333;
+        .container {
+          > div {
+            width: 100%;
+          }
+          > a.navbar-brand {
+            margin: auto;
+          }
+        }
+      }
+      wvr-nav-list-element[top-navigation]  {
+        ul {
+          justify-content: space-evenly;
+          height: 50px;
+        }
+        wvr-nav-li-element {
+          flex: 1 1 auto;
+        }
+      }
+      .title-row {
+        text-align: center;
+      }
     }
 
   }
 
 }
+
+
