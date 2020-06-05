@@ -53,6 +53,9 @@
     @media (max-width: 767px) {
       --top-nav-height: auto;
       --wvr-nav-li-width: fit-content;
+      header {
+        box-shadow: 1px 1px 5px 2px #000;
+      }
       .top-nav{
         border-bottom: 1px solid #333333;
         .container {
