@@ -14,6 +14,10 @@
     --title-row-height: 85px;
     --bottom-nav-height: 65px;
 
+    wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a {
+      padding:12px;
+      text-decoration: none;
+    }
     // Weaver Nav List overrides for top navigation
     wvr-nav-list-element[top-navigation] wvr-nav-li-element,
     wvr-nav-list-element[top-navigation] .dropdown {
@@ -23,10 +27,7 @@
       --wvr-nav-li-width: contain;
       border-right: 1px solid #6a0000;
       line-height: 20px;
-      a {
-        padding: 12px;
-        text-decoration: none;
-      }
+
       wvr-dropdown-btn {
         text-align: center;
         padding: 12px;
@@ -61,9 +62,12 @@
       }
 
       .informationFor {
+
         a {
           color: #2b5d7d;
           text-decoration: none;
+          line-height: 2;
+          padding: 10px 20px;
         }
         a:hover {
           color: #23527c;
@@ -72,18 +76,27 @@
       }
 
       .help {
-        a {
+        wvr-dropdown-menu > wvr-dropdown-menu-item {
           border-bottom: 1px solid #e0e0e0;
-          color: #500000;
-          display: block;
-          margin: 5px 0px;
-          text-decoration: none;
+          padding: 10px 0px;
+          display: inline;
+          a {
+            color: #500000;
+            padding: 5px 0px;
+            text-decoration: none;
+          }
+          > svg {
+            fill: var(--tl-deep-grey);
+            width: 35px;
+            height: 35px;
+            margin-right: 5px;
+            background: var(--tl-white);
+          }
         }
-        a:hover, a:focus {
+        wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink{
+          padding: 10px 0px;
           background: #b0b0b0;
           border-radius: 5px;
-          display:block;
-          width:100%;
         }
       }
     }
