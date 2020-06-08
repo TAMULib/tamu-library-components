@@ -2,7 +2,6 @@
 @import "../shared/styles/tl-variables.scss";
 
 :host {
-
   wvr-header-element {
     // Weaver Component overrides
     --wvr-navbar-padding: 0px;
@@ -26,7 +25,6 @@
     wvr-nav-list-element[top-navigation] wvr-nav-li-element:first-child {
       border-left: 0px;
     }
-
     wvr-nav-list-element[bottom-navigation] wvr-nav-li {
       --wvr-nav-link-color: var(--tl-black);
       --wvr-nav-link-color-hover: var(--tl-white);
@@ -91,7 +89,7 @@
         background: #7ad9ff;
         width: 75%;
         opacity: 1;
-        box-shadow: 4px 4px 7px -2px #000;
+        box-shadow: 4px 4px 7px -2px var(--tl-deep-grey);
         overflow: hidden;
         transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
         li {
@@ -118,7 +116,7 @@
         background: #000;
         color: #fff;
         width: 100%;
-        padding: 10px;
+        padding: 12px 10px;
         li {
           font-weight: lighter;
           min-width: auto;
@@ -131,10 +129,10 @@
     }
 
   }
-
   .mobile-menu-button {
     display: none;
     margin-left: 10px;
+    cursor: pointer;
   }
 
   @media (max-width: 767px) {
@@ -142,8 +140,6 @@
       display: block;
     }
   }
-
-
 }
 
 
