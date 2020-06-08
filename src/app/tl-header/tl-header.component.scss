@@ -127,7 +127,7 @@
       border-bottom: 1px solid #333333;
       .container {
         > div {
-          height: inherit;
+          height: auto;
         }
       }
     }
@@ -156,10 +156,11 @@
       wvr-nav-list-element[top-navigation]  {
         ul {
           justify-content: space-evenly;
-          height: 50px;
         }
+        .dropdown,
         wvr-nav-li-element {
           flex: 1 1 auto;
+          border-right: none;
         }
       }
       .title-row {
