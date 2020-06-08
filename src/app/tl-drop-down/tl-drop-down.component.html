@@ -1,0 +1,21 @@
+<wvr-dropdown-element
+  [toggleOn]="toggleOn"
+  [btnType]="btnType"
+  [menuBackground]="'var(--tl-dropdown-menu-background)'"
+  [menuBorder]="'var(--tl-dropdown-menu-border)'"
+  [menuBorderRadius]="'var(--tl-dropdown-menu-border-radius)'"
+  [menuBorderDisplay]="'var(--tl-dropdown-menu-border-display)'"
+  [menuFlexDirection]="'var(--tl-dropdown-menu-flex-direction)'"
+  [menuPadding]="'var(--tl-dropdown-menu-padding)'"
+  [menuWidth]="'var(--tl-dropdown-menu-width)'"
+  [menuXOffset]="'var(--tl-dropdown-menu-x-offset)'"
+  [menuYOffset]="'var(--tl-dropdown-menu-y-offset)'"
+  [menuItemMargin]="'var(--tl-dropdown-menu-item-margin)'"
+>
+  <wvr-dropdown-btn>
+    <ng-content select="tl-dropdown-btn"></ng-content>
+  </wvr-dropdown-btn >
+  <wvr-dropdown-menu>
+    <ng-content select="tl-dropdown-menu"></ng-content>
+  </wvr-dropdown-menu>
+</wvr-dropdown-element>

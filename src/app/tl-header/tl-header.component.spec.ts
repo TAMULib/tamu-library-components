@@ -41,9 +41,9 @@ describe('TamuHeaderComponent', () => {
       .toEqual('var(--tl-primary)');
   });
 
-  it("should have as topNavBackground 'var(--tl-secondary)'", () => {
+  it("should have as topNavBackground 'var(--tl-primary-dark-accent)'", () => {
     expect(component.topNavBackground)
-      .toEqual('var(--tl-secondary)');
+      .toEqual('var(--tl-primary-dark-accent)');
   });
 
   it("should have as bottomNavBackground ''var(--tl-grey)'", () => {

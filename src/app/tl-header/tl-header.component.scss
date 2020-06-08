@@ -13,13 +13,97 @@
     --title-row-height: 85px;
     --bottom-nav-height: 65px;
 
+    wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a {
+      padding:12px;
+      text-decoration: none;
+    }
     // Weaver Nav List overrides for top navigation
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element {
+    wvr-nav-list-element[top-navigation] wvr-nav-li-element,
+    wvr-nav-list-element[top-navigation] .dropdown {
       --wvr-nav-link-color: var(--tl-white);
       --wvr-nav-link-color-hover: var(--tl-black);
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
-      border-left: 1px solid #6a0000;
+      border-right: 1px solid #6a0000;
+      line-height: 20px;
+
+      wvr-dropdown-btn {
+        text-align: center;
+        padding: 12px;
+      }
+       > .dropdown-menu {
+        width: 435px;
+        border: 1px solid rgba(0,0,0,.15);
+        text-align: left;
+      }
+
+      .hours wvr-dropdown-menu-item {
+        text-align: center;
+      }
+
+      .libraries {
+        h6 > a {
+          color: #500000;
+          text-decoration: underline;
+        }
+        p {
+          color: #4d4d4d;
+          a{
+            color: #2b5d7d;
+            text-decoration: underline;
+          }
+        }
+        wvr-dropdown-menu {
+          line-height: 0.6rem;
+          margin-left: -20px;
+          padding: 0px 15px;
+        }
+      }
+
+      .information-for {
+
+        a {
+          color: #2b5d7d;
+          text-decoration: none;
+          line-height: 2;
+          padding: 10px 20px;
+        }
+        a:hover {
+          color: #23527c;
+          text-decoration: underline;
+        }
+      }
+
+      .help {
+        wvr-dropdown-menu > wvr-dropdown-menu-item {
+          border-bottom: 1px solid #e0e0e0;
+          padding: 10px 0px;
+          display: flex;
+
+          a {
+            color: #500000;
+            padding: 8px 0px 8px 8px;
+            text-decoration: none;
+            width:100%;
+          }
+          > svg {
+            fill: var(--tl-deep-grey);
+            width: 35px;
+            height: 35px;
+            margin-right: 5px;
+            background: var(--tl-white);
+          }
+        }
+
+        wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink {
+          background: #b0b0b0;
+          border-radius: 5px;
+        }
+        wvr-dropdown-menu > wvr-dropdown-menu-item:first-child,
+        wvr-dropdown-menu > wvr-dropdown-menu-item:last-child {
+          border-bottom: 0px;
+        }
+      }
     }
 
     wvr-nav-list-element[top-navigation] wvr-nav-li-element:first-child {

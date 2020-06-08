@@ -28,8 +28,8 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   /** This defines the TAMU css variable: --tl-primary. */
   titleRowBackground = 'var(--tl-primary)';
 
-  /** This defines the css variable: --tl-secondary. */
-  topNavBackground = 'var(--tl-secondary)';
+  /** This defines the css variable: --tl-primary-dark-accent. */
+  topNavBackground = 'var(--tl-primary-dark-accent)';
 
   /** This defines the TAMU css variable: grayColor. */
   bottomNavBackground = 'var(--tl-grey)';
