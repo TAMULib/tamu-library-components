@@ -17,4 +17,15 @@
     --wvr-nav-link-text-decoration-hover: underline;
     --wvr-nav-li-width: max-content;
   }
+  @media (max-width: 767px) {
+    wvr-footer-element {
+      --footer-height: auto;
+      --footer-height: auto;
+      wvr-nav-list-element {
+        ul.flex-row {
+          flex-direction: column !important;
+        }
+      }
+    }
+  }
 }
