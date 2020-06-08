@@ -10,7 +10,7 @@
   --tl-dropdown-primary-button--hover-border: 1px solid rgb(89, 89, 89);
 
   // info button
-  --tl-dropdown-info-button-color: #000 ;
+  --tl-dropdown-info-button-color: var(--tl-black) ;
   --tl-dropdown-info-button-background: rgb(91, 192, 222);
   --tl-dropdown-info-button-border: 1px solid rgb(70, 184, 218);
   // info button : hover
@@ -68,89 +68,89 @@
       }
 
       .btn-primary {
-        background: rgb(80, 0, 0);
+        background: var(--tl-primary);
       }
 
       .btn-primary:hover, 
       .btn-primary:not(:disabled):not(.disabled):active {
-        background: rgb(77, 77, 77);
+        background: var(--tl-dark);
       }
 
       .btn-secondary {
-        background: rgb(38, 90, 135);
+        background: var(--tl-secondary);
       }
 
       .btn-secondary:hover, 
       .btn-secondary:not(:disabled):not(.disabled):active {
-        background: rgb(77, 77, 77);
+        background: var(--tl-dark);
       }
 
       .btn-info {
-        background: rgb(91, 192, 222);
-        color: #000;
+        background: var(--tl-info);
+        color: var(--tl-black);
       }
 
       .btn-info:hover, 
       .btn-info:not(:disabled):not(.disabled):active {
-        background: rgb(49, 176, 213);
-        color: #000;
+        background: var(--tl-info-light-accent);
+        color: var(--tl-black);
       }
 
       .btn-warning {
-        background: rgb(255, 194, 34);
-        color: #000;
+        background: var(--tl-warning);
+        color: var(--tl-black);
       }
 
       .btn-warning:hover, 
       .btn-warning:not(:disabled):not(.disabled):active {
-        background: rgb(255, 232, 170);
-        color: #000;
+        background: var(--tl-warning-light-accent);
+        color: var(--tl-black);
       }
 
       .btn-danger {
-        background: rgb(228, 0, 43);
+        background: var(--tl-danger);
       }
 
       .btn-danger:hover, 
       .btn-danger:not(:disabled):not(.disabled):active {
-        background: rgb(255, 219, 226);
-        border: 1px solid rgb(228, 0, 43);
-        color: #000;
+        background: var(--tl-danger-light-accent);
+        border: 1px solid var(--tl-danger);
+        color: var(--tl-black);
       }
 
       .btn-success {
-        background: rgb(0, 189, 50);
-        color: #000;
+        background: var(--tl-success);
+        color: var(--tl-black);
       }
 
       .btn-success:hover, 
       .btn-success:not(:disabled):not(.disabled):active {
-        background: rgb(214, 255, 224);
-        border: 1px solid rgb(0, 189, 50);
-        color: #000;
+        background: var(--tl-success-light-accent);
+        border: 1px solid var(--tl-success);
+        color: var(--tl-black);
       }
 
       .btn-light {
-        background: rgb(255, 255, 255);
-        border: 1px solid rgb(80, 0, 0);
-        color: rgb(80, 0, 0);
+        background: var(--tl-light);
+        border: 1px solid var(--tl-primary);
+        color: var(--tl-primary);
       }
 
       .btn-light:hover, 
       .btn-light:not(:disabled):not(.disabled):active {
-        background: rgb(80, 0, 0);
-        color: rgb(255, 255, 255);
+        background: var(--tl-primary);
+        color: var(--tl-white);
       }
 
       .btn-dark {
-        background: rgb(77, 77, 77);
+        background: var(--tl-dark);
       }
 
       .btn-dark:hover, 
       .btn-dark:not(:disabled):not(.disabled):active {
-        background: rgb(255, 255, 255);
-        border: 1px solid rgb(77, 77, 77);
-        color: rgb(77, 77, 77);
+        background: var(--tl-white);
+        border: 1px solid var(--tl-dark);
+        color: var(--tl-dark);
       }
 
       wvr-dropdown-menu, .dropdown-menu {
@@ -172,7 +172,7 @@
       }
 
       .dropdown-menu wvr-dropdown-menu-item:hover {
-        background: #efefef;
+        background: var(--tl-grey);
       }
 
     }
