@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
@@ -28,14 +28,18 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   /** This defines the TAMU css variable: --tl-primary. */
   titleRowBackground = 'var(--tl-primary)';
 
-  /** This defines the css variable: --tl-secondary. */
-  topNavBackground = 'var(--tl-secondary)';
+  /** This defines the css variable: --tl-primary-dark-accent. */
+  topNavBackground = 'var(--tl-primary-dark-accent)';
 
   /** This defines the TAMU css variable: grayColor. */
   bottomNavBackground = 'var(--tl-grey)';
 
   /** This defines the TAMU page  header title and is displayed as page title. */
   @Input() pageTitle = 'TL Header Component';
+
+  @Input() pageTitleUrl = '/';
+
+  mobileMenuClosed = true;
 
   /** Used to iterate the header navigation list. */
   topLinks: Array<Link> = [
@@ -45,5 +49,14 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
     { href: 'https://library.tamu.edu/mylibrary/', value: 'MyLibrary' },
     { href: 'http://askus.library.tamu.edu/', value: 'Help' }
   ];
+
+  constructor(private ref: ChangeDetectorRef) {
+    super();
+  }
+
+  toggleMobileMenu(): void {
+    this.mobileMenuClosed = !this.mobileMenuClosed;
+    this.ref.detectChanges();
+  }
 
 }
