@@ -8,6 +8,7 @@ const majorVersion = package.version.split('.')[0];
 const dirName = `${majorVersion}x`;
 const dirPath = `${basePath}/${dirName}`;
 const latestPath = `${basePath}/latest`;
+const staticPath = 'static/tamu-library-components';
 
 (async function build() {
   const files = [
@@ -25,7 +26,6 @@ const latestPath = `${basePath}/latest`;
   // TODO: this should only happen when building docs
   // the docs script is not aware of the dir path with version
   fs.copy(`${dirPath}/tl-components.js`, `${latestPath}/tl-components.js`);
-  fs.copy(`${dirPath}/tl-components.js`, `docs/${dirPath}/tl-components.js`);
 
   // to ensure static assets present in latest and <latest>x folders
   fs.ensureDir(assetPath);
