@@ -184,6 +184,7 @@
         box-shadow: 4px 4px 7px -2px var(--tl-deep-grey);
         overflow: hidden;
         transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        z-index: 1300;
         li {
           border-bottom: 1px solid #85c0d8;
           font-weight: bold;
