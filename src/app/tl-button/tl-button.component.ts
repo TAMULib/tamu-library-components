@@ -11,7 +11,7 @@ export class TlButtonComponent {
   @Input() btnClass = 'success';
 
   /** Used to define the size for button component.  */
-  @Input() btnSize = 'large';
+  @Input() btnSize = '';
 
   /** Used to define the type of a button.  */
   @Input() wvrBtnType = 'button';

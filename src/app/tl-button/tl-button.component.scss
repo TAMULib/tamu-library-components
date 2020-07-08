@@ -62,7 +62,6 @@
 
     ::ng-deep {
       wvr-button, .btn {
-
           font-family: Lato-Regular;
           font-size: 18px;
           font-weight: normal;
@@ -72,8 +71,8 @@
           line-height: 24px;
           border-radius: 4px;
           // button
-          height: 48px;
-          width: 124px;
+          height: fit-content;
+          width: fit-content;
         // }
 
         // btn-primary
