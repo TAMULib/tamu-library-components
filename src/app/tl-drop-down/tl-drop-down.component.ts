@@ -49,4 +49,21 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
 
   /** Used to define the boolean value for the drop down */
   isOpen = false;
+
+  /** Used to override the button background in a drop down */
+  get btnBackground(): string {
+    return `var(--tl-btn-${this.btnType}-background)`;
+  }
+  /** Used to override the button border in a drop down */
+  get btnBorderColor(): string {
+    return `var(--tl-btn-${this.btnType}-border)`;
+  }
+  /** Used to override the button color in a drop down */
+  get btnColor(): string {
+    return `var(--tl-btn-${this.btnType}-color)`;
+  }
+  /** Used to override the button background hover state in a drop down */
+  get btnBackgroundHover(): string {
+    return `var(--tl-btn-${this.btnType}-hover-background)`;
+  }
 }

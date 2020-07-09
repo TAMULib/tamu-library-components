@@ -11,10 +11,14 @@
   [menuXOffset]="'var(--tl-dropdown-menu-x-offset)'"
   [menuYOffset]="'var(--tl-dropdown-menu-y-offset)'"
   [menuItemMargin]="'var(--tl-dropdown-menu-item-margin)'"
+  [btnBackground]="btnBackground"
+  [btnBorderColor]="btnBorderColor"
+  [btnColor]="btnColor"
+  [btnBackgroundHover]="btnBackgroundHover"
 >
   <wvr-dropdown-btn>
-    <ng-content select="tl-dropdown-btn"></ng-content>
-  </wvr-dropdown-btn >
+    <ng-content select="tl-dropdown-btn" ></ng-content>
+  </wvr-dropdown-btn>
   <wvr-dropdown-menu>
     <ng-content select="tl-dropdown-menu"></ng-content>
   </wvr-dropdown-menu>

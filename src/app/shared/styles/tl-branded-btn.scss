@@ -1,0 +1,113 @@
+:host {
+  // primary
+  --tl-btn-primary-background: rgb(80, 0, 0);
+  --tl-btn-primary-border: 1px solid rgb(80, 0, 0);
+  --tl-btn-primary-color: rgb(255, 255, 255);
+  --tl-btn-primary-width: 65px;
+  --tl-btn-primary-hover-background: rgb(77, 77, 77);
+
+  // secondary
+  --tl-btn-secondary-background: rgb(38, 90, 135);
+  --tl-btn-secondary-border: 1px solid rgb(151, 151, 151);
+  --tl-btn-secondary-color: rgb(255, 255, 255);
+  --tl-btn-secondary-width: 85px;
+  --tl-btn-secondary-hover-background: rgb(77, 77, 77);
+
+  // info
+  --tl-btn-info-background: rgb(91, 192, 222);
+  --tl-btn-info-border: 1px solid rgb(151, 151, 151);
+  --tl-btn-info-color: rgb(0, 0, 0);
+  --tl-btn-info-width: 33px;
+  --tl-btn-info-hover-background: rgb(49, 176, 213);
+
+  // warning
+  --tl-btn-warning-background: rgb(255, 194, 34);
+  --tl-btn-warning-color: rgb(0, 0, 0);
+  --tl-btn-warning-width: 69px;
+  --tl-btn-warning-hover-background: rgb(255, 232, 170);
+  --tl-btn-warning-hover-width: 124px;
+
+  // danger
+  --tl-btn-danger-background: rgb(228, 0, 43);
+  --tl-btn-danger-color: rgb(255, 255, 255);
+  --tl-btn-danger-width: 60px;
+
+  // success
+  --tl-btn-success-background: rgb(0, 189, 50);
+  --tl-btn-success-color: rgb(0, 0, 0);
+  --tl-btn-success-width: 63px;
+  --tl-btn-success-hover-background: #D6FFE0;
+
+
+  // light
+  --tl-btn-light-background: rgb(255, 255, 255);
+  --tl-btn-light-border: 1px solid rgb(80, 0, 0);
+  --tl-btn-light-color: rgb(80, 0, 0);
+  --tl-btn-light-width: 41px;
+
+    // dark
+    --tl-btn-dark-background: rgb(77, 77, 77);
+    --tl-btn-dark-color: rgb(255, 255, 255);
+    --tl-btn-dark-width: 40px;
+
+    // link
+    --tl-btn-link-color: rgb(43, 93, 125);
+    --tl-btn-link-font-size: 14px;
+    --tl-btn-link-font-weight: normal;
+    --tl-btn-link-letter-spacing: -0.18px;
+    --tl-btn-link-height: 17px;
+    --tl-btn-link-text-decoration: underline;
+    --tl-btn-link-width: 26px;
+
+  // dropdown styles
+    // primary button
+  --tl-dropdown-primary-button-background: rgb(38, 90, 135);
+  --tl-dropdown-primary-button-border: 1px solid rgb(30, 72, 108);
+  // primary button : hover
+  --tl-dropdown-primary-button-hover-background: rgb(77, 77, 77);
+  --tl-dropdown-primary-button--hover-border: 1px solid rgb(89, 89, 89);
+
+  // info button
+  --tl-dropdown-info-button-color: var(--tl-black) ;
+  --tl-dropdown-info-button-background: rgb(91, 192, 222);
+  --tl-dropdown-info-button-border: 1px solid rgb(70, 184, 218);
+  // info button : hover
+  --tl-dropdown-info-button-hover-background: rgb(49, 176, 213);
+  --tl-dropdown-info-button--hover-border: 1px solid rgb(38, 154, 188);
+  --tl-dropdown-info-button-hover-color: #fff ;
+
+  // default button
+  --tl-dropdown-default-button-background: rgb(80, 0, 0);
+  --tl-dropdown-default-button-border: 1px solid rgb(151, 151, 151);
+  --tl-dropdown-default-button-color: #ffffff ;
+  // default button : hover
+  --tl-dropdown-default-button-hover-background: rgb(77, 77, 77);
+
+  // dropdown menu properties
+  --tl-dropdown-menu-width: fit-content;
+  --tl-dropdown-menu-height: fit-content;
+  --tl-dropdown-menu-background: rgb(255, 255, 255);
+  --tl-dropdown-menu-border: 1px solid rgb(204, 204, 204);
+  --tl-dropdown-menu-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.17);
+  --tl-dropdown-menu-border-radius: 4px;
+
+  // drop down button properties
+  --tl-dropdown-font-size: 16px;
+  --tl-dropdown-button-width: 124px;
+  --tl-dropdown-button-height: 48px;
+  --tl-dropdown-button-border-radius: 4px;
+
+  // tl-drop-down properties
+  --tl-dropdown-menu-animation-speed: var(--wvr-dropdown-menu-animation-speed);
+  --tl-dropdown-menu-background: var(--tl-white);
+  --tl-dropdown-menu-border-radius: 4px;
+  --tl-dropdown-menu-display: var(--wvr-dropdown-menu-display);
+  --tl-dropdown-menu-flex-direction: var(--wvr-dropdown-menu-flex-direction);
+  --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
+  --tl-dropdown-menu-width: var(--wvr-dropdown-menu-width);
+  --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
+  --tl-dropdown-menu-x-offset: var(--wvr-dropdown-menu-x-offset);
+  --tl-dropdown-menu-y-offset:var(--wvr-dropdown-menu-y-offset);
+  --tl-dropdown-menu-item-margin: var(--wvr-dropdown-menu-item-margin);
+
+}

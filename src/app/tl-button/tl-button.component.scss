@@ -1,79 +1,18 @@
 @import "../shared/styles/tl-variables.scss";
 
 :host {
-
-    // primary
-    --tl-btn-primary-background: rgb(80, 0, 0);
-    --tl-btn-primary-border: rgb(80, 0, 0);
-    --tl-btn-primary-color: rgb(255, 255, 255);
-    --tl-btn-primary-width: 65px;
-    --tl-btn-primary-hover-background: rgb(77, 77, 77);
-
-    // secondary
-    --tl-btn-secondary-background: rgb(38, 90, 135);
-    --tl-btn-secondary-border: 1px solid rgb(151, 151, 151);
-    --tl-btn-secondary-color: rgb(255, 255, 255);
-    --tl-btn-secondary-width: 85px;
-    --tl-btn-secondary-hover-background: rgb(77, 77, 77);
-
-    // info
-    --tl-btn-info-background: rgb(91, 192, 222);
-    --tl-btn-info-border: 1px solid rgb(151, 151, 151);
-    --tl-btn-info-color: rgb(0, 0, 0);
-    --tl-btn-info-width: 33px;
-    --tl-btn-info-hover-background: rgb(49, 176, 213);
-
-    // warning
-    --tl-btn-warning-background: rgb(255, 194, 34);
-    --tl-btn-warning-color: rgb(0, 0, 0);
-    --tl-btn-warning-width: 69px;
-    --tl-btn-warning-hover-background: rgb(255, 232, 170);
-    --tl-btn-warning-hover-width: 124px;
-
-    // danger
-    --tl-btn-danger-background: rgb(228, 0, 43);
-    --tl-btn-danger-color: rgb(255, 255, 255);
-    --tl-btn-danger-width: 60px;
-
-    // success
-    --tl-btn-success-background: rgb(0, 189, 50);
-    --tl-btn-success-color: rgb(0, 0, 0);
-    --tl-btn-success-width: 63px;
-
-    // light
-    --tl-btn-light-background: rgb(255, 255, 255);
-    --tl-btn-light-border: 1px solid rgb(80, 0, 0);
-    --tl-btn-light-color: rgb(80, 0, 0);
-    --tl-btn-light-width: 41px;
-
-    // dark
-    --tl-btn-dark-background: rgb(77, 77, 77);
-    --tl-btn-dark-color: rgb(255, 255, 255);
-    --tl-btn-dark-width: 40px;
-
-    // link
-    --tl-btn-link-color: rgb(43, 93, 125);
-    --tl-btn-link-font-size: 14px;
-    --tl-btn-link-font-weight: normal;
-    --tl-btn-link-letter-spacing: -0.18px;
-    --tl-btn-link-height: 17px;
-    --tl-btn-link-text-decoration: underline;
-    --tl-btn-link-width: 26px;
-
+  @import "../shared/styles/tl-branded-btn.scss";
     ::ng-deep {
       wvr-button, .btn {
           font-family: Lato-Regular;
           font-size: 18px;
           font-weight: normal;
           text-align: center;
-          // height: 24px;
           letter-spacing: 0.11px;
           line-height: 24px;
           border-radius: 4px;
-          // button
           height: fit-content;
           width: fit-content;
-        // }
 
         // btn-primary
         .btn.btn.btn-primary {
@@ -88,10 +27,11 @@
         }
 
         .btn.btn.btn-primary > a {
-          color: #500000;
           background-color:#ffffff;
           border-color: #500000;
+          color: #500000;
         }
+
         .btn.btn.btn-primary > a:hover,
         .btn.btn.btn-primary > a:focus {
         color: #ffffff;
@@ -147,6 +87,16 @@
           background: var(--tl-btn-success-background);
           color: var(--tl-btn-success-color);
           // width: var(--tl-btn-success-width);
+        }
+
+        .btn.btn.btn-success:hover {
+          background: var(--tl-btn-success-hover-background);
+          color: rgb(0, 0, 0);
+        }
+        .btn.btn.btn-success > a:hover,
+        .btn.btn.btn-success > a:focus {
+          background-color: var(--tl-btn-success-hover-background);
+          color: rgb(0, 0, 0);
         }
 
         // btn-light
