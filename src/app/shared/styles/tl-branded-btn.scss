@@ -9,15 +9,12 @@
   --tl-btn-vertical-align: middle;
   --tl-btn-box-shadow: none;
 
+  --tl-btn-border: 1px solid transparent;
+
   // primary
   --tl-btn-primary-background: rgb(80, 0, 0);
   --tl-btn-primary-active-background: rgb(77, 77, 77);
   --tl-btn-primary-hover-background: rgb(77, 77, 77);
-
-  --tl-btn-primary-border: 1px solid rgb(80, 0, 0);
-  --tl-btn-primary-active-border: 1px solid rgb(77, 77, 77);
-  --tl-btn-primary-focus-border: 1px solid rgb(77, 77, 77);
-  --tl-btn-primary-hover-border: 1px solid rgb(77, 77, 77);
 
   --tl-btn-primary-color:rgb(255, 255, 255);
   --tl-btn-primary-active-color:rgb(255, 255, 255);
