@@ -3,6 +3,33 @@
 
 :host {
 
+  // dropdown menu properties
+  --tl-dropdown-menu-width: fit-content;
+  --tl-dropdown-menu-height: fit-content;
+  --tl-dropdown-menu-background: rgb(255, 255, 255);
+  --tl-dropdown-menu-border: 1px solid rgb(204, 204, 204);
+  --tl-dropdown-menu-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.17);
+  --tl-dropdown-menu-border-radius: 4px;
+
+  // drop down button properties
+  --tl-dropdown-font-size: 16px;
+  --tl-dropdown-button-width: 124px;
+  --tl-dropdown-button-height: 48px;
+  --tl-dropdown-button-border-radius: 4px;
+
+  // tl-drop-down properties
+  --tl-dropdown-menu-animation-speed: var(--wvr-dropdown-menu-animation-speed);
+  --tl-dropdown-menu-background: var(--tl-white);
+  --tl-dropdown-menu-border-radius: 4px;
+  --tl-dropdown-menu-display: var(--wvr-dropdown-menu-display);
+  --tl-dropdown-menu-flex-direction: var(--wvr-dropdown-menu-flex-direction);
+  --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
+  --tl-dropdown-menu-width: var(--wvr-dropdown-menu-width);
+  --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
+  --tl-dropdown-menu-x-offset: var(--wvr-dropdown-menu-x-offset);
+  --tl-dropdown-menu-y-offset:var(--wvr-dropdown-menu-y-offset);
+  --tl-dropdown-menu-item-margin: var(--wvr-dropdown-menu-item-margin);
+
   wvr-dropdown-element {
     ::ng-deep {
 
