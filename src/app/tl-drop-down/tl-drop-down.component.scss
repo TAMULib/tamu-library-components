@@ -33,6 +33,53 @@
   wvr-dropdown-element {
     ::ng-deep {
 
+      .wvr-button.btn.btn-primary:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-primary:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-primary-hover-background);
+      }
+
+      .wvr-button.btn.btn-secondary:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-secondary:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-secondary-hover-background);
+      }
+
+      .wvr-button.btn.btn-success:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-success:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-success-hover-background);
+      }
+
+      .wvr-button.btn.btn-info:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-info:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-info-hover-background);
+      }
+
+      .wvr-button.btn.btn-warning:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-warning:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-warning-hover-background);
+      }
+
+      .wvr-button.btn.btn-danger:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-danger:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-danger-hover-background);
+      }
+
+      .wvr-button.btn.btn-dark:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-dark:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-dark-hover-background);
+      }
+
+      .wvr-button.btn.btn-light:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-light:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-primary-background);
+        color: var(--tl-white);
+      }
+
+      .wvr-button.btn.btn-link:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-link:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-link-hover-background);
+        color: var(--tl-btn-link-color);
+      }
+
       wvr-dropdown-menu, .dropdown-menu {
         box-shadow: var(--tl-dropdown-menu-box-shadow);
         width: var(--tl-dropdown-menu-width);
