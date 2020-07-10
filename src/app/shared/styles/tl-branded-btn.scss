@@ -4,8 +4,10 @@
   --tl-btn-font-family: Lato-Regular;
   --tl-btn-font-size: 18px;
   --tl-btn-line-height: 24px;
+  --tl-btn-padding: .375rem .75rem;
   --tl-btn-text-align: center;
-  --tl-btn-focus-box-shadow: none;
+  --tl-btn-vertical-align: middle;
+  --tl-btn-box-shadow: none;
 
   // primary
   --tl-btn-primary-background: rgb(80, 0, 0);
@@ -33,7 +35,7 @@
   --tl-btn-secondary-active-background: rgb(77, 77, 77);
   --tl-btn-secondary-hover-background: rgb(77, 77, 77);
 
-  --tl-btn-secondary-border: 1px solid rgb(77, 77, 77); // 1px solid rgb(151, 151, 151);
+  --tl-btn-secondary-border: 1px solid rgb(38, 90, 135);
   --tl-btn-secondary-active-border: 1px solid rgb(77, 77, 77);
   --tl-btn-secondary-focus-border: 1px solid rgb(77, 77, 77);
   --tl-btn-secondary-hover-border: 1px solid rgb(77, 77, 77);

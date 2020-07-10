@@ -23,17 +23,17 @@
   [btnColor]="btnColor"
   [btnColorActive]="btnColorActive"
   [btnColorHover]="btnColorHover"
-  [btnFontFamily]="'var(--tl-btn-font-family)'"
-  [btnFontSize]="'var(--tl-btn-font-size)'"
-  [btnLineHeight]="'var(--tl-btn-line-height)'"
-  [btnTextAlign]="'var(--tl-btn-text-align)'"
-  [btnTextDecoration]="btnTextDecoration"
-  [btnTextDecorationActive]="btnTextDecorationActive"
-  [btnTextDecorationFocus]="btnTextDecorationFocus"
-  [btnTextDecorationHover]="btnTextDecorationHover"
+  [fontFamily]="'var(--tl-btn-font-family)'"
+  [fontSize]="'var(--tl-btn-font-size)'"
+  [lineHeight]="'var(--tl-btn-line-height)'"
+  [textAlign]="'var(--tl-btn-text-align)'"
+  [textDecoration]="btnTextDecoration"
+  [textDecorationActive]="btnTextDecorationActive"
+  [textDecorationFocus]="btnTextDecorationFocus"
+  [textDecorationHover]="btnTextDecorationHover"
   >
   <wvr-dropdown-btn>
-    <ng-content select="tl-dropdown-btn" ></ng-content>
+    <ng-content select="tl-dropdown-btn"></ng-content>
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>
     <ng-content select="tl-dropdown-menu"></ng-content>

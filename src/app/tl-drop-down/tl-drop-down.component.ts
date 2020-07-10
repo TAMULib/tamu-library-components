@@ -9,7 +9,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 export class TlDropDownComponent extends TamuAbstractBaseComponent {
 
   /** Used to override the drop-down menu active button. */
-  @Input() btnType = '';
+  @Input() btnType;
 
   /** Used to define the drop down menu background. */
   @HostBinding('style.--tl-dropdown-menu-background') @Input() menuBackground;
