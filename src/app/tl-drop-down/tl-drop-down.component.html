@@ -9,7 +9,7 @@
   [menuPadding]="'var(--tl-dropdown-menu-padding)'"
   [menuWidth]="'var(--tl-dropdown-menu-width)'"
   [menuXOffset]="'var(--tl-dropdown-menu-x-offset)'"
-  [menuYOffset]="'var(--tl-dropdown-menu-y-offset)'"
+  [menuYOffset]="'calc(var(--tl-dropdown-menu-y-offset) + 10px)'"
   [menuItemMargin]="'var(--tl-dropdown-menu-item-margin)'"
   [btnBackground]="btnBackground"
   [backgroundActive]="btnBackgroundActive"
@@ -31,6 +31,7 @@
   [textDecorationActive]="btnTextDecorationActive"
   [textDecorationFocus]="btnTextDecorationFocus"
   [textDecorationHover]="btnTextDecorationHover"
+  ngbDropdownAnchor
   >
   <wvr-dropdown-btn>
     <ng-content select="tl-dropdown-btn"></ng-content>

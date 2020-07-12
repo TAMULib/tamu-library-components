@@ -42,7 +42,7 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   @HostBinding('style.--tl-dropdown-menu-x-offset') @Input() menuXOffset;
 
   /** Used to define the drop-down menu x offset. */
-  @HostBinding('style.--tl-dropdown-menu-y-offset') @Input() menuYOffset;
+  @HostBinding('style.--tl-dropdown-menu-y-offset') @Input() menuYOffset = '0px';
 
   /** Used to define the event type which will display the dropdown menu. */
   @Input() toggleOn = 'click';
