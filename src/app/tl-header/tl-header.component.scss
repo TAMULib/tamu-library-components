@@ -26,9 +26,26 @@
       }
     }
 
-    // Weaver Nav List overrides for top navigation
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element,
+    wvr-dropdown-element {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
     wvr-nav-list-element[top-navigation] .dropdown {
+
+      height: 100%;
+
+      > .dropdown-menu {
+        width: 500px;
+        border: 1px solid rgba(0,0,0,.15);
+        text-align: left;
+      }
+
+    }
+
+    // Weaver Nav List overrides for top navigation
+    wvr-nav-list-element[top-navigation] wvr-nav-li-element {
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
       border-right: 1px solid #6a0000;
@@ -37,11 +54,6 @@
       wvr-dropdown-btn {
         text-align: center;
         padding: 0px 12px;
-      }
-       > .dropdown-menu {
-        width: 435px;
-        border: 1px solid rgba(0,0,0,.15);
-        text-align: left;
       }
 
       .hours wvr-dropdown-menu-item {
