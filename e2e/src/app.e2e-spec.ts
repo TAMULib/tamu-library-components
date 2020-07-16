@@ -11,13 +11,13 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display tl it works component', () => {
-    page.navigateTo()
-      .catch(err => { console.error(err); });
-    expect(page.getItWorksText())
-      .toEqual('TAMU Library Components Work Really Well!!!')
-      .catch(err => { console.error(err); });
-  });
+  // it('should display tl it works component', () => {
+  //   page.navigateTo()
+  //     .catch(err => { console.error(err); });
+  //   expect(page.getItWorksText())
+  //     .toEqual('TAMU Library Components Work Really Well!!!')
+  //     .catch(err => { console.error(err); });
+  // });
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
