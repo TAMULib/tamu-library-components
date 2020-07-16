@@ -9,12 +9,33 @@
   [menuPadding]="'var(--tl-dropdown-menu-padding)'"
   [menuWidth]="'var(--tl-dropdown-menu-width)'"
   [menuXOffset]="'var(--tl-dropdown-menu-x-offset)'"
-  [menuYOffset]="'var(--tl-dropdown-menu-y-offset)'"
+  [menuYOffset]="'calc(var(--tl-dropdown-menu-y-offset) + 10px)'"
   [menuItemMargin]="'var(--tl-dropdown-menu-item-margin)'"
->
+  [btnBackground]="btnBackground"
+  [backgroundActive]="btnBackgroundActive"
+  [btnBackgroundHover]="btnBackgroundHover"
+  [btnBorderColor]="btnBorderColor"
+  [btnBorderActive]="btnBorderActive"
+  [btnBorderFocus]="btnBorderFocus"
+  [btnBorderHover]="btnBorderHover"
+  [btnBorderRadius]="'var(--tl-btn-border-radius)'"
+  [btnBoxShadowFocus]="'var(--tl-btn-focus-box-shadow)'"
+  [btnColor]="btnColor"
+  [btnColorActive]="btnColorActive"
+  [btnColorHover]="btnColorHover"
+  [fontFamily]="'var(--tl-btn-font-family)'"
+  [fontSize]="'var(--tl-btn-font-size)'"
+  [lineHeight]="'var(--tl-btn-line-height)'"
+  [textAlign]="'var(--tl-btn-text-align)'"
+  [textDecoration]="btnTextDecoration"
+  [textDecorationActive]="btnTextDecorationActive"
+  [textDecorationFocus]="btnTextDecorationFocus"
+  [textDecorationHover]="btnTextDecorationHover"
+  ngbDropdownAnchor
+  >
   <wvr-dropdown-btn>
     <ng-content select="tl-dropdown-btn"></ng-content>
-  </wvr-dropdown-btn >
+  </wvr-dropdown-btn>
   <wvr-dropdown-menu>
     <ng-content select="tl-dropdown-menu"></ng-content>
   </wvr-dropdown-menu>

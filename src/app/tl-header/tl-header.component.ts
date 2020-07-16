@@ -25,6 +25,9 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   /** This defines the margin of the TAMU logo. */
   logoImgMargin = 'var(--tl-logo-img-margin)';
 
+  /** This is the href for the logo */
+  logoHref = 'https://library.tamu.edu';
+
   /** This defines the TAMU css variable: --tl-primary. */
   titleRowBackground = 'var(--tl-primary)';
 

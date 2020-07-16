@@ -1,29 +1,7 @@
 @import "../shared/styles/tl-variables.scss";
+@import "../shared/styles/tl-branded-btn.scss";
 
 :host {
-
-  // primary button
-  --tl-dropdown-primary-button-background: rgb(38, 90, 135);
-  --tl-dropdown-primary-button-border: 1px solid rgb(30, 72, 108);
-  // primary button : hover
-  --tl-dropdown-primary-button-hover-background: rgb(77, 77, 77);
-  --tl-dropdown-primary-button--hover-border: 1px solid rgb(89, 89, 89);
-
-  // info button
-  --tl-dropdown-info-button-color: var(--tl-black) ;
-  --tl-dropdown-info-button-background: rgb(91, 192, 222);
-  --tl-dropdown-info-button-border: 1px solid rgb(70, 184, 218);
-  // info button : hover
-  --tl-dropdown-info-button-hover-background: rgb(49, 176, 213);
-  --tl-dropdown-info-button--hover-border: 1px solid rgb(38, 154, 188);
-  --tl-dropdown-info-button-hover-color: #fff ;
-
-  // default button
-  --tl-dropdown-default-button-background: rgb(80, 0, 0);
-  --tl-dropdown-default-button-border: 1px solid rgb(151, 151, 151);
-  --tl-dropdown-default-button-color: #ffffff ;
-  // default button : hover
-  --tl-dropdown-default-button-hover-background: rgb(77, 77, 77);
 
   // dropdown menu properties
   --tl-dropdown-menu-width: fit-content;
@@ -49,108 +27,57 @@
   --tl-dropdown-menu-width: var(--wvr-dropdown-menu-width);
   --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
   --tl-dropdown-menu-x-offset: var(--wvr-dropdown-menu-x-offset);
-  --tl-dropdown-menu-y-offset:var(--wvr-dropdown-menu-y-offset);
+  --tl-dropdown-menu-y-offset: var(--wvr-dropdown-menu-y-offset);
   --tl-dropdown-menu-item-margin: var(--wvr-dropdown-menu-item-margin);
 
   wvr-dropdown-element {
     ::ng-deep {
 
-
-      wvr-dropdown-btn, .btn {
-        font-size: var(--tl-dropdown-font-size);
-        width: var(--tl-dropdown-button-width);
-        height:var(--tl-dropdown-button-height);
-        border-radius: var(--tl-dropdown-button-border-radius);
-        border: none;
-        line-height: 36px;
-        width: 124px;
-        height: 48px;
+      .wvr-button.btn.btn-primary:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-primary:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-primary-hover-background);
       }
 
-      .btn-primary {
-        background: var(--tl-primary);
+      .wvr-button.btn.btn-secondary:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-secondary:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-secondary-hover-background);
       }
 
-      .btn-primary:hover,
-      .btn-primary:not(:disabled):not(.disabled):active {
-        background: var(--tl-dark);
+      .wvr-button.btn.btn-success:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-success:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-success-hover-background);
       }
 
-      .btn-secondary {
-        background: var(--tl-secondary);
+      .wvr-button.btn.btn-info:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-info:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-info-hover-background);
       }
 
-      .btn-secondary:hover,
-      .btn-secondary:not(:disabled):not(.disabled):active {
-        background: var(--tl-dark);
+      .wvr-button.btn.btn-warning:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-warning:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-warning-hover-background);
       }
 
-      .btn-info {
-        background: var(--tl-info);
-        color: var(--tl-black);
+      .wvr-button.btn.btn-danger:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-danger:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-danger-hover-background);
       }
 
-      .btn-info:hover,
-      .btn-info:not(:disabled):not(.disabled):active {
-        background: var(--tl-info-light-accent);
-        color: var(--tl-black);
+      .wvr-button.btn.btn-dark:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-dark:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-dark-hover-background);
       }
 
-      .btn-warning {
-        background: var(--tl-warning);
-        color: var(--tl-black);
-      }
-
-      .btn-warning:hover,
-      .btn-warning:not(:disabled):not(.disabled):active {
-        background: var(--tl-warning-light-accent);
-        color: var(--tl-black);
-      }
-
-      .btn-danger {
-        background: var(--tl-danger);
-      }
-
-      .btn-danger:hover,
-      .btn-danger:not(:disabled):not(.disabled):active {
-        background: var(--tl-danger-light-accent);
-        border: 1px solid var(--tl-danger);
-        color: var(--tl-black);
-      }
-
-      .btn-success {
-        background: var(--tl-success);
-        color: var(--tl-black);
-      }
-
-      .btn-success:hover,
-      .btn-success:not(:disabled):not(.disabled):active {
-        background: var(--tl-success-light-accent);
-        border: 1px solid var(--tl-success);
-        color: var(--tl-black);
-      }
-
-      .btn-light {
-        background: var(--tl-light);
-        border: 1px solid var(--tl-primary);
-        color: var(--tl-primary);
-      }
-
-      .btn-light:hover,
-      .btn-light:not(:disabled):not(.disabled):active {
-        background: var(--tl-primary);
+      .wvr-button.btn.btn-light:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-light:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-primary-background);
         color: var(--tl-white);
       }
 
-      .btn-dark {
-        background: var(--tl-dark);
-      }
-
-      .btn-dark:hover,
-      .btn-dark:not(:disabled):not(.disabled):active {
-        background: var(--tl-white);
-        border: 1px solid var(--tl-dark);
-        color: var(--tl-dark);
+      .wvr-button.btn.btn-link:not(:disabled):not(.disabled).focus,
+      .wvr-button.btn.btn-link:not(:disabled):not(.disabled):focus {
+        background: var(--tl-btn-link-hover-background);
+        color: var(--tl-btn-link-color);
       }
 
       wvr-dropdown-menu, .dropdown-menu {

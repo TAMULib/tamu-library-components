@@ -1,12 +1,12 @@
-<wvr-header-element [logoSrc]="logoSrc" [logoText]="logoText" [logoImgHeight]="logoImgHeight"
+<wvr-header-element [logoSrc]="logoSrc" [logoHref]="logoHref" [logoText]="logoText" [logoImgHeight]="logoImgHeight"
   [logoImgWidth]="logoImgWidth" [logoImgMargin]="logoImgMargin" [headerTitle]="pageTitle" [headerTitleUrl]="pageTitleUrl"
   [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
   [bottomNavBackground]="bottomNavBackground">
   <wvr-nav-list-element top-navigation aligned="RIGHT">
     <wvr-nav-li-element >
-      <wvr-dropdown toggle-on="mouseover" class="hours">
+      <wvr-dropdown-element [toggleOn]="'mouseover'" class="hours" [menuYOffset]="'15px'">
         <wvr-dropdown-btn>
-          <wvr-text value="Hours" ></wvr-text>
+          <wvr-text value="Hours" font-size="14px"></wvr-text>
         </wvr-dropdown-btn>
         <wvr-dropdown-menu>
             <wvr-dropdown-menu-item>
@@ -24,13 +24,13 @@
               </a>
             </wvr-dropdown-menu-item>
         </wvr-dropdown-menu>
-    </wvr-dropdown>
+    </wvr-dropdown-element>
   </wvr-nav-li-element>
 
   <wvr-nav-li-element >
-    <wvr-dropdown toggle-on="mouseover" menu-x-offset="-70px" class="libraries">
+    <wvr-dropdown-element [toggleOn]="'mouseover'" [menuXOffset]="'-70px'" [menuYOffset]="'15px'" class="libraries" >
       <wvr-dropdown-btn>
-        <wvr-text value="Libraries" ></wvr-text>
+        <wvr-text value="Libraries" font-size="14px"></wvr-text>
       </wvr-dropdown-btn>
       <wvr-dropdown-menu>
           <wvr-dropdown-menu-item>
@@ -95,13 +95,13 @@
             </p>
           </wvr-dropdown-menu-item>
       </wvr-dropdown-menu>
-    </wvr-dropdown>
+    </wvr-dropdown-element>
   </wvr-nav-li-element>
 
   <wvr-nav-li-element>
-    <wvr-dropdown toggle-on="mouseover" menu-x-offset="-160px" class="information-for">
+    <wvr-dropdown-element [toggleOn]="'mouseover'" [menuXOffset]="'-180px'" [menuYOffset]="'15px'" class="information-for">
       <wvr-dropdown-btn>
-        <wvr-text value="Information for" ></wvr-text>
+        <wvr-text value="Information for" font-size="14px"></wvr-text>
       </wvr-dropdown-btn>
       <wvr-dropdown-menu>
         <wvr-dropdown-menu-item>
@@ -140,19 +140,19 @@
           </a>
         </wvr-dropdown-menu-item>
       </wvr-dropdown-menu>
-    </wvr-dropdown>
+    </wvr-dropdown-element>
   </wvr-nav-li-element>
 
   <wvr-nav-li-element >
     <a href="https://library.tamu.edu/mylibrary/">
-      <wvr-text value="MyLibrary" ></wvr-text>
+      <wvr-text value="MyLibrary" font-size="14px"></wvr-text>
     </a>
   </wvr-nav-li-element>
 
   <wvr-nav-li-element>
-    <wvr-dropdown toggle-on="mouseover" menu-x-offset="-381px" class="help">
+    <wvr-dropdown-element [toggleOn]="'mouseover'" [menuXOffset]="'-415px'" [menuYOffset]="'15px'" class="help">
       <wvr-dropdown-btn>
-        <wvr-text value="Help" ></wvr-text>
+        <wvr-text value="Help" font-size="14px"></wvr-text>
       </wvr-dropdown-btn>
       <wvr-dropdown-menu>
           <wvr-dropdown-menu-item>
@@ -221,7 +221,7 @@
             </a>
           </wvr-dropdown-menu-item>
       </wvr-dropdown-menu>
-    </wvr-dropdown>
+    </wvr-dropdown-element>
   </wvr-nav-li-element>
   </wvr-nav-list-element>
   <wvr-nav-list-element bottom-navigation theme="DARK" [ngClass]="{'closed': mobileMenuClosed}">
