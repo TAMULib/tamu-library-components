@@ -29,33 +29,37 @@
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
       border-right: 1px solid #6a0000;
+
       line-height: 20px;
+
       .wvr-button {
         color: var(--tl-white);
         padding: 13px 12px;
         text-align: center;
       }
-      .wvr-button:hover {
-        color: var(--tl-black);
+
+      .wvr-button:focus {
+        border-radius: 0px;
+        box-shadow: none;
       }
+
        > .dropdown-menu {
         width: 435px;
         border: 1px solid rgba(0,0,0,.15);
         text-align: left;
         font-size: 16px;
-      }
-
-      .hours wvr-dropdown-menu-item {
-        text-align: center;
-      }
+       }
 
       .libraries {
 
-        h6 > a {
-          color: #500000;
-          font-size: 16px;
-          text-decoration: underline;
+        .libraries-link {
+          margin-bottom:18px;
+          a {
+            color: #500000;
+            text-decoration: underline;
+          }
         }
+
         p {
           color: #4d4d4d;
           a{
@@ -114,6 +118,12 @@
         wvr-dropdown-menu > wvr-dropdown-menu-item:last-child {
           border-bottom: 0px;
         }
+      }
+    }
+
+    wvr-nav-list-element[top-navigation] .dropdown:hover {
+      .wvr-button {
+        color: var(--tl-black);
       }
     }
 
