@@ -16,14 +16,11 @@
     wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a {
       padding:12px;
       text-decoration: none;
+      color: var(--tl-white);
     }
 
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element,
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element a {
-      color: var(--tl-white);
-      :hover , a:hover {
-        color: var(--tl-black);
-      }
+    wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a:hover {
+      color: var(--tl-black);
     }
 
     // Weaver Nav List overrides for top navigation
@@ -34,41 +31,35 @@
       border-right: 1px solid #6a0000;
 
       line-height: 20px;
-      wvr-dropdown-btn {
+
+      .wvr-button {
+        color: var(--tl-white);
+        padding: 13px 12px;
         text-align: center;
-        padding: 0px 12px;
       }
+
+      .wvr-button:focus {
+        border-radius: 0px;
+        box-shadow: none;
+      }
+
        > .dropdown-menu {
         width: 435px;
         border: 1px solid rgba(0,0,0,.15);
         text-align: left;
-      }
-
-      .hours .wvr-button {
-        color: var(--tl-white);
-      }
-
-      .hours .wvr-button:hover {
-        color: var(--tl-black);
-      }
-
-      .hours wvr-dropdown-menu-item {
-        text-align: center;
-      }
+        font-size: 16px;
+       }
 
       .libraries {
 
-        .wvr-button {
-          color: var(--tl-white);
-        }
-        .wvr-button:hover {
-          color: var(--tl-black);
+        .libraries-link {
+          margin-bottom:18px;
+          a {
+            color: #500000;
+            text-decoration: underline;
+          }
         }
 
-        h6 > a {
-          color: #500000;
-          text-decoration: underline;
-        }
         p {
           color: #4d4d4d;
           a{
@@ -85,13 +76,6 @@
 
       .information-for {
 
-        .wvr-button {
-          color: var(--tl-white);
-        }
-        .wvr-button:hover {
-          color: var(--tl-black);
-        }
-
         a {
           color: #2b5d7d;
           text-decoration: none;
@@ -105,13 +89,6 @@
       }
 
       .help {
-
-          .wvr-button {
-            color: var(--tl-white);
-          }
-          .wvr-button:hover {
-            color: var(--tl-black);
-          }
 
           wvr-dropdown-menu > wvr-dropdown-menu-item {
           border-bottom: 1px solid #e0e0e0;
@@ -141,6 +118,12 @@
         wvr-dropdown-menu > wvr-dropdown-menu-item:last-child {
           border-bottom: 0px;
         }
+      }
+    }
+
+    wvr-nav-list-element[top-navigation] .dropdown:hover {
+      .wvr-button {
+        color: var(--tl-black);
       }
     }
 

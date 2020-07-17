@@ -3,7 +3,7 @@
   [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
   [bottomNavBackground]="bottomNavBackground">
   <wvr-nav-list-element top-navigation aligned="RIGHT">
-    <wvr-nav-li-element >
+    <wvr-nav-li-element>
       <wvr-dropdown-element [toggleOn]="'mouseover'" class="hours" [menuYOffset]="'15px'">
         <wvr-dropdown-btn>
           <wvr-text value="Hours" font-size="14px"></wvr-text>
@@ -34,11 +34,11 @@
       </wvr-dropdown-btn>
       <wvr-dropdown-menu>
           <wvr-dropdown-menu-item>
-            <h6>
+            <div class="libraries-link">
               <a href="//blcc.library.tamu.edu" title="Go to Business Library and Collaboration Commons website">
                 <wvr-text value="Business Library &amp; Collaboration Commons"></wvr-text>
               </a>
-            </h6>
+            </div>
             <p>
               <a href="//library.tamu.edu/about/directions/business-library.html" title="Parking Directions for Business Library and Collaboration Commons">
                 <wvr-text value="Parking Directions"></wvr-text>
@@ -47,7 +47,7 @@
             </p>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
-            <h6><a href="//cushing.library.tamu.edu" title="Go to Cushing Library website">Cushing Memorial Library &amp; Archives</a></h6>
+            <div class="libraries-link"><a href="//cushing.library.tamu.edu" title="Go to Cushing Library website">Cushing Memorial Library &amp; Archives</a></div>
             <p>
               <a href="//library.tamu.edu/about/directions/cushing-library.html" title="Parking Directions for Cushing Library">
                 <wvr-text value="Parking Directions"></wvr-text>
@@ -56,11 +56,11 @@
             </p>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
-            <h6>
+            <div class="libraries-link">
               <a href="//msl.library.tamu.edu" title="Go to Medical Sciences Library website">
                 <wvr-text value="Medical Sciences Library"></wvr-text>
               </a>
-            </h6>
+            </div>
             <p>
               <a href="//library.tamu.edu/about/directions/medical-sciences-library.html" title="Parking Directions for Medical Sciences Library">
                 <wvr-text value="Parking Directions"></wvr-text>
@@ -69,11 +69,11 @@
             </p>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
-            <h6>
+            <div class="libraries-link">
               <a href="//psel.library.tamu.edu" title="Go to Policy Sciences and Economics Library website">
                 <wvr-text value="Policy Sciences &amp; Economics Library"></wvr-text>
               </a>
-            </h6>
+            </div>
             <p>
               <a href="//library.tamu.edu/about/directions/policy-sciences-economics-library.html" title="Parking Directions for Policy Sciences and Economics Library">
                 <wvr-text value="Parking Directions"></wvr-text>
@@ -82,11 +82,11 @@
             </p>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
-            <h6>
+            <div class="libraries-link">
               <a href="//evans.library.tamu.edu" title="Go to Evans Library website">
                 <wvr-text value="Sterling C. Evans Library &amp; Annex"></wvr-text>
               </a>
-            </h6>
+            </div>
             <p>
               <a href="//library.tamu.edu/about/directions/evans-library-annex.html" title="Parking Directions for Evans Library and Annex">
                 <wvr-text value="Parking Directions"></wvr-text>
@@ -142,8 +142,7 @@
       </wvr-dropdown-menu>
     </wvr-dropdown-element>
   </wvr-nav-li-element>
-
-  <wvr-nav-li-element >
+  <wvr-nav-li-element>
     <a href="https://library.tamu.edu/mylibrary/">
       <wvr-text value="MyLibrary" font-size="14px"></wvr-text>
     </a>
