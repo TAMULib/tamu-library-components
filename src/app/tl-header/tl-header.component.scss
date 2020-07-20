@@ -100,13 +100,6 @@
             text-decoration: none;
             width:100%;
           }
-          > svg {
-            fill: var(--tl-deep-grey);
-            width: 35px;
-            height: 35px;
-            margin-right: 5px;
-            background: var(--tl-white);
-          }
         }
 
         wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink {
