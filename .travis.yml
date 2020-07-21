@@ -7,9 +7,6 @@ addons:
 node_js:
   - "10"
 
-before_install:
-- npm install -g @lhci/cli
-
 services:
   - xvfb
 
