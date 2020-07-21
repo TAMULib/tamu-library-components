@@ -17,6 +17,8 @@ install:
 script:
   - npm run build
   - npm run test:ci
+  - lhci autorun --upload.target=temporary-public-storage --config=./lighthouserc.json
+  - node scripts/build-tl-components-lighthouse-badges.js
 
 after_success:
   - cat ./static/tamu-library-components/reports/coverage/tamu-library-components/lcov.info | ./node_modules/coveralls/bin/coveralls.js,
