@@ -1,5 +1,4 @@
 language: node_js
-name: TEST TRAVIS CI
 on: [push]
 
 addons:
@@ -17,6 +16,7 @@ install:
 script:
   - npm run build
   - npm run test:ci
+  - node scripts/build-tl-components-lighthouse-badges.js
   - lhci autorun --upload.target=temporary-public-storage --config=./lighthouserc.json
   - node scripts/build-tl-components-lighthouse-badges.js
 
