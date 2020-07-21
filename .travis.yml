@@ -9,6 +9,9 @@ node_js:
 services:
   - xvfb
 
+before_install:
+- npm install -g @lhci/cli
+
 install:
   - npm install
 
