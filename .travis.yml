@@ -1,4 +1,6 @@
 language: node_js
+name: TEST TRAVIS CI
+on: [push]
 
 addons:
   chrome: stable
