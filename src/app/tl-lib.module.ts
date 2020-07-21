@@ -6,6 +6,7 @@ import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlDropDownComponent } from './tl-drop-down/tl-drop-down.component';
 import { TamuFooterComponent } from './tl-footer/tl-footer.component';
 import { TamuHeaderComponent } from './tl-header/tl-header.component';
+import { TlIconComponent } from './tl-icon/tl-icon.component';
 import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 
@@ -14,6 +15,7 @@ const elements = [
   { component: TlButtonComponent, selector: 'tl-button' },
   { component: TlDropDownComponent, selector: 'tl-drop-down' },
   { component: TamuFooterComponent, selector: 'tl-footer' },
+  { component: TlIconComponent, selector: 'tl-icon' },
   { component: TamuItWorksComponent, selector: 'tl-it-works' },
   { component: TamuHeaderComponent, selector: 'tl-header' },
   { component: TamuNavListComponent, selector: 'tl-nav-list' }
@@ -26,6 +28,7 @@ const components = [
   TamuFooterComponent,
   TamuItWorksComponent,
   TamuHeaderComponent,
+  TlIconComponent,
   TamuNavListComponent
 ];
 

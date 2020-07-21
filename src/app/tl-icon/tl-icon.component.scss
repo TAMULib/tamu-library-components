@@ -1,0 +1,8 @@
+@import "../shared/styles/tl-variables.scss";
+
+:host {
+  wvr-icon {
+    --wvr-icon-color: inherit;
+    --wvr-icon-size: inherit;
+  }
+}
