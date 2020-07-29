@@ -100,6 +100,12 @@
             text-decoration: none;
             width:100%;
           }
+          wvr-icon svg {
+            height: 35px;
+            width: 45px;
+            fill: var(--wvr-secondary);
+          }
+
         }
 
         wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink {
@@ -194,7 +200,7 @@
         justify-content: flex-start;
         left: 0;
         top: 215px;
-        background: #7ad9ff;
+        background: var(--wvr-warning);
         width: 75%;
         opacity: 1;
         box-shadow: 4px 4px 7px -2px var(--tl-deep-grey);
@@ -249,6 +255,7 @@
       display: block;
     }
   }
+
 }
 
 
