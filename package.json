@@ -18,7 +18,7 @@
     "test:unit": "ng test --no-watch",
     "test:watch": "ng test",
     "test:coverage": "ng test --no-watch --code-coverage",
-    "test:report": "cat ./coverage/tamu-library-components/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:report": "cat ./static/tamu-library-components/reports/coverage/tamu-library-components/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:ci": "npm run test:coverage && npm run test:audit",
     "build:docs-setup": "node scripts/build-tl-components-docs.js",
     "build:docs-development": "compodoc --output ./static/tamu-library-components/docs/development -p ./src/tsconfig.docs.json",
