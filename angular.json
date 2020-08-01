@@ -54,7 +54,7 @@
               "namedChunks": false,
               "commonChunk": false,
               "vendorChunk": false,
-              "experimentalRollupPass": false,
+              "experimentalRollupPass": true,
               "buildOptimizer": true,
               "budgets": [
                 {
