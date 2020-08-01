@@ -1,4 +1,5 @@
-@import "../../styles.scss";
+@import "../shared/styles/tl-encapsulated.scss";
+@import "../shared/styles/tl-branded-btn.scss";
 
 :host {
   wvr-header-element {

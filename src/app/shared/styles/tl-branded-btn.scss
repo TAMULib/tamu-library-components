@@ -1,4 +1,6 @@
-:root {
+@import "./tl-variables.scss";
+
+:host {
 
   --tl-btn-border-radius: 4px;
   --tl-btn-font-family: Lato-Regular;
@@ -200,7 +202,7 @@
 
   // dropdown styles
 
-    // primary button
+  // primary button
   --tl-dropdown-primary-button-background: rgb(38, 90, 135);
   --tl-dropdown-primary-button-border: 1px solid rgb(30, 72, 108);
   // primary button : hover

@@ -1,4 +1,5 @@
-@import "../../styles.scss";
+@import "../shared/styles/tl-encapsulated.scss";
+@import "../shared/styles/tl-variables.scss";
 
 :host {
   h1.it-works {
