@@ -1,5 +1,5 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TlIconComponent } from './tl-icon.component';
 
 describe('TlIconComponent', () => {
@@ -8,9 +8,9 @@ describe('TlIconComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TlIconComponent ]
-    })
-    .compileComponents();
+      declarations: [TlIconComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

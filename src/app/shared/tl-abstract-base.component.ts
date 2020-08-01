@@ -1,6 +1,8 @@
-import { HostBinding, Input } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 
+@Directive()
 export abstract class TamuAbstractBaseComponent {
+
   /** Allows for the override of the --tl-default-font-size css variable. */
   @HostBinding('style.--tl-font-size') _fontSize = 'var(--tl-default-font-size)';
 

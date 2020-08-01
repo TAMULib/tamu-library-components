@@ -9,6 +9,7 @@ import { TamuHeaderComponent } from './tl-header/tl-header.component';
 import { TlIconComponent } from './tl-icon/tl-icon.component';
 import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
+import { WvrBaseComponent } from '@wvr/elements/lib/shared/wvr-base.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const elements = [

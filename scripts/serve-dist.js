@@ -9,17 +9,21 @@ const latestPath = `${basePath}/latest`;
 const server = new StaticServer({
   rootPath: 'dist/bundle/latest',
   port: 8080,
-  name: 'tl-component-static-server',
+  name: 'tl-component-dist-server',
   followSymlink: true,
 });
 
 server.start(function () {
   console.log('Server listening to', server.port);
-  fsPromises.copyFile('index.html', `${latestPath}/index.html`);
+  fsPromises.copyFile('src/index.html', `${latestPath}/index.html`);
+  fsPromises.copyFile('src/config-static.json', `${latestPath}/config.json`);
 });
 
 process.on('exit', function () {
   fs.unlink(`${latestPath}/index.html`, err => {
+    if (err) throw err;
+  });
+  fs.unlink(`${latestPath}/config.json`, err => {
     if (err) throw err;
   });
   console.log('Cleaning up');

@@ -14,7 +14,7 @@ const staticPath = 'static/tamu-library-components';
   const files = [
     'dist/tl-components/runtime-es5.js',
     'dist/tl-components/polyfills-es5.js',
-    // 'dist/tl-components/styles-es5.js',
+    'dist/tl-components/styles-es5.js',
     'dist/tl-components/scripts.js',
     // 'dist/tl-components/vendor-es5.js',
     'dist/tl-components/main-es5.js'
@@ -23,6 +23,7 @@ const staticPath = 'static/tamu-library-components';
   fs.ensureDir(dirPath);
 
   await concat(files, `${dirPath}/tl-components.js`);
+
   // TODO: this should only happen when building docs
   // the docs script is not aware of the dir path with version
   fs.copy(`${dirPath}/tl-components.js`, `${latestPath}/tl-components.js`);
