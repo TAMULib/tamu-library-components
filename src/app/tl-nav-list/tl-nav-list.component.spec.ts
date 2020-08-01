@@ -11,8 +11,7 @@ describe('TamuNavListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [TamuNavListComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents()
+    }).compileComponents()
       .catch(err => { console.error(err); });
   }));
 

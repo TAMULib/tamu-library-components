@@ -49,21 +49,23 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
+              "extractCss": false,
               "extractLicenses": true,
+              "namedChunks": false,
+              "commonChunk": false,
               "vendorChunk": false,
+              "experimentalRollupPass": false,
               "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "1mB",
-                  "maximumError": "2mB"
+                  "maximumWarning": "50kb",
+                  "maximumError": "500kb"
                 }
               ]
             }

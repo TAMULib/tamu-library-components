@@ -10,8 +10,7 @@ describe('TlFooterComponent', () => {
     TestBed.configureTestingModule({
       declarations: [TamuFooterComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents()
+    }).compileComponents()
       .catch(err => { console.error(err); });
   }));
 
