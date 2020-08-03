@@ -282,21 +282,25 @@
   }
 
   .mobile-menu-backdrop {
-    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: fixed;
+    display: none;
     height: 448px;
     width: 75%;
-    opacity: 1;
+      opacity: 1;
     box-shadow: 3px 3px 10px 0px var(--tl-black);
     left: 0;
     top: 133px;
-    position: fixed;
-    display: inline-block;
     z-index: 1100;
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
 
   @media (max-width: 767px) {
     .mobile-menu-button {
       display: block;
+    }
+
+    .mobile-menu-backdrop {
+      display: inline-block;
     }
 
     .mobile-menu-backdrop.closed {
