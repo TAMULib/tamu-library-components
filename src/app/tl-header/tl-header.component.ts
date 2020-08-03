@@ -37,21 +37,15 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   /** This defines the TAMU css variable: grayColor. */
   bottomNavBackground = 'var(--tl-grey)';
 
+  /** This defines the btn link for the hours dropdown. */
+  hoursHref = 'https://library.tamu.edu/about/hours.html';
+
   /** This defines the TAMU page  header title and is displayed as page title. */
   @Input() pageTitle = 'TL Header Component';
 
   @Input() pageTitleUrl = '/';
 
   mobileMenuClosed = true;
-
-  /** Used to iterate the header navigation list. */
-  topLinks: Array<Link> = [
-    { href: 'https://library.tamu.edu/about/hours.html', value: 'Hours' },
-    { href: 'https://library.tamu.edu/about/index.html', value: 'Libraries' },
-    { href: 'https://library.tamu.edu/#', value: 'Information For' },
-    { href: 'https://library.tamu.edu/mylibrary/', value: 'MyLibrary' },
-    { href: 'http://askus.library.tamu.edu/', value: 'Help' }
-  ];
 
   toggleMobileMenu(): void {
     this.mobileMenuClosed = !this.mobileMenuClosed;

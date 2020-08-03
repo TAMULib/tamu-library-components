@@ -2,6 +2,7 @@
 @import "../shared/styles/tl-branded-btn.scss";
 
 :host {
+
   wvr-header-element {
     // Weaver Component overrides
     --wvr-navbar-padding: 0px;
@@ -280,9 +281,27 @@
     cursor: pointer;
   }
 
+  .mobile-menu-backdrop {
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    height: 448px;
+    width: 75%;
+    opacity: 1;
+    box-shadow: 3px 3px 10px 0px var(--tl-black);
+    left: 0;
+    top: 133px;
+    position: fixed;
+    display: inline-block;
+    z-index: 1100;
+  }
+
   @media (max-width: 767px) {
     .mobile-menu-button {
       display: block;
+    }
+
+    .mobile-menu-backdrop.closed {
+      width: 0px;
+      opacity: 0;
     }
   }
 
