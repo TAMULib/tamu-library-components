@@ -1,0 +1,14 @@
+<wvr-dropdown-element
+  [btnType]="'link'"
+  ngbDropdownAnchor
+  >
+  <wvr-dropdown-btn>
+    {{menuTitle}}
+  </wvr-dropdown-btn>
+  <wvr-dropdown-menu>
+    <ng-content select="tl-mega-menu-section"></ng-content>
+    <tl-button href="{{viewAllHref}}" btn-class="primary">
+      <wvr-text value="View All {{menuTitle}}"></wvr-text>
+    </tl-button>
+  </wvr-dropdown-menu>
+</wvr-dropdown-element>
