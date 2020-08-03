@@ -37,9 +37,6 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   /** This defines the TAMU css variable: grayColor. */
   bottomNavBackground = 'var(--tl-grey)';
 
-  /** This defines the btn link for the hours dropdown. */
-  hoursHref = 'https://library.tamu.edu/about/hours.html';
-
   /** This defines the TAMU page  header title and is displayed as page title. */
   @Input() pageTitle = 'TL Header Component';
 
