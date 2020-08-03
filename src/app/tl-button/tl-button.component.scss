@@ -2,6 +2,10 @@
 
 :host {
 
+  tl-button-wrapper {
+    display: inline-block;
+  }
+
   ::ng-deep {
 
     wvr-button, .btn {

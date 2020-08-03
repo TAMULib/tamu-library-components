@@ -53,10 +53,6 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
     { href: 'http://askus.library.tamu.edu/', value: 'Help' }
   ];
 
-  constructor(private _cdRef: ChangeDetectorRef) {
-    super();
-  }
-
   toggleMobileMenu(): void {
     this.mobileMenuClosed = !this.mobileMenuClosed;
     this._cdRef.detectChanges();
