@@ -1,14 +1,20 @@
 <wvr-dropdown-element
   [btnType]="'link'"
+  [toggleOn]="'mouseover'"
+  [menuWidth]="'750px'"
   ngbDropdownAnchor
   >
   <wvr-dropdown-btn>
     {{menuTitle}}
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>
-    <ng-content select="tl-mega-menu-section"></ng-content>
-    <tl-button href="{{viewAllHref}}" btn-class="primary">
-      <wvr-text value="View All {{menuTitle}}"></wvr-text>
-    </tl-button>
+    <div class="mega-menu-sections">
+      <ng-content select="tl-mega-menu-section"></ng-content>
+    </div>
+    <div class="mega-menu-view-all">
+      <tl-button-element [href]="viewAllHref" [btnClass]="'primary'">
+        <wvr-text-element value="View All {{menuTitle}}"></wvr-text-element>
+      </tl-button-element>
+    </div>
   </wvr-dropdown-menu>
 </wvr-dropdown-element>

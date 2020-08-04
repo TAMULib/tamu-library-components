@@ -2,14 +2,14 @@ import { Component, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-button',
+  selector: 'tl-button-element',
   templateUrl: './tl-button.component.html',
   styleUrls: ['./tl-button.component.scss']
 })
 export class TlButtonComponent extends TamuAbstractBaseComponent {
 
   /** Used to override the button class. */
-  @Input() btnClass = 'success';
+  @Input() btnClass;
 
   /** Used to define the size for button component.  */
   @Input() btnSize = '';
