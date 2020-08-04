@@ -17,7 +17,6 @@
       letter-spacing: 0.11px;
       line-height: var(--tl-btn-line-height);// 24px;
       border: var(--tl-btn-border);
-      border-radius: var(--tl-btn-border-radius); //5px;
       text-align: var(--tl-btn-text-align);
       height: fit-content;
       width: fit-content;
@@ -47,6 +46,7 @@
         border-color: var(--tl-btn-primary-background);
         color: var(--tl-btn-primary-color);
         text-decoration: var(--tl-btn-primary-text-decoration);
+        border-radius: var(--tl-btn-border-radius);
         // width: var(--tl-btn-primary-width);
       }
 
@@ -65,6 +65,7 @@
         border-color: var(--tl-btn-secondary-background);
         color: var(--tl-btn-secondary-color);
         text-decoration: var(--tl-btn-secondary-text-decoration);
+        border-radius: var(--tl-btn-border-radius);
       }
 
       .wvr-button.btn.btn-secondary:not(:disabled):not(.disabled).active,
@@ -82,6 +83,7 @@
         border-color: var(--tl-btn-info-background);
         color: var(--tl-btn-info-color);
         text-decoration: var(--tl-btn-info-text-decoration);
+        border-radius: var(--tl-btn-border-radius);
       }
 
       .wvr-button.btn.btn-info:not(:disabled):not(.disabled).active,
@@ -99,6 +101,7 @@
         border-color: var(--tl-btn-warning-background);
         color: var(--tl-btn-warning-color);
         text-decoration: var(--tl-btn-warning-text-decoration);
+        border-radius: var(--tl-btn-border-radius);
       }
 
       .wvr-button.btn.btn-warning:not(:disabled):not(.disabled).active,
@@ -116,6 +119,7 @@
         border-color: var(--tl-btn-danger-background);
         color: var(--tl-btn-danger-color);
         text-decoration: var(--tl-btn-danger-text-decoration);
+        border-radius: var(--tl-btn-border-radius);
       }
 
       .wvr-button.btn.btn-danger:not(:disabled):not(.disabled).active,
@@ -133,6 +137,7 @@
         border-color: var(--tl-btn-success-background);
         color: var(--tl-btn-success-color);
         text-decoration: var(--tl-btn-success-text-decoration);
+        border-radius: var(--tl-btn-border-radius);
       }
 
       .wvr-button.btn.btn-success:not(:disabled):not(.disabled).active,
@@ -150,6 +155,7 @@
         border-color: var(--tl-btn-light-background);
         color: var(--tl-btn-light-color);
         text-decoration: var(--tl-btn-light-text-decoration);
+        border-radius: var(--tl-btn-border-radius);
       }
 
       .wvr-button.btn.btn-light:not(:disabled):not(.disabled).active,
@@ -167,6 +173,7 @@
         border-color: var(--tl-btn-dark-background);
         color: var(--tl-btn-dark-color);
         text-decoration: var(--tl-btn-dark-text-decoration);
+        border-radius: var(--tl-btn-border-radius);
       }
 
       .wvr-button.btn.btn-dark:not(:disabled):not(.disabled).active,

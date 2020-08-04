@@ -1,14 +1,25 @@
 <wvr-dropdown-element
   [btnType]="'link'"
   [toggleOn]="'mouseover'"
-  [menuWidth]="'750px'"
+  [menuYOffset]="0"
+  [menuWidth]="'928px'"
+  [btnTextDecoration]="'none'"
+  [btnColor]="'var(--tl-black)'"
+  [btnFontWeight]="'bolder'"
+  [btnColorHover]="'var(--tl-black)'"
+  [btnTextDecorationHover]="'none'"
   ngbDropdownAnchor
   >
   <wvr-dropdown-btn>
-    {{menuTitle}}
+    {{menuTitle}} 
+    <tl-icon-element 
+      set="bootstrap" 
+      name="caret-right-fill" 
+      size="11px">
+    </tl-icon-element>
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>
-    <div class="mega-menu-sections">
+    <div class="mega-menu-sections d-flex justify-content-between flex-wrap">
       <ng-content select="tl-mega-menu-section"></ng-content>
     </div>
     <div class="mega-menu-view-all">
