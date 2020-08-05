@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, HostBinding, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -138,6 +138,11 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   /** Used to override the hover state of button text decoration property in a drop down */
   get btnTextDecorationHover(): string {
     return `var(--tl-btn-${this.btnType}-hover-color)`;
+  }
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
   }
 
 }

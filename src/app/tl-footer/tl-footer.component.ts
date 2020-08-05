@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Injector, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
@@ -28,5 +28,10 @@ export class TamuFooterComponent extends TamuAbstractBaseComponent {
     { href: 'https://askus.library.tamu.edu/contact/index', value: 'Comments' },
     { href: 'https://library.tamu.edu/status/', value: 'Services Status' }
   ];
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
 }

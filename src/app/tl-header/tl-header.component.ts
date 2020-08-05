@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, Input, ViewEncapsulation } from '@angular/core';
-import { Link } from '../shared/link';
+import { Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -47,6 +46,11 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   toggleMobileMenu(): void {
     this.mobileMenuClosed = !this.mobileMenuClosed;
     this._cdRef.detectChanges();
+  }
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
   }
 
 }

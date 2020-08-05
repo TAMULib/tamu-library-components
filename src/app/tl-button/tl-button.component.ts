@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -19,5 +19,10 @@ export class TlButtonComponent extends TamuAbstractBaseComponent {
 
   /** Allows for the button component to be an anchor tag component if hrefUrl property present. */
   @Input() href;
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
 }

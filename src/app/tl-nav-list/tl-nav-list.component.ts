@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { Alignment } from '@wvr/elements';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
@@ -19,5 +19,10 @@ export class TamuNavListComponent extends TamuAbstractBaseComponent {
 
   /** This allows the display of the list horizontally. */
   @Input() vertical = false;
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
 }

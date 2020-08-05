@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.component';
 
 @Component({
@@ -9,5 +9,10 @@ import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.compone
 export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent  {
 
   @Input() sectionTitle = 'Section Title';
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
 }

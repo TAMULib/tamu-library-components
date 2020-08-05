@@ -9,7 +9,9 @@ describe('TlButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
+      imports: [
+        BrowserAnimationsModule
+      ],
       declarations: [TlButtonComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
