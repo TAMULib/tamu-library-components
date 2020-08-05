@@ -81,4 +81,13 @@ describe('TamuHeaderComponent', () => {
       .toEqual('var(--tl-default-font-size)');
   });
 
+  it('should toggle mobile menu state', () => {
+    const mobileMenuState = component.mobileMenuClosed;
+    expect(component.mobileMenuClosed)
+      .toBeTrue();
+    component.toggleMobileMenu();
+    expect(component.mobileMenuClosed)
+      .toBeFalse();
+  });
+
 });
