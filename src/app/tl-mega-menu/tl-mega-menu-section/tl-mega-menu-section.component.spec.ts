@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('TlMegaMenuSectionComponent', () => {
   let component: TlMegaMenuSectionComponent;
@@ -8,9 +10,11 @@ describe('TlMegaMenuSectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TlMegaMenuSectionComponent ]
+      imports: [BrowserAnimationsModule],
+      declarations: [TlMegaMenuSectionComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,6 +24,7 @@ describe('TlMegaMenuSectionComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component)
+      .toBeTruthy();
   });
 });

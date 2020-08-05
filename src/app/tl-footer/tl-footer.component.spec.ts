@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TamuFooterComponent } from './tl-footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TlFooterComponent', () => {
   let component: TamuFooterComponent;
@@ -8,9 +9,11 @@ describe('TlFooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [TamuFooterComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    }).compileComponents()
+    })
+      .compileComponents()
       .catch(err => { console.error(err); });
   }));
 

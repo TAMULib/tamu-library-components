@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TlButtonComponent } from './tl-button.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TlButtonComponent', () => {
   let component: TlButtonComponent;
@@ -8,9 +9,11 @@ describe('TlButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [TlButtonComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    }).compileComponents();
+    })
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,6 +23,7 @@ describe('TlButtonComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component)
+      .toBeTruthy();
   });
 });

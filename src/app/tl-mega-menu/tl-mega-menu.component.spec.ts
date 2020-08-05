@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TlMegaMenuComponent } from './tl-mega-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('MegaMenuComponent', () => {
   let component: TlMegaMenuComponent;
@@ -8,9 +9,10 @@ describe('MegaMenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [ TlMegaMenuComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

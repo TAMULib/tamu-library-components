@@ -2,6 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Alignment } from '@wvr/elements';
 import { TamuNavListComponent } from './tl-nav-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TamuNavListComponent', () => {
   let component: TamuNavListComponent;
@@ -9,9 +10,11 @@ describe('TamuNavListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [TamuNavListComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    }).compileComponents()
+    })
+      .compileComponents()
       .catch(err => { console.error(err); });
   }));
 

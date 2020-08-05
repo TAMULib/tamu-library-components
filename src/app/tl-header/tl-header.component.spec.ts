@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TamuHeaderComponent } from './tl-header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TamuHeaderComponent', () => {
   let component: TamuHeaderComponent;
@@ -8,9 +9,11 @@ describe('TamuHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [TamuHeaderComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    }).compileComponents()
+    })
+      .compileComponents()
       .catch(err => { console.error(err); });
   }));
 
@@ -55,20 +58,27 @@ describe('TamuHeaderComponent', () => {
       .toEqual('TL Header Component');
   });
 
-  it("should have conditional font styling", () => {
-    expect(component.inheritFontStyle).toEqual(undefined);
-    expect(component._fontFamily).toEqual('var(--tl-default-font-family-sans-serif)');
-    expect(component._fontSize).toEqual('var(--tl-default-font-size)');
+  it('should have conditional font styling', () => {
+    expect(component.inheritFontStyle)
+      .toEqual(undefined);
+    expect(component._fontFamily)
+      .toEqual('var(--tl-default-font-family-sans-serif)');
+    expect(component._fontSize)
+      .toEqual('var(--tl-default-font-size)');
 
     component.inheritFontStyle = 'true';
     fixture.detectChanges();
-    expect(component._fontFamily).toEqual('inherit');
-    expect(component._fontSize).toEqual('inherit');
+    expect(component._fontFamily)
+      .toEqual('inherit');
+    expect(component._fontSize)
+      .toEqual('inherit');
 
     component.inheritFontStyle = 'false';
     fixture.detectChanges();
-    expect(component._fontFamily).toEqual('var(--tl-default-font-family-sans-serif)');
-    expect(component._fontSize).toEqual('var(--tl-default-font-size)');
+    expect(component._fontFamily)
+      .toEqual('var(--tl-default-font-family-sans-serif)');
+    expect(component._fontSize)
+      .toEqual('var(--tl-default-font-size)');
   });
 
 });

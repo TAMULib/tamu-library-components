@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TamuItWorksComponent } from './tl-it-works.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TamuItWorksComponent', () => {
   let component: TamuItWorksComponent;
@@ -8,9 +9,11 @@ describe('TamuItWorksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [TamuItWorksComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    }).compileComponents()
+    })
+      .compileComponents()
       .catch(err => { console.error(err); });
   }));
 
