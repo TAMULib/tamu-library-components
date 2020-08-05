@@ -9,16 +9,19 @@ import { TamuHeaderComponent } from './tl-header/tl-header.component';
 import { TlIconComponent } from './tl-icon/tl-icon.component';
 import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
-import { WvrBaseComponent } from '@wvr/elements/lib/shared/wvr-base.component';
+import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
+import { TlMegaMenuSectionComponent } from './tl-mega-menu/tl-mega-menu-section/tl-mega-menu-section.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const elements = [
   { component: TlButtonComponent, selector: 'tl-button' },
   { component: TlDropDownComponent, selector: 'tl-drop-down' },
   { component: TamuFooterComponent, selector: 'tl-footer' },
+  { component: TamuHeaderComponent, selector: 'tl-header' },
   { component: TlIconComponent, selector: 'tl-icon' },
   { component: TamuItWorksComponent, selector: 'tl-it-works' },
-  { component: TamuHeaderComponent, selector: 'tl-header' },
+  { component: TlMegaMenuComponent, selector: 'tl-mega-menu' },
+  { component: TlMegaMenuSectionComponent, selector: 'tl-mega-menu-section' },
   { component: TamuNavListComponent, selector: 'tl-nav-list' }
 ];
 
@@ -27,9 +30,11 @@ const components = [
   TlButtonComponent,
   TlDropDownComponent,
   TamuFooterComponent,
-  TamuItWorksComponent,
   TamuHeaderComponent,
+  TamuItWorksComponent,
   TlIconComponent,
+  TlMegaMenuComponent,
+  TlMegaMenuSectionComponent,
   TamuNavListComponent
 ];
 

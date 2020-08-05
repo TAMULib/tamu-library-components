@@ -1,6 +1,10 @@
 @import "../shared/styles/tl-variables.scss";
 
 :host {
+  tl-icon-wrapper {
+    display: inline-block;
+  }
+
   wvr-icon {
     --wvr-icon-color: inherit;
     --wvr-icon-size: inherit;

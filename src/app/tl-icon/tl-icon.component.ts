@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-icon',
+  selector: 'tl-icon-element',
   templateUrl: './tl-icon.component.html',
   styleUrls: ['./tl-icon.component.scss']
 })
-export class TlIconComponent {
+export class TlIconComponent extends TamuAbstractBaseComponent {
 
   /** Used to define the icon set. */
   @Input() set = 'tl';

@@ -1,0 +1,41 @@
+@import "../../shared/styles/tl-variables.scss";
+
+
+:host {
+  width: 27%;
+  padding-bottom: 35px;
+  .section-title {
+    padding-bottom: 3px;
+    color: var(--tl-primary);
+    font-size: var(--tl-h3-font-size);
+    font-weight: 100;
+    border-bottom: 2px solid var(--tl-primary);
+    text-shadow: 
+        -0.25px 0 var(--tl-primary), 0 0.25px var(--tl-primary), 0.25px 0 var(--tl-primary), 0 -0.25px var(--tl-primary), 
+        -0.25px -0.25px var(--tl-primary), 0.25px 0.25px var(--tl-primary), -0.25px 0.25px var(--tl-primary), 0.25px -0.25px var(--tl-primary);
+  }
+  p {
+    margin-bottom: 3px;
+  }
+  wvr-nav-list-element {
+    ::ng-deep {
+      tl-nav-li {
+        width: 100%;
+        a {
+          padding: 4px 0px 4px 25px;
+          color: var(--tl-deep-grey);
+          font-weight: lighter;
+          width: 100%;
+          display: block;
+        }
+        a:hover {
+          font-weight: bolder;
+          color: var(--tl-white);
+          background: var(--tl-deep-grey);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
