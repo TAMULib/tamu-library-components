@@ -1,4 +1,1 @@
-{
-  "baseUrl" : "$BASE_URL",
-  "assetUrl" : "$ASSET_URL"
-}
+{"baseUrl":"$BASE_URL","assetUrl":"$ASSET_URL"}
