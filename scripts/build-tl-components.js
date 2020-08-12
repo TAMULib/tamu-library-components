@@ -1,6 +1,7 @@
 const fs = require('fs-extra');
 const concat = require('concat');
 const package = require('../package.json');
+const cp = require('child_process');
 
 const assetPath = 'dist/tl-components';
 const basePath = 'dist/bundle';
@@ -8,7 +9,8 @@ const majorVersion = package.version.split('.')[0];
 const dirName = `${majorVersion}x`;
 const dirPath = `${basePath}/${dirName}`;
 const latestPath = `${basePath}/latest`;
-const staticPath = 'static/tamu-library-components';
+
+cp.fork(__dirname + '/build-wvr-config-template.js');
 
 (async function build() {
   const files = [
