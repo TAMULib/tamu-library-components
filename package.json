@@ -8,6 +8,7 @@
     "build:tl-components": "node scripts/build-tl-components.js",
     "clean": "rimraf dist",
     "lint": "ng lint",
+    "link": "npm link @wvr/elements",
     "ng": "ng",
     "postbuild": "npm run build:tl-components",
     "start": "ng serve --port 3000",
