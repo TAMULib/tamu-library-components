@@ -53,3 +53,4 @@ static/
 .vscode/
 
 package-lock.json
+src/config.json
