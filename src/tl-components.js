@@ -1,1 +1,1 @@
-console.log("Running in development mode.")
+console.log("Running in development mode.");
