@@ -54,4 +54,4 @@ static/
 
 package-lock.json
 src/config.json
-src/config-template
+src/config-template.json
