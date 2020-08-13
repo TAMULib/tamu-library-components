@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
+import { BrowserModule } from '@angular/platform-browser';
 import { WvrLibModule } from '@wvr/elements';
 import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlDropDownComponent } from './tl-drop-down/tl-drop-down.component';
@@ -40,6 +41,7 @@ const components = [
 /** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
+    BrowserModule,
     WvrLibModule
   ],
   exports: [
@@ -57,18 +59,20 @@ const components = [
 })
 export class TamuLibModule {
 
-  constructor(injector: Injector) {
+  constructor(private readonly injector: Injector) {
+
+  }
+
+  ngDoBootstrap(): void {
     elements.forEach(element => {
       try {
-        customElements.define(element.selector, createCustomElement(element.component, { injector }));
+        customElements.define(element.selector, createCustomElement(element.component, { 
+          injector: this.injector
+         }));
       } catch (e) {
         console.warn(e);
       }
     });
-  }
-
-  ngDoBootstrap(): void {
-    // OVERRIDE
   }
 
 }
