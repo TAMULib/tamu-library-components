@@ -45,7 +45,6 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
 
   toggleMobileMenu(): void {
     this.mobileMenuClosed = !this.mobileMenuClosed;
-    this._cdRef.detectChanges();
   }
 
   // tslint:disable-next-line:unnecessary-constructor
