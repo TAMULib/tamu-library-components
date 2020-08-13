@@ -10,7 +10,7 @@ const dirName = `${majorVersion}x`;
 const dirPath = `${basePath}/${dirName}`;
 const latestPath = `${basePath}/latest`;
 
-cp.fork(__dirname + '/build-wvr-config-template.js');
+cp.fork(__dirname + '/build-tl-config-template.js');
 
 (async function build() {
   const files = [

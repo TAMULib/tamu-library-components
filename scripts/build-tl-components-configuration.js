@@ -1,5 +1,4 @@
 const dotEnv = require('dotenv-override-true');
-const { exec } = require('child_process');
 const fs = require('fs-extra');
 
 let defaults = dotEnv.config({
@@ -21,5 +20,5 @@ Object.keys(defaults.parsed)
 
 fs.writeFile('./dist/bundle/1x/config.json', configTemplate);
 fs.writeFile('./dist/bundle/latest/config.json', configTemplate);
-//fs.writeFile('./static/tamu-library-components/docs/usage/config.json', configTemplate);
+// fs.writeFile('./static/tamu-library-components/docs/usage/config.json', configTemplate);
 fs.writeFile('./src/config.json', configTemplate);
