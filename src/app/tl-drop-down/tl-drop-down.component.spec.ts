@@ -7,14 +7,12 @@ describe('TlDropDownComponent', () => {
   let component: TlDropDownComponent;
   let fixture: ComponentFixture<TlDropDownComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
-      declarations: [TlDropDownComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents();
-  }));
+  beforeEach(async(() => TestBed.configureTestingModule({
+    imports: [BrowserAnimationsModule],
+    declarations: [TlDropDownComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  })
+    .compileComponents()));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TlDropDownComponent);

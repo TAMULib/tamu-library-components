@@ -8,9 +8,9 @@ import { TamuFooterComponent } from './tl-footer/tl-footer.component';
 import { TamuHeaderComponent } from './tl-header/tl-header.component';
 import { TlIconComponent } from './tl-icon/tl-icon.component';
 import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
-import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
-import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu/tl-mega-menu-section/tl-mega-menu-section.component';
+import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
+import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const elements = [
@@ -59,18 +59,20 @@ const components = [
 })
 export class TamuLibModule {
 
-  constructor(injector: Injector) {
+  constructor(private readonly injector: Injector) {
+
+  }
+
+  ngDoBootstrap(): void {
     elements.forEach(element => {
       try {
-        customElements.define(element.selector, createCustomElement(element.component, { injector }));
+        customElements.define(element.selector, createCustomElement(element.component, { 
+          injector: this.injector
+         }));
       } catch (e) {
         console.warn(e);
       }
     });
-  }
-
-  ngDoBootstrap(): void {
-    // OVERRIDE
   }
 
 }

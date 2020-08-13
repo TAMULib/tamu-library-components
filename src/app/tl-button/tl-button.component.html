@@ -1,17 +1,17 @@
 <tl-button-wrapper #animationRoot>
-  <wvr-button
+  <wvr-button-element
     *ngIf="href!== ''"
     [btnClass]="btnClass"
     [btnSize]="btnSize"
     [href]="href"
     [wvrBtnType]="wvrBtnType">
     <ng-content select="wvr-text, wvr-text-element" ngProjectAs="wvr-btn-content"></ng-content>
-  </wvr-button>
-  <wvr-button
+  </wvr-button-element>
+  <wvr-button-element
     *ngIf="href === ''"
     [btnClass]="btnClass"
     [btnSize]="btnSize"
     [wvrBtnType]="wvrBtnType">
     <ng-content select="wvr-text, wvr-text-element" ngProjectAs="wvr-btn-content"></ng-content>
-  </wvr-button>
+  </wvr-button-element>
 </tl-button-wrapper>
