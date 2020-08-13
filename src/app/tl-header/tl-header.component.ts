@@ -1,5 +1,4 @@
-import { ChangeDetectorRef, Component, Input, ViewEncapsulation } from '@angular/core';
-import { Link } from '../shared/link';
+import { Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -44,22 +43,13 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
 
   mobileMenuClosed = true;
 
-  /** Used to iterate the header navigation list. */
-  topLinks: Array<Link> = [
-    { href: 'https://library.tamu.edu/about/hours.html', value: 'Hours' },
-    { href: 'https://library.tamu.edu/about/index.html', value: 'Libraries' },
-    { href: 'https://library.tamu.edu/#', value: 'Information For' },
-    { href: 'https://library.tamu.edu/mylibrary/', value: 'MyLibrary' },
-    { href: 'http://askus.library.tamu.edu/', value: 'Help' }
-  ];
-
-  constructor(private ref: ChangeDetectorRef) {
-    super();
-  }
-
   toggleMobileMenu(): void {
     this.mobileMenuClosed = !this.mobileMenuClosed;
-    this.ref.detectChanges();
+  }
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -14,5 +14,10 @@ export class TamuItWorksComponent extends TamuAbstractBaseComponent {
 
   /** The text value to be displayed for text. */
   @Input() text = '';
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
 }

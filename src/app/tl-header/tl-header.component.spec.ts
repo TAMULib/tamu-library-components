@@ -1,19 +1,19 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TamuHeaderComponent } from './tl-header.component';
 
 describe('TamuHeaderComponent', () => {
   let component: TamuHeaderComponent;
   let fixture: ComponentFixture<TamuHeaderComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [TamuHeaderComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents()
-      .catch(err => { console.error(err); });
-  }));
+  beforeEach(async(() => TestBed.configureTestingModule({
+    imports: [BrowserAnimationsModule],
+    declarations: [TamuHeaderComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  })
+    .compileComponents()
+    .catch(err => { console.error(err); })));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TamuHeaderComponent);
@@ -56,20 +56,36 @@ describe('TamuHeaderComponent', () => {
       .toEqual('TL Header Component');
   });
 
-  it("should have conditional font styling", () => {
-    expect(component.inheritFontStyle).toEqual(undefined);
-    expect(component._fontFamily).toEqual('var(--tl-default-font-family-sans-serif)');
-    expect(component._fontSize).toEqual('var(--tl-default-font-size)');
+  it('should have conditional font styling', () => {
+    expect(component.inheritFontStyle)
+      .toEqual(undefined);
+    expect(component._fontFamily)
+      .toEqual('var(--tl-default-font-family-sans-serif)');
+    expect(component._fontSize)
+      .toEqual('var(--tl-default-font-size)');
 
     component.inheritFontStyle = 'true';
     fixture.detectChanges();
-    expect(component._fontFamily).toEqual('inherit');
-    expect(component._fontSize).toEqual('inherit');
+    expect(component._fontFamily)
+      .toEqual('inherit');
+    expect(component._fontSize)
+      .toEqual('inherit');
 
     component.inheritFontStyle = 'false';
     fixture.detectChanges();
-    expect(component._fontFamily).toEqual('var(--tl-default-font-family-sans-serif)');
-    expect(component._fontSize).toEqual('var(--tl-default-font-size)');
+    expect(component._fontFamily)
+      .toEqual('var(--tl-default-font-family-sans-serif)');
+    expect(component._fontSize)
+      .toEqual('var(--tl-default-font-size)');
+  });
+
+  it('should toggle mobile menu state', () => {
+    const mobileMenuState = component.mobileMenuClosed;
+    expect(component.mobileMenuClosed)
+      .toBeTrue();
+    component.toggleMobileMenu();
+    expect(component.mobileMenuClosed)
+      .toBeFalse();
   });
 
 });

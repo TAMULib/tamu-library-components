@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 
 :host {
   all: initial; /* 1st rule so subsequent properties are reset. */
@@ -33,7 +33,7 @@
   --tl-default-font-size: 16px;
   --tl-default-font-family-sans-serif: 'Lato', sans-serif;
 
-  --tl-font-family-sans-serif:var(--tl-default-font-family-sans-serif);
+  --tl-font-family-sans-serif: var(--tl-default-font-family-sans-serif);
   --tl-font-size: var(--tl-default-font-size);
 
   // custom defining the header variables

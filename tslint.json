@@ -6,6 +6,9 @@
     "angular-tslint-rules"
   ],
   "rules": {
+    "deprecation": {
+      "severity": "warning"
+    },
     "directive-selector": [
       true,
       "attribute",

@@ -17,7 +17,7 @@ script:
   - npm run test:ci
 
 after_success:
-  - cat ./static/tamu-library-components/reports/coverage/tamu-library-components/lcov.info | ./node_modules/coveralls/bin/coveralls.js,
+  - npm run test:report
   - npm run build:static-production
 
 notifications:
@@ -31,4 +31,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
-    branch: master
+    branch: sprint9-staging

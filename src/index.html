@@ -6,13 +6,13 @@
   <title>TAMU Library Components</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      
+
     }
   </style>
 </head>
@@ -189,7 +189,7 @@
   <hr />
   <br />
   <div class="container" style="text-align: center;">
-    <tl-button btn-class="primary">
+    <tl-button btn-class="primary" animate="{click: 'rotateToggle'}">
       <wvr-text value="Primary"></wvr-text>
     </tl-button>
     <tl-button btn-class="secondary">
@@ -214,7 +214,127 @@
       <wvr-text value="Dark"></wvr-text>
     </tl-button>
   </div>
+  <br /><hr /><br />
+  <div class="container" style="text-align: center;background: #6d6d6d;">
+    <tl-icon></tl-icon>
+    <tl-icon set="tl" name="weaver-w" color="#500000" size="34px"></tl-icon>
+    <tl-icon set="bootstrap" name="arrow-right-circle" size="32px" animate="{click: 'rotateToggle'}"></tl-icon>
+  </div>
+
+  <br /><hr /><br />
+  <div class="container" style="height: 700px">
+    
+    <tl-mega-menu menu-title="Services" view-all-href="/view-all">
+      <tl-mega-menu-section section-title="Section One">
+        <tl-nav-li>
+          <a href="/services/option1">
+            <wvr-text value="Option 1"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/services/option2">
+            <wvr-text value="Option 2"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/services/option3">
+            <wvr-text value="Option 3"></wvr-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Two">
+        <tl-nav-li >
+          <a href="/research/option1">
+            <wvr-text value="Option 1"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/research/option2">
+            <wvr-text value="Option 2"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/research/option3">
+            <wvr-text value="Option 3"></wvr-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Three">
+        <tl-nav-li >
+          <a href="/instructional/option1">
+            <wvr-text value="Option 1"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/instructional/option2">
+            <wvr-text value="Option 2"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/instructional/option3">
+            <wvr-text value="Option 3"></wvr-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Four">
+        <tl-nav-li>
+          <a href="/services/option1">
+            <wvr-text value="Option 1"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/services/option2">
+            <wvr-text value="Option 2"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/services/option3">
+            <wvr-text value="Option 3"></wvr-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Five">
+        <tl-nav-li >
+          <a href="/research/option1">
+            <wvr-text value="Option 1"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/research/option2">
+            <wvr-text value="Option 2"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/research/option3">
+            <wvr-text value="Option 3"></wvr-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Six">
+        <tl-nav-li >
+          <a href="/instructional/option1">
+            <wvr-text value="Option 1"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/instructional/option2">
+            <wvr-text value="Option 2"></wvr-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li >
+          <a href="/instructional/option3">
+            <wvr-text value="Option 3"></wvr-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+    </tl-mega-menu>
+
+  </div>
+
   <tl-footer></tl-footer>
+
+  <script defer src="tl-components.js"></script>
+
 </body>
 
 </html>
