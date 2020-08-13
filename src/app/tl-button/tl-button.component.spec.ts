@@ -1,22 +1,20 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TlButtonComponent } from './tl-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TlButtonComponent } from './tl-button.component';
 
 describe('TlButtonComponent', () => {
   let component: TlButtonComponent;
   let fixture: ComponentFixture<TlButtonComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        BrowserAnimationsModule
-      ],
-      declarations: [TlButtonComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents();
-  }));
+  beforeEach(async(() => TestBed.configureTestingModule({
+    imports: [
+      BrowserAnimationsModule
+    ],
+    declarations: [TlButtonComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  })
+    .compileComponents()));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TlButtonComponent);

@@ -1,21 +1,19 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TamuHeaderComponent } from './tl-header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TamuHeaderComponent } from './tl-header.component';
 
 describe('TamuHeaderComponent', () => {
   let component: TamuHeaderComponent;
   let fixture: ComponentFixture<TamuHeaderComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
-      declarations: [TamuHeaderComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents()
-      .catch(err => { console.error(err); });
-  }));
+  beforeEach(async(() => TestBed.configureTestingModule({
+    imports: [BrowserAnimationsModule],
+    declarations: [TamuHeaderComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  })
+    .compileComponents()
+    .catch(err => { console.error(err); })));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TamuHeaderComponent);

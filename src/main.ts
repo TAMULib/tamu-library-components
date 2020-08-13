@@ -1,6 +1,5 @@
 import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
+import { weaverBootstrap } from '@wvr/elements';
 import { TamuLibModule } from './app/tl-lib.module';
 import { environment } from './environments/environment';
 
@@ -8,6 +7,4 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic()
-  .bootstrapModule(TamuLibModule)
-  .catch(err => { console.error(err); });
+document.addEventListener('DOMContentLoaded', weaverBootstrap(TamuLibModule));

@@ -1,21 +1,19 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TamuItWorksComponent } from './tl-it-works.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TamuItWorksComponent } from './tl-it-works.component';
 
 describe('TamuItWorksComponent', () => {
   let component: TamuItWorksComponent;
   let fixture: ComponentFixture<TamuItWorksComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
-      declarations: [TamuItWorksComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents()
-      .catch(err => { console.error(err); });
-  }));
+  beforeEach(async(() => TestBed.configureTestingModule({
+    imports: [BrowserAnimationsModule],
+    declarations: [TamuItWorksComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  })
+    .compileComponents()
+    .catch(err => { console.error(err); })));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TamuItWorksComponent);
