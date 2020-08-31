@@ -1,6 +1,10 @@
-import { HostBinding, Input } from '@angular/core';
+import { Directive, HostBinding, Injector, Input } from '@angular/core';
+import { WvrBaseComponent } from '@wvr/elements';
 
-export abstract class TamuAbstractBaseComponent {
+@Directive()
+// tslint:disable-next-line:directive-class-suffix
+export abstract class TamuAbstractBaseComponent extends WvrBaseComponent {
+
   /** Allows for the override of the --tl-default-font-size css variable. */
   @HostBinding('style.--tl-font-size') _fontSize = 'var(--tl-default-font-size)';
 
@@ -10,6 +14,11 @@ export abstract class TamuAbstractBaseComponent {
   @Input() set inheritFontStyle(value: 'true' | 'false') {
     this._fontSize = (value === 'true') ? 'inherit' : 'var(--tl-default-font-size)';
     this._fontFamily = (value === 'true') ? 'inherit' : 'var(--tl-default-font-family-sans-serif)';
+  }
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
   }
 
 }

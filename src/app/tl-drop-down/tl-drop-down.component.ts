@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -8,8 +8,11 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 })
 export class TlDropDownComponent extends TamuAbstractBaseComponent {
 
-  /** Used to override the drop-down menu active button. */
+  /** Used to override the drop-down menu button type. */
   @Input() btnType;
+
+  /** Used to convert the dropdown menu button into a link. */
+  @Input() btnHref;
 
   /** Used to define the drop down menu background. */
   @HostBinding('style.--tl-dropdown-menu-background') @Input() menuBackground;
@@ -42,7 +45,7 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   @HostBinding('style.--tl-dropdown-menu-x-offset') @Input() menuXOffset;
 
   /** Used to define the drop-down menu x offset. */
-  @HostBinding('style.--tl-dropdown-menu-y-offset') @Input() menuYOffset = '0px';
+  @HostBinding('style.--tl-dropdown-menu-y-offset') @Input() menuYOffset = '-6px';
 
   /** Used to define the event type which will display the dropdown menu. */
   @Input() toggleOn = 'click';
@@ -135,6 +138,11 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   /** Used to override the hover state of button text decoration property in a drop down */
   get btnTextDecorationHover(): string {
     return `var(--tl-btn-${this.btnType}-hover-color)`;
+  }
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
   }
 
 }

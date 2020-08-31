@@ -51,3 +51,7 @@ docs/
 static/
 .lighthouseci/
 .vscode/
+
+package-lock.json
+src/config.json
+src/config-template.json
