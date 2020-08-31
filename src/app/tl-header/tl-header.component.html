@@ -10,20 +10,57 @@
           <wvr-text-element value="Hours" font-size="14px"></wvr-text-element>
         </wvr-dropdown-btn>
         <wvr-dropdown-menu>
-            <wvr-dropdown-menu-item>
-                  <wvr-text-element value="While most of our buildings are closed to the public access, we still have robust " font-weight="bold"></wvr-text-element>
-                  <a href="https://tamu.libguides.com/c.php?g=1016445">
-                    <wvr-text-element value="virtual services" color="#2b5d7d" font-weight="bold"></wvr-text-element>
-                  </a>
-            </wvr-dropdown-menu-item>
-            <wvr-dropdown-menu-item>
-              <wvr-text-element value="The OAL Lab in BLCC is open 8am - 7pm."></wvr-text-element> <br /><wvr-text-element value="BLCC is offering only virtual services."></wvr-text-element>
-            </wvr-dropdown-menu-item>
-            <wvr-dropdown-menu-item>
-              <a class="btn btn-info" href="https://tamu.libguides.com/c.php?g=1016445">
-                <wvr-text-element value="View all Virtual Services"></wvr-text-element>
-              </a>
-            </wvr-dropdown-menu-item>
+          <wvr-dropdown-menu-item>
+            <div class="todayshours">
+              <div class="caldate true">
+                <wvr-text
+                  value="Business Library &amp; Collaboration Commons"
+                ></wvr-text>
+                <span><wvr-text value="7am - 6pm"></wvr-text></span>
+              </div>
+              <div class="caldate true">
+                <wvr-text
+                  value="Cushing Memorial Library &amp; Archives"
+                ></wvr-text>
+                <span><wvr-text value="8am - 5pm"></wvr-text></span>
+              </div>
+              <div class="caldate false">
+                <wvr-text value="Medical Sciences Library"></wvr-text>
+                <span
+                  ><wvr-text
+                    value="Reservations are required 7 am - 6 pm"
+                  ></wvr-text
+                ></span>
+              </div>
+              <div class="caldate true">
+                <wvr-text
+                  value="Policy Sciences &amp; Economics Library"
+                ></wvr-text>
+                <span><wvr-text value="9am - 5pm"></wvr-text></span>
+              </div>
+              <div class="caldate true">
+                <wvr-text value="Sterling C. Evans Library"></wvr-text>
+                <span><wvr-text value="7am - 6pm"></wvr-text></span>
+              </div>
+              <div class="caldate false">
+                <wvr-text value="Sterling C. Evans Library Annex"></wvr-text>
+                <span><wvr-text value="Closed"></wvr-text></span>
+              </div>
+              <div class="caldate true">
+                <wvr-text value="AskUs (chat, email, text)"></wvr-text>
+                <span><wvr-text value="10am - 5pm"></wvr-text></span>
+              </div>
+            </div>
+            <br />
+          </wvr-dropdown-menu-item>
+
+          <wvr-dropdown-menu-item>
+            <a
+              class="btn btn-info btn-sm w-100"
+              href="//library.tamu.edu/about/hours.html"
+              ><wvr-text value="View All Hours"></wvr-text>
+            </a>
+          </wvr-dropdown-menu-item>
         </wvr-dropdown-menu>
       </wvr-dropdown-element>
     </wvr-nav-li-element>
@@ -199,7 +236,11 @@
       </wvr-dropdown-element>
     </wvr-nav-li-element>
   </wvr-nav-list-element>
-  <wvr-nav-list-element bottom-navigation theme="DARK" [ngClass]="{'closed': mobileMenuClosed}">
+  <wvr-nav-list-element
+    bottom-navigation
+    theme="DARK"
+    [ngClass]="{ closed: mobileMenuClosed }"
+  >
     <wvr-nav-li-element class="mobile-menu-header">
       <div (click)="toggleMobileMenu()">
         <span><wvr-text-element value="Close" font-size="0.75em"></wvr-text-element></span>
@@ -218,5 +259,21 @@
 <span class="mobile-menu-backdrop" [ngClass]="{'closed': mobileMenuClosed}"></span>
 
 <div class="container" class="mobile-menu-button">
-  <svg (click)="toggleMobileMenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu mobile-menu-button"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  <svg
+    (click)="toggleMobileMenu()"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="feather feather-menu mobile-menu-button"
+  >
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="18" x2="21" y2="18" />
+  </svg>
 </div>

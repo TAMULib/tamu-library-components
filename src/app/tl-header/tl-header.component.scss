@@ -15,7 +15,7 @@
     --bottom-nav-height: 65px;
 
     wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a {
-      padding:12px;
+      padding: 12px;
       text-decoration: none;
       color: var(--tl-white);
     }
@@ -44,12 +44,23 @@
         box-shadow: none;
       }
 
-       > .dropdown-menu {
-        width: 435px;
-        border: 1px solid rgba(0,0,0,.15);
+      > .dropdown-menu {
+        width: 497px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
         text-align: left;
         font-size: 16px;
-       }
+      }
+
+      .hours wvr-dropdown-menu-item {
+        .caldate {
+          padding: 10px 0 0 0;
+          font-size: 13px;
+        }
+
+        .caldate span {
+          float: right;
+        }
+      }
 
       .libraries {
 
@@ -63,7 +74,7 @@
 
         p {
           color: #4d4d4d;
-          a{
+          a {
             color: #2b5d7d;
             text-decoration: underline;
           }
@@ -90,6 +101,12 @@
       }
 
       .help {
+        .wvr-button {
+          color: var(--tl-white);
+        }
+        .wvr-button:hover {
+          color: var(--tl-black);
+        }
 
           wvr-dropdown-menu > wvr-dropdown-menu-item {
           border-bottom: 1px solid #e0e0e0;
@@ -99,7 +116,7 @@
             color: #500000;
             padding: 8px 0px 8px 8px;
             text-decoration: none;
-            width:100%;
+            width: 100%;
           }
           wvr-icon svg {
             height: 35px;
@@ -149,7 +166,7 @@
       font-size: var(--tl-h1-font-size);
     }
 
-    .top-nav{
+    .top-nav {
       border-bottom: 1px solid #333333;
       .container {
         > div {
@@ -172,7 +189,7 @@
       header {
         box-shadow: 1px 1px 5px 2px #000;
       }
-      .top-nav{
+      .top-nav {
         border-bottom: 1px solid #333333;
         .container {
           > div {
@@ -183,7 +200,7 @@
           }
         }
       }
-      wvr-nav-list-element[top-navigation]  {
+      wvr-nav-list-element[top-navigation] {
         ul {
           justify-content: space-evenly;
         }
@@ -238,15 +255,14 @@
           border-bottom: 1px solid #85c0d8;
           font-weight: bold;
           a {
-            justify-content: flex-start!important;
+            justify-content: flex-start !important;
             padding: 15px;
           }
         }
         ul {
-          flex-wrap: nowrap!important;
-          flex-direction: column!important;
+          flex-wrap: nowrap !important;
+          flex-direction: column !important;
         }
-
       }
 
       [bottom-navigation] wvr-nav-li:last-child {
@@ -274,7 +290,6 @@
         }
       }
     }
-
   }
   .mobile-menu-button {
     display: none;
