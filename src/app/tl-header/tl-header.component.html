@@ -1,25 +1,13 @@
-<wvr-header-element
-  [logoSrc]="logoSrc"
-  [logoHref]="logoHref"
-  [logoText]="logoText"
-  [logoImgHeight]="logoImgHeight"
-  [logoImgWidth]="logoImgWidth"
-  [logoImgMargin]="logoImgMargin"
-  [headerTitle]="pageTitle"
-  [headerTitleUrl]="pageTitleUrl"
-  [titleRowBackground]="titleRowBackground"
-  [topNavBackground]="topNavBackground"
-  [bottomNavBackground]="bottomNavBackground"
->
-  <wvr-nav-list-element top-navigation aligned="RIGHT">
-    <wvr-nav-li-element>
-      <wvr-dropdown-element
-        [toggleOn]="'mouseover'"
-        class="hours"
-        [menuYOffset]="'15px'"
-      >
+<wvr-header-element [logoSrc]="logoSrc" [logoHref]="logoHref" [logoText]="logoText" [logoImgHeight]="logoImgHeight"
+  [logoImgWidth]="logoImgWidth" [logoImgMargin]="logoImgMargin" [headerTitle]="pageTitle" [headerTitleUrl]="pageTitleUrl"
+  [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
+  [bottomNavBackground]="bottomNavBackground">
+
+  <wvr-nav-list-element top-navigation aligned="RIGHT" [ngClass]="{'closed': mobileMenuClosed}">
+    <wvr-nav-li-element (click)="toggleMobileMenu()">
+      <wvr-dropdown-element [btnHref]="'https://library.tamu.edu/about/hours.html'" [toggleOn]="'mouseover'" class="hours" [menuYOffset]="'-2px'">
         <wvr-dropdown-btn>
-          <wvr-text value="Hours" font-size="14px"></wvr-text>
+          <wvr-text-element value="Hours" font-size="14px"></wvr-text-element>
         </wvr-dropdown-btn>
         <wvr-dropdown-menu>
           <wvr-dropdown-menu-item>
@@ -76,346 +64,174 @@
         </wvr-dropdown-menu>
       </wvr-dropdown-element>
     </wvr-nav-li-element>
-
-    <wvr-nav-li-element>
-      <wvr-dropdown-element
-        [toggleOn]="'mouseover'"
-        [menuXOffset]="'-70px'"
-        [menuYOffset]="'15px'"
-        class="libraries"
-      >
+    <wvr-nav-li-element >
+      <wvr-dropdown-element [btnHref]="'https://library.tamu.edu/about/index.html'" [toggleOn]="'mouseover'" [menuXOffset]="'-65px'" [menuYOffset]="'-2px'" class="libraries" >
         <wvr-dropdown-btn>
-          <wvr-text value="Libraries" font-size="14px"></wvr-text>
+          <wvr-text-element value="Libraries" font-size="14px"></wvr-text-element>
         </wvr-dropdown-btn>
         <wvr-dropdown-menu>
-          <wvr-dropdown-menu-item>
-            <h6>
-              <a
-                href="//blcc.library.tamu.edu"
-                title="Go to Business Library and Collaboration Commons website"
-              >
-                <wvr-text
-                  value="Business Library &amp; Collaboration Commons"
-                ></wvr-text>
-              </a>
-            </h6>
-            <p>
-              <a
-                href="//library.tamu.edu/about/directions/business-library.html"
-                title="Parking Directions for Business Library and Collaboration Commons"
-              >
-                <wvr-text value="Parking Directions"></wvr-text>
-              </a>
-              <wvr-text value=" / 979-845-2111"></wvr-text>
-            </p>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <h6>
-              <a
-                href="//cushing.library.tamu.edu"
-                title="Go to Cushing Library website"
-                >Cushing Memorial Library &amp; Archives</a
-              >
-            </h6>
-            <p>
-              <a
-                href="//library.tamu.edu/about/directions/cushing-library.html"
-                title="Parking Directions for Cushing Library"
-              >
-                <wvr-text value="Parking Directions"></wvr-text>
-              </a>
-              <wvr-text value=" / 979-845-1951"></wvr-text>
-            </p>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <h6>
-              <a
-                href="//msl.library.tamu.edu"
-                title="Go to Medical Sciences Library website"
-              >
-                <wvr-text value="Medical Sciences Library"></wvr-text>
-              </a>
-            </h6>
-            <p>
-              <a
-                href="//library.tamu.edu/about/directions/medical-sciences-library.html"
-                title="Parking Directions for Medical Sciences Library"
-              >
-                <wvr-text value="Parking Directions"></wvr-text>
-              </a>
-              <wvr-text value=" / 979-845-7428"></wvr-text>
-            </p>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <h6>
-              <a
-                href="//psel.library.tamu.edu"
-                title="Go to Policy Sciences and Economics Library website"
-              >
-                <wvr-text
-                  value="Policy Sciences &amp; Economics Library"
-                ></wvr-text>
-              </a>
-            </h6>
-            <p>
-              <a
-                href="//library.tamu.edu/about/directions/policy-sciences-economics-library.html"
-                title="Parking Directions for Policy Sciences and Economics Library"
-              >
-                <wvr-text value="Parking Directions"></wvr-text>
-              </a>
-              <wvr-text value=" / 979-862-3544"></wvr-text>
-            </p>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <h6>
-              <a
-                href="//evans.library.tamu.edu"
-                title="Go to Evans Library website"
-              >
-                <wvr-text
-                  value="Sterling C. Evans Library &amp; Annex"
-                ></wvr-text>
-              </a>
-            </h6>
-            <p>
-              <a
-                href="//library.tamu.edu/about/directions/evans-library-annex.html"
-                title="Parking Directions for Evans Library and Annex"
-              >
-                <wvr-text value="Parking Directions"></wvr-text>
-              </a>
-              <wvr-text value=" / 979-845-3731"></wvr-text>
-            </p>
-          </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <div class="libraries-link">
+                <a href="//blcc.library.tamu.edu" title="Go to Business Library and Collaboration Commons website">
+                  <wvr-text-element value="Business Library &amp; Collaboration Commons"></wvr-text-element>
+                </a>
+              </div>
+              <p>
+                <a href="//library.tamu.edu/about/directions/business-library.html" title="Parking Directions for Business Library and Collaboration Commons">
+                  <wvr-text-element value="Parking Directions"></wvr-text-element>
+                </a>
+                <wvr-text-element value=" / 979-845-2111"></wvr-text-element>
+              </p>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <div class="libraries-link"><a href="//cushing.library.tamu.edu" title="Go to Cushing Library website">Cushing Memorial Library &amp; Archives</a></div>
+              <p>
+                <a href="//library.tamu.edu/about/directions/cushing-library.html" title="Parking Directions for Cushing Library">
+                  <wvr-text-element value="Parking Directions"></wvr-text-element>
+                </a>
+                <wvr-text-element value=" / 979-845-1951"></wvr-text-element>
+              </p>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <div class="libraries-link">
+                <a href="//msl.library.tamu.edu" title="Go to Medical Sciences Library website">
+                  <wvr-text-element value="Medical Sciences Library"></wvr-text-element>
+                </a>
+              </div>
+              <p>
+                <a href="//library.tamu.edu/about/directions/medical-sciences-library.html" title="Parking Directions for Medical Sciences Library">
+                  <wvr-text-element value="Parking Directions"></wvr-text-element>
+                </a>
+                <wvr-text-element value=" / 979-845-7428"></wvr-text-element>
+              </p>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <div class="libraries-link">
+                <a href="//psel.library.tamu.edu" title="Go to Policy Sciences and Economics Library website">
+                  <wvr-text-element value="Policy Sciences &amp; Economics Library"></wvr-text-element>
+                </a>
+              </div>
+              <p>
+                <a href="//library.tamu.edu/about/directions/policy-sciences-economics-library.html" title="Parking Directions for Policy Sciences and Economics Library">
+                  <wvr-text-element value="Parking Directions"></wvr-text-element>
+                </a>
+                <wvr-text-element value=" / 979-862-3544"></wvr-text-element>
+              </p>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <div class="libraries-link">
+                <a href="//evans.library.tamu.edu" title="Go to Evans Library website">
+                  <wvr-text-element value="Sterling C. Evans Library &amp; Annex"></wvr-text-element>
+                </a>
+              </div>
+              <p>
+                <a href="//library.tamu.edu/about/directions/evans-library-annex.html" title="Parking Directions for Evans Library and Annex">
+                  <wvr-text-element value="Parking Directions"></wvr-text-element>
+                </a>
+                <wvr-text-element value=" / 979-845-3731"></wvr-text-element>
+              </p>
+            </wvr-dropdown-menu-item>
         </wvr-dropdown-menu>
       </wvr-dropdown-element>
     </wvr-nav-li-element>
 
     <wvr-nav-li-element>
-      <wvr-dropdown-element
-        [toggleOn]="'mouseover'"
-        [menuXOffset]="'-180px'"
-        [menuYOffset]="'15px'"
-        class="information-for"
-      >
+      <wvr-dropdown-element [btnHref]="'https://library.tamu.edu'" [toggleOn]="'mouseover'" [menuXOffset]="'-150px'" [menuYOffset]="'-2px'" class="information-for">
         <wvr-dropdown-btn>
-          <wvr-text value="Information for" font-size="14px"></wvr-text>
+          <wvr-text-element value="Information for" font-size="14px"></wvr-text-element>
         </wvr-dropdown-btn>
         <wvr-dropdown-menu>
           <wvr-dropdown-menu-item>
             <a href="faculty_info/index.html">
-              <wvr-text value="Information for Faculty"></wvr-text>
+              <wvr-text-element value="Information for Faculty"></wvr-text-element>
             </a>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
             <a href="grad_info/index.html">
-              <wvr-text value="Graduate Student Resources"></wvr-text>
+              <wvr-text-element value="Graduate Student Resources"></wvr-text-element>
             </a>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
             <a href="undergrad_info/index.html">
-              <wvr-text value="Undergraduate Student Resources"></wvr-text>
+              <wvr-text-element value="Undergraduate Student Resources"></wvr-text-element>
             </a>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
             <a href="services/accessibility.html">
-              <wvr-text
-                value="Services for Individuals with Disabilities"
-              ></wvr-text>
+              <wvr-text-element value="Services for Individuals with Disabilities"></wvr-text-element>
             </a>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
             <a href="https://tamu.libguides.com/c.php?g=949823">
-              <wvr-text value="Students at Satellite Campuses"></wvr-text>
+              <wvr-text-element value="Students at Satellite Campuses"></wvr-text-element>
             </a>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
             <a href="http://tamu.libguides.com/c.php?g=586101&amp;p=4048709">
-              <wvr-text value="School Visitors"></wvr-text>
+              <wvr-text-element value="School Visitors"></wvr-text-element>
             </a>
           </wvr-dropdown-menu-item>
           <wvr-dropdown-menu-item>
             <a href="about/other_patrons.html">
-              <wvr-text
-                value="Other Library Guests (Non-TAMU Affiliates)"
-              ></wvr-text>
+              <wvr-text-element value="Other Library Guests (Non-TAMU Affiliates)"></wvr-text-element>
             </a>
           </wvr-dropdown-menu-item>
         </wvr-dropdown-menu>
       </wvr-dropdown-element>
     </wvr-nav-li-element>
-
     <wvr-nav-li-element>
       <a href="https://library.tamu.edu/mylibrary/">
-        <wvr-text value="MyLibrary" font-size="14px"></wvr-text>
+        <wvr-text-element value="MyLibrary" font-size="14px"></wvr-text-element>
       </a>
     </wvr-nav-li-element>
 
     <wvr-nav-li-element>
-      <wvr-dropdown-element
-        [toggleOn]="'mouseover'"
-        [menuXOffset]="'-415px'"
-        [menuYOffset]="'15px'"
-        class="help"
-      >
+      <wvr-dropdown-element [btnHref]="'http://askus.library.tamu.edu/'" [toggleOn]="'mouseover'" [menuXOffset]="'-365px'" [menuYOffset]="'-2px'" class="help">
         <wvr-dropdown-btn>
-          <wvr-text value="Help" font-size="14px"></wvr-text>
+          <wvr-text-element value="Help" font-size="14px"></wvr-text-element>
         </wvr-dropdown-btn>
         <wvr-dropdown-menu>
-          <wvr-dropdown-menu-item>
-            <a href="http://askus.library.tamu.edu/">
-              <img
-                alt="AskUs logo"
-                height="80px"
-                src="//library.tamu.edu/assets/images/askus.png"
-              />
-            </a>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <svg
-              class="bi bi-arrow-right-circle"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-            <a href="http://askus.library.tamu.edu/" class="helpLink">
-              <wvr-text value=" Chat with us "></wvr-text>
-            </a>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <svg
-              class="bi bi-arrow-right-circle"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-            <a href="//library.tamu.edu/about/phone.html" class="helpLink">
-              <wvr-text value=" Call us "></wvr-text>
-            </a>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <svg
-              class="bi bi-arrow-right-circle"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-            <a href="sms:9792561091" class="helpLink">
-              <wvr-text value=" Text us @ 979-256-1091 "></wvr-text>
-            </a>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <svg
-              class="bi bi-arrow-right-circle"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-            <a
-              href="https://askus.library.tamu.edu/contact/index"
-              class="helpLink"
-            >
-              <wvr-text value=" Email us "></wvr-text>
-            </a>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <svg
-              class="bi bi-arrow-right-circle"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-            <a href="http://askus.library.tamu.edu/" class="helpLink">
-              <wvr-text value=" FAQs "></wvr-text>
-            </a>
-          </wvr-dropdown-menu-item>
-          <wvr-dropdown-menu-item>
-            <svg
-              class="bi bi-arrow-right-circle"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-            <a
-              href="https://askus.library.tamu.edu/contact/index"
-              class="helpLink"
-            >
-              <wvr-text value=" Report a problem "></wvr-text>
-            </a>
-          </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <a href="http://askus.library.tamu.edu/">
+                <img alt="AskUs logo" height="80px" src="//library.tamu.edu/assets/images/askus.png">
+              </a>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
+              <a href="http://askus.library.tamu.edu/" class="helpLink">
+                <wvr-text-element value=" Chat with us "></wvr-text-element>
+              </a>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
+              <a href="//library.tamu.edu/about/phone.html" class="helpLink">
+                <wvr-text-element value=" Call us "></wvr-text-element>
+              </a>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
+              <a href="sms:9792561091" class="helpLink">
+                <wvr-text-element value=" Text us @ 979-256-1091 "></wvr-text-element>
+              </a>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
+              <a href="https://askus.library.tamu.edu/contact/index" class="helpLink">
+                <wvr-text-element value=" Email us "></wvr-text-element>
+              </a>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
+              <a href="http://askus.library.tamu.edu/" class="helpLink">
+                <wvr-text-element value=" FAQs "></wvr-text-element>
+              </a>
+            </wvr-dropdown-menu-item>
+            <wvr-dropdown-menu-item>
+              <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
+              <a href="https://askus.library.tamu.edu/contact/index" class="helpLink">
+                <wvr-text-element value=" Report a problem "></wvr-text-element>
+              </a>
+            </wvr-dropdown-menu-item>
         </wvr-dropdown-menu>
       </wvr-dropdown-element>
     </wvr-nav-li-element>
@@ -427,23 +243,10 @@
   >
     <wvr-nav-li-element class="mobile-menu-header">
       <div (click)="toggleMobileMenu()">
-        <span><wvr-text value="Close" font-size="0.75em"></wvr-text></span>
-        <svg
-          class="bi bi-x"
-          width="1.25em"
-          height="1.25em"
-          viewBox="0 0 16 16"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"
-          />
-          <path
-            fill-rule="evenodd"
-            d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"
-          />
+        <span><wvr-text-element value="Close" font-size="0.75em"></wvr-text-element></span>
+        <svg class="bi bi-x" width="1.25em" height="1.25em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+          <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
         </svg>
       </div>
     </wvr-nav-li-element>
@@ -452,6 +255,8 @@
     </ng-container>
   </wvr-nav-list-element>
 </wvr-header-element>
+
+<span class="mobile-menu-backdrop" [ngClass]="{'closed': mobileMenuClosed}"></span>
 
 <div class="container" class="mobile-menu-button">
   <svg
