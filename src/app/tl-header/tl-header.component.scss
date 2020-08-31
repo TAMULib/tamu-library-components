@@ -30,13 +30,14 @@
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
       border-right: 1px solid #6a0000;
-
-      line-height: 20px;
+      font-size: 14px;
 
       .wvr-button {
         color: var(--tl-white);
         padding: 9px 12px;
         text-align: center;
+        font-size: 14px;
+        margin-top: 4px;
       }
 
       .wvr-button:focus {
@@ -60,6 +61,10 @@
         .caldate span {
           float: right;
         }
+      }
+
+      .hours wvr-dropdown-menu-item {
+        text-align: center;
       }
 
       .libraries {
@@ -96,7 +101,7 @@
         }
         a:hover {
           color: #23527c;
-          text-decoration: underline;
+          // text-decoration: underline;
         }
       }
 
@@ -118,12 +123,13 @@
             text-decoration: none;
             width: 100%;
           }
-          wvr-icon svg {
+          tl-icon svg {
+            fill: var(--tl-deep-grey);
+            width: 35px;
             height: 35px;
-            width: 45px;
-            fill: var(--wvr-secondary);
+            margin-right: 5px;
+            background: var(--tl-white);
           }
-
         }
 
         wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink {
@@ -273,6 +279,7 @@
         width: 0px;
         opacity: 0;
       }
+
       .mobile-menu-header {
         display: flex;
         justify-content: flex-end;
@@ -289,6 +296,7 @@
           background: transparent;
         }
       }
+
     }
   }
   .mobile-menu-button {
