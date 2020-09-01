@@ -11,10 +11,10 @@
   ngbDropdownAnchor
   >
   <wvr-dropdown-btn>
-    {{menuTitle}} 
-    <tl-icon-element 
-      set="bootstrap" 
-      name="caret-right-fill" 
+    {{menuTitle}}
+    <tl-icon-element
+      set="bootstrap"
+      name="caret-right-fill"
       size="11px">
     </tl-icon-element>
   </wvr-dropdown-btn>
@@ -23,7 +23,7 @@
       <ng-content select="tl-mega-menu-section"></ng-content>
     </div>
     <div class="mega-menu-view-all">
-      <tl-button-element [href]="viewAllHref" [btnClass]="'primary'">
+      <tl-button-element *ngIf="viewAllHref" [href]="viewAllHref" [btnClass]="'primary'">
         <wvr-text-element value="View All {{menuTitle}}"></wvr-text-element>
       </tl-button-element>
     </div>
