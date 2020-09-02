@@ -12,6 +12,9 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent {
 
   @Input() viewAllHref = 'https://library.tamu.edu';
 
+  /** This variable allows customizing the text value of View All button in the mega menu. */
+  @Input() viewAllButtonText = `View All ${this.menuTitle}`;
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
