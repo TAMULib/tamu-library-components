@@ -6,6 +6,10 @@
   @import '~bootstrap/scss/bootstrap.scss';
 }
 
+.wvr-hidden {
+  display: none!important;
+}
+
 body {
     margin: 0;
 }
@@ -17,8 +21,4 @@ html {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
-
-.hidden {
-  display: none;
 }
