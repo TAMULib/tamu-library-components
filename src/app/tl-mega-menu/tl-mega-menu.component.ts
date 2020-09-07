@@ -12,6 +12,13 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent {
 
   @Input() viewAllHref = 'https://library.tamu.edu';
 
+  get menuXOffset(): string {
+
+    let amount = -16;
+
+    return `${amount}px`;
+  }
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);

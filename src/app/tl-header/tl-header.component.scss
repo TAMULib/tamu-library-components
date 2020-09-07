@@ -132,12 +132,33 @@
       border: none;
     }
 
-    wvr-nav-list-element[bottom-navigation] wvr-nav-li {
+    wvr-nav-list-element[bottom-navigation] wvr-nav-li,
+    wvr-nav-list-element[bottom-navigation] wvr-nav-li-element {
       --wvr-nav-link-color: var(--tl-black);
       --wvr-nav-link-color-hover: var(--tl-white);
       --wvr-nav-link-background-hover: var(--tl-deep-grey);
       wvr-text {
         font-size: 16px;
+      }
+
+      tl-mega-menu {
+        display: flex;
+        height: 100%;
+        wvr-dropdown-element {
+          display: flex;
+          height: 100%;
+          .dropdown {
+            height: 100%;
+            wvr-button-element {
+              display: flex;
+              height: 100%;
+              button {
+                height:100%;
+              }
+            }
+          }
+        }
+
       }
     }
 

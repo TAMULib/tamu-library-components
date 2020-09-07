@@ -1,7 +1,8 @@
 <wvr-dropdown-element
   [btnType]="'link'"
   [toggleOn]="'mouseover'"
-  [menuYOffset]="0"
+  [menuXOffset]="menuXOffset"
+  [menuYOffset]="'-2px'"
   [menuWidth]="'928px'"
   [btnTextDecoration]="'none'"
   [btnColor]="'var(--tl-black)'"
@@ -11,10 +12,10 @@
   ngbDropdownAnchor
   >
   <wvr-dropdown-btn>
-    {{menuTitle}} 
-    <tl-icon-element 
-      set="bootstrap" 
-      name="caret-right-fill" 
+    {{menuTitle}}
+    <tl-icon-element
+      set="bootstrap"
+      name="caret-right-fill"
       size="11px">
     </tl-icon-element>
   </wvr-dropdown-btn>
