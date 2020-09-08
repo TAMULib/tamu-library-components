@@ -1,7 +1,7 @@
 <wvr-dropdown-element
   [btnType]="'link'"
   [toggleOn]="'mouseover'"
-  [menuXOffset]="menuXOffset"
+  menuXOffset="{{menuXOffset}}px"
   [menuYOffset]="'-2px'"
   [menuWidth]="'928px'"
   [btnTextDecoration]="'none'"
@@ -14,9 +14,10 @@
   <wvr-dropdown-btn>
     {{menuTitle}}
     <tl-icon-element
-      set="bootstrap"
-      name="caret-right-fill"
-      size="11px">
+      [hiddenInMobile]="true"
+      [set]="bootstrap"
+      [name]="caret-right-fill"
+      [size]="11px">
     </tl-icon-element>
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>

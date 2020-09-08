@@ -256,7 +256,7 @@
 
       }
 
-      [bottom-navigation] {
+      wvr-nav-list-element[bottom-navigation] {
         position: fixed;
         justify-content: flex-start;
         left: 0;
@@ -268,6 +268,13 @@
         overflow: hidden;
         transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
         z-index: 1300;
+        wvr-nav-li, 
+        wvr-nav-li-element {
+          width: 100%;
+          tl-mega-menu wvr-dropdown-element .wvr-dropdown .dropdown wvr-button-element button-wrapper button {
+            width: auto;
+          }
+        }
         li {
           border-bottom: 1px solid #85c0d8;
           font-weight: bold;
