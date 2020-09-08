@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, Injector, Input } from '@angular/core';
+import { AfterViewInit, Component, HostListener, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { debounce } from '@wvr/elements/lib/shared/utility/bootstrap.utility';
 
 @Component({
   selector: 'tl-mega-menu-element',
@@ -14,6 +15,9 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   menuXOffset = 0;
 
+  /** This variable allows customizing the text value of View All button in the mega menu. */
+  @Input() viewAllButtonText = `View All ${this.menuTitle}`;
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
@@ -23,7 +27,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     this.calculateMenuXOffset();
   }
 
-  private calculateMenuXOffset(): void {
+  @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
     const nativeElem = this._eRef.nativeElement as HTMLElement;
     const header = document.querySelector('tl-header') as HTMLElement;
     const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]') as HTMLElement;

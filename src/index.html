@@ -700,7 +700,7 @@
   <br />
   <tl-it-works text="TAMU Library Components Work Really Well"></tl-it-works>
   <div class="container" style="text-align: center;">
-    <tl-drop-down btn-type="primary">
+    <tl-drop-down btn-type="primary" hidden-in-mobile="true">
         <tl-dropdown-btn>
           <wvr-text value="Primary Dropdown"></wvr-text>
         </tl-dropdown-btn>
@@ -861,7 +861,7 @@
       <wvr-text value="Primary"></wvr-text>
     </tl-button>
     <tl-button btn-class="secondary">
-      <wvr-text value="Secondary"></wvr-text>
+      <wvr-text value="Secondary Will be Hidden"></wvr-text>
     </tl-button>
     <tl-button btn-class="info">
       <wvr-text value="Info"></wvr-text>
@@ -885,14 +885,14 @@
   <br /><hr /><br />
   <div class="container" style="text-align: center;background: #6d6d6d;">
     <tl-icon></tl-icon>
-    <tl-icon set="tl" name="weaver-w" color="#500000" size="34px"></tl-icon>
+    <tl-icon set="tl" name="weaver-w" color="#500000" size="34px" hidden-in-mobile="true"></tl-icon>
     <tl-icon set="bootstrap" name="arrow-right-circle" size="32px" animate="{click: 'rotateToggle'}"></tl-icon>
   </div>
 
   <br /><hr /><br />
   <div class="container" style="height: 700px">
 
-    <tl-mega-menu menu-title="Services" view-all-href="/view-all">
+    <tl-mega-menu menu-title="Services"  view-all-href="/view-all" view-all-button-text= "Customized View All Button" hidden-in-mobile="true">
       <tl-mega-menu-section section-title="Section One">
         <tl-nav-li>
           <a href="/services/option1">
