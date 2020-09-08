@@ -137,6 +137,7 @@
       --wvr-nav-link-color: var(--tl-black);
       --wvr-nav-link-color-hover: var(--tl-white);
       --wvr-nav-link-background-hover: var(--tl-deep-grey);
+      width: 150px;
       wvr-text {
         font-size: 16px;
       }
@@ -144,16 +145,28 @@
       tl-mega-menu {
         display: flex;
         height: 100%;
+        width: 100%;
         wvr-dropdown-element {
           display: flex;
           height: 100%;
-          .dropdown {
-            height: 100%;
-            wvr-button-element {
-              display: flex;
+          width: 100%;
+          .wvr-dropdown {
+            width: 100%;
+            .dropdown {
               height: 100%;
-              button {
-                height:100%;
+              width: 100%;
+              wvr-button-element {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                button-wrapper {
+                  width: 100%;
+                  button {
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                  }
+                }
               }
             }
           }
