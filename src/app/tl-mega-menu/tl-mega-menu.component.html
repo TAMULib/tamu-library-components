@@ -14,15 +14,22 @@
   <wvr-dropdown-btn>
     {{menuTitle}}
     <tl-icon-element
+      class="x-icon"
       [hiddenInMobile]="true"
       [set]="'bootstrap'"
       [name]="'caret-right-fill'"
       [size]="'11px'">
     </tl-icon-element>
+    <tl-icon-element
+      class="plus-icon"
+      [set]="'bootstrap'"
+      [name]="'plus'"
+      [size]="'24px'">
+    </tl-icon-element>
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>
     <div class="mega-menu-sections d-flex justify-content-between flex-wrap">
-      <ng-content select="tl-mega-menu-section"></ng-content>
+      <ng-container *ngTemplateOutlet="content"></ng-container>
     </div>
     <div class="mega-menu-view-all">
       <tl-button-element [href]="viewAllHref" [btnClass]="'primary'">
@@ -31,3 +38,13 @@
     </div>
   </wvr-dropdown-menu>
 </wvr-dropdown-element>
+<div *ngIf="isMobileLayout">
+  <!-- <ng-container *ngTemplateOutlet="content"></ng-container> -->
+</div>
+
+
+
+
+<ng-template #content>
+  <ng-content select="tl-mega-menu-section"></ng-content>
+</ng-template>

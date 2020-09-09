@@ -1,4 +1,4 @@
-import { Component, Injector, Input } from '@angular/core';
+import { AfterContentInit, Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({

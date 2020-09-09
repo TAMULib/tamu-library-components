@@ -11,10 +11,16 @@
     ::ng-deep {
       .wvr-dropdown .dropdown {
         .btn {
-          tl-icon-element svg {
+          tl-icon-element.x-icon svg {
             transition: 0.25s ease-in-out;
             transform: rotate(0deg);
           }
+          tl-icon-element.plus-icon svg {
+            transition: 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+          width: 100%;
+          text-align: start;
         }
       }
     }
@@ -24,15 +30,18 @@
     ::ng-deep {
       .wvr-dropdown .dropdown {
         .btn {
-          tl-icon-element svg {
+          tl-icon-element.x-icon svg {
             transition: 0.25s ease-in-out;
             transform: rotate(90deg);
+          }
+          tl-icon-element.plus-icon svg {
+            transition: 0.25s ease-in-out;
+            transform: rotate(45deg);
           }
         }
       }
     }
   }
-
 
   ::ng-deep {
     
@@ -41,7 +50,16 @@
     }
 
     .wvr-dropdown .dropdown {
-
+      wvr-dropdown-btn {
+        width: 100%;
+        tl-icon-element.plus-icon {
+          display: none;
+          float: right;
+        }
+        tl-icon-element.x-icon {
+          display: inline-block;
+        }
+      }
       [ngbDropdownMenu] {
         padding: 20px;
         border: 1px solid var(--tl-grey);
@@ -51,6 +69,21 @@
       }
     }
 
+  }
+
+  @media (max-width: 767px) {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        wvr-dropdown-btn {
+          tl-icon-element.plus-icon {
+            display: inline-block;
+          }
+          tl-icon-element.x-icon {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
 }

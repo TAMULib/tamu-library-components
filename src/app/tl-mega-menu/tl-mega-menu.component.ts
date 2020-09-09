@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, HostListener, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { debounce } from '@wvr/elements';
 
 @Component({
   selector: 'tl-mega-menu-element',
@@ -26,7 +27,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     this.calculateMenuXOffset();
   }
 
-  @HostListener('window:resize') calculateMenuXOffset(): void {
+  @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
     const nativeElem = this._eRef.nativeElement as HTMLElement;
     const header = document.querySelector('tl-header') as HTMLElement;
     const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]') as HTMLElement;
