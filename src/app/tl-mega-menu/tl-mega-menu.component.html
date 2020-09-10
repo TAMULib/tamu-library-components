@@ -28,7 +28,7 @@
     </tl-icon-element>
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>
-    <div class="mega-menu-sections d-flex justify-content-between flex-wrap">
+    <div class="mega-menu-sections d-flex justify-content-between flex-wrap"  *ngIf="!isMobileLayout">
       <ng-container *ngTemplateOutlet="content"></ng-container>
     </div>
     <div class="mega-menu-view-all">
@@ -38,8 +38,9 @@
     </div>
   </wvr-dropdown-menu>
 </wvr-dropdown-element>
+
 <div *ngIf="isMobileLayout">
-  <!-- <ng-container *ngTemplateOutlet="content"></ng-container> -->
+  <ng-container *ngTemplateOutlet="content"></ng-container>
 </div>
 
 

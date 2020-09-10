@@ -20,7 +20,6 @@
             transform: rotate(0deg);
           }
           width: 100%;
-          text-align: start;
         }
       }
     }
@@ -72,6 +71,18 @@
   }
 
   @media (max-width: 767px) {
+
+    wvr-dropdown-element {
+      ::ng-deep {
+        .wvr-dropdown .dropdown {
+          .btn {
+            text-align: start !important;
+          }
+        }
+      }
+    }
+
+
     ::ng-deep {
       .wvr-dropdown .dropdown {
         wvr-dropdown-btn {
