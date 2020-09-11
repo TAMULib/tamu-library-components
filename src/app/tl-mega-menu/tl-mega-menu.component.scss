@@ -3,9 +3,10 @@
 
 :host {
   .tl-mega-menu-custom-top {
-    width: var(--wvr-dropdown-menu-width);
-    margin-left: -18px;
+    width: calc(var(--wvr-dropdown-menu-width) + 6px);
+    margin-left: -19px;
     .tl-mega-menu-custom-content-top {
+      width: calc(var(--wvr-dropdown-menu-width) + 6px);
       margin-left: -21px;
     }
   }
