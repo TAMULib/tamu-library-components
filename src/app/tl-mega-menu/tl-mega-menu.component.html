@@ -19,8 +19,18 @@
     </tl-icon-element>
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>
+    <div class="container tl-mega-menu-custom-top">
+      <div class="flex-fill align-self-stretch tl-mega-menu-custom-content-top">
+        <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
+      </div>
+    </div>
     <div class="mega-menu-sections d-flex justify-content-between flex-wrap">
       <ng-content select="tl-mega-menu-section"></ng-content>
+    </div>
+    <div class="container tl-mega-menu-custom-bottom">
+      <div class="flex-fill align-self-stretch tl-mega-menu-custom-content-bottom">
+        <ng-content select="tl-mega-menu-custom[bottom-content]"></ng-content>
+      </div>
     </div>
     <div class="mega-menu-view-all">
       <tl-button-element [href]="viewAllHref" [btnClass]="'primary'">

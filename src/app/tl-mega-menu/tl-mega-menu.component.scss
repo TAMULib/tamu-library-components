@@ -2,6 +2,22 @@
 @import "../shared/styles/tl-variables.scss";
 
 :host {
+  .tl-mega-menu-custom-top {
+    width: var(--wvr-dropdown-menu-width);
+    margin-left: -18px;
+    .tl-mega-menu-custom-content-top {
+      margin-left: -21px;
+    }
+  }
+
+  .tl-mega-menu-custom-bottom {
+    margin-left: -18px;
+    width: var(--wvr-dropdown-menu-width);
+    .tl-mega-menu-custom-content-bottom {
+      margin-left: -17px;
+    }
+  }
+
   .mega-menu-view-all {
     display: flex;
     justify-content: flex-end;
@@ -35,7 +51,7 @@
 
 
   ::ng-deep {
-    
+
     tl-button-element {
       --tl-btn-border-radius: 0px;
     }
