@@ -228,17 +228,16 @@
                   hidden-in-mobile="true">
       <tl-mega-menu-custom top-content>
           <div class="alert alert-primary" role="alert">
-            <wvr-text value="Primary Alert Message (top-content)Primary Alert Message (top-content)
-              Primary Alert Message (top-content)Primary Alert Message (top-content)Primary Alert Message (top-content)
-              Primary Alert Message (top-content)Primary Alert Message (top-content)Primary Alert Message (top-content)">
-            </wvr-text>
+            <wvr-text value="Primary Alert Message"></wvr-text>
           </div>
       </tl-mega-menu-custom>
       <tl-mega-menu-custom top-content>
         <tl-it-works text="Custom Content in Mega Menu"></tl-it-works>
     </tl-mega-menu-custom>
       <tl-mega-menu-section section-title="Section One">
-        <tl-it-works text="Section 1 using jumbotron"></tl-it-works>
+        <tl-mega-menu-custom>
+          <tl-it-works text="Custom Content in Section"></tl-it-works>
+      </tl-mega-menu-custom>
       </tl-mega-menu-section>
       <tl-mega-menu-section section-title="Section Two">
         <tl-nav-li >
@@ -258,8 +257,14 @@
         </tl-nav-li>
       </tl-mega-menu-section>
       <tl-mega-menu-section section-title="Section Three">
-        <h3><wvr-text value="Custom Content Title"></wvr-text></h3>
-        <p><wvr-text value="Custom content paragraph"></wvr-text></p>
+        <tl-mega-menu-custom>
+          <h3>
+            <wvr-text value="Custom Content Title (using h3)"></wvr-text>
+          </h3>
+          <p>
+            <wvr-text value="Custom content paragraph"></wvr-text>
+          </p>
+        </tl-mega-menu-custom>
       </tl-mega-menu-section>
       <tl-mega-menu-section section-title="Section Four">
         <tl-nav-li>
