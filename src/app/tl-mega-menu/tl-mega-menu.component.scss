@@ -10,6 +10,12 @@
   wvr-dropdown-element {
     ::ng-deep {
       .wvr-dropdown .dropdown {
+        .btn.btn-link.dropdown-toggle, 
+        .btn.btn-link:not(:disabled):not(.disabled).active, 
+        .btn.btn-link:not(:disabled):not(.disabled):active {
+          text-decoration: none !important;
+          color: var(--tl-black) !important;
+        }
         .btn {
           tl-icon-element.x-icon svg {
             transition: 0.25s ease-in-out;
@@ -25,7 +31,7 @@
     }
   }
 
-  wvr-dropdown-element:hover {
+  wvr-dropdown-element.active {
     ::ng-deep {
       .wvr-dropdown .dropdown {
         .btn {
@@ -37,6 +43,36 @@
             transition: 0.25s ease-in-out;
             transform: rotate(45deg);
           }
+        }
+      }
+    }
+  }
+
+  .mobile-display {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s linear;
+    background: var(--tl-grey);
+    ::ng-deep {
+      tl-mega-menu-section {
+        wvr-nav-list-element {
+          display: inline-block;
+          overflow: hidden;
+          max-height: 0px;
+          transition: max-height 1s linear;
+        }
+      }
+    }
+  }
+
+  .mobile-display.active {
+    max-height: 1500px;
+    transition: max-height 0.5s linear;
+    ::ng-deep {
+      tl-mega-menu-section.active {
+        wvr-nav-list-element {
+          max-height: 400px;
+          transition: max-height 0.5s linear;
         }
       }
     }
@@ -81,7 +117,6 @@
         }
       }
     }
-
 
     ::ng-deep {
       .wvr-dropdown .dropdown {

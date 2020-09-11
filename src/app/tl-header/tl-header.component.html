@@ -3,7 +3,11 @@
   [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
   [bottomNavBackground]="bottomNavBackground">
   <ng-container *ngTemplateOutlet="topNavContent" ngProjectAs='wvr-nav-list-element[top-navigation]'></ng-container>
-  <ng-container *ngTemplateOutlet="bottomNavContent" ngProjectAs='wvr-nav-list-element[bottom-navigation]'></ng-container>
+  <wvr-nav-list-element bottom-navigation *ngIf="!isMobileLayout">
+    <ng-container wvr-nav-items>
+      <ng-container *ngTemplateOutlet="bottomNavContent" ngProjectAs='wvr-nav-list-element[bottom-navigation]'></ng-container>
+    </ng-container>
+  </wvr-nav-list-element>
   <ng-container *ngTemplateOutlet="mobileMenuContent" ngProjectAs='[mobile-menu]'></ng-container>
 </wvr-header-element>
 
@@ -244,18 +248,10 @@
 </ng-template>
 
 <ng-template #bottomNavContent>
-  <wvr-nav-list-element
-    bottom-navigation
-    theme="DARK"
-    [ngClass]="{ closed: mobileMenuClosed }"
-    *ngIf="!isMobileLayout">
-    <ng-container wvr-nav-items>
-      <ng-content select="wvr-nav-li"></ng-content>
-    </ng-container>
-  </wvr-nav-list-element>
+    <ng-content select="wvr-nav-li"></ng-content>
 </ng-template>
 
 <ng-template #mobileMenuContent>
-  <!-- <ng-container *ngTemplateOutlet="bottomNavContent"></ng-container> -->
-  <ng-container *ngTemplateOutlet="topNavContent" ngProjectAs='wvr-nav-list-element[top-navigation]'></ng-container>
+  <ng-container *ngTemplateOutlet="bottomNavContent" ngProjectAs='wvr-nav-list-element[bottom-navigation]'></ng-container>
+  <ng-container *ngTemplateOutlet="topNavContent"></ng-container>
 </ng-template>

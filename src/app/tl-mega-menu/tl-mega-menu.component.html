@@ -39,12 +39,9 @@
   </wvr-dropdown-menu>
 </wvr-dropdown-element>
 
-<div *ngIf="isMobileLayout">
+<div *ngIf="isMobileLayout" class="mobile-display">
   <ng-container *ngTemplateOutlet="content"></ng-container>
 </div>
-
-
-
 
 <ng-template #content>
   <ng-content select="tl-mega-menu-section"></ng-content>
