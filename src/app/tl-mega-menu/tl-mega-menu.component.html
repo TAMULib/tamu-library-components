@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="container mega-menu-view-all">
-      <tl-button-element [href]="viewAllHref" [btnClass]="'primary'">
+      <tl-button-element *ngIf="viewAllHref" [href]="viewAllHref" [btnClass]="'primary'">
         <wvr-text-element [value]="viewAllButtonText"></wvr-text-element>
       </tl-button-element>
     </div>
