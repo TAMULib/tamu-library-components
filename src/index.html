@@ -220,30 +220,27 @@
     <tl-icon set="tl" name="weaver-w" color="#500000" size="34px" hidden-in-mobile="true"></tl-icon>
     <tl-icon set="bootstrap" name="arrow-right-circle" size="32px" animate="{click: 'rotateToggle'}"></tl-icon>
   </div>
-
   <br /><hr /><br />
   <div class="container" style="height: 700px">
-
-    <tl-mega-menu menu-title="Services"  view-all-href="/view-all" view-all-button-text= "Customized View All Button" hidden-in-mobile="true">
+    <tl-mega-menu menu-title="Services"
+                  view-all-href="/view-all"
+                  view-all-button-text= "Customized View All Button"
+                  hidden-in-mobile="true">
+      <tl-mega-menu-custom top-content>
+          <div class="alert alert-primary" role="alert">
+            <wvr-text value="Primary Alert Message"></wvr-text>
+          </div>
+      </tl-mega-menu-custom>
+      <tl-mega-menu-custom top-content>
+        <tl-it-works text="Custom Content in Mega Menu"></tl-it-works>
+    </tl-mega-menu-custom>
       <tl-mega-menu-section section-title="Section One">
-        <tl-nav-li>
-          <a href="/services/option1">
-            <wvr-text value="Option 1"></wvr-text>
-          </a>
-        </tl-nav-li>
-        <tl-nav-li >
-          <a href="/services/option2">
-            <wvr-text value="Option 2"></wvr-text>
-          </a>
-        </tl-nav-li>
-        <tl-nav-li >
-          <a href="/services/option3">
-            <wvr-text value="Option 3"></wvr-text>
-          </a>
-        </tl-nav-li>
+        <tl-mega-menu-custom>
+          <tl-it-works text="Custom Content in Section"></tl-it-works>
+      </tl-mega-menu-custom>
       </tl-mega-menu-section>
       <tl-mega-menu-section section-title="Section Two">
-        <tl-nav-li >
+        <tl-nav-li role="list">
           <a href="/research/option1">
             <wvr-text value="Option 1"></wvr-text>
           </a>
@@ -260,21 +257,12 @@
         </tl-nav-li>
       </tl-mega-menu-section>
       <tl-mega-menu-section section-title="Section Three">
-        <tl-nav-li >
-          <a href="/instructional/option1">
-            <wvr-text value="Option 1"></wvr-text>
-          </a>
-        </tl-nav-li>
-        <tl-nav-li >
-          <a href="/instructional/option2">
-            <wvr-text value="Option 2"></wvr-text>
-          </a>
-        </tl-nav-li>
-        <tl-nav-li >
-          <a href="/instructional/option3">
-            <wvr-text value="Option 3"></wvr-text>
-          </a>
-        </tl-nav-li>
+        <tl-mega-menu-custom>
+          <wvr-text value="Custom Content Title"></wvr-text>
+          <p>
+            <wvr-text value="Custom content paragraph"></wvr-text>
+          </p>
+        </tl-mega-menu-custom>
       </tl-mega-menu-section>
       <tl-mega-menu-section section-title="Section Four">
         <tl-nav-li>
@@ -309,24 +297,27 @@
             <wvr-text value="Option 3"></wvr-text>
           </a>
         </tl-nav-li>
+        <tl-mega-menu-custom>
+          <!-- <h1><wvr-text value="Test Services"></wvr-text></h1> -->
+          <div class="alert alert-warning" role="alert">
+            <wvr-text value="Warning Alert Message (section-content)"></wvr-text>
+          </div>
+        </tl-mega-menu-custom>
       </tl-mega-menu-section>
       <tl-mega-menu-section section-title="Section Six">
-        <tl-nav-li >
-          <a href="/instructional/option1">
-            <wvr-text value="Option 1"></wvr-text>
-          </a>
-        </tl-nav-li>
-        <tl-nav-li >
-          <a href="/instructional/option2">
-            <wvr-text value="Option 2"></wvr-text>
-          </a>
-        </tl-nav-li>
-        <tl-nav-li >
-          <a href="/instructional/option3">
-            <wvr-text value="Option 3"></wvr-text>
-          </a>
-        </tl-nav-li>
+        <tl-mega-menu-custom>
+          <div class="container">
+            <wvr-text value="Section Content"></wvr-text>
+          </div>
+        </tl-mega-menu-custom>
       </tl-mega-menu-section>
+      <tl-mega-menu-custom bottom-content>
+        <div class="container">
+          <div class="alert alert-success" role="alert">
+            <wvr-text value="Success Alert Message (bottom-content)Success AlertSuccess AlertSuccess Alert"></wvr-text>
+          </div>
+        </div>
+      </tl-mega-menu-custom>
     </tl-mega-menu>
 
   </div>
