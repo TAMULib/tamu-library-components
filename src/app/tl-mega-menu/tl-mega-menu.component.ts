@@ -1,8 +1,6 @@
 import { AfterViewInit, Component, HostListener, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { debounce } from '@wvr/elements';
-import { of } from 'rxjs';
-import { ɵangular_packages_platform_browser_platform_browser_k } from '@angular/platform-browser';
 
 @Component({
   selector: 'tl-mega-menu-element',
@@ -34,7 +32,6 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   }
 
   @HostListener('click', ['$event']) toggleMobileMenuPanes($event: MouseEvent): void {
-    console.log($event);
     const clickedElem = (($event as any).path[0] as HTMLElement);
     const clickedElemName = clickedElem.tagName;
 
