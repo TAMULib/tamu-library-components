@@ -10,6 +10,8 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent  {
 
   @Input() sectionTitle = 'Section Title';
 
+  @Input() viewAllHref: string;
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);

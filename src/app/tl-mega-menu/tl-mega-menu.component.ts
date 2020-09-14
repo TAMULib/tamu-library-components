@@ -18,7 +18,11 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   menuXOffset = 0;
 
   /** This variable allows customizing the text value of View All button in the mega menu. */
-  @Input() viewAllButtonText = `View All ${this.menuTitle}`;
+  @Input() viewAllButtonText: string;
+
+  get viewAllButtonDisplayText(): string {
+    return this.viewAllButtonText ? this.viewAllButtonText : `View All ${this.menuTitle}`;
+  }
 
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {

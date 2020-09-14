@@ -33,7 +33,7 @@
     </div>
     <div class="mega-menu-view-all">
       <tl-button-element [href]="viewAllHref" [btnClass]="'primary'">
-        <wvr-text-element [value]="viewAllButtonText"></wvr-text-element>
+        <wvr-text-element [value]="viewAllButtonDisplayText"></wvr-text-element>
       </tl-button-element>
     </div>
   </wvr-dropdown-menu>
@@ -41,6 +41,7 @@
 
 <div *ngIf="isMobileLayout" class="mobile-display">
   <ng-container *ngTemplateOutlet="content"></ng-container>
+  <tl-mega-menu-section-element [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section-element>
 </div>
 
 <ng-template #content>
