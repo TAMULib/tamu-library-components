@@ -13,6 +13,8 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   @Input() viewAllHref = 'https://library.tamu.edu';
 
+  @Input() outOfHeader = false;
+
   menuXOffset = 0;
 
   /** This variable allows customizing the text value of View All button in the mega menu. */
@@ -63,19 +65,21 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   }
 
   @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
-    const nativeElem = this._eRef.nativeElement as HTMLElement;
-    const header = document.querySelector('tl-header') as HTMLElement;
-    const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]') as HTMLElement;
-    if (bottomNav) {
-      let wvrBtn;
-      const frameReq = requestAnimationFrame(() => {
-        wvrBtn = nativeElem.querySelector('wvr-dropdown-btn');
-        if (wvrBtn) {
-          const wvrBtnWidth = wvrBtn.offsetWidth;
-          this.menuXOffset = (bottomNav.firstChild as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
-          cancelAnimationFrame(frameReq);
-        }
-      });
+    if (!this.outOfHeader) {
+      const nativeElem = this._eRef.nativeElement as HTMLElement;
+      const header = document.querySelector('tl-header') as HTMLElement;
+      const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]') as HTMLElement;
+      if (bottomNav) {
+        let wvrBtn;
+        const frameReq = requestAnimationFrame(() => {
+          wvrBtn = nativeElem.querySelector('wvr-dropdown-btn');
+          if (wvrBtn) {
+            const wvrBtnWidth = wvrBtn.offsetWidth;
+            this.menuXOffset = (bottomNav.firstChild as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
+            cancelAnimationFrame(frameReq);
+          }
+        });
+      }
     }
   }
 
