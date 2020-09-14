@@ -28,10 +28,20 @@
     </tl-icon-element>
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>
+    <div class="tl-mega-menu-custom-top" *ngIf="!isMobileLayout">
+      <div class="flex-fill align-self-stretch">
+        <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
+      </div>
+    </div>
     <div class="mega-menu-sections d-flex justify-content-between flex-wrap"  *ngIf="!isMobileLayout">
       <ng-container *ngTemplateOutlet="content"></ng-container>
     </div>
-    <div class="mega-menu-view-all">
+    <div class="tl-mega-menu-custom-bottom" *ngIf="!isMobileLayout">
+      <div class="flex-fill align-self-stretch">
+        <ng-content select="tl-mega-menu-custom[bottom-content]"></ng-content>
+      </div>
+    </div>
+    <div class="mega-menu-view-all container">
       <tl-button [href]="viewAllHref" [btnClass]="'primary'">
         <wvr-text-element [value]="viewAllButtonDisplayText"></wvr-text-element>
       </tl-button>
