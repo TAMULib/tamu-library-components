@@ -1,4 +1,4 @@
-<p class="section-title">{{sectionTitle}}</p>
+<p class="section-title">{{sectionTitle}} <tl-icon *ngIf="isMobileLayout" set="bootstrap" name="chevron-right"></tl-icon></p>
 <wvr-nav-list-element vertical="true">
   <ng-content select="tl-nav-li" ngProjectAs="wvr-nav-li"></ng-content>
 </wvr-nav-list-element>

@@ -65,15 +65,17 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     const nativeElem = this._eRef.nativeElement as HTMLElement;
     const header = document.querySelector('tl-header') as HTMLElement;
     const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]') as HTMLElement;
-    let wvrBtn;
-    const frameReq = requestAnimationFrame(() => {
-      wvrBtn = nativeElem.querySelector('wvr-dropdown-btn');
-      if (wvrBtn) {
-        const wvrBtnWidth = wvrBtn.offsetWidth;
-        this.menuXOffset = (bottomNav.firstChild as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
-        cancelAnimationFrame(frameReq);
-      }
-    });
+    if (bottomNav) {
+      let wvrBtn;
+      const frameReq = requestAnimationFrame(() => {
+        wvrBtn = nativeElem.querySelector('wvr-dropdown-btn');
+        if (wvrBtn) {
+          const wvrBtnWidth = wvrBtn.offsetWidth;
+          this.menuXOffset = (bottomNav.firstChild as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
+          cancelAnimationFrame(frameReq);
+        }
+      });
+    }
   }
 
 }
