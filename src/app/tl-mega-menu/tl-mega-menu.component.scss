@@ -2,21 +2,10 @@
 @import "../shared/styles/tl-variables.scss";
 
 :host {
-  .tl-mega-menu-custom-top {
-    width: calc(var(--wvr-dropdown-menu-width) + 6px);
-    margin-left: -19px;
-    .tl-mega-menu-custom-content-top {
-      width: calc(var(--wvr-dropdown-menu-width) + 6px);
-      margin-left: -21px;
-    }
-  }
 
+  .tl-mega-menu-custom-top,
   .tl-mega-menu-custom-bottom {
-    margin-left: -18px;
     width: var(--wvr-dropdown-menu-width);
-    .tl-mega-menu-custom-content-bottom {
-      margin-left: -17px;
-    }
   }
 
   .mega-menu-view-all {
@@ -60,7 +49,7 @@
     .wvr-dropdown .dropdown {
 
       [ngbDropdownMenu] {
-        padding: 20px;
+        padding: 20px 0px;
         border: 1px solid var(--tl-grey);
         border-radius: 3px;
         border-bottom: 12px solid var(--tl-deep-yellow);
