@@ -178,6 +178,9 @@
             .dropdown {
               height: 100%;
               width: 100%;
+              wvr-text {
+                font-size: var(--tl-font-size);
+              }
               wvr-button-element {
                 display: flex;
                 height: 100%;
