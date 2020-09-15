@@ -11,7 +11,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   @Input() menuTitle = 'Mega Menu';
 
-  @Input() viewAllHref = 'https://library.tamu.edu';
+  @Input() viewAllHref;
 
   @Input() outOfHeader = false;
 
