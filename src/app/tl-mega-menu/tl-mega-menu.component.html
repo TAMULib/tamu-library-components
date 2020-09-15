@@ -1,7 +1,8 @@
 <wvr-dropdown-element
   [btnType]="'link'"
   [toggleOn]="'mouseover'"
-  [menuYOffset]="0"
+  menuXOffset="{{menuXOffset}}px"
+  [menuYOffset]="'-2px'"
   [menuWidth]="'928px'"
   [btnTextDecoration]="'none'"
   [btnColor]="'var(--tl-black)'"
@@ -13,29 +14,46 @@
   <wvr-dropdown-btn>
     {{menuTitle}}
     <tl-icon-element
-      set="bootstrap"
-      name="caret-right-fill"
-      size="11px">
+      class="x-icon"
+      [hiddenInMobile]="true"
+      [set]="'bootstrap'"
+      [name]="'caret-right-fill'"
+      [size]="'11px'">
+    </tl-icon-element>
+    <tl-icon-element
+      class="plus-icon"
+      [set]="'bootstrap'"
+      [name]="'plus'"
+      [size]="'24px'">
     </tl-icon-element>
   </wvr-dropdown-btn>
   <wvr-dropdown-menu>
-    <div class="tl-mega-menu-custom-top">
+    <div class="tl-mega-menu-custom-top" *ngIf="!isMobileLayout">
       <div class="flex-fill align-self-stretch">
         <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
       </div>
     </div>
-    <div class="container mega-menu-sections d-flex justify-content-between flex-wrap">
-      <ng-content select="tl-mega-menu-section"></ng-content>
+    <div class="mega-menu-sections d-flex justify-content-between flex-wrap"  *ngIf="!isMobileLayout">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
     </div>
-    <div class="tl-mega-menu-custom-bottom">
+    <div class="tl-mega-menu-custom-bottom" *ngIf="!isMobileLayout">
       <div class="flex-fill align-self-stretch">
         <ng-content select="tl-mega-menu-custom[bottom-content]"></ng-content>
       </div>
     </div>
-    <div class="container mega-menu-view-all">
-      <tl-button-element *ngIf="viewAllHref" [href]="viewAllHref" [btnClass]="'primary'">
-        <wvr-text-element [value]="viewAllButtonText"></wvr-text-element>
-      </tl-button-element>
+    <div class="mega-menu-view-all container">
+      <tl-button [href]="viewAllHref" [btnClass]="'primary'">
+        <wvr-text-element [value]="viewAllButtonDisplayText"></wvr-text-element>
+      </tl-button>
     </div>
   </wvr-dropdown-menu>
 </wvr-dropdown-element>
+
+<div *ngIf="isMobileLayout" class="mobile-display">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+  <tl-mega-menu-section-element [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section-element>
+</div>
+
+<ng-template #content>
+  <ng-content select="tl-mega-menu-section"></ng-content>
+</ng-template>
