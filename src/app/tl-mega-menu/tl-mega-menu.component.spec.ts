@@ -41,6 +41,43 @@ describe('MegaMenuComponent', () => {
       .toEqual('Customized text value');
   });
 
+  it('toggleMobileMenuOpen should add active class to wvr-dropdown-element and the .mobile-display', () => {
+
+    jasmine
+      .clock()
+      .install();
+
+    window.resizeBy(300, 300);
+    window.dispatchEvent(new Event('resize'));
+
+    jasmine.clock()
+      .tick(350);
+
+    const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
+    const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-element');
+    const wvrDropdownBtn = wvrDropDownElement.querySelector('wvr-dropdown-btn');
+    const mobileDisplay = tlMegaMenu.querySelector('.mobile-display');
+
+    expect(wvrDropDownElement.classList.contains('active'))
+        .toBeFalse();
+
+    expect(mobileDisplay.classList.contains('active'))
+        .toBeFalse();
+
+    wvrDropdownBtn.dispatchEvent(new MouseEvent('click'));
+
+    expect(wvrDropDownElement.classList.contains('active'))
+      .toBeTrue();
+
+    expect(mobileDisplay.classList.contains('active'))
+      .toBeTrue();
+
+    jasmine
+      .clock()
+      .uninstall();
+
+  });
+
   // it('should highlight selected components when clicked', () => {
   //   expect(component.isMobileLayout)
   //     .toBeFalse();
@@ -59,17 +96,17 @@ describe('MegaMenuComponent', () => {
   //       .toBeTrue();
   //     done();
   //   }, 251);
-  it('should activate Mega menu section when clicked', done => {
+  // it('should activate Mega menu section when clicked', done => {
 
-    const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
+  //   const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
 
-    const wvrDropdownBtn = tlMegaMenu.querySelector('wvr-dropdown-btn');
-    const wvrDropDownElement = wvrDropdownBtn.closest('wvr-dropdown-element');
-    const clickEvent = new MouseEvent('click', {
-      relatedTarget: wvrDropdownBtn
-    });
+  //   const wvrDropdownBtn = tlMegaMenu.querySelector('wvr-dropdown-btn');
+  //   const wvrDropDownElement = wvrDropdownBtn.closest('wvr-dropdown-element');
+  //   const clickEvent = new MouseEvent('click', {
+  //     relatedTarget: wvrDropdownBtn
+  //   });
 
-    tlMegaMenu.dispatchEvent(clickEvent);
+  //   tlMegaMenu.dispatchEvent(clickEvent);
     // console.log('\n\n wvrDropdownBtn classList = ', wvrDropdownBtn.classList, '\n---\n\n');
     // console.log('\n\n wvrDropDownElement = ', wvrDropDownElement, '\n\n\n');
     // setTimeout(() => {
@@ -77,7 +114,7 @@ describe('MegaMenuComponent', () => {
     //     .toBeTrue();
     //   done();
     // }, 251);
-  });
-
+  // });
+// });
 
 });

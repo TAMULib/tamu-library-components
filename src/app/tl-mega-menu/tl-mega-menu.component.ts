@@ -38,34 +38,23 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     this.calculateMenuXOffset();
   }
 
-  /** This click event listener highlights the selected component. */
-  @HostListener('click', ['$event']) toggleMobileMenuPanes($event: MouseEvent): void {
-    const clickedElem = (($event as any).path[0] as HTMLElement);
-    const clickedElemName = clickedElem.tagName;
-    switch (clickedElemName) {
-      case 'WVR-DROPDOWN-BTN':
-        const wvrDropDownElement = clickedElem.closest('wvr-dropdown-element');
-        wvrDropDownElement.classList.contains('active') ?
-        wvrDropDownElement.classList.remove('active') :
-        wvrDropDownElement.classList.add('active');
-        const mobileDisplay = (this._eRef.nativeElement as HTMLElement).querySelector('.mobile-display');
-        mobileDisplay.classList.contains('active') ?
-        mobileDisplay.classList.remove('active') :
-        mobileDisplay.classList.add('active');
-        break;
-      case 'P':
-        if (clickedElem.classList.contains('section-title')) {
-          const sectionElement = clickedElem.closest('tl-mega-menu-section');
-          sectionElement.classList.contains('active') ?
-          sectionElement.classList.remove('active') :
-          sectionElement.classList.add('active');
-        }
-        break;
-      default:
-    }
-    // if ( === 'WVR-DROPDOWN-BTN') {
+  toggleMobileMenuOpen($event: MouseEvent): void {
+    const clickedElem = $event.target as HTMLElement;
+    const wvrDropDownElement = clickedElem.closest('wvr-dropdown-element');
+    wvrDropDownElement.classList.contains('active') ?
+    wvrDropDownElement.classList.remove('active') :
+    wvrDropDownElement.classList.add('active');
+    const mobileDisplay = (this._eRef.nativeElement as HTMLElement).querySelector('.mobile-display');
+    mobileDisplay.classList.contains('active') ?
+    mobileDisplay.classList.remove('active') :
+    mobileDisplay.classList.add('active');
+  }
 
-    // }
+  toggleMobileMenuSectionOpen($event: MouseEvent): void {
+    const sectionElement = ($event.target as HTMLElement).closest('tl-mega-menu-section');
+    sectionElement.classList.contains('active') ?
+    sectionElement.classList.remove('active') :
+    sectionElement.classList.add('active');
   }
 
   /** This event listener on window resize event helps the header for proper display. */
