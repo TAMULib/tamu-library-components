@@ -19,15 +19,14 @@
         .btn.btn-link:not(:disabled):not(.disabled).active, 
         .btn.btn-link:not(:disabled):not(.disabled):active {
           text-decoration: none !important;
-          color: var(--tl-black) !important;
         }
         .btn {
           tl-icon-element.x-icon svg {
-            transition: 0.25s ease-in-out;
+            transition: transform 0.25s ease-in-out;
             transform: rotate(0deg);
           }
           tl-icon-element.plus-icon svg {
-            transition: 0.25s ease-in-out;
+            transition: transform 0.25s ease-in-out;
             transform: rotate(0deg);
           }
           width: 100%;
@@ -41,7 +40,7 @@
       .wvr-dropdown .dropdown {
         .btn {
           tl-icon-element.x-icon svg {
-            transition: 0.25s ease-in-out;
+            transition: transform 0.25s ease-in-out;
             transform: rotate(90deg);
           }
         }
@@ -54,7 +53,7 @@
       .wvr-dropdown .dropdown {
         .btn {
           tl-icon-element.plus-icon svg {
-            transition: 0.25s ease-in-out;
+            transition: transform 0.25s ease-in-out;
             transform: rotate(45deg);
           }
         }
