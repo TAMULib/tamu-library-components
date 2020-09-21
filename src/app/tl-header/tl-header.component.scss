@@ -101,7 +101,6 @@
         }
         a:hover {
           color: #23527c;
-          // text-decoration: underline;
         }
       }
 
@@ -161,7 +160,7 @@
       --wvr-nav-link-color-hover: var(--tl-white);
       --wvr-nav-link-background-hover: var(--tl-deep-grey);
       width: fit-content;
-      wvr-text {
+      > li > a wvr-text {
         font-family: sans-serif;
         font-weight: 600;
         font-size: 16px;
