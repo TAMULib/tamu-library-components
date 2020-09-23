@@ -1,8 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TlMegaMenuComponent } from './tl-mega-menu.component';
 import { ComponentRef, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
+
+declare const viewport;
 
 describe('MegaMenuComponent', () => {
   let component: TlMegaMenuComponent;
@@ -41,53 +43,52 @@ describe('MegaMenuComponent', () => {
       .toEqual('Customized text value');
   });
 
-  it('toggleMobileMenuOpen should add active class to wvr-dropdown-element and the .mobile-display', done => {
+  it('toggleMobileMenuOpen should toggle active class on click', () => {
 
-    window.resizeBy(300, 300);
-    window.dispatchEvent(new Event('resize'));
+    const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
+    const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-element');
+    const wvrDropdownBtn = wvrDropDownElement.querySelectorAll('wvr-dropdown-btn')[0];
+
+    expect(wvrDropDownElement.classList.contains('active'))
+    .toBeFalse();
+
+    wvrDropdownBtn.dispatchEvent(new MouseEvent('click'));
+
+    expect(wvrDropDownElement.classList.contains('active'))
+      .toBeTrue();
+
+    wvrDropdownBtn.dispatchEvent(new MouseEvent('click'));
+
+    expect(wvrDropDownElement.classList.contains('active'))
+    .toBeFalse();
+
+  });
+
+  it('toggleMobileMenuSectionOpen should toggle active class on click', done => {
+
+    component.outOfHeader = true;
+
+    viewport.set(320);
 
     setTimeout(() => {
       const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
-      const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-element');
-      const wvrDropdownBtn = wvrDropDownElement.querySelectorAll('wvr-dropdown-btn')[0];
-      // const mobileDisplay = tlMegaMenu.querySelectorAll('.mobile-display')[0];
+      const megaMenuSection = tlMegaMenu.shadowRoot.querySelector('tl-mega-menu-section');
+      const megaMenuSectionTitle = tlMegaMenu.querySelector('.section-title');
 
-      expect(wvrDropDownElement.classList.contains('active'))
+      expect(megaMenuSection.classList.contains('active'))
       .toBeFalse();
 
-      // expect(mobileDisplay.classList.contains('active'))
-      //     .toBeFalse();
+      megaMenuSectionTitle.dispatchEvent(new MouseEvent('click'));
 
-      wvrDropdownBtn.dispatchEvent(new MouseEvent('click'));
-
-      expect(wvrDropDownElement.classList.contains('active'))
+      expect(megaMenuSection.classList.contains('active'))
         .toBeTrue();
 
-      // expect(mobileDisplay.classList.contains('active'))
-      //   .toBeTrue();
+      megaMenuSectionTitle.dispatchEvent(new MouseEvent('click'));
 
+      expect(megaMenuSection.classList.contains('active'))
+      .toBeFalse();
       done();
-
-    }, 301);
-
-    // const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
-    // const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-element');
-    // const wvrDropdownBtn = wvrDropDownElement.querySelector('wvr-dropdown-btn');
-    // const mobileDisplay = tlMegaMenu.querySelector('.mobile-display');
-
-    // expect(wvrDropDownElement.classList.contains('active'))
-    //     .toBeFalse();
-
-    // expect(mobileDisplay.classList.contains('active'))
-    //     .toBeFalse();
-
-    // wvrDropdownBtn.dispatchEvent(new MouseEvent('click'));
-
-    // expect(wvrDropDownElement.classList.contains('active'))
-    //   .toBeTrue();
-
-    // expect(mobileDisplay.classList.contains('active'))
-    //   .toBeTrue();
+    }, 1000);
 
   });
 
