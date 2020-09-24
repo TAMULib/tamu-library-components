@@ -1,5 +1,5 @@
 import { DebugElement } from '@angular/core';
-import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TlMegaMenuComponent } from './tl-mega-menu.component';
 
@@ -8,7 +8,7 @@ describe('MegaMenuComponent', () => {
   let fixture: ComponentFixture<TlMegaMenuComponent>;
   let debugElement: DebugElement;
 
-  beforeEach(waitForAsync(() => TestBed.configureTestingModule({
+  beforeEach(async(() => TestBed.configureTestingModule({
     imports: [BrowserAnimationsModule],
     declarations: [ TlMegaMenuComponent ]
   })
