@@ -1,17 +1,14 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TlMegaMenuComponent } from './tl-mega-menu.component';
-import { ComponentRef, DebugElement } from '@angular/core';
-import { By } from '@angular/platform-browser';
-
-declare const viewport;
 
 describe('MegaMenuComponent', () => {
   let component: TlMegaMenuComponent;
   let fixture: ComponentFixture<TlMegaMenuComponent>;
   let debugElement: DebugElement;
 
-  beforeEach(async(() => TestBed.configureTestingModule({
+  beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [BrowserAnimationsModule],
     declarations: [ TlMegaMenuComponent ]
   })
@@ -64,71 +61,76 @@ describe('MegaMenuComponent', () => {
 
   });
 
-  it('toggleMobileMenuSectionOpen should toggle active class on click', done => {
+  it('toggleMobileMenuSectionOpen should toggle active class on click', () => {
 
     component.outOfHeader = true;
 
-    viewport.set(320);
+    const section = document.createElement('tl-mega-menu-section');
+    const testElem = document.createElement('p');
+    testElem.classList.add('section-title');
 
-    setTimeout(() => {
-      const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
-      const megaMenuSection = tlMegaMenu.shadowRoot.querySelector('tl-mega-menu-section');
-      const megaMenuSectionTitle = tlMegaMenu.querySelector('.section-title');
+    section.appendChild(testElem);
 
-      expect(megaMenuSection.classList.contains('active'))
+    expect(section.classList.contains('active'))
       .toBeFalse();
 
-      megaMenuSectionTitle.dispatchEvent(new MouseEvent('click'));
+    const firstClick = new MouseEvent('click');
+    Object.defineProperty(firstClick, 'target', {value: testElem, enumerable: true});
+    component.toggleMobileMenuSectionOpen(firstClick);
 
-      expect(megaMenuSection.classList.contains('active'))
-        .toBeTrue();
+    expect(section.classList.contains('active'))
+      .toBeTrue();
 
-      megaMenuSectionTitle.dispatchEvent(new MouseEvent('click'));
+    const secondClick = new MouseEvent('click');
+    Object.defineProperty(secondClick, 'target', {value: testElem, enumerable: true});
+    component.toggleMobileMenuSectionOpen(secondClick);
 
-      expect(megaMenuSection.classList.contains('active'))
+    expect(section.classList.contains('active'))
       .toBeFalse();
-      done();
-    }, 1000);
 
   });
 
-  // it('should highlight selected components when clicked', () => {
-  //   expect(component.isMobileLayout)
-  //     .toBeFalse();
-  //   const bottomNav = debugElement.query(By.css('[bottom-nav]'));
-  //   console.log('\n\n\n bottomNav = ', bottomNav);
+  it('Resize event should change menu offset', fakeAsync(() => {
 
-  // });
+    const header = document.createElement('tl-header');
 
-  // const compElem = (fixture.elementRef.nativeElement as HTMLElement);
-  //   const wvrDropdownBtn = compElem.querySelector('[ngbDropdownAnchor]');
-  //   const wvrDropDownElement = wvrDropdownBtn.closest('wvr-dropdown-element');
+    document.body.append(header);
 
-  //   wvrDropdownBtn.dispatchEvent(new MouseEvent('click'));
-  //   setTimeout(() => {
-  //     expect(wvrDropDownElement.classList.contains('active'))
-  //       .toBeTrue();
-  //     done();
-  //   }, 251);
-  // it('should activate Mega menu section when clicked', done => {
+    const bottomNav = document.createElement('div');
+    bottomNav.setAttribute('bottom-navigation', '');
 
-  //   const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
+    header.attachShadow({mode: 'open'});
+    header.shadowRoot.appendChild(bottomNav);
+    const wvrBtnContainer = document.createElement('div');
 
-  //   const wvrDropdownBtn = tlMegaMenu.querySelector('wvr-dropdown-btn');
-  //   const wvrDropDownElement = wvrDropdownBtn.closest('wvr-dropdown-element');
-  //   const clickEvent = new MouseEvent('click', {
-  //     relatedTarget: wvrDropdownBtn
-  //   });
+    wvrBtnContainer.style.display = 'block';
+    wvrBtnContainer.style.position = 'relative';
+    wvrBtnContainer.style.padding = '100px';
 
-  //   tlMegaMenu.dispatchEvent(clickEvent);
-    // console.log('\n\n wvrDropdownBtn classList = ', wvrDropdownBtn.classList, '\n---\n\n');
-    // console.log('\n\n wvrDropDownElement = ', wvrDropDownElement, '\n\n\n');
-    // setTimeout(() => {
-    //   expect(wvrDropDownElement.classList.contains('active'))
-    //     .toBeTrue();
-    //   done();
-    // }, 251);
-  // });
-// });
+    const wvrBtn = document.createElement('wvr-dropdown-btn');
+
+    wvrBtnContainer.appendChild(wvrBtn);
+
+    bottomNav.appendChild(wvrBtnContainer);
+
+    const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
+
+    wvrBtn.appendChild(tlMegaMenu);
+    const firstChild = (bottomNav.firstChild as HTMLElement);
+    firstChild.style.display = 'block';
+    firstChild.style.position = 'relative';
+    firstChild.style.left = '200px';
+
+    component.calculateMenuXOffset();
+
+    expect(component.menuXOffset)
+      .toBe(0);
+
+    tick(1000);
+
+    expect(component.menuXOffset)
+        .toBeGreaterThan(0);
+
+  }));
 
 });

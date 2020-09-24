@@ -59,16 +59,18 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   /** This event listener on window resize event helps the header for proper display. */
   @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
+    /* istanbul ignore else*/
     if (!this.outOfHeader) {
       const nativeElem = this._eRef.nativeElement as HTMLElement;
       const header = document.querySelector('tl-header') as HTMLElement;
       const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]') as HTMLElement;
+      /* istanbul ignore else*/
       if (bottomNav) {
         let wvrBtn;
         const frameReq = requestAnimationFrame(() => {
           wvrBtn = nativeElem.querySelector('wvr-dropdown-btn');
+          /* istanbul ignore else*/
           if (wvrBtn) {
-            const wvrBtnWidth = wvrBtn.offsetWidth;
             this.menuXOffset = (bottomNav.firstChild as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
             cancelAnimationFrame(frameReq);
           }
