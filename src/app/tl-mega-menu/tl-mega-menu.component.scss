@@ -2,27 +2,177 @@
 @import "../shared/styles/tl-variables.scss";
 
 :host {
+
+  .mega-menu-sections {
+    margin: 0px 20px;
+  }
+
   .mega-menu-view-all {
     display: flex;
     justify-content: flex-end;
   }
 
+  wvr-dropdown-element {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn.btn-link.dropdown-toggle,
+        .btn.btn-link:not(:disabled):not(.disabled).active,
+        .btn.btn-link:not(:disabled):not(.disabled):active {
+          text-decoration: none !important;
+        }
+        .btn {
+          tl-icon-element.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+          tl-icon-element.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-element:hover {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-element.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-element.active {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-element.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-display {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s linear;
+    background: var(--tl-grey);
+
+    ::ng-deep {
+      tl-mega-menu-section-element,
+      tl-mega-menu-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+        a {
+          margin: 0px 15px 0px 0px;
+          padding: 20px 0px 0px 60px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: sans-serif;
+          font-weight: 300;
+          wvr-text {
+            font-weight: 400;
+            padding: 0px;
+            margin: 0px;
+            border-bottom: 0.5px solid #e4e4e4;
+            display: flex;
+            height: 40px;
+            width: 97%;
+          }
+        }
+        a:hover {
+          border-bottom: none;
+          wvr-text {
+            border-bottom: none;
+          }
+        }
+        .section-title {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: sans-serif;
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+          text-decoration: none;
+          tl-icon {
+            float: right;
+            transition: 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+        }
+        a.mega-menu-view-all {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: sans-serif;
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+        }
+        wvr-nav-list-element {
+          display: inline-block;
+          overflow: hidden;
+          max-height: 0px;
+          transition: max-height 1s linear;
+        }
+      }
+    }
+  }
+
+  .mobile-display.active {
+    max-height: 1500px;
+    transition: max-height 0.5s linear;
+    ::ng-deep {
+      tl-mega-menu-section.active {
+        tl-icon {
+          float: right;
+          transition: 0.25s ease-in-out;
+          transform: rotate(90deg);
+        }
+        wvr-nav-list-element {
+          max-height: 350px;
+          transition: max-height 0.5s linear;
+        }
+      }
+    }
+  }
+
   ::ng-deep {
-    
+
     tl-button-element {
       --tl-btn-border-radius: 0px;
     }
 
     .wvr-dropdown .dropdown {
-
-      .btn:hover {
-        tl-icon-element svg {
-          transform: rotate(90deg);
+      wvr-dropdown-btn {
+        width: 100%;
+        tl-icon-element.plus-icon {
+          display: none;
+          float: right;
+        }
+        tl-icon-element.x-icon {
+          display: inline-block;
         }
       }
-
       [ngbDropdownMenu] {
-        padding: 20px;
+        padding: 20px 0px;
         border: 1px solid var(--tl-grey);
         border-radius: 3px;
         border-bottom: 12px solid var(--tl-deep-yellow);
@@ -30,6 +180,36 @@
       }
     }
 
+  }
+
+  @media (max-width: 767px) {
+
+    wvr-dropdown-element {
+      ::ng-deep {
+        .wvr-dropdown .dropdown {
+          .btn {
+            text-align: start !important;
+          }
+        }
+      }
+    }
+
+    ::ng-deep {
+      wvr-dropdown-menu {
+        display: none;
+      }
+
+      .wvr-dropdown .dropdown {
+        wvr-dropdown-btn {
+          tl-icon-element.plus-icon {
+            display: inline-block;
+          }
+          tl-icon-element.x-icon {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
 }

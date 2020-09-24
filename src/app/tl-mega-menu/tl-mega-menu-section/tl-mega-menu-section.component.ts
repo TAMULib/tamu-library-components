@@ -8,7 +8,11 @@ import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.compone
 })
 export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent  {
 
+  /** The text value to be displayed as section title in the tl-mega-menu dropdown menu. */
   @Input() sectionTitle = 'Section Title';
+
+  /** The href value for the view all button. */
+  @Input() viewAllHref: string;
 
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {

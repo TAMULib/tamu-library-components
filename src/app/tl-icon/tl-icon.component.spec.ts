@@ -34,4 +34,22 @@ describe('TlIconComponent', () => {
     expect(component.name)
       .toEqual('tamu-logo');
   });
+
+  it('should have a customized color for the tl-icon', () => {
+    expect(component.color)
+      .toEqual(undefined);
+    component.color = '#500000';
+    fixture.detectChanges();
+    expect(component.color)
+      .toEqual('#500000');
+  });
+
+  it('should have a customized size for the tl-icon', () => {
+    expect(component.size)
+      .toEqual(undefined);
+    component.color = '34px';
+    fixture.detectChanges();
+    expect(component.color)
+      .toEqual('34px');
+  });
 });
