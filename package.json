@@ -48,6 +48,7 @@
     "classlist.js": "^1.1.20150312",
     "document-register-element": "^1.14.5",
     "ie11-custom-properties": "^4.1.0",
+    "karma-viewport": "^1.0.7",
     "rxjs": "~6.6.2",
     "tslib": "^2.0.1",
     "web-animations-js": "^2.3.2",

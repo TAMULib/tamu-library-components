@@ -24,4 +24,22 @@ describe('TlMegaMenuSectionComponent', () => {
     expect(component)
       .toBeTruthy();
   });
+
+  it('should have as user defined sectionTitle', () => {
+    expect(component.sectionTitle)
+      .toEqual('Section Title');
+    component.sectionTitle = 'User Defined Section Title1';
+    fixture.detectChanges();
+    expect(component.sectionTitle)
+      .toEqual('User Defined Section Title1');
+  });
+
+  it('should have as viewAllHref property', () => {
+    expect(component.viewAllHref)
+      .toEqual(undefined);
+    component.viewAllHref = '/view-all';
+    fixture.detectChanges();
+    expect(component.viewAllHref)
+      .toEqual('/view-all');
+  });
 });

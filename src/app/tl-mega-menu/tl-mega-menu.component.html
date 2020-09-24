@@ -11,7 +11,7 @@
   [btnTextDecorationHover]="'none'"
   ngbDropdownAnchor
   >
-  <wvr-dropdown-btn>
+  <wvr-dropdown-btn (click)="toggleMobileMenuOpen($event)">
     {{menuTitle}}
     <tl-icon-element
       class="x-icon"
@@ -49,7 +49,7 @@
   </wvr-dropdown-menu>
 </wvr-dropdown-element>
 
-<div *ngIf="isMobileLayout" class="mobile-display">
+<div *ngIf="isMobileLayout" class="mobile-display" (click)="toggleMobileMenuSectionOpen($event)">
   <ng-container *ngTemplateOutlet="content"></ng-container>
   <tl-mega-menu-section-element [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section-element>
 </div>
