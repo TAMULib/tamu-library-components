@@ -126,7 +126,7 @@ describe('MegaMenuComponent', () => {
     expect(component.menuXOffset)
       .toBe(0);
 
-    tick(1000);
+    tick(5000);
 
     expect(component.menuXOffset)
         .toBeGreaterThan(0);
