@@ -403,8 +403,8 @@
     left: 0;
     z-index: 1100;
     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    .flex-fill.align-self-stretch {
-      div  {
+    div {
+      div {
         wvr-nav-li > li.nav-item {
           a {
             white-space: nowrap;
@@ -419,7 +419,25 @@
         }
       }
     }
-
   }
+
+  // nav.mobile-menu {
+  //   div {
+  //     div {
+  //       wvr-nav-li > li.nav-item {
+  //         a {
+  //           white-space: nowrap;
+  //         }
+  //         .mobile-display tl-mega-menu-section-element,
+  //           .mobile-display tl-mega-menu-section {
+  //             white-space: nowrap;
+  //           }
+  //         tl-mega-menu > wvr-dropdown-element > .wvr-dropdown .dropdown wvr-button-element {
+  //           white-space: nowrap;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
 }
