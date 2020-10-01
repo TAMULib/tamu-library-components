@@ -403,8 +403,7 @@
     left: 0;
     z-index: 1100;
     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    div {
-      div {
+    div.mobile-menu-content {
         wvr-nav-li > li.nav-item {
           a {
             white-space: nowrap;
@@ -417,7 +416,6 @@
             white-space: nowrap;
           }
         }
-      }
     }
   }
 
