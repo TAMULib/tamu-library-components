@@ -1,0 +1,26 @@
+@import "../../shared/styles/tl-encapsulated.scss";
+@import "../../shared/styles/tl-branded-btn.scss";
+
+:host {
+
+  ::ng-deep {
+    
+    .nav-item {
+      display: inline-block;
+      .nav-link {
+        border-top: 5px solid var(--tl-grey);
+        border-radius: 0px 0px 0 0;
+        color: #5a534d;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: #000000;
+        background-color: #fff;
+        border-color: #a9a09a #a9a09a #fff;
+        border-top: 5px solid #500000;
+      }
+    }
+
+  }
+
+}
