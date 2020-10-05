@@ -702,7 +702,109 @@
   </tl-header>
   <br />
   <tl-it-works text="TAMU Library Components Work Really Well"></tl-it-works>
+
+  <div class="container" style="text-align: center;margin: 10px 60px;">
+    <wvr-text value="Alert Component" text-decoration="underline"></wvr-text><br /><br />
+
+    <!-- Primary Alert with Close button -->
+    <tl-alert
+      alert-class="primary"
+      alert-type="basic">
+        <wvr-text value="A simple primary alert."></wvr-text>
+    </tl-alert>
+
+    <!-- Secondary Alert with Close button -->
+    <tl-alert
+      alert-class="secondary"
+      alert-type="self-closing"
+      close-timer="15000">
+        <wvr-text value="A self closing secondary alert."></wvr-text>
+    </tl-alert>
+
+    <!-- Success Alert with Close button -->
+    <tl-alert
+      alert-class="success"
+      alert-type="basic">
+        <wvr-text value="A simple success alert."></wvr-text>
+    </tl-alert>
+
+    <!-- Danger Alert with Close button -->
+    <tl-alert
+      alert-class="danger"
+      alert-type="basic">
+        <wvr-text value="A simple danger alert."></wvr-text>
+    </tl-alert>
+
+    <!-- Warning Alert with Close button -->
+    <tl-alert
+      alert-class="warning"
+      alert-type="basic">
+        <wvr-text value="A simple warning alert."></wvr-text>
+    </tl-alert>
+
+    <!-- Info Alert with Close button -->
+    <tl-alert
+      alert-class="info"
+      alert-type="basic">
+        <wvr-text value="A simple info alert."></wvr-text>
+    </tl-alert>
+
+    <!-- Light Alert with Close button -->
+    <tl-alert
+      alert-class="light"
+      alert-type="basic">
+        <wvr-text value="A simple light alert."></wvr-text>
+    </tl-alert>
+
+    <!-- Dark Alert with Close button -->
+    <tl-alert
+      alert-class="dark"
+      alert-type="basic">
+        <wvr-text value="A simple dark alert."></wvr-text>
+    </tl-alert>
+
+    <!-- Custom Alert with Close button -->
+    <tl-alert
+      alert-class="success"
+      alert-type="custom">
+        <tl-custom-alert>
+          <h4 class="alert-heading">
+            <wvr-text value="Custom Alert Heading"></wvr-text>
+          </h4>
+          <p>
+            <wvr-text value="Custom Alert Body"></wvr-text>
+          </p>
+          <hr>
+          <p class="mb-0">
+            <wvr-text value="Custom Alert footer section."></wvr-text>
+          </p>
+        </tl-custom-alert>
+    </tl-alert>
+
+    <!-- Custom Alert with No Close button -->
+    <tl-alert
+      alert-class="danger"
+      alert-type="custom"
+      closable="false">
+        <tl-custom-alert>
+          <h4 class="alert-heading">
+            <wvr-text value="Custom Alert Heading"></wvr-text>
+          </h4>
+          <p>
+            <wvr-text value="Custom Alert Body"></wvr-text>
+          </p>
+          <hr>
+          <p class="mb-0">
+            <wvr-text value="Custom Alert footer section."></wvr-text>
+          </p>
+        </tl-custom-alert>
+    </tl-alert>
+  </div>
+  <br />
+  <hr />
+  <br />
   <div class="container" style="text-align: center;">
+    <wvr-text value="DropDown Component" text-decoration="underline"></wvr-text><br /><br />
     <tl-drop-down btn-type="primary" hidden-in-mobile="true">
         <tl-dropdown-btn>
           <wvr-text value="Primary Dropdown"></wvr-text>
@@ -860,6 +962,7 @@
   <hr />
   <br />
   <div class="container" style="text-align: center;">
+    <wvr-text value="Button Component" text-decoration="underline"></wvr-text><br /><br />
     <tl-button btn-class="primary" animate="{click: 'rotateToggle'}">
       <wvr-text value="Primary"></wvr-text>
     </tl-button>
@@ -887,12 +990,14 @@
   </div>
   <br /><hr /><br />
   <div class="container" style="text-align: center;background: #6d6d6d;">
+    <wvr-text value="Icon Component" text-decoration="underline"></wvr-text><br /><br />
     <tl-icon></tl-icon>
     <tl-icon set="tl" name="weaver-w" color="#500000" size="34px" hidden-in-mobile="true"></tl-icon>
     <tl-icon set="bootstrap" name="arrow-right-circle" size="32px" animate="{click: 'rotateToggle'}"></tl-icon>
   </div>
   <br /><hr /><br />
-  <div class="container" style="height: 700px">
+  <div class="container" style="height: 700px;">
+    <wvr-text value="Mega Menu Component" text-decoration="underline"></wvr-text><br /><br />
     <tl-mega-menu menu-title="Services"
                   view-all-href="/view-all"
                   view-all-button-text= "Customized View All Button"

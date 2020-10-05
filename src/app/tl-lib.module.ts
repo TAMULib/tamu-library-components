@@ -2,6 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { WvrLibModule } from '@wvr/elements';
+import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlDropDownComponent } from './tl-drop-down/tl-drop-down.component';
 import { TamuFooterComponent } from './tl-footer/tl-footer.component';
@@ -14,8 +15,10 @@ import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 
+
 /** This property contains a list of TAMU components and the selector tags. */
 const elements = [
+  { component: TlAlertComponent, selector: 'tl-alert' },
   { component: TlButtonComponent, selector: 'tl-button' },
   { component: TlDropDownComponent, selector: 'tl-drop-down' },
   { component: TamuFooterComponent, selector: 'tl-footer' },
@@ -31,6 +34,7 @@ const elements = [
 
 /** This property contains a list of TAMU components classes. */
 const components = [
+  TlAlertComponent,
   TlButtonComponent,
   TlDropDownComponent,
   TamuFooterComponent,
@@ -72,7 +76,7 @@ export class TamuLibModule {
   ngDoBootstrap(): void {
     elements.forEach(element => {
       try {
-        customElements.define(element.selector, createCustomElement(element.component, { 
+        customElements.define(element.selector, createCustomElement(element.component, {
           injector: this.injector
          }));
       } catch (e) {
