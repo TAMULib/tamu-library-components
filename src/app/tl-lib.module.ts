@@ -12,6 +12,8 @@ import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu/tl-mega-menu-section/tl-mega-menu-section.component';
 import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
+import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
+import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 
 
 /** This property contains a list of TAMU components and the selector tags. */
@@ -25,7 +27,9 @@ const elements = [
   { component: TamuItWorksComponent, selector: 'tl-it-works' },
   { component: TlMegaMenuComponent, selector: 'tl-mega-menu' },
   { component: TlMegaMenuSectionComponent, selector: 'tl-mega-menu-section' },
-  { component: TamuNavListComponent, selector: 'tl-nav-list' }
+  { component: TamuNavListComponent, selector: 'tl-nav-list' },
+  { component: TlTabsComponent, selector: 'tl-tabs' },
+  { component: TlTabComponent, selector: 'tl-tab' }
 ];
 
 /** This property contains a list of TAMU components classes. */
@@ -39,7 +43,9 @@ const components = [
   TlIconComponent,
   TlMegaMenuComponent,
   TlMegaMenuSectionComponent,
-  TamuNavListComponent
+  TamuNavListComponent,
+  TlTabsComponent,
+  TlTabComponent
 ];
 
 /** The main module for the TAMU Compnent library. */
