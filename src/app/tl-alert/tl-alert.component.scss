@@ -34,8 +34,19 @@
         opacity: .75;
         color: var(--tl-black);
         background: transparent;
-        border: 0.12rem solid var(--tl-black);
+        // border: 0.12rem solid var(--tl-black);
         top: -2px;
+      }
+
+      .btn.btn-danger.close:focus,
+      .btn.btn-dark.close:focus,
+      .btn.btn-info.close:focus,
+      .btn.btn-light.close:focus,
+      .btn.btn-primary.close:focus,
+      .btn.btn-secondary.close:focus,
+      .btn.btn-success.close:focus,
+      .btn.btn-warning.close:focus {
+        box-shadow: none;
       }
 
       .btn.btn-danger.close:active,
@@ -56,9 +67,6 @@
       .btn.btn-warning.close.active {
         color: var(--tl-black);
         background: transparent;
-        :focus {
-          box-shadow: none;
-        }
       }
 
     }

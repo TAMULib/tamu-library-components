@@ -37,9 +37,9 @@ describe('TlAlertComponent', () => {
   it('should customize alertType', () => {
     expect(component.alertType)
       .toBeUndefined();
-    component.alertType = 'closable';
+    component.alertType = 'custom';
     fixture.detectChanges();
     expect(component.alertType)
-      .toEqual('closable');
+      .toEqual('custom');
   });
 });
