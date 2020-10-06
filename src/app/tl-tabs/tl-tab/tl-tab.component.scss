@@ -8,6 +8,7 @@
     .nav-item {
       display: inline-block;
       .nav-link {
+        border: 1px solid var(--tl-grey);
         border-top: 5px solid var(--tl-grey);
         border-radius: 0px 0px 0 0;
         color: #5a534d;
@@ -16,11 +17,12 @@
       .nav-link.active {
         color: #000000;
         background-color: #fff;
-        border-color: #a9a09a #a9a09a #fff;
-        border-top: 5px solid #500000;
+        border-top: 5px solid var(--tl-primary);
+      }
+      .nav-link:hover {
+        border-bottom: 1px solid var(--tl-grey);
       }
     }
-
   }
 
 }
