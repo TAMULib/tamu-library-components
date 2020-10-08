@@ -1,0 +1,8 @@
+<wvr-alert-element
+[alertType]="alertType"
+[alertClass]="alertClass"
+[closable]="closable"
+[closeTimer]="closeTimer">
+  <ng-content select="wvr-text, wvr-text-element" ngProjectAs="wvr-text"></ng-content>
+  <ng-content select="tl-custom-alert" ngProjectAs="wvr-custom-alert"></ng-content>
+</wvr-alert-element>
