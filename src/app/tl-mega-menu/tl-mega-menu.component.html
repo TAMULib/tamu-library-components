@@ -1,4 +1,4 @@
-<wvrc-dropdown-element
+<wvre-dropdown-element
   [btnType]="'link'"
   [toggleOn]="'mouseover'"
   menuXOffset="{{menuXOffset}}px"
@@ -11,7 +11,7 @@
   [btnTextDecorationHover]="'none'"
   ngbDropdownAnchor
   >
-  <wvrc-dropdown-btn (click)="toggleMobileMenuOpen($event)">
+  <wvre-dropdown-btn (click)="toggleMobileMenuOpen($event)">
     {{menuTitle}}
     <tl-icon-element
       class="x-icon"
@@ -26,8 +26,8 @@
       [name]="'plus'"
       [size]="'24px'">
     </tl-icon-element>
-  </wvrc-dropdown-btn>
-  <wvrc-dropdown-menu>
+  </wvre-dropdown-btn>
+  <wvre-dropdown-menu>
     <div class="tl-mega-menu-custom-top" *ngIf="!isMobileLayout">
       <div class="flex-fill align-self-stretch">
         <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
@@ -43,11 +43,11 @@
     </div>
     <div class="mega-menu-view-all container pt-2" *ngIf="viewAllHref">
       <tl-button [href]="viewAllHref" [btnClass]="'primary'">
-        <wvrc-text-element [value]="viewAllButtonDisplayText"></wvrc-text-element>
+        <wvre-text-element [value]="viewAllButtonDisplayText"></wvre-text-element>
       </tl-button>
     </div>
-  </wvrc-dropdown-menu>
-</wvrc-dropdown-element>
+  </wvre-dropdown-menu>
+</wvre-dropdown-element>
 
 <div *ngIf="isMobileLayout" class="mobile-display" (click)="toggleMobileMenuSectionOpen($event)">
   <ng-container *ngTemplateOutlet="content"></ng-container>

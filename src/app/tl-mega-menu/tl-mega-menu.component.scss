@@ -12,9 +12,9 @@
     justify-content: flex-end;
   }
 
-  wvrc-dropdown-element {
+  wvre-dropdown-element {
     ::ng-deep {
-      .wvrc-dropdown .dropdown {
+      .wvre-dropdown .dropdown {
         .btn.btn-link.dropdown-toggle,
         .btn.btn-link:not(:disabled):not(.disabled).active,
         .btn.btn-link:not(:disabled):not(.disabled):active {
@@ -35,9 +35,9 @@
     }
   }
 
-  wvrc-dropdown-element:hover {
+  wvre-dropdown-element:hover {
     ::ng-deep {
-      .wvrc-dropdown .dropdown {
+      .wvre-dropdown .dropdown {
         .btn {
           tl-icon-element.x-icon svg {
             transition: transform 0.25s ease-in-out;
@@ -48,9 +48,9 @@
     }
   }
 
-  wvrc-dropdown-element.active {
+  wvre-dropdown-element.active {
     ::ng-deep {
-      .wvrc-dropdown .dropdown {
+      .wvre-dropdown .dropdown {
         .btn {
           tl-icon-element.plus-icon svg {
             transition: transform 0.25s ease-in-out;
@@ -82,7 +82,7 @@
           font-size: 17px;
           font-family: sans-serif;
           font-weight: 300;
-          wvrc-text {
+          wvre-text {
             font-weight: 400;
             padding: 0px;
             margin: 0px;
@@ -94,7 +94,7 @@
         }
         a:hover {
           border-bottom: none;
-          wvrc-text {
+          wvre-text {
             border-bottom: none;
           }
         }
@@ -126,7 +126,7 @@
           font-weight: 300;
           border-bottom: 0.5px solid #e4e4e4;
         }
-        wvrc-nav-list-element {
+        wvre-nav-list-element {
           display: inline-block;
           overflow: hidden;
           max-height: 0px;
@@ -146,7 +146,7 @@
           transition: 0.25s ease-in-out;
           transform: rotate(90deg);
         }
-        wvrc-nav-list-element {
+        wvre-nav-list-element {
           max-height: 350px;
           transition: max-height 0.5s linear;
         }
@@ -160,8 +160,8 @@
       --tl-btn-border-radius: 0px;
     }
 
-    .wvrc-dropdown .dropdown {
-      wvrc-dropdown-btn {
+    .wvre-dropdown .dropdown {
+      wvre-dropdown-btn {
         width: 100%;
         tl-icon-element.plus-icon {
           display: none;
@@ -184,9 +184,9 @@
 
   @media (max-width: 767px) {
 
-    wvrc-dropdown-element {
+    wvre-dropdown-element {
       ::ng-deep {
-        .wvrc-dropdown .dropdown {
+        .wvre-dropdown .dropdown {
           .btn {
             text-align: start !important;
           }
@@ -195,12 +195,12 @@
     }
 
     ::ng-deep {
-      wvrc-dropdown-menu {
+      wvre-dropdown-menu {
         display: none;
       }
 
-      .wvrc-dropdown .dropdown {
-        wvrc-dropdown-btn {
+      .wvre-dropdown .dropdown {
+        wvre-dropdown-btn {
           tl-icon-element.plus-icon {
             display: inline-block;
           }

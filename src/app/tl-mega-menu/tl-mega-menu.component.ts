@@ -40,7 +40,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   toggleMobileMenuOpen($event: MouseEvent): void {
     const clickedElem = $event.target as HTMLElement;
-    const wvrDropDownElement = clickedElem.closest('wvrc-dropdown-element');
+    const wvrDropDownElement = clickedElem.closest('wvre-dropdown-element');
     wvrDropDownElement.classList.contains('active') ?
     wvrDropDownElement.classList.remove('active') :
     wvrDropDownElement.classList.add('active');
@@ -68,7 +68,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
       if (bottomNav) {
         let wvrBtn;
         const frameReq = requestAnimationFrame(() => {
-          wvrBtn = nativeElem.querySelector('wvrc-dropdown-btn');
+          wvrBtn = nativeElem.querySelector('wvre-dropdown-btn');
           /* istanbul ignore else*/
           if (wvrBtn) {
             this.menuXOffset = (bottomNav.firstChild as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;

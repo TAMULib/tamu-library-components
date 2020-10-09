@@ -1,263 +1,263 @@
-<wvrc-header-element [logoSrc]="logoSrc" [logoHref]="logoHref" [logoText]="logoText" [logoImgHeight]="logoImgHeight"
+<wvre-header-element [logoSrc]="logoSrc" [logoHref]="logoHref" [logoText]="logoText" [logoImgHeight]="logoImgHeight"
   [logoImgWidth]="logoImgWidth" [logoImgMargin]="logoImgMargin" [headerTitle]="pageTitle" [headerTitleUrl]="pageTitleUrl"
   [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
   [bottomNavBackground]="bottomNavBackground">
-  <wvrc-nav-list-element top-navigation aligned="RIGHT">
-    <ng-container wvrc-nav-items>
+  <wvre-nav-list-element top-navigation aligned="RIGHT">
+    <ng-container wvre-nav-items>
       <ng-container *ngTemplateOutlet="topNavContent"></ng-container>
     </ng-container>
-  </wvrc-nav-list-element>
-  <wvrc-nav-list-element bottom-navigation *ngIf="!isMobileLayout">
-    <ng-container wvrc-nav-items>
+  </wvre-nav-list-element>
+  <wvre-nav-list-element bottom-navigation *ngIf="!isMobileLayout">
+    <ng-container wvre-nav-items>
       <ng-container *ngTemplateOutlet="bottomNavContent"></ng-container>
     </ng-container>
-  </wvrc-nav-list-element>
+  </wvre-nav-list-element>
   <ng-container *ngTemplateOutlet="mobileMenuContent" ngProjectAs='[mobile-menu]'></ng-container>
-</wvrc-header-element>
+</wvre-header-element>
 
 <ng-template #topNavContent>
-  <wvrc-nav-li-element (click)="toggleMobileMenu()">
-    <wvrc-dropdown-element [btnHref]="'https://library.tamu.edu/about/hours.html'" [toggleOn]="'mouseover'" class="hours" [menuYOffset]="'-2px'">
-      <wvrc-dropdown-btn>
-        <wvrc-text-element value="Hours"></wvrc-text-element>
-      </wvrc-dropdown-btn>
-      <wvrc-dropdown-menu>
-        <wvrc-dropdown-menu-item>
+  <wvre-nav-li-element (click)="toggleMobileMenu()">
+    <wvre-dropdown-element [btnHref]="'https://library.tamu.edu/about/hours.html'" [toggleOn]="'mouseover'" class="hours" [menuYOffset]="'-2px'">
+      <wvre-dropdown-btn>
+        <wvre-text-element value="Hours"></wvre-text-element>
+      </wvre-dropdown-btn>
+      <wvre-dropdown-menu>
+        <wvre-dropdown-menu-item>
           <div class="todayshours">
             <div class="caldate true">
-              <wvrc-text
+              <wvre-text
                 value="Business Library &amp; Collaboration Commons"
-              ></wvrc-text>
-              <span><wvrc-text value="7am - 6pm"></wvrc-text></span>
+              ></wvre-text>
+              <span><wvre-text value="7am - 6pm"></wvre-text></span>
             </div>
             <div class="caldate true">
-              <wvrc-text
+              <wvre-text
                 value="Cushing Memorial Library &amp; Archives"
-              ></wvrc-text>
-              <span><wvrc-text value="8am - 5pm"></wvrc-text></span>
+              ></wvre-text>
+              <span><wvre-text value="8am - 5pm"></wvre-text></span>
             </div>
             <div class="caldate false">
-              <wvrc-text value="Medical Sciences Library"></wvrc-text>
+              <wvre-text value="Medical Sciences Library"></wvre-text>
               <span
-                ><wvrc-text
+                ><wvre-text
                   value="Reservations are required 7 am - 6 pm"
-                ></wvrc-text
+                ></wvre-text
               ></span>
             </div>
             <div class="caldate true">
-              <wvrc-text
+              <wvre-text
                 value="Policy Sciences &amp; Economics Library"
-              ></wvrc-text>
-              <span><wvrc-text value="9am - 5pm"></wvrc-text></span>
+              ></wvre-text>
+              <span><wvre-text value="9am - 5pm"></wvre-text></span>
             </div>
             <div class="caldate true">
-              <wvrc-text value="Sterling C. Evans Library"></wvrc-text>
-              <span><wvrc-text value="7am - 6pm"></wvrc-text></span>
+              <wvre-text value="Sterling C. Evans Library"></wvre-text>
+              <span><wvre-text value="7am - 6pm"></wvre-text></span>
             </div>
             <div class="caldate false">
-              <wvrc-text value="Sterling C. Evans Library Annex"></wvrc-text>
-              <span><wvrc-text value="Closed"></wvrc-text></span>
+              <wvre-text value="Sterling C. Evans Library Annex"></wvre-text>
+              <span><wvre-text value="Closed"></wvre-text></span>
             </div>
             <div class="caldate true">
-              <wvrc-text value="AskUs (chat, email, text)"></wvrc-text>
-              <span><wvrc-text value="10am - 5pm"></wvrc-text></span>
+              <wvre-text value="AskUs (chat, email, text)"></wvre-text>
+              <span><wvre-text value="10am - 5pm"></wvre-text></span>
             </div>
           </div>
           <br />
-        </wvrc-dropdown-menu-item>
+        </wvre-dropdown-menu-item>
 
-        <wvrc-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
           <a
             class="btn btn-info btn-sm w-100"
             href="//library.tamu.edu/about/hours.html"
-            ><wvrc-text value="View All Hours"></wvrc-text>
+            ><wvre-text value="View All Hours"></wvre-text>
           </a>
-        </wvrc-dropdown-menu-item>
-      </wvrc-dropdown-menu>
-    </wvrc-dropdown-element>
-  </wvrc-nav-li-element>
-  <wvrc-nav-li-element >
-    <wvrc-dropdown-element [btnHref]="'https://library.tamu.edu/about/index.html'" [toggleOn]="'mouseover'" [menuXOffset]="'-65px'" [menuYOffset]="'-2px'" class="libraries" >
-      <wvrc-dropdown-btn>
-        <wvrc-text-element value="Libraries"></wvrc-text-element>
-      </wvrc-dropdown-btn>
-      <wvrc-dropdown-menu>
-          <wvrc-dropdown-menu-item>
+        </wvre-dropdown-menu-item>
+      </wvre-dropdown-menu>
+    </wvre-dropdown-element>
+  </wvre-nav-li-element>
+  <wvre-nav-li-element >
+    <wvre-dropdown-element [btnHref]="'https://library.tamu.edu/about/index.html'" [toggleOn]="'mouseover'" [menuXOffset]="'-65px'" [menuYOffset]="'-2px'" class="libraries" >
+      <wvre-dropdown-btn>
+        <wvre-text-element value="Libraries"></wvre-text-element>
+      </wvre-dropdown-btn>
+      <wvre-dropdown-menu>
+          <wvre-dropdown-menu-item>
             <div class="libraries-link">
               <a href="//blcc.library.tamu.edu" title="Go to Business Library and Collaboration Commons website">
-                <wvrc-text-element value="Business Library &amp; Collaboration Commons"></wvrc-text-element>
+                <wvre-text-element value="Business Library &amp; Collaboration Commons"></wvre-text-element>
               </a>
             </div>
             <p>
               <a href="//library.tamu.edu/about/directions/business-library.html" title="Parking Directions for Business Library and Collaboration Commons">
-                <wvrc-text-element value="Parking Directions"></wvrc-text-element>
+                <wvre-text-element value="Parking Directions"></wvre-text-element>
               </a>
-              <wvrc-text-element value=" / 979-845-2111"></wvrc-text-element>
+              <wvre-text-element value=" / 979-845-2111"></wvre-text-element>
             </p>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <div class="libraries-link"><a href="//cushing.library.tamu.edu" title="Go to Cushing Library website">Cushing Memorial Library &amp; Archives</a></div>
             <p>
               <a href="//library.tamu.edu/about/directions/cushing-library.html" title="Parking Directions for Cushing Library">
-                <wvrc-text-element value="Parking Directions"></wvrc-text-element>
+                <wvre-text-element value="Parking Directions"></wvre-text-element>
               </a>
-              <wvrc-text-element value=" / 979-845-1951"></wvrc-text-element>
+              <wvre-text-element value=" / 979-845-1951"></wvre-text-element>
             </p>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <div class="libraries-link">
               <a href="//msl.library.tamu.edu" title="Go to Medical Sciences Library website">
-                <wvrc-text-element value="Medical Sciences Library"></wvrc-text-element>
+                <wvre-text-element value="Medical Sciences Library"></wvre-text-element>
               </a>
             </div>
             <p>
               <a href="//library.tamu.edu/about/directions/medical-sciences-library.html" title="Parking Directions for Medical Sciences Library">
-                <wvrc-text-element value="Parking Directions"></wvrc-text-element>
+                <wvre-text-element value="Parking Directions"></wvre-text-element>
               </a>
-              <wvrc-text-element value=" / 979-845-7428"></wvrc-text-element>
+              <wvre-text-element value=" / 979-845-7428"></wvre-text-element>
             </p>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <div class="libraries-link">
               <a href="//psel.library.tamu.edu" title="Go to Policy Sciences and Economics Library website">
-                <wvrc-text-element value="Policy Sciences &amp; Economics Library"></wvrc-text-element>
+                <wvre-text-element value="Policy Sciences &amp; Economics Library"></wvre-text-element>
               </a>
             </div>
             <p>
               <a href="//library.tamu.edu/about/directions/policy-sciences-economics-library.html" title="Parking Directions for Policy Sciences and Economics Library">
-                <wvrc-text-element value="Parking Directions"></wvrc-text-element>
+                <wvre-text-element value="Parking Directions"></wvre-text-element>
               </a>
-              <wvrc-text-element value=" / 979-862-3544"></wvrc-text-element>
+              <wvre-text-element value=" / 979-862-3544"></wvre-text-element>
             </p>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <div class="libraries-link">
               <a href="//evans.library.tamu.edu" title="Go to Evans Library website">
-                <wvrc-text-element value="Sterling C. Evans Library &amp; Annex"></wvrc-text-element>
+                <wvre-text-element value="Sterling C. Evans Library &amp; Annex"></wvre-text-element>
               </a>
             </div>
             <p>
               <a href="//library.tamu.edu/about/directions/evans-library-annex.html" title="Parking Directions for Evans Library and Annex">
-                <wvrc-text-element value="Parking Directions"></wvrc-text-element>
+                <wvre-text-element value="Parking Directions"></wvre-text-element>
               </a>
-              <wvrc-text-element value=" / 979-845-3731"></wvrc-text-element>
+              <wvre-text-element value=" / 979-845-3731"></wvre-text-element>
             </p>
-          </wvrc-dropdown-menu-item>
-      </wvrc-dropdown-menu>
-    </wvrc-dropdown-element>
-  </wvrc-nav-li-element>
+          </wvre-dropdown-menu-item>
+      </wvre-dropdown-menu>
+    </wvre-dropdown-element>
+  </wvre-nav-li-element>
 
-  <wvrc-nav-li-element>
-    <wvrc-dropdown-element [btnHref]="'https://library.tamu.edu'" [toggleOn]="'mouseover'" [menuXOffset]="'-150px'" [menuYOffset]="'-2px'" class="information-for">
-      <wvrc-dropdown-btn>
-        <wvrc-text-element value="Information for"></wvrc-text-element>
-      </wvrc-dropdown-btn>
-      <wvrc-dropdown-menu>
-        <wvrc-dropdown-menu-item>
+  <wvre-nav-li-element>
+    <wvre-dropdown-element [btnHref]="'https://library.tamu.edu'" [toggleOn]="'mouseover'" [menuXOffset]="'-150px'" [menuYOffset]="'-2px'" class="information-for">
+      <wvre-dropdown-btn>
+        <wvre-text-element value="Information for"></wvre-text-element>
+      </wvre-dropdown-btn>
+      <wvre-dropdown-menu>
+        <wvre-dropdown-menu-item>
           <a href="faculty_info/index.html">
-            <wvrc-text-element value="Information for Faculty"></wvrc-text-element>
+            <wvre-text-element value="Information for Faculty"></wvre-text-element>
           </a>
-        </wvrc-dropdown-menu-item>
-        <wvrc-dropdown-menu-item>
+        </wvre-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
           <a href="grad_info/index.html">
-            <wvrc-text-element value="Graduate Student Resources"></wvrc-text-element>
+            <wvre-text-element value="Graduate Student Resources"></wvre-text-element>
           </a>
-        </wvrc-dropdown-menu-item>
-        <wvrc-dropdown-menu-item>
+        </wvre-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
           <a href="undergrad_info/index.html">
-            <wvrc-text-element value="Undergraduate Student Resources"></wvrc-text-element>
+            <wvre-text-element value="Undergraduate Student Resources"></wvre-text-element>
           </a>
-        </wvrc-dropdown-menu-item>
-        <wvrc-dropdown-menu-item>
+        </wvre-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
           <a href="services/accessibility.html">
-            <wvrc-text-element value="Services for Individuals with Disabilities"></wvrc-text-element>
+            <wvre-text-element value="Services for Individuals with Disabilities"></wvre-text-element>
           </a>
-        </wvrc-dropdown-menu-item>
-        <wvrc-dropdown-menu-item>
+        </wvre-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
           <a href="https://tamu.libguides.com/c.php?g=949823">
-            <wvrc-text-element value="Students at Satellite Campuses"></wvrc-text-element>
+            <wvre-text-element value="Students at Satellite Campuses"></wvre-text-element>
           </a>
-        </wvrc-dropdown-menu-item>
-        <wvrc-dropdown-menu-item>
+        </wvre-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
           <a href="http://tamu.libguides.com/c.php?g=586101&amp;p=4048709">
-            <wvrc-text-element value="School Visitors"></wvrc-text-element>
+            <wvre-text-element value="School Visitors"></wvre-text-element>
           </a>
-        </wvrc-dropdown-menu-item>
-        <wvrc-dropdown-menu-item>
+        </wvre-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
           <a href="about/other_patrons.html">
-            <wvrc-text-element value="Other Library Guests (Non-TAMU Affiliates)"></wvrc-text-element>
+            <wvre-text-element value="Other Library Guests (Non-TAMU Affiliates)"></wvre-text-element>
           </a>
-        </wvrc-dropdown-menu-item>
-      </wvrc-dropdown-menu>
-    </wvrc-dropdown-element>
-  </wvrc-nav-li-element>
-  <wvrc-nav-li-element>
+        </wvre-dropdown-menu-item>
+      </wvre-dropdown-menu>
+    </wvre-dropdown-element>
+  </wvre-nav-li-element>
+  <wvre-nav-li-element>
     <a href="https://library.tamu.edu/mylibrary/">
-      <wvrc-text-element value="MyLibrary"></wvrc-text-element>
+      <wvre-text-element value="MyLibrary"></wvre-text-element>
     </a>
-  </wvrc-nav-li-element>
+  </wvre-nav-li-element>
 
-  <wvrc-nav-li-element>
-    <wvrc-dropdown-element [btnHref]="'http://askus.library.tamu.edu/'" [toggleOn]="'mouseover'" [menuXOffset]="'-365px'" [menuYOffset]="'-2px'" class="help">
-      <wvrc-dropdown-btn>
-        <wvrc-text-element value="Help"></wvrc-text-element>
-      </wvrc-dropdown-btn>
-      <wvrc-dropdown-menu>
-          <wvrc-dropdown-menu-item>
+  <wvre-nav-li-element>
+    <wvre-dropdown-element [btnHref]="'http://askus.library.tamu.edu/'" [toggleOn]="'mouseover'" [menuXOffset]="'-365px'" [menuYOffset]="'-2px'" class="help">
+      <wvre-dropdown-btn>
+        <wvre-text-element value="Help"></wvre-text-element>
+      </wvre-dropdown-btn>
+      <wvre-dropdown-menu>
+          <wvre-dropdown-menu-item>
             <a href="http://askus.library.tamu.edu/">
               <img alt="AskUs logo" height="80px" src="//library.tamu.edu/assets/images/askus.png">
             </a>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
             <a href="http://askus.library.tamu.edu/" class="helpLink">
-              <wvrc-text-element value=" Chat with us "></wvrc-text-element>
+              <wvre-text-element value=" Chat with us "></wvre-text-element>
             </a>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
             <a href="//library.tamu.edu/about/phone.html" class="helpLink">
-              <wvrc-text-element value=" Call us "></wvrc-text-element>
+              <wvre-text-element value=" Call us "></wvre-text-element>
             </a>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
             <a href="sms:9792561091" class="helpLink">
-              <wvrc-text-element value=" Text us @ 979-256-1091 "></wvrc-text-element>
+              <wvre-text-element value=" Text us @ 979-256-1091 "></wvre-text-element>
             </a>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
             <a href="https://askus.library.tamu.edu/contact/index" class="helpLink">
-              <wvrc-text-element value=" Email us "></wvrc-text-element>
+              <wvre-text-element value=" Email us "></wvre-text-element>
             </a>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
             <a href="http://askus.library.tamu.edu/" class="helpLink">
-              <wvrc-text-element value=" FAQs "></wvrc-text-element>
+              <wvre-text-element value=" FAQs "></wvre-text-element>
             </a>
-          </wvrc-dropdown-menu-item>
-          <wvrc-dropdown-menu-item>
+          </wvre-dropdown-menu-item>
+          <wvre-dropdown-menu-item>
             <tl-icon set="bootstrap" name="arrow-right-circle"></tl-icon>
             <a href="https://askus.library.tamu.edu/contact/index" class="helpLink">
-              <wvrc-text-element value=" Report a problem "></wvrc-text-element>
+              <wvre-text-element value=" Report a problem "></wvre-text-element>
             </a>
-          </wvrc-dropdown-menu-item>
-      </wvrc-dropdown-menu>
-    </wvrc-dropdown-element>
-  </wvrc-nav-li-element>
+          </wvre-dropdown-menu-item>
+      </wvre-dropdown-menu>
+    </wvre-dropdown-element>
+  </wvre-nav-li-element>
 </ng-template>
 
 <ng-template #bottomNavContent>
-    <ng-content select="wvrc-nav-li"></ng-content>
+    <ng-content select="wvre-nav-li"></ng-content>
 </ng-template>
 
 <ng-template #mobileMenuContent>
   <ng-container *ngTemplateOutlet="bottomNavContent"></ng-container>
-  <wvrc-nav-list-element top-navigation-mobile>
-    <ng-container wvrc-nav-items>
+  <wvre-nav-list-element top-navigation-mobile>
+    <ng-container wvre-nav-items>
       <ng-container *ngTemplateOutlet="topNavContent"></ng-container>
     </ng-container>
-  </wvrc-nav-list-element>
+  </wvre-nav-list-element>
 </ng-template>
