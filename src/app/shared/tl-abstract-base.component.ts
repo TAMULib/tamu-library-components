@@ -1,9 +1,9 @@
 import { Directive, HostBinding, Injector, Input } from '@angular/core';
-import { WvrBaseComponent } from '@wvr/elements';
+import { WvrcBaseComponent } from '@wvr/elements';
 
 @Directive()
 // tslint:disable-next-line:directive-class-suffix
-export abstract class TamuAbstractBaseComponent extends WvrBaseComponent {
+export abstract class TamuAbstractBaseComponent extends WvrcBaseComponent {
 
   /** Allows for the override of the --tl-default-font-size css variable. */
   @HostBinding('style.--tl-font-size') _fontSize = 'var(--tl-default-font-size)';

@@ -43,8 +43,8 @@ describe('MegaMenuComponent', () => {
   it('toggleMobileMenuOpen should toggle active class on click', () => {
 
     const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
-    const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-element');
-    const wvrDropdownBtn = wvrDropDownElement.querySelectorAll('wvr-dropdown-btn')[0];
+    const wvrDropDownElement = tlMegaMenu.querySelector('wvrc-dropdown-element');
+    const wvrDropdownBtn = wvrDropDownElement.querySelectorAll('wvrc-dropdown-btn')[0];
 
     expect(wvrDropDownElement.classList.contains('active'))
     .toBeFalse();
@@ -107,7 +107,7 @@ describe('MegaMenuComponent', () => {
     wvrBtnContainer.style.position = 'relative';
     wvrBtnContainer.style.padding = '100px';
 
-    const wvrBtn = document.createElement('wvr-dropdown-btn');
+    const wvrBtn = document.createElement('wvrc-dropdown-btn');
 
     wvrBtnContainer.appendChild(wvrBtn);
 

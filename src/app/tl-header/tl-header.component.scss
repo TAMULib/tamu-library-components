@@ -3,40 +3,40 @@
 
 :host {
 
-  wvr-header-element {
+  wvrc-header-element {
     // Weaver Component overrides
-    --wvr-navbar-padding: 0px;
-    --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
-    --wvr-nav-link-font-size: var(--tl-nav-item-font-size);
+    --wvrc-navbar-padding: 0px;
+    --wvrc-font-family-sans-serif: var(--tl-font-family-sans-serif);
+    --wvrc-nav-link-font-size: var(--tl-nav-item-font-size);
 
     // Weaver Header Element Overrides
     --top-nav-height: 50px;
     --title-row-height: 85px;
     --bottom-nav-height: 65px;
 
-    wvr-nav-list-element[top-navigation-mobile] > ul > wvr-nav-li-element > li > a,
-    wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a {
+    wvrc-nav-list-element[top-navigation-mobile] > ul > wvrc-nav-li-element > li > a,
+    wvrc-nav-list-element[top-navigation] > ul > wvrc-nav-li-element > li > a {
       padding: 12px;
       text-decoration: none;
       color: var(--tl-white);
     }
 
-    wvr-nav-list-element[top-navigation-mobile] > ul > wvr-nav-li-element > li > a:hover,
-    wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a:hover {
+    wvrc-nav-list-element[top-navigation-mobile] > ul > wvrc-nav-li-element > li > a:hover,
+    wvrc-nav-list-element[top-navigation] > ul > wvrc-nav-li-element > li > a:hover {
       color: var(--tl-black);
     }
 
     // Weaver Nav List overrides for top navigation
-    wvr-nav-list-element[top-navigation-mobile] wvr-nav-li-element,
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element,
-    wvr-nav-list-element[top-navigation] .dropdown,
-    wvr-nav-list-element[top-navigation-mobile] .dropdown {
-      --wvr-nav-link-background-hover: var(--tl-deep-yellow);
-      --wvr-nav-li-width: contain;
+    wvrc-nav-list-element[top-navigation-mobile] wvrc-nav-li-element,
+    wvrc-nav-list-element[top-navigation] wvrc-nav-li-element,
+    wvrc-nav-list-element[top-navigation] .dropdown,
+    wvrc-nav-list-element[top-navigation-mobile] .dropdown {
+      --wvrc-nav-link-background-hover: var(--tl-deep-yellow);
+      --wvrc-nav-li-width: contain;
       border-right: 1px solid #6a0000;
       font-size: 14px;
 
-      .wvr-button {
+      .wvrc-button {
         color: var(--tl-white);
         padding: 9px 12px;
         text-align: center;
@@ -44,7 +44,7 @@
         margin-top: 4px;
       }
 
-      .wvr-button:focus {
+      .wvrc-button:focus {
         border-radius: 0px;
         box-shadow: none;
       }
@@ -56,7 +56,7 @@
         font-size: 16px;
       }
 
-      .hours wvr-dropdown-menu-item {
+      .hours wvrc-dropdown-menu-item {
         .caldate {
           padding: 10px 0 0 0;
           font-size: 13px;
@@ -84,7 +84,7 @@
             text-decoration: underline;
           }
         }
-        wvr-dropdown-menu {
+        wvrc-dropdown-menu {
           line-height: 0.6rem;
           margin-left: -20px;
           padding: 0px 15px;
@@ -105,14 +105,14 @@
       }
 
       .help {
-        .wvr-button {
+        .wvrc-button {
           color: var(--tl-white);
         }
-        .wvr-button:hover {
+        .wvrc-button:hover {
           color: var(--tl-black);
         }
 
-          wvr-dropdown-menu > wvr-dropdown-menu-item {
+          wvrc-dropdown-menu > wvrc-dropdown-menu-item {
           border-bottom: 1px solid #e0e0e0;
           padding: 10px 0px;
           display: flex;
@@ -131,48 +131,48 @@
           }
         }
 
-        wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink {
+        wvrc-dropdown-menu > wvrc-dropdown-menu-item:hover > .helpLink {
           background: #b0b0b0;
           border-radius: 5px;
         }
 
-        wvr-dropdown-menu > wvr-dropdown-menu-item:first-child,
-        wvr-dropdown-menu > wvr-dropdown-menu-item:last-child {
+        wvrc-dropdown-menu > wvrc-dropdown-menu-item:first-child,
+        wvrc-dropdown-menu > wvrc-dropdown-menu-item:last-child {
           border-bottom: 0px;
         }
       }
     }
 
-    wvr-nav-list-element[top-navigation] .dropdown:hover {
-      .wvr-button {
+    wvrc-nav-list-element[top-navigation] .dropdown:hover {
+      .wvrc-button {
         color: var(--tl-black);
       }
     }
 
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element:last-child,
-    wvr-nav-list-element[top-navigation] .dropdown:last-child {
+    wvrc-nav-list-element[top-navigation] wvrc-nav-li-element:last-child,
+    wvrc-nav-list-element[top-navigation] .dropdown:last-child {
       border: none;
     }
 
-    wvr-nav-list-element[bottom-navigation] wvr-nav-li,
-    wvr-nav-list-element[bottom-navigation] wvr-nav-li-element {
-      --wvr-nav-link-color: var(--tl-black);
-      --wvr-nav-link-color-hover: var(--tl-white);
-      --wvr-nav-link-background-hover: var(--tl-deep-grey);
+    wvrc-nav-list-element[bottom-navigation] wvrc-nav-li,
+    wvrc-nav-list-element[bottom-navigation] wvrc-nav-li-element {
+      --wvrc-nav-link-color: var(--tl-black);
+      --wvrc-nav-link-color-hover: var(--tl-white);
+      --wvrc-nav-link-background-hover: var(--tl-deep-grey);
       width: fit-content;
-      .nav-item > a wvr-text {
+      .nav-item > a wvrc-text {
         font-family: sans-serif;
         font-weight: 600;
         font-size: 16px;
         color: black;
       }
 
-      .nav-item:hover > a wvr-text {
+      .nav-item:hover > a wvrc-text {
         color: white;
       }
 
 
-      :hover wvr-dropdown-btn {
+      :hover wvrc-dropdown-btn {
           color: white;
           svg {
             color: white;
@@ -183,19 +183,19 @@
         display: flex;
         height: 100%;
         width: 100%;
-        wvr-dropdown-element {
+        wvrc-dropdown-element {
           display: flex;
           height: 100%;
           width: 100%;
-          .wvr-dropdown {
+          .wvrc-dropdown {
             width: 100%;
             .dropdown {
               height: 100%;
               width: 100%;
-              wvr-text {
+              wvrc-text {
                 font-size: var(--tl-font-size);
               }
-              wvr-button-element {
+              wvrc-button-element {
                 display: flex;
                 height: 100%;
                 width: 100%;
@@ -234,7 +234,7 @@
 
     @media (max-width: 767px) {
       --top-nav-height: auto;
-      --wvr-nav-li-width: fit-content;
+      --wvrc-nav-li-width: fit-content;
       header {
         box-shadow: 1px 1px 5px 2px #000;
       }
@@ -258,7 +258,7 @@
         }
       }
 
-      .mobile-menu > div > div > wvr-nav-li > li {
+      .mobile-menu > div > div > wvrc-nav-li > li {
         display: flex;
         > a {
           justify-content: start !important;
@@ -266,7 +266,7 @@
           width: 100%;
           background: var(--tl-deep-yellow);
           border-bottom: 1px solid rgb(175, 175, 175);
-          wvr-text {
+          wvrc-text {
             font-family: sans-serif;
             font-weight: 600;
             font-size: 16px;
@@ -275,11 +275,11 @@
         }
       }
 
-      wvr-nav-list-element[top-navigation-mobile] {
+      wvrc-nav-list-element[top-navigation-mobile] {
 
         .dropdown,
-        wvr-nav-li-element,
-        wvr-nav-li {
+        wvrc-nav-li-element,
+        wvrc-nav-li {
           flex: 1 1 auto;
           border-right: none;
         }
@@ -293,17 +293,17 @@
         li {
           justify-content: left!important;
 
-          wvr-dropdown-element,
-          wvr-dropdown {
+          wvrc-dropdown-element,
+          wvrc-dropdown {
             width: 100%;
           }
 
-          .wvr-dropdown {
+          .wvrc-dropdown {
             display: flex !important;
           }
 
 
-          wvr-button-element {
+          wvrc-button-element {
             display: flex;
             width:100%;
             button-wrapper {
@@ -314,15 +314,15 @@
             }
           }
 
-          .dropdown .wvr-button,
+          .dropdown .wvrc-button,
           a {
             width: 100%;
             padding-top: 6px !important;
             padding-bottom: 6px !important;
             margin-top: 0px !important;
-            wvr-dropdown-btn,
-            wvr-text-element,
-            wvr-text {
+            wvrc-dropdown-btn,
+            wvrc-text-element,
+            wvrc-text {
               font-family: var(--tl-font-family-sans-serif);
               font-weight: bold;
               font-size: 16px;
@@ -341,16 +341,16 @@
         background: var(--tl-deep-yellow);
         overflow: hidden;
         border-bottom: grey;
-        wvr-dropdown-element {
+        wvrc-dropdown-element {
           display: flex;
           width: 100%;
-          .wvr-dropdown {
+          .wvrc-dropdown {
             display: flex !important;
             width: 100%;
             .dropdown {
               display: flex !important;
               width: 100%;
-              wvr-button-element {
+              wvrc-button-element {
                 display: flex;
                 width: 100%;
                 button-wrapper {
@@ -404,7 +404,7 @@
     z-index: 1100;
     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
     div.mobile-menu-content {
-        wvr-nav-li > li.nav-item {
+        wvrc-nav-li > li.nav-item {
           a {
             white-space: nowrap;
           }
@@ -412,7 +412,7 @@
             .mobile-display tl-mega-menu-section {
               white-space: nowrap;
             }
-          tl-mega-menu > wvr-dropdown-element > .wvr-dropdown .dropdown wvr-button-element {
+          tl-mega-menu > wvrc-dropdown-element > .wvrc-dropdown .dropdown wvrc-button-element {
             white-space: nowrap;
           }
         }

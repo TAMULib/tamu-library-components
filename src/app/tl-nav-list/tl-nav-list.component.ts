@@ -4,7 +4,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 
 /**
  * The TamuNavList Component represents a navigation list.
- * Elements within this list must be of type : wvr-nav-li elements and can be either links of action elements.
+ * Elements within this list must be of type : wvrc-nav-li elements and can be either links of action elements.
  */
 @Component({
   selector: 'tl-nav-list-element',

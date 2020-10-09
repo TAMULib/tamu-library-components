@@ -2,27 +2,27 @@
 @import "../shared/styles/tl-branded-btn.scss";
 
 :host {
-  wvr-footer-element {
+  wvrc-footer-element {
     // Weaver Component overrides
-    --wvr-navbar-padding: 0px;
-    --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
-    --wvr-nav-link-font-size: var(--tl-nav-item-font-size);
+    --wvrc-navbar-padding: 0px;
+    --wvrc-font-family-sans-serif: var(--tl-font-family-sans-serif);
+    --wvrc-nav-link-font-size: var(--tl-nav-item-font-size);
     --footer-height: 50px;
   }
 
    // Weaver Nav List overrides for top navigation
-   wvr-nav-list-element wvr-nav-li-element {
-    --wvr-nav-link-color: var(--tl-white);
-    --wvr-nav-link-color-hover: var(--tl-deep-yellow);
-    --wvr-nav-link-background-hover: transparent;
-    --wvr-nav-link-text-decoration-hover: underline;
-    --wvr-nav-li-width: max-content;
+   wvrc-nav-list-element wvrc-nav-li-element {
+    --wvrc-nav-link-color: var(--tl-white);
+    --wvrc-nav-link-color-hover: var(--tl-deep-yellow);
+    --wvrc-nav-link-background-hover: transparent;
+    --wvrc-nav-link-text-decoration-hover: underline;
+    --wvrc-nav-li-width: max-content;
   }
   @media (max-width: 767px) {
-    wvr-footer-element {
+    wvrc-footer-element {
       --footer-height: auto;
       --footer-height: auto;
-      wvr-nav-list-element {
+      wvrc-nav-list-element {
         ul.flex-row {
           flex-direction: column !important;
         }

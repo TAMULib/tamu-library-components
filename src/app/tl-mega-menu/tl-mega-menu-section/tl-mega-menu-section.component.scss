@@ -10,14 +10,14 @@
     font-size: var(--tl-h3-font-size);
     font-weight: 100;
     border-bottom: 2px solid var(--tl-primary);
-    text-shadow: 
-        -0.25px 0 var(--tl-primary), 0 0.25px var(--tl-primary), 0.25px 0 var(--tl-primary), 0 -0.25px var(--tl-primary), 
+    text-shadow:
+        -0.25px 0 var(--tl-primary), 0 0.25px var(--tl-primary), 0.25px 0 var(--tl-primary), 0 -0.25px var(--tl-primary),
         -0.25px -0.25px var(--tl-primary), 0.25px 0.25px var(--tl-primary), -0.25px 0.25px var(--tl-primary), 0.25px -0.25px var(--tl-primary);
   }
   p {
     margin-bottom: 3px;
   }
-  wvr-nav-list-element {
+  wvrc-nav-list-element {
     ::ng-deep {
       tl-nav-li {
         width: 100%;
