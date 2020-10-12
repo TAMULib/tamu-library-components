@@ -3,40 +3,40 @@
 
 :host {
 
-  wvre-header-element {
+  wvr-header-component {
     // Weaver Component overrides
-    --wvre-navbar-padding: 0px;
-    --wvre-font-family-sans-serif: var(--tl-font-family-sans-serif);
-    --wvre-nav-link-font-size: var(--tl-nav-item-font-size);
+    --wvr-navbar-padding: 0px;
+    --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
+    --wvr-nav-link-font-size: var(--tl-nav-item-font-size);
 
     // Weaver Header Element Overrides
     --top-nav-height: 50px;
     --title-row-height: 85px;
     --bottom-nav-height: 65px;
 
-    wvre-nav-list-element[top-navigation-mobile] > ul > wvre-nav-li-element > li > a,
-    wvre-nav-list-element[top-navigation] > ul > wvre-nav-li-element > li > a {
+    wvr-nav-list-component[top-navigation-mobile] > ul > wvr-nav-li-component > li > a,
+    wvr-nav-list-component[top-navigation] > ul > wvr-nav-li-component > li > a {
       padding: 12px;
       text-decoration: none;
       color: var(--tl-white);
     }
 
-    wvre-nav-list-element[top-navigation-mobile] > ul > wvre-nav-li-element > li > a:hover,
-    wvre-nav-list-element[top-navigation] > ul > wvre-nav-li-element > li > a:hover {
+    wvr-nav-list-component[top-navigation-mobile] > ul > wvr-nav-li-component > li > a:hover,
+    wvr-nav-list-component[top-navigation] > ul > wvr-nav-li-component > li > a:hover {
       color: var(--tl-black);
     }
 
     // Weaver Nav List overrides for top navigation
-    wvre-nav-list-element[top-navigation-mobile] wvre-nav-li-element,
-    wvre-nav-list-element[top-navigation] wvre-nav-li-element,
-    wvre-nav-list-element[top-navigation] .dropdown,
-    wvre-nav-list-element[top-navigation-mobile] .dropdown {
-      --wvre-nav-link-background-hover: var(--tl-deep-yellow);
-      --wvre-nav-li-width: contain;
+    wvr-nav-list-component[top-navigation-mobile] wvr-nav-li-component,
+    wvr-nav-list-component[top-navigation] wvr-nav-li-component,
+    wvr-nav-list-component[top-navigation] .dropdown,
+    wvr-nav-list-component[top-navigation-mobile] .dropdown {
+      --wvr-nav-link-background-hover: var(--tl-deep-yellow);
+      --wvr-nav-li-width: contain;
       border-right: 1px solid #6a0000;
       font-size: 14px;
 
-      .wvre-button {
+      .wvr-button {
         color: var(--tl-white);
         padding: 9px 12px;
         text-align: center;
@@ -44,7 +44,7 @@
         margin-top: 4px;
       }
 
-      .wvre-button:focus {
+      .wvr-button:focus {
         border-radius: 0px;
         box-shadow: none;
       }
@@ -105,10 +105,10 @@
       }
 
       .help {
-        .wvre-button {
+        .wvr-button {
           color: var(--tl-white);
         }
-        .wvre-button:hover {
+        .wvr-button:hover {
           color: var(--tl-black);
         }
 
@@ -143,22 +143,22 @@
       }
     }
 
-    wvre-nav-list-element[top-navigation] .dropdown:hover {
-      .wvre-button {
+    wvr-nav-list-component[top-navigation] .dropdown:hover {
+      .wvr-button {
         color: var(--tl-black);
       }
     }
 
-    wvre-nav-list-element[top-navigation] wvre-nav-li-element:last-child,
-    wvre-nav-list-element[top-navigation] .dropdown:last-child {
+    wvr-nav-list-component[top-navigation] wvr-nav-li-component:last-child,
+    wvr-nav-list-component[top-navigation] .dropdown:last-child {
       border: none;
     }
 
-    wvre-nav-list-element[bottom-navigation] wvre-nav-li,
-    wvre-nav-list-element[bottom-navigation] wvre-nav-li-element {
-      --wvre-nav-link-color: var(--tl-black);
-      --wvre-nav-link-color-hover: var(--tl-white);
-      --wvre-nav-link-background-hover: var(--tl-deep-grey);
+    wvr-nav-list-component[bottom-navigation] wvre-nav-li,
+    wvr-nav-list-component[bottom-navigation] wvr-nav-li-component {
+      --wvr-nav-link-color: var(--tl-black);
+      --wvr-nav-link-color-hover: var(--tl-white);
+      --wvr-nav-link-background-hover: var(--tl-deep-grey);
       width: fit-content;
       .nav-item > a wvre-text {
         font-family: sans-serif;
@@ -183,11 +183,11 @@
         display: flex;
         height: 100%;
         width: 100%;
-        wvre-dropdown-element {
+        wvr-dropdown-component {
           display: flex;
           height: 100%;
           width: 100%;
-          .wvre-dropdown {
+          .wvr-dropdown {
             width: 100%;
             .dropdown {
               height: 100%;
@@ -195,7 +195,7 @@
               wvre-text {
                 font-size: var(--tl-font-size);
               }
-              wvre-button-element {
+              wvr-button-component {
                 display: flex;
                 height: 100%;
                 width: 100%;
@@ -234,7 +234,7 @@
 
     @media (max-width: 767px) {
       --top-nav-height: auto;
-      --wvre-nav-li-width: fit-content;
+      --wvr-nav-li-width: fit-content;
       header {
         box-shadow: 1px 1px 5px 2px #000;
       }
@@ -275,10 +275,10 @@
         }
       }
 
-      wvre-nav-list-element[top-navigation-mobile] {
+      wvr-nav-list-component[top-navigation-mobile] {
 
         .dropdown,
-        wvre-nav-li-element,
+        wvr-nav-li-component,
         wvre-nav-li {
           flex: 1 1 auto;
           border-right: none;
@@ -298,12 +298,12 @@
             width: 100%;
           }
 
-          .wvre-dropdown {
+          .wvr-dropdown {
             display: flex !important;
           }
 
 
-          wvre-button-element {
+          wvr-button-component {
             display: flex;
             width:100%;
             button-wrapper {
@@ -314,14 +314,14 @@
             }
           }
 
-          .dropdown .wvre-button,
+          .dropdown .wvr-button,
           a {
             width: 100%;
             padding-top: 6px !important;
             padding-bottom: 6px !important;
             margin-top: 0px !important;
             wvre-dropdown-btn,
-            wvre-text-element,
+            wvr-text-component,
             wvre-text {
               font-family: var(--tl-font-family-sans-serif);
               font-weight: bold;
@@ -341,16 +341,16 @@
         background: var(--tl-deep-yellow);
         overflow: hidden;
         border-bottom: grey;
-        wvre-dropdown-element {
+        wvr-dropdown-component {
           display: flex;
           width: 100%;
-          .wvre-dropdown {
+          .wvr-dropdown {
             display: flex !important;
             width: 100%;
             .dropdown {
               display: flex !important;
               width: 100%;
-              wvre-button-element {
+              wvr-button-component {
                 display: flex;
                 width: 100%;
                 button-wrapper {
@@ -412,7 +412,7 @@
             .mobile-display tl-mega-menu-section {
               white-space: nowrap;
             }
-          tl-mega-menu > wvre-dropdown-element > .wvre-dropdown .dropdown wvre-button-element {
+          tl-mega-menu > wvr-dropdown-component > .wvr-dropdown .dropdown wvr-button-component {
             white-space: nowrap;
           }
         }

@@ -3,34 +3,34 @@
 
 :host {
 
-  wvre-alert-element {
+  wvr-alert-component {
     ::ng-deep {
       .alert {
         border-radius: 0;
       }
 
-      .btn.btn-danger.close:hover,
-      .btn.btn-dark.close:hover,
-      .btn.btn-info.close:hover,
-      .btn.btn-light.close:hover,
-      .btn.btn-primary.close:hover,
-      .btn.btn-secondary.close:hover,
-      .btn.btn-success.close:hover,
-      .btn.btn-warning.close:hover {
+      button.btn.btn-danger.close:hover,
+      button.btn.btn-dark.close:hover,
+      button.btn.btn-info.close:hover,
+      button.btn.btn-light.close:hover,
+      button.btn.btn-primary.close:hover,
+      button.btn.btn-secondary.close:hover,
+      button.btn.btn-success.close:hover,
+      button.btn.btn-warning.close:hover {
         color: var(--tl-black);
         text-decoration: none;
         background: transparent;
         opacity: .75;
       }
 
-      .btn.btn-danger.close:focus,
-      .btn.btn-dark.close:focus,
-      .btn.btn-info.close:focus,
-      .btn.btn-light.close:focus,
-      .btn.btn-primary.close:focus,
-      .btn.btn-secondary.close:focus,
-      .btn.btn-success.close:focus,
-      .btn.btn-warning.close:focus {
+      button.btn.btn-danger.close:focus,
+      button.btn.btn-dark.close:focus,
+      button.btn.btn-info.close:focus,
+      button.btn.btn-light.close:focus,
+      button.btn.btn-primary.close:focus,
+      button.btn.btn-secondary.close:focus,
+      button.btn.btn-success.close:focus,
+      button.btn.btn-warning.close:focus {
         opacity: .75;
         color: var(--tl-black);
         background: transparent;
@@ -38,33 +38,33 @@
         top: -2px;
       }
 
-      .btn.btn-danger.close:focus,
-      .btn.btn-dark.close:focus,
-      .btn.btn-info.close:focus,
-      .btn.btn-light.close:focus,
-      .btn.btn-primary.close:focus,
-      .btn.btn-secondary.close:focus,
-      .btn.btn-success.close:focus,
-      .btn.btn-warning.close:focus {
+      button.btn.btn-danger.close:focus,
+      button.btn.btn-dark.close:focus,
+      button.btn.btn-info.close:focus,
+      button.btn.btn-light.close:focus,
+      button.btn.btn-primary.close:focus,
+      button.btn.btn-secondary.close:focus,
+      button.btn.btn-success.close:focus,
+      button.btn.btn-warning.close:focus {
         box-shadow: none;
       }
 
-      .btn.btn-danger.close:active,
-      .btn.btn-danger.close.active,
-      .btn.btn-dark.close:active,
-      .btn.btn-dark.close.active,
-      .btn.btn-info.close:active,
-      .btn.btn-info.close.active,
-      .btn.btn-light.close:active,
-      .btn.btn-light.close.active,
-      .btn.btn-primary.close:active,
-      .btn.btn-primary.close.active,
-      .btn.btn-secondary.close:active,
-      .btn.btn-secondary.close.active,
-      .btn.btn-success.close:active,
-      .btn.btn-success.close.active,
-      .btn.btn-warning.close:active,
-      .btn.btn-warning.close.active {
+      button.btn.btn-danger.close:active,
+      button.btn.btn-danger.close.active,
+      button.btn.btn-dark.close:active,
+      button.btn.btn-dark.close.active,
+      button.btn.btn-info.close:active,
+      button.btn.btn-info.close.active,
+      button.btn.btn-light.close:active,
+      button.btn.btn-light.close.active,
+      button.btn.btn-primary.close:active,
+      button.btn.btn-primary.close.active,
+      button.btn.btn-secondary.close:active,
+      button.btn.btn-secondary.close.active,
+      button.btn.btn-success.close:active,
+      button.btn.btn-success.close.active,
+      button.btn.btn-warning.close:active,
+      button.btn.btn-warning.close.active {
         color: var(--tl-black);
         background: transparent;
       }

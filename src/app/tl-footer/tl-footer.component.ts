@@ -7,7 +7,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
  */
 
 @Component({
-  selector: 'tl-footer-element',
+  selector: 'tl-footer-component',
   templateUrl: './tl-footer.component.html',
   styleUrls: ['./tl-footer.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom

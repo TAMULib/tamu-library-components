@@ -2,7 +2,7 @@ import { Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-alert-element',
+  selector: 'tl-alert-component',
   templateUrl: './tl-alert.component.html',
   styleUrls: ['./tl-alert.component.scss']
 })

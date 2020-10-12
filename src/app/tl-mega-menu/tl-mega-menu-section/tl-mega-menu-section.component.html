@@ -1,5 +1,5 @@
 <p class="section-title" *ngIf="!viewAllHref">{{sectionTitle}} <tl-icon *ngIf="isMobileLayout" set="bootstrap" name="chevron-right"></tl-icon></p>
 <a class="section-title" href="{{viewAllHref}}" *ngIf="viewAllHref">{{sectionTitle}} <tl-icon *ngIf="isMobileLayout" set="bootstrap" name="chevron-right"></tl-icon></a>
-<wvre-nav-list-element vertical="true">
+<wvr-nav-list-component vertical="true">
   <ng-content select="tl-nav-li, tl-mega-menu-custom" ngProjectAs="wvre-nav-li"></ng-content>
-</wvre-nav-list-element>
+</wvr-nav-list-component>
