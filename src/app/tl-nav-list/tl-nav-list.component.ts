@@ -7,7 +7,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
  * Elements within this list must be of type : wvr-nav-li elements and can be either links of action elements.
  */
 @Component({
-  selector: 'tl-nav-list-element',
+  selector: 'tl-nav-list-component',
   templateUrl: './tl-nav-list.component.html',
   styleUrls: ['./tl-nav-list.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom

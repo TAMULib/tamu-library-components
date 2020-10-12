@@ -1,7 +1,7 @@
-<wvr-footer-element [background]="backgroundColor">
-  <wvr-nav-list-element aligned="CENTER">
-    <wvr-nav-li-element *ngFor="let link of links" [href]="link.href">
-      <wvr-text-element [value]="link.value"></wvr-text-element>
-    </wvr-nav-li-element>
-  </wvr-nav-list-element>
-</wvr-footer-element>
+<wvr-footer-component [background]="backgroundColor">
+  <wvr-nav-list-component aligned="CENTER">
+    <wvr-nav-li-component *ngFor="let link of links" [href]="link.href">
+      <wvr-text-component [value]="link.value"></wvr-text-component>
+    </wvr-nav-li-component>
+  </wvr-nav-list-component>
+</wvr-footer-component>

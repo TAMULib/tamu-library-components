@@ -2,7 +2,7 @@ import { AfterContentInit, Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-icon-element',
+  selector: 'tl-icon-component',
   templateUrl: './tl-icon.component.html',
   styleUrls: ['./tl-icon.component.scss']
 })

@@ -43,7 +43,7 @@ describe('MegaMenuComponent', () => {
   it('toggleMobileMenuOpen should toggle active class on click', () => {
 
     const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
-    const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-element');
+    const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-component');
     const wvrDropdownBtn = wvrDropDownElement.querySelectorAll('wvr-dropdown-btn')[0];
 
     expect(wvrDropDownElement.classList.contains('active'))
