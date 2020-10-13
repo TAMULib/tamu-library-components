@@ -18,6 +18,7 @@ describe('MegaMenuComponent', () => {
     fixture = TestBed.createComponent(TlMegaMenuComponent);
     debugElement = fixture.debugElement;
     component = fixture.componentInstance;
+    component.outOfHeader = true;
     fixture.detectChanges();
   });
 
