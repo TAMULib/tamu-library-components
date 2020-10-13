@@ -1,4 +1,4 @@
-<wvr-dropdown-element
+<wvr-dropdown-component
   [btnHref]="btnHref"
   [toggleOn]="toggleOn"
   [btnType]="btnType"
@@ -34,10 +34,10 @@
   [textDecorationHover]="btnTextDecorationHover"
   ngbDropdownAnchor
   >
-  <wvr-dropdown-btn>
+  <wvre-dropdown-btn>
     <ng-content select="tl-dropdown-btn"></ng-content>
-  </wvr-dropdown-btn>
-  <wvr-dropdown-menu>
+  </wvre-dropdown-btn>
+  <wvre-dropdown-menu>
     <ng-content select="tl-dropdown-menu"></ng-content>
-  </wvr-dropdown-menu>
-</wvr-dropdown-element>
+  </wvre-dropdown-menu>
+</wvr-dropdown-component>

@@ -2,7 +2,7 @@ import { Component, HostBinding, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-drop-down-element',
+  selector: 'tl-drop-down-component',
   templateUrl: './tl-drop-down.component.html',
   styleUrls: ['./tl-drop-down.component.scss']
 })

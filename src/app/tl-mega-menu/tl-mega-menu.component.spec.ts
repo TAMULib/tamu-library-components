@@ -18,6 +18,7 @@ describe('MegaMenuComponent', () => {
     fixture = TestBed.createComponent(TlMegaMenuComponent);
     debugElement = fixture.debugElement;
     component = fixture.componentInstance;
+    component.outOfHeader = true;
     fixture.detectChanges();
   });
 
@@ -43,8 +44,8 @@ describe('MegaMenuComponent', () => {
   it('toggleMobileMenuOpen should toggle active class on click', () => {
 
     const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
-    const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-element');
-    const wvrDropdownBtn = wvrDropDownElement.querySelectorAll('wvr-dropdown-btn')[0];
+    const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-component');
+    const wvrDropdownBtn = wvrDropDownElement.querySelectorAll('wvre-dropdown-btn')[0];
 
     expect(wvrDropDownElement.classList.contains('active'))
     .toBeFalse();
@@ -93,7 +94,7 @@ describe('MegaMenuComponent', () => {
   it('Resize event should change menu offset', fakeAsync(() => {
 
     const header = document.createElement('tl-header');
-
+    component.outOfHeader = false;
     document.body.append(header);
 
     const bottomNav = document.createElement('div');
@@ -107,7 +108,7 @@ describe('MegaMenuComponent', () => {
     wvrBtnContainer.style.position = 'relative';
     wvrBtnContainer.style.padding = '100px';
 
-    const wvrBtn = document.createElement('wvr-dropdown-btn');
+    const wvrBtn = document.createElement('wvre-dropdown-btn');
 
     wvrBtnContainer.appendChild(wvrBtn);
 

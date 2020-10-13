@@ -1,4 +1,4 @@
-<wvr-dropdown-element
+<wvr-dropdown-component
   [btnType]="'link'"
   [toggleOn]="'mouseover'"
   menuXOffset="{{menuXOffset}}px"
@@ -11,23 +11,23 @@
   [btnTextDecorationHover]="'none'"
   ngbDropdownAnchor
   >
-  <wvr-dropdown-btn (click)="toggleMobileMenuOpen($event)">
+  <wvre-dropdown-btn (click)="toggleMobileMenuOpen($event)">
     {{menuTitle}}
-    <tl-icon-element
+    <tl-icon-component
       class="x-icon"
       [hiddenInMobile]="true"
       [set]="'bootstrap'"
       [name]="'caret-right-fill'"
       [size]="'11px'">
-    </tl-icon-element>
-    <tl-icon-element
+    </tl-icon-component>
+    <tl-icon-component
       class="plus-icon"
       [set]="'bootstrap'"
       [name]="'plus'"
       [size]="'24px'">
-    </tl-icon-element>
-  </wvr-dropdown-btn>
-  <wvr-dropdown-menu>
+    </tl-icon-component>
+  </wvre-dropdown-btn>
+  <wvre-dropdown-menu>
     <div class="tl-mega-menu-custom-top" *ngIf="!isMobileLayout">
       <div class="flex-fill align-self-stretch">
         <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
@@ -43,15 +43,15 @@
     </div>
     <div class="mega-menu-view-all container pt-2" *ngIf="viewAllHref">
       <tl-button [href]="viewAllHref" [btnClass]="'primary'">
-        <wvr-text-element [value]="viewAllButtonDisplayText"></wvr-text-element>
+        <wvr-text-component [value]="viewAllButtonDisplayText"></wvr-text-component>
       </tl-button>
     </div>
-  </wvr-dropdown-menu>
-</wvr-dropdown-element>
+  </wvre-dropdown-menu>
+</wvr-dropdown-component>
 
 <div *ngIf="isMobileLayout" class="mobile-display" (click)="toggleMobileMenuSectionOpen($event)">
   <ng-container *ngTemplateOutlet="content"></ng-container>
-  <tl-mega-menu-section-element [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section-element>
+  <tl-mega-menu-section-component [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section-component>
 </div>
 
 <ng-template #content>

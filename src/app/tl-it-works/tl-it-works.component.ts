@@ -2,7 +2,7 @@ import { Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-it-works-element',
+  selector: 'tl-it-works-component',
   templateUrl: './tl-it-works.component.html',
   styleUrls: ['./tl-it-works.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
