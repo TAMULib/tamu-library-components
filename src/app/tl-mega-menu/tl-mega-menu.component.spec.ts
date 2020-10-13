@@ -94,7 +94,7 @@ describe('MegaMenuComponent', () => {
   it('Resize event should change menu offset', fakeAsync(() => {
 
     const header = document.createElement('tl-header');
-
+    component.outOfHeader = false;
     document.body.append(header);
 
     const bottomNav = document.createElement('div');
@@ -108,7 +108,7 @@ describe('MegaMenuComponent', () => {
     wvrBtnContainer.style.position = 'relative';
     wvrBtnContainer.style.padding = '100px';
 
-    const wvrBtn = document.createElement('wvr-dropdown-btn');
+    const wvrBtn = document.createElement('wvre-dropdown-btn');
 
     wvrBtnContainer.appendChild(wvrBtn);
 
@@ -127,7 +127,7 @@ describe('MegaMenuComponent', () => {
     expect(component.menuXOffset)
       .toBe(0);
 
-    tick(25000);
+    tick(10000);
 
     expect(component.menuXOffset)
         .toBeGreaterThan(0);
