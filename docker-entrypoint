@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
 location=/usr/local/apache2/htdocs/tl-components/bundle/config.json
 
-eval "cat << EOF | tee $location
+eval "cat << EOF | echo > $location
 $(<tmp/config-template.json)
 EOF"
 
