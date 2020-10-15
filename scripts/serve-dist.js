@@ -4,10 +4,10 @@ const StaticServer = require('static-server');
 
 const fsPromises = fs.promises;
 const basePath = 'dist/bundle';
-const latestPath = `${basePath}/latest`;
+const bundlePath = `${basePath}/bundle`;
 
 const server = new StaticServer({
-  rootPath: 'dist/bundle/latest',
+  rootPath: 'dist/bundle/bundle',
   port: 8080,
   name: 'tl-component-dist-server',
   followSymlink: true,
@@ -15,14 +15,14 @@ const server = new StaticServer({
 
 server.start(function () {
   console.log('Server listening to', server.port);
-  fsPromises.copyFile('src/index.html', `${latestPath}/index.html`);
+  fsPromises.copyFile('src/index.html', `${bundlePath}/index.html`);
 });
 
 process.on('exit', function () {
-  fs.unlink(`${latestPath}/index.html`, err => {
+  fs.unlink(`${bundlePath}/index.html`, err => {
     if (err) throw err;
   });
-  fs.unlink(`${latestPath}/config.json`, err => {
+  fs.unlink(`${bundlePath}/config.json`, err => {
     if (err) throw err;
   });
   console.log('Cleaning up');

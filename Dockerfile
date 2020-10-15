@@ -12,17 +12,18 @@ RUN ls -la
 
 FROM httpd:2.4-alpine
 
-ARG MAJOR_VERSION=1x
-ARG MAJOR_MINOR_VERSION=1.0
+ARG MAJOR_VERSION=0x
+ARG MAJOR_MINOR_VERSION=0.0
 
-COPY --from=npm /app/dist/bundle/ /usr/local/apache2/htdocs/tl-components/
+COPY --from=npm /app/dist/bundle/ /usr/local/apache2/htdocs/tl-components/bundle
 
-RUN ln -s /usr/local/apache2/htdocs/tl-components/bundle /usr/local/apache2/htdocs/wvr-components/latest
-RUN ln -s /usr/local/apache2/htdocs/tl-components/bundle /usr/local/apache2/htdocs/wvr-components/${MAJOR_VERSION}
-RUN ln -s /usr/local/apache2/htdocs/tl-components/bundle /usr/local/apache2/htdocs/wvr-components/${MAJOR_MINOR_VERSION}
+RUN ln -s /usr/local/apache2/htdocs/tl-components/bundle /usr/local/apache2/htdocs/tl-components/latest
+RUN ln -s /usr/local/apache2/htdocs/tl-components/bundle /usr/local/apache2/htdocs/tl-components/${MAJOR_VERSION}
+RUN ln -s /usr/local/apache2/htdocs/tl-components/bundle /usr/local/apache2/htdocs/tl-components/${MAJOR_MINOR_VERSION}
 
-COPY src/config-template.json tmp/config-template.json
+COPY --from=npm /app/src/config-template.json tmp/config-template.json
 COPY docker-entrypoint /usr/local/bin/
+
 RUN chmod +x /usr/local/bin/docker-entrypoint
 
 ENTRYPOINT ["docker-entrypoint"]

@@ -1,7 +1,10 @@
 {
   "name": "tamu-library-components",
-  "version": "1.4.1",
+  "version": "1.5.0-rc1",
   "private": true,
+  "config": {
+    "DOCKER_SERVER": "10.55.134.48/weaver/tl-components"
+  },
   "scripts": {
     "build": "ng build --prod --output-hashing none",
     "build:clean": "npm run clean && npm run build",
@@ -13,10 +16,10 @@
     "build:static-production": "npm run build:static && node ./scripts/build-tl-components-configuration.js defaults-ci-overrides.env && ls -A | grep -v static | xargs rimraf && mv static/tamu-library-components/* . && rimraf static",
     "build:static-reports": "npm run build:static-setup && npm run test:coverage",
     "build:static-setup": "node scripts/build-tl-components-static.js",
-    "build:docker": "node scripts/build-docker.js $1",
-    "build:docker-production": "npm run build:docker 10.55.134.48/weaver/wvr-components",
+    "build:docker": "node scripts/build-docker.js",
     "clean": "rimraf dist",
     "clean:static": "rimraf static",
+    "docker:push": "node scripts/docker-push.js",
     "link": "npm link @wvr/elements",
     "lint": "ng lint",
     "ng": "ng",
@@ -24,8 +27,7 @@
     "start": "node ./scripts/build-tl-components-configuration.js defaults-dev-overrides.env && ng serve --port 3000",
     "start:dist": "node ./scripts/build-tl-components-configuration.js defaults-dist-overrides.env && node scripts/serve-dist.js",
     "start:static": "node ./scripts/build-tl-components-configuration.js defaults-static-overrides.env && static-server static -p 8081",
-    "start:docker": "node scripts/start-docker.js $1",
-    "start:docker-production": "node scripts/start-docker.js 10.55.134.48/weaver/wvr-components",
+    "start:docker": "node scripts/start-docker.js",
     "test": "npm run test:unit && npm run test:e2e",
     "test:audit": "rimraf .lighthouseci && lhci autorun --upload.target=temporary-public-storage --config=./lighthouserc.json && node scripts/build-tl-components-lighthouse-badges.js",
     "test:coverage": "ng test --no-watch --code-coverage",

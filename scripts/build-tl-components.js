@@ -1,14 +1,9 @@
 const fs = require('fs-extra');
 const concat = require('concat');
-const package = require('../package.json');
 const cp = require('child_process');
 
 const assetPath = 'dist/tl-components';
-const basePath = 'dist/bundle';
-const majorVersion = package.version.split('.')[0];
-const dirName = `${majorVersion}x`;
-const dirPath = `${basePath}/${dirName}`;
-const latestPath = `${basePath}/latest`;
+const bundlePath = 'dist/bundle';
 
 cp.fork(__dirname + '/build-tl-config-template.js');
 
@@ -22,16 +17,11 @@ cp.fork(__dirname + '/build-tl-config-template.js');
     'dist/tl-components/main-es5.js'
   ];
 
-  fs.ensureDir(dirPath);
+  fs.ensureDir(bundlePath);
 
-  await concat(files, `${dirPath}/tl-components.js`);
+  await concat(files, `${bundlePath}/tl-components.js`);
+  fs.copy('dist/tl-components/assets', "dist/static/docs/usage/assets");
+  fs.copy(`${assetPath}/assets`, `${bundlePath}/assets`);
 
-  // TODO: this should only happen when building docs
-  // the docs script is not aware of the dir path with version
-  fs.copy(`${dirPath}/tl-components.js`, `${latestPath}/tl-components.js`);
-
-  // to ensure static assets present in latest and <latest>x folders
-  fs.ensureDir(assetPath);
-  fs.copy(`${assetPath}/assets`, `${dirPath}/assets`);
-  fs.copy(`${assetPath}/assets`, `${latestPath}/assets`);
 })();
+
