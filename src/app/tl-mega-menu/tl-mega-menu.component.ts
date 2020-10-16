@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, HostListener, Injector, Input } from '@angular/core';
+import { AfterViewInit, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { debounce } from '@wvr/elements';
 
@@ -28,6 +28,12 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     return this.viewAllButtonText ? this.viewAllButtonText : `View All ${this.menuTitle}`;
   }
 
+  /** Allows for the override of the --tl-mobile-display-max-height variable. */
+  @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight: string;
+
+  /** Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable. */
+  @HostBinding('style.--tl-mobile-display-wvr-nav-list-component-max-height') mobileDisplayWvrNavListComponentMaxHeight: string;
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
@@ -36,8 +42,10 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   /** This adjusts the dropdown menu x offset on page load. */
   ngAfterViewInit(): void {
     this.calculateMenuXOffset();
+    this.calculateMaxHeights();
   }
 
+  /** This toggles the display of mobile menu on click event. */
   toggleMobileMenuOpen($event: MouseEvent): void {
     const clickedElem = $event.target as HTMLElement;
     const wvrDropDownElement = clickedElem.closest('wvr-dropdown-component');
@@ -50,11 +58,25 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     mobileDisplay.classList.add('active');
   }
 
+  /** This toggles the display of tl-mega-menu-section mobile menu on click event. */
   toggleMobileMenuSectionOpen($event: MouseEvent): void {
     const sectionElement = ($event.target as HTMLElement).closest('tl-mega-menu-section');
-    sectionElement.classList.contains('active') ?
-    sectionElement.classList.remove('active') :
-    sectionElement.classList.add('active');
+    const elem = this._eRef.nativeElement as HTMLElement;
+    const sections = elem.querySelectorAll('tl-mega-menu-section');
+    const sectionMaxHeight = this.getSectionHeight(sections);
+    // tslint:disable-next-line: radix
+    let mobileDisplayMaxHeight = parseInt(this.mobileDisplayMaxHeight.replace('px', ''));
+    if (sectionElement.classList.contains('active')) {
+      sectionElement.classList.remove('active');
+      setTimeout(() => {
+        mobileDisplayMaxHeight -= sectionMaxHeight;
+        this.mobileDisplayMaxHeight = `${mobileDisplayMaxHeight}px`;
+      }, 1000);
+    } else {
+      mobileDisplayMaxHeight += sectionMaxHeight;
+      this.mobileDisplayMaxHeight = `${mobileDisplayMaxHeight}px`;
+      sectionElement.classList.add('active');
+    }
   }
 
   /** This event listener on window resize event helps the header for proper display. */
@@ -62,8 +84,8 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     /* istanbul ignore else*/
     if (!this.outOfHeader) {
       const nativeElem = this._eRef.nativeElement as HTMLElement;
-      const header = document.querySelector('tl-header') as HTMLElement;
-      const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]') as HTMLElement;
+      const header = document.querySelector('tl-header');
+      const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]');
       /* istanbul ignore else*/
       if (bottomNav) {
         let wvrBtn;
@@ -78,5 +100,34 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
       }
     }
   }
+  /** This calculates the maximum height for tl-mega-menu-section in mobile view. */
+  calculateMaxHeights(): void {
+    const elem = this._eRef.nativeElement as HTMLElement;
+    const sections = elem.querySelectorAll('tl-mega-menu-section');
+    const sectionMaxHeight = this.getSectionHeight(sections);
+    setTimeout(() => {
+      const sectionTitles = elem.querySelectorAll('.section-title');
+      const sectionTitleHeight = sectionTitles[0] ? sectionTitles[0].clientHeight : 0;
+      const sectionTitlesHeight = sectionTitles.length * sectionTitleHeight;
+      this.mobileDisplayWvrNavListComponentMaxHeight = `${sectionMaxHeight}px`;
+      this.mobileDisplayMaxHeight = `${sectionTitlesHeight}px`;
+    }, 0);
+  }
 
+  /** This calculates the maximum height for section in mobile view. */
+  private getSectionHeight(sections: NodeListOf<Element>): number {
+    let sectionMaxHeight = 0;
+    sections.forEach(section => {
+      const lis = section.querySelectorAll('tl-nav-li');
+      if (lis[0]) {
+        const liHeight = lis[0].clientHeight;
+        const currentHeight = lis.length * liHeight;
+        if (sectionMaxHeight < currentHeight) {
+          sectionMaxHeight = currentHeight;
+        }
+      }
+    });
+
+    return sectionMaxHeight;
+  }
 }
