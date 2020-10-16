@@ -1,10 +1,10 @@
 const shell = require('shelljs')
 const package = require('../package.json');
 
-const tagBase = process.env.npm_package_config_DOCKER_SERVER.length ? 
-                `${process.env.npm_package_config_DOCKER_SERVER}:` : 
+const tagBase = process.env.npm_package_config_DOCKER_SERVER.length ?
+                `${process.env.npm_package_config_DOCKER_SERVER}:` :
                 '';
-const dockerCmd = `docker run -p 8080:80 -t ${tagBase}${package.version}`;
+const dockerCmd = `docker run --env-file=defaults.env --env-file=defaults-dev-overrides.env -p 8080:80 -t ${tagBase}${package.version}`;
 
 shell.config.fatal = true;
 

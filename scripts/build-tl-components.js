@@ -24,4 +24,3 @@ cp.fork(__dirname + '/build-tl-config-template.js');
   fs.copy(`${assetPath}/assets`, `${bundlePath}/assets`);
 
 })();
-
