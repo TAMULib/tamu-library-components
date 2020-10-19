@@ -29,7 +29,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   }
 
   /** Allows for the override of the --tl-mobile-display-max-height variable. */
-  @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight: string;
+  @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight = '0px';
 
   /** Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable. */
   @HostBinding('style.--tl-mobile-display-wvr-nav-list-component-max-height') mobileDisplayWvrNavListComponentMaxHeight: string;
