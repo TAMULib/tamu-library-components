@@ -33,7 +33,7 @@
         <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
       </div>
     </div>
-    <div class="mega-menu-sections d-flex justify-content-between flex-wrap"  *ngIf="!isMobileLayout">
+    <div class="mega-menu-sections d-flex justify-content-start flex-wrap"  *ngIf="!isMobileLayout">
       <ng-container *ngTemplateOutlet="content"></ng-container>
     </div>
     <div class="tl-mega-menu-custom-bottom" *ngIf="!isMobileLayout">
