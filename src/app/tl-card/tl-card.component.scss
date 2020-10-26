@@ -1,0 +1,159 @@
+@import "../shared/styles/tl-encapsulated.scss";
+@import "../shared/styles/tl-branded-btn.scss";
+
+:host {
+  // .card.wvr-card {
+  //   ul.list-group.list-group-flush {
+  //     border-top: 1px solid rgba(0, 0, 0, 0.125);
+  //     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  //   }
+  // }
+
+
+  .card.wvr-card {
+    // ul.list-group.list-group-flush {
+    //   border-top: 1px solid rgba(0, 0, 0, 0.125);
+    //   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    // }
+
+
+    :ng-deep {
+
+      .card.wvr-card {
+        // ul.list-group.list-group-flush {
+        //   border-top: 1px solid rgba(0, 0, 0, 0.125);
+        //   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        // }
+
+        .btn.btn-danger,
+        .btn.btn-dark,
+        .btn.btn-info,
+        .btn.btn-light,
+        .btn.btn-primary,
+        .wvr-button.btn.btn-secondary,
+        .btn.btn-success,
+        .btn.btn-warning {
+          border: var(--tl-btn-border) !important;
+        }
+
+      // btn-primary
+        button.wvr-components.wvr-button.btn.btn-secondary {
+          background: var(--tl-btn-primary-background);
+          border-color: var(--tl-btn-primary-background);
+          color: var(--tl-btn-primary-color);
+          text-decoration: var(--tl-btn-primary-text-decoration);
+          border-radius: var(--tl-btn-border-radius);
+        }
+      }
+    }
+  }
+
+
+}
+// :host {
+//   :ng-deep {
+
+
+//     .card {
+//       margin: 0 20px;
+//     }
+
+//     .card-img, .card-img-top {
+//       border-top-left-radius: calc(.25rem - 1px);
+//       border-top-right-radius: calc(.25rem - 1px);
+//     }
+
+//     .card-body {
+//       min-height: 1px;
+//       padding: 1.25rem;
+//     }
+
+//     .card-title {
+//       margin-bottom: .75rem;
+//     }
+
+//   }
+// }
+// :host {
+
+  // ::ng-deep {
+
+  //   font-family: var(--tl-btn-font-family);
+  //   font-size: var(--tl-btn-font-size);
+  //   font-weight: normal;
+  //   text-align: var(--tl-btn-text-align);
+  //   letter-spacing: 0.11px;
+  //   line-height: var(--tl-btn-line-height);
+  //   border: var(--tl-btn-border);
+  //   text-align: var(--tl-btn-text-align);
+  //   height: fit-content;
+  //   width: fit-content;
+
+  //   button.wvr-components.wvr-button.btn.btn-primary,
+  //   button.wvr-components.wvr-button.btn.btn-secondary,
+  //   button.wvr-components.wvr-button.btn.btn-info,
+  //   button.wvr-components.wvr-button.btn.btn-warning,
+  //   button.wvr-components.wvr-button.btn.btn-danger,
+  //   button.wvr-components.wvr-button.btn.btn-success,
+  //   button.wvr-components.wvr-button.btn.btn-light,
+  //   button.wvr-components.wvr-button.btn.btn-dark {
+  //     border: var(--tl-btn-border) !important;
+  //   }
+
+  //   wvre-card {
+
+
+  //   }
+
+
+
+  //   // btn-secondary
+  //   button.wvr-components.wvr-button.btn.btn-secondary {
+  //     background: var(--tl-btn-secondary-background);
+  //     border-color: var(--tl-btn-secondary-background);
+  //     color: var(--tl-btn-secondary-color);
+  //     text-decoration: var(--tl-btn-secondary-text-decoration);
+  //     border-radius: var(--tl-btn-border-radius);
+  //   }
+
+  //   // btn-info
+  //   button.wvr-components.wvr-button.btn.btn-info {
+  //     background: var(--tl-btn-info-background);
+  //     border-color: var(--tl-btn-info-background);
+  //     color: var(--tl-btn-info-color);
+  //     text-decoration: var(--tl-btn-info-text-decoration);
+  //     border-radius: var(--tl-btn-border-radius);
+  //   }
+
+  //   // btn-warning
+  //   button.wvr-components.wvr-button.btn.btn-info {
+  //     background: var(--tl-btn-warning-background);
+  //     border-color: var(--tl-btn-warning-background);
+  //     color: var(--tl-btn-warning-color);
+  //     text-decoration: var(--tl-btn-warning-text-decoration);
+  //     border-radius: var(--tl-btn-border-radius);
+  //   }
+
+  //   // btn-light
+  //   button.wvr-components.wvr-button.btn.btn-info {
+  //     background: var(--tl-btn-light-background);
+  //     border-color: var(--tl-btn-light-background);
+  //     color: var(--tl-btn-light-color);
+  //     text-decoration: var(--tl-btn-light-text-decoration);
+  //     border-radius: var(--tl-btn-border-radius);
+  //   }
+
+  //   // btn-dark
+  //   button.wvr-components.wvr-button.btn.btn-dark {
+  //     background: var(--tl-btn-dark-background);
+  //     border-color: var(--tl-btn-dark-background);
+  //     color: var(--tl-btn-dark-color);
+  //     text-decoration: var(--tl-btn-dark-text-decoration);
+  //     border-radius: var(--tl-btn-border-radius);
+  //   }
+
+
+  // }
+
+
+// }
