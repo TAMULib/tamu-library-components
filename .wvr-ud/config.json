@@ -1,0 +1,16 @@
+{
+  "output": "static/tamu-library-components/docs/usage",
+  "basePath": "/tamu-library-components/docs/usage/",
+  "includes": [
+    "src/app/**/*"
+  ],
+  "excludes": [
+    "src/app/tl-it-works"
+  ],
+  "additionalScript": [
+    "dist/bundle/tl-components.js"
+  ],
+  "additionalAssets": [
+    "src/assets/**/*"
+  ]
+}
