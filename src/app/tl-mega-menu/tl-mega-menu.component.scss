@@ -3,6 +3,9 @@
 
 :host {
 
+  --tl-mobile-display-max-height: 1500px;
+  --tl-mobile-display-wvr-nav-list-component-max-height: 450px;
+
   .mega-menu-sections {
     margin: 0px 20px;
   }
@@ -137,7 +140,7 @@
   }
 
   .mobile-display.active {
-    max-height: 1500px;
+    max-height: var(--tl-mobile-display-max-height);
     transition: max-height 0.5s linear;
     ::ng-deep {
       tl-mega-menu-section.active {
@@ -147,7 +150,7 @@
           transform: rotate(90deg);
         }
         wvr-nav-list-component {
-          max-height: 350px;
+          max-height: var(--tl-mobile-display-wvr-nav-list-component-max-height);
           transition: max-height 0.5s linear;
         }
       }
