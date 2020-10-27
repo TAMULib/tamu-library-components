@@ -13,7 +13,6 @@ import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu/tl-mega-menu-section/tl-mega-menu-section.component';
 import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
-import { TlPanelComponent } from './tl-panel/tl-panel.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 
@@ -30,7 +29,6 @@ const elements = [
   { component: TlMegaMenuComponent, selector: 'tl-mega-menu' },
   { component: TlMegaMenuSectionComponent, selector: 'tl-mega-menu-section' },
   { component: TamuNavListComponent, selector: 'tl-nav-list' },
-  { component: TlPanelComponent, selector: 'tl-panel' },
   { component: TlTabsComponent, selector: 'tl-tabs' },
   { component: TlTabComponent, selector: 'tl-tab' }
 ];
@@ -48,7 +46,6 @@ const components = [
   TlMegaMenuComponent,
   TlMegaMenuSectionComponent,
   TamuNavListComponent,
-  TlPanelComponent,
   TlTabsComponent,
   TlTabComponent
 ];
