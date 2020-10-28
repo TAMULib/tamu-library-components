@@ -5,16 +5,24 @@
   <title>TAMU Components Reports</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="src/favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"?>
 </head>
 
 <body>
   <tl-header></tl-header>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">TAMU Components Reporting</h1>
-      <p class="lead">Choose your option:
-        <a class="btn btn-primary ml-2" href="/tamu-library-components/reports/audit/index.html">Audit</a>
-        <a class="btn btn-success ml-2" href="/tamu-library-components/reports/coverage/tamu-library-components/index.html">Coverage</a>
+      <h1 class="display-4">
+        <wvre-text value="TAMU Components Reporting" inherit-font-style="false"></wvre-text>
+      </h1>
+      <p class="lead">
+        <wvre-text inherit-font-style="false" value="Choose your option:"></wvre-text>
+        <tl-button href="/tamu-library-components/reports/audit/index.html" btn-class="info">
+          <wvre-text value="Audit"></wvre-text>
+        </tl-button>
+        <tl-button href="/tamu-library-components/reports/coverage/tamu-library-components/index.html" btn-class="success">
+          <wvre-text value="Coverage"></wvre-text>
+        </tl-button>
       </p>
     </div>
   </div>
