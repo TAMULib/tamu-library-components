@@ -4,12 +4,11 @@ const fs = require('fs');
 const process = require('process');
 const StaticServer = require('static-server');
 
-const fsPromises = fs.promises;
-const basePath = 'dist/bundle';
+const basePath = `dist`;
 const bundlePath = `${basePath}/bundle`;
 
 const server = new StaticServer({
-  rootPath: 'dist/bundle/bundle',
+  rootPath: 'dist/bundle',
   port: 8080,
   name: 'tl-component-dist-server',
   followSymlink: true,
@@ -17,7 +16,7 @@ const server = new StaticServer({
 
 server.start(function () {
   console.log('Server listening to', server.port);
-  fsPromises.copyFile('src/index.html', `${bundlePath}/index.html`);
+  fs.copyFileSync(`src/index.html`, `${bundlePath}/index.html`);
 });
 
 process.on('exit', function () {

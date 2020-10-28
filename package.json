@@ -26,7 +26,7 @@
     "ng": "ng",
     "postbuild": "npm run build:tl-components",
     "start": "node ./scripts/build-tl-components-configuration.js defaults-dev-overrides.env && ng serve --port 3000",
-    "start:dist": "node ./scripts/build-tl-components-configuration.js defaults-dist-overrides.env && node scripts/serve-dist.js",
+    "start:dist": "node ./scripts/build-tl-components-configuration.js defaults-dist-overrides.env && node ./scripts/serve-dist.js",
     "start:static": "node ./scripts/build-tl-components-configuration.js defaults-static-overrides.env && static-server static -p 8081",
     "start:docker": "node scripts/start-docker.js",
     "test": "npm run test:unit && npm run test:e2e",
