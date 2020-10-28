@@ -115,6 +115,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   }
 
   /** This calculates the maximum height for section in mobile view. */
+  // tslint:disable-next-line:prefer-function-over-method
   private getSectionHeight(sections: NodeListOf<Element>): number {
     let sectionMaxHeight = 0;
     sections.forEach(section => {

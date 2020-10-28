@@ -1,6 +1,8 @@
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
 import { TlMegaMenuComponent } from './tl-mega-menu.component';
 
 describe('MegaMenuComponent', () => {
@@ -9,7 +11,10 @@ describe('MegaMenuComponent', () => {
   let debugElement: DebugElement;
 
   beforeEach(async(() => TestBed.configureTestingModule({
-    imports: [BrowserAnimationsModule],
+    imports: [
+      BrowserAnimationsModule,
+      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+    ],
     declarations: [ TlMegaMenuComponent ]
   })
     .compileComponents()));

@@ -713,6 +713,92 @@
   <br />
   <tl-it-works text="TAMU Library Components Work Really Well"></tl-it-works>
 
+  <hr><br><br><br>
+  <div class="container" style="text-align: center;margin: 10px 60px;">
+    <wvre-text value="Card Component" text-decoration="underline"></wvre-text>
+    <br /><br />
+
+    <tl-card card-type="primary" panel-format="solid">
+      <tl-card-header>
+        <wvre-text value="Card Header with solid panel formatting"></wvre-text>
+      </tl-card-header>
+      <tl-card-title>
+        <wvre-text value="This is a title"></wvre-text>
+      </tl-card-title>
+      <wvre-text value="This is a basic card body"></wvre-text>
+    </tl-card>
+    <br /><br />
+    <tl-card>
+      <tl-card-header>
+        <wvre-text value="Card Header"></wvre-text>
+      </tl-card-header>
+
+      <tl-card-title>
+        <wvre-text value="Card Title1"></wvre-text>
+      </tl-card-title>
+
+      <wvre-text value="A basic tl card with header and button"></wvre-text>
+
+      <tl-button btn-class="primary">
+        <wvre-text value="Card Button"></wvre-text>
+      </tl-button>
+
+    </tl-card>
+
+    <br>
+
+    <tl-card>
+      <tl-card-img src="assets/kitten2.jpeg"></tl-card-img>
+      <tl-card-title>
+        <wvre-text value="Card Title1"></wvre-text>
+      </tl-card-title>
+      <wvre-text value="Some quick example text to build on the card title and make up the bulk of the card's content."></wvre-text>
+
+      <wvre-list top list-type="group-flush">
+        <wvre-list-item>
+          <wvre-text value="Top List Item 1"></wvre-text>
+        </wvre-list-item>
+        <wvre-list-item context="warning">
+          <wvre-text value="Top List Item 2"></wvre-text>
+        </wvre-list-item>
+        <wvre-list-item context="success">
+          <wvre-text value="Top List Item 3"></wvre-text>
+        </wvre-list-item>
+      </wvre-list>
+
+      <wvre-list bottom list-type="group-flush">
+        <wvre-list-item>
+          <wvre-text value="Bottom List Item 1"></wvre-text>
+        </wvre-list-item>
+        <wvre-list-item context="warning">
+          <wvre-text value="Bottom List Item 2"></wvre-text>
+        </wvre-list-item>
+        <wvre-list-item context="success">
+          <wvre-text value="Bottom List Item 3"></wvre-text>
+        </wvre-list-item>
+      </wvre-list>
+
+      <tl-card-link href="www.google.com">
+        <wvre-text value="Google"></wvre-text>
+      </tl-card-link>
+      <tl-card-link href="www.gmail.com">
+        <wvre-text value="Gmail"></wvre-text>
+      </tl-card-link>
+
+      <tl-button btn-class="secondary">
+        <wvre-text value="Go somewhere"></wvre-text>
+      </tl-button>
+
+      <tl-card-footer>
+        <wvre-text value="Card Footer"></wvre-text>
+      </tl-card-footer>
+
+    </tl-card>
+
+  </div>
+
+  <hr><br><br><br>
+
   <div class="container" style="text-align: center;margin: 10px 60px;">
     <wvre-text value="Alert Component" text-decoration="underline"></wvre-text><br /><br />
 
@@ -1006,7 +1092,8 @@
     <tl-icon set="bootstrap" name="arrow-right-circle" size="32px" animate="{click: 'rotateToggle'}"></tl-icon>
   </div>
   <br /><hr /><br />
-  <div class="container" style="height: 700px;">
+  <!-- style="height: 700px;" -->
+  <div class="container" >
     <wvre-text value="Mega Menu Component" text-decoration="underline"></wvre-text><br /><br />
     <tl-mega-menu menu-title="Services"
                   view-all-href="/view-all"

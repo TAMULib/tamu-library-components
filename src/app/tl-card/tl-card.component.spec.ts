@@ -1,13 +1,14 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
 
-import { TlTabComponent } from './tl-tab.component';
+import { TlCardComponent } from './tl-card.component';
 
-describe('TlTabComponent', () => {
-  let component: TlTabComponent;
-  let fixture: ComponentFixture<TlTabComponent>;
+describe('TlCardComponent', () => {
+  let component: TlCardComponent;
+  let fixture: ComponentFixture<TlCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -15,13 +16,14 @@ describe('TlTabComponent', () => {
         BrowserAnimationsModule,
         StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
       ],
-      declarations: [ TlTabComponent ]
+      declarations: [ TlCardComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TlTabComponent);
+    fixture = TestBed.createComponent(TlCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
