@@ -14,12 +14,14 @@ import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
+import { TlCardComponent } from './tl-card/tl-card.component';
 
 
 /** This property contains a list of TAMU components and the selector tags. */
 const elements = [
   { component: TlAlertComponent, selector: 'tl-alert' },
   { component: TlButtonComponent, selector: 'tl-button' },
+  { component: TlCardComponent, selector: 'tl-card' },
   { component: TlDropDownComponent, selector: 'tl-drop-down' },
   { component: TamuFooterComponent, selector: 'tl-footer' },
   { component: TamuHeaderComponent, selector: 'tl-header' },
@@ -36,6 +38,7 @@ const elements = [
 const components = [
   TlAlertComponent,
   TlButtonComponent,
+  TlCardComponent,
   TlDropDownComponent,
   TamuFooterComponent,
   TamuHeaderComponent,
