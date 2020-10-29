@@ -2,7 +2,7 @@
 @import "../shared/styles/tl-variables.scss";
 
 :host {
-
+  font-family: var(--tl-font-family-sans-serif);
   --tl-mobile-display-max-height: 1500px;
   --tl-mobile-display-wvr-nav-list-component-max-height: 450px;
 
@@ -83,7 +83,7 @@
           text-align: start;
           color: var(--tl-black);
           font-size: 17px;
-          font-family: sans-serif;
+          font-family: var(--tl-font-family-sans-serif);
           font-weight: 300;
           wvre-text {
             font-weight: 400;
@@ -108,7 +108,7 @@
           text-align: start;
           color: var(--tl-black);
           font-size: 17px;
-          font-family: sans-serif;
+          font-family: var(--tl-font-family-sans-serif);
           font-weight: 300;
           border-bottom: 0.5px solid #e4e4e4;
           text-decoration: none;
@@ -125,7 +125,7 @@
           text-align: start;
           color: var(--tl-black);
           font-size: 17px;
-          font-family: sans-serif;
+          font-family: var(--tl-font-family-sans-serif);
           font-weight: 300;
           border-bottom: 0.5px solid #e4e4e4;
         }
