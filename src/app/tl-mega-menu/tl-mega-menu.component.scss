@@ -67,7 +67,7 @@
   .mobile-display {
     max-height: 0px;
     overflow: hidden;
-    transition: max-height 1s linear;
+    transition: max-height 1s ease-in-out;
     background: var(--tl-grey);
 
     ::ng-deep {
@@ -114,7 +114,7 @@
           text-decoration: none;
           tl-icon {
             float: right;
-            transition: 0.25s ease-in-out;
+            transition: 0.5s ease-in-out;
             transform: rotate(0deg);
           }
         }
@@ -133,7 +133,7 @@
           display: inline-block;
           overflow: hidden;
           max-height: 0px;
-          transition: max-height 1s linear;
+          transition: max-height 0.25s ease-in-out;
         }
       }
     }
@@ -141,7 +141,7 @@
 
   .mobile-display.active {
     max-height: var(--tl-mobile-display-max-height);
-    transition: max-height 0.5s linear;
+    transition: max-height 0.5s ease-in-out;
     ::ng-deep {
       tl-mega-menu-section.active {
         tl-icon {
@@ -151,7 +151,7 @@
         }
         wvr-nav-list-component {
           max-height: var(--tl-mobile-display-wvr-nav-list-component-max-height);
-          transition: max-height 0.5s linear;
+          transition: max-height 1s linear;
         }
       }
     }

@@ -68,7 +68,7 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
     const lis = elem.querySelectorAll('tl-nav-li');
     const liHeight = lis.length ? lis[0].clientHeight : 0;
 
-    return (lis.length * liHeight) + this.getElementHeight();
+    return lis.length * liHeight;
   }
 
 }
