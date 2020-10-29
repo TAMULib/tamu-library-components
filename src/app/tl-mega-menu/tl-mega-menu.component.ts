@@ -1,13 +1,14 @@
-import { AfterViewInit, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
+import { AfterViewInit, Component, HostBinding, HostListener, Injector, Input, OnInit } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { debounce } from '@wvr/elements';
+import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
 
 @Component({
   selector: 'tl-mega-menu-component',
   templateUrl: './tl-mega-menu.component.html',
   styleUrls: ['./tl-mega-menu.component.scss']
 })
-export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterViewInit {
+export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements OnInit, AfterViewInit {
   /** The default text value to be displayed for tl-mega menu title. */
   @Input() menuTitle = 'Mega Menu';
 
@@ -34,48 +35,44 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   /** Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable. */
   @HostBinding('style.--tl-mobile-display-wvr-nav-list-component-max-height') mobileDisplayWvrNavListComponentMaxHeight: string;
 
+  private sections: Array<TlMegaMenuSectionComponent>;
+
+  private sectionTitleHeight = 0;
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
+    this.sections = new Array<TlMegaMenuSectionComponent>();
   }
 
   /** This adjusts the dropdown menu x offset on page load. */
   ngAfterViewInit(): void {
     this.calculateMenuXOffset();
-    this.calculateMaxHeights();
+  }
+
+  addSection(section: TlMegaMenuSectionComponent): void {
+    this.sections.push(section);
+    this.sectionTitleHeight = section.getElementHeight() > this.sectionTitleHeight ?
+                              section.getElementHeight() :
+                              this.sectionTitleHeight;
   }
 
   /** This toggles the display of mobile menu on click event. */
   toggleMobileMenuOpen($event: MouseEvent): void {
+    this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionTitleHeight}px`;
+    const mobileDisplay = (this._eRef.nativeElement as HTMLElement).querySelector('.mobile-display');
     const clickedElem = $event.target as HTMLElement;
     const wvrDropDownElement = clickedElem.closest('wvr-dropdown-component');
-    wvrDropDownElement.classList.contains('active') ?
-    wvrDropDownElement.classList.remove('active') :
-    wvrDropDownElement.classList.add('active');
-    const mobileDisplay = (this._eRef.nativeElement as HTMLElement).querySelector('.mobile-display');
-    mobileDisplay.classList.contains('active') ?
-    mobileDisplay.classList.remove('active') :
-    mobileDisplay.classList.add('active');
-  }
 
-  /** This toggles the display of tl-mega-menu-section mobile menu on click event. */
-  toggleMobileMenuSectionOpen($event: MouseEvent): void {
-    const sectionElement = ($event.target as HTMLElement).closest('tl-mega-menu-section');
-    const elem = this._eRef.nativeElement as HTMLElement;
-    const sections = elem.querySelectorAll('tl-mega-menu-section');
-    const sectionMaxHeight = this.getSectionHeight(sections);
-    // tslint:disable-next-line: radix
-    let mobileDisplayMaxHeight = parseInt(this.mobileDisplayMaxHeight.replace('px', ''));
-    if (sectionElement.classList.contains('active')) {
-      sectionElement.classList.remove('active');
-      setTimeout(() => {
-        mobileDisplayMaxHeight -= sectionMaxHeight;
-        this.mobileDisplayMaxHeight = `${mobileDisplayMaxHeight}px`;
-      }, 1000);
+    const active = mobileDisplay.classList.contains('active');
+
+    if (active) {
+      this.sections.forEach(s => s.close());
+      mobileDisplay.classList.remove('active');
+      wvrDropDownElement.classList.remove('active');
     } else {
-      mobileDisplayMaxHeight += sectionMaxHeight;
-      this.mobileDisplayMaxHeight = `${mobileDisplayMaxHeight}px`;
-      sectionElement.classList.add('active');
+      mobileDisplay.classList.add('active');
+      wvrDropDownElement.classList.add('active');
     }
   }
 
@@ -100,35 +97,5 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
       }
     }
   }
-  /** This calculates the maximum height for tl-mega-menu-section in mobile view. */
-  calculateMaxHeights(): void {
-    const elem = this._eRef.nativeElement as HTMLElement;
-    const sections = elem.querySelectorAll('tl-mega-menu-section');
-    const sectionMaxHeight = this.getSectionHeight(sections);
-    setTimeout(() => {
-      const sectionTitles = elem.querySelectorAll('.section-title');
-      const sectionTitleHeight = sectionTitles[0] ? sectionTitles[0].clientHeight : 0;
-      const sectionTitlesHeight = sectionTitles.length * sectionTitleHeight;
-      this.mobileDisplayWvrNavListComponentMaxHeight = `${sectionMaxHeight}px`;
-      this.mobileDisplayMaxHeight = `${sectionTitlesHeight}px`;
-    }, 0);
-  }
 
-  /** This calculates the maximum height for section in mobile view. */
-  // tslint:disable-next-line:prefer-function-over-method
-  private getSectionHeight(sections: NodeListOf<Element>): number {
-    let sectionMaxHeight = 0;
-    sections.forEach(section => {
-      const lis = section.querySelectorAll('tl-nav-li');
-      if (lis[0]) {
-        const liHeight = lis[0].clientHeight;
-        const currentHeight = lis.length * liHeight;
-        if (sectionMaxHeight < currentHeight) {
-          sectionMaxHeight = currentHeight;
-        }
-      }
-    });
-
-    return sectionMaxHeight;
-  }
 }

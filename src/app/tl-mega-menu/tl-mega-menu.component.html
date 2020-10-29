@@ -49,7 +49,7 @@
   </wvre-dropdown-menu>
 </wvr-dropdown-component>
 
-<div *ngIf="isMobileLayout" class="mobile-display" (click)="toggleMobileMenuSectionOpen($event)">
+<div *ngIf="isMobileLayout" class="mobile-display">
   <ng-container *ngTemplateOutlet="content"></ng-container>
   <tl-mega-menu-section-component [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section-component>
 </div>
