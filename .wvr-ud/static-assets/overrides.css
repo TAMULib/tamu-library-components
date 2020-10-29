@@ -5,3 +5,7 @@
 body {
   background: ghostwhite;
 }
+
+.sidebar {
+  max-width: 325px;
+}
