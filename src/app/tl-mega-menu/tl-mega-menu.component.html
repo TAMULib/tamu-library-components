@@ -9,9 +9,10 @@
   [btnFontWeight]="'bolder'"
   [btnColorHover]="'var(--tl-black)'"
   [btnTextDecorationHover]="'none'"
+  [ngClass]="{active: active}"
   ngbDropdownAnchor
   >
-  <wvre-dropdown-btn (click)="toggleMobileMenuOpen($event)">
+  <wvre-dropdown-btn (click)="toggleMobileMenuOpen()">
     {{menuTitle}}
     <tl-icon-component
       class="x-icon"
@@ -49,7 +50,7 @@
   </wvre-dropdown-menu>
 </wvr-dropdown-component>
 
-<div *ngIf="isMobileLayout" class="mobile-display">
+<div *ngIf="isMobileLayout" class="mobile-display" [ngClass]="{active: active}">
   <ng-container *ngTemplateOutlet="content"></ng-container>
   <tl-mega-menu-section-component [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section-component>
 </div>

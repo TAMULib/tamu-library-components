@@ -3,11 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
+import { TlMegaMenuComponent } from '../tl-mega-menu.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section.component';
 
 describe('TlMegaMenuSectionComponent', () => {
   let component: TlMegaMenuSectionComponent;
   let fixture: ComponentFixture<TlMegaMenuSectionComponent>;
+  let parentComponent: TlMegaMenuComponent;
+  let parentFixture: ComponentFixture<TlMegaMenuComponent>;
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [
@@ -22,7 +25,12 @@ describe('TlMegaMenuSectionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TlMegaMenuSectionComponent);
     component = fixture.componentInstance;
+    parentFixture = TestBed.createComponent(TlMegaMenuComponent);
+    parentComponent = parentFixture.componentInstance;
+    // tslint:disable-next-line:no-string-literal
+    component['parent'] = parentComponent;
     fixture.detectChanges();
+    parentFixture.detectChanges();
   });
 
   it('should create', () => {
@@ -47,4 +55,28 @@ describe('TlMegaMenuSectionComponent', () => {
     expect(component.viewAllHref)
       .toEqual('/view-all');
   });
+
+  it('toggleOpenClose should toggle active state on click', () => {
+
+    const section = document.createElement('tl-mega-menu-section');
+    const testElem = document.createElement('p');
+    testElem.classList.add('section-title');
+
+    section.appendChild(testElem);
+
+    expect(component.active)
+      .toBeFalse();
+
+    component.toggleOpenClose();
+
+    expect(component.active)
+      .toBeTrue();
+
+    component.toggleOpenClose();
+
+    expect(component.active)
+      .toBeFalse();
+
+  });
+
 });
