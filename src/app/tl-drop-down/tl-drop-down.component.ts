@@ -109,7 +109,7 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   }
 
   /** Used to override the button font family in a drop down */
-  @HostBinding('style.--tl-btn-font-family') @Input() btnFontFamily;
+  @HostBinding('style.--tl-font-family-sans-serif') @Input() btnFontFamily;
 
   /** Used to override the button font size in a drop down */
   @HostBinding('style.--tl-btn-font-size') @Input() btnFontSize;

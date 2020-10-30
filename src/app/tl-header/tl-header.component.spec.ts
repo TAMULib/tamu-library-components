@@ -2,7 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
-import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
+import { APP_CONFIG, metaReducers, ROOT_REDUCER, testAppConfig } from '@wvr/elements';
 import { TamuHeaderComponent } from './tl-header.component';
 
 describe('TamuHeaderComponent', () => {
@@ -15,6 +15,10 @@ describe('TamuHeaderComponent', () => {
       StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
     ],
     declarations: [TamuHeaderComponent],
+    providers: [{
+      provide: APP_CONFIG,
+      useValue: testAppConfig
+    }],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   })
     .compileComponents()
@@ -31,12 +35,13 @@ describe('TamuHeaderComponent', () => {
       .toBeTruthy();
   });
 
-  it("should have as logoSrc 'https://demos.library.tamu.edu/tl-components/bundle/assets/tamu-logo.svg'", () => {
+  it('should have a set logoSrc', () => {
     expect(component.logoSrc)
-      .toEqual('https://demos.library.tamu.edu/tl-components/bundle/assets/tamu-logo.svg');
+      // tslint:disable-next-line:no-string-literal
+      .toEqual(`${component['appConfig'].assetsUrl}/icons/tl/tamu-logo.svg`);
   });
 
-  it("should have as logoText 'Texas A&M University Libraries'", () => {
+  it('should have as logoText "Texas A&M University Libraries"', () => {
     expect(component.logoText)
       .toEqual(' Texas A&M University Libraries');
   });

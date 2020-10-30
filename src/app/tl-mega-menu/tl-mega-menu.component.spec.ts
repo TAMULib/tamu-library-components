@@ -46,53 +46,23 @@ describe('MegaMenuComponent', () => {
       .toEqual('Customized text value');
   });
 
-  it('toggleMobileMenuOpen should toggle active class on click', () => {
+  it('toggleMobileMenuOpen should toggle active class', () => {
 
     const tlMegaMenu = (fixture.elementRef.nativeElement as HTMLElement);
     const wvrDropDownElement = tlMegaMenu.querySelector('wvr-dropdown-component');
-    const wvrDropdownBtn = wvrDropDownElement.querySelectorAll('wvre-dropdown-btn')[0];
 
-    expect(wvrDropDownElement.classList.contains('active'))
-    .toBeFalse();
-
-    wvrDropdownBtn.dispatchEvent(new MouseEvent('click'));
-
-    expect(wvrDropDownElement.classList.contains('active'))
-      .toBeTrue();
-
-    wvrDropdownBtn.dispatchEvent(new MouseEvent('click'));
-
-    expect(wvrDropDownElement.classList.contains('active'))
-    .toBeFalse();
-
-  });
-
-  it('toggleMobileMenuSectionOpen should toggle active class on click', () => {
-
-    component.outOfHeader = true;
-
-    const section = document.createElement('tl-mega-menu-section');
-    const testElem = document.createElement('p');
-    testElem.classList.add('section-title');
-
-    section.appendChild(testElem);
-
-    expect(section.classList.contains('active'))
+    expect(component.active)
       .toBeFalse();
 
-    const firstClick = new MouseEvent('click');
-    Object.defineProperty(firstClick, 'target', {value: testElem, enumerable: true});
-    component.toggleMobileMenuSectionOpen(firstClick);
+    component.toggleMobileMenuOpen();
 
-    expect(section.classList.contains('active'))
+    expect(component.active)
       .toBeTrue();
 
-    const secondClick = new MouseEvent('click');
-    Object.defineProperty(secondClick, 'target', {value: testElem, enumerable: true});
-    component.toggleMobileMenuSectionOpen(secondClick);
+    component.toggleMobileMenuOpen();
 
-    expect(section.classList.contains('active'))
-      .toBeFalse();
+    expect(component.active)
+    .toBeFalse();
 
   });
 

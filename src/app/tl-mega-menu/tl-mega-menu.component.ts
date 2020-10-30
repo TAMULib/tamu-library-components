@@ -24,6 +24,8 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
   /** This variable allows customizing the text value of View All button in the mega menu. */
   @Input() viewAllButtonText: string;
 
+  active = false;
+
   /** This returns customized text or the default value to be displayed on the mega menu View All button. */
   get viewAllButtonDisplayText(): string {
     return this.viewAllButtonText ? this.viewAllButtonText : `View All ${this.menuTitle}`;
@@ -31,9 +33,6 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
 
   /** Allows for the override of the --tl-mobile-display-max-height variable. */
   @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight = '0px';
-
-  /** Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable. */
-  @HostBinding('style.--tl-mobile-display-wvr-nav-list-component-max-height') mobileDisplayWvrNavListComponentMaxHeight: string;
 
   private sections: Array<TlMegaMenuSectionComponent>;
 
@@ -58,21 +57,13 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
   }
 
   /** This toggles the display of mobile menu on click event. */
-  toggleMobileMenuOpen($event: MouseEvent): void {
+  toggleMobileMenuOpen(): void {
     this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionTitleHeight}px`;
-    const mobileDisplay = (this._eRef.nativeElement as HTMLElement).querySelector('.mobile-display');
-    const clickedElem = $event.target as HTMLElement;
-    const wvrDropDownElement = clickedElem.closest('wvr-dropdown-component');
-
-    const active = mobileDisplay.classList.contains('active');
-
-    if (active) {
+    if (this.active) {
       this.sections.forEach(s => s.close());
-      mobileDisplay.classList.remove('active');
-      wvrDropDownElement.classList.remove('active');
+      this.active = false;
     } else {
-      mobileDisplay.classList.add('active');
-      wvrDropDownElement.classList.add('active');
+      this.active = true;
     }
   }
 
