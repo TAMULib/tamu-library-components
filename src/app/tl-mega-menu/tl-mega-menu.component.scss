@@ -16,11 +16,13 @@
 
   wvr-dropdown-component {
     ::ng-deep {
+      --wvr-font-family
       .wvr-dropdown .dropdown {
         .btn.btn-link.dropdown-toggle,
         .btn.btn-link:not(:disabled):not(.disabled).active,
         .btn.btn-link:not(:disabled):not(.disabled):active {
           text-decoration: none !important;
+          color: var(--tl-black) !important;
         }
         .btn {
           tl-icon-component.x-icon svg {
