@@ -3,7 +3,7 @@
 :host {
 
   --tl-btn-border-radius: 4px;
-  --tl-btn-font-family: Lato-Regular;
+  --tl-btn-font-family: var(--tl-font-family-sans-serif);
   --tl-btn-font-size: 18px;
   --tl-btn-line-height: 24px;
   --tl-btn-padding: .375rem .75rem;

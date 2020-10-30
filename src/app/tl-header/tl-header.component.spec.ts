@@ -65,7 +65,7 @@ describe('TamuHeaderComponent', () => {
     expect(component.inheritFontStyle)
       .toEqual(undefined);
     expect(component._fontFamily)
-      .toEqual('var(--tl-default-font-family-sans-serif)');
+      .toEqual('var(--tl-font-family-sans-serif)');
     expect(component._fontSize)
       .toEqual('var(--tl-default-font-size)');
 
@@ -79,7 +79,7 @@ describe('TamuHeaderComponent', () => {
     component.inheritFontStyle = 'false';
     fixture.detectChanges();
     expect(component._fontFamily)
-      .toEqual('var(--tl-default-font-family-sans-serif)');
+      .toEqual('var(--tl-font-family-sans-serif)');
     expect(component._fontSize)
       .toEqual('var(--tl-default-font-size)');
   });

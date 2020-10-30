@@ -2,13 +2,15 @@
 
 :host {
 
+  font-family: var(--tl-font-family-sans-serif);
+
   tl-button-wrapper {
     display: inline-block;
   }
 
   ::ng-deep {
 
-      font-family: var(--tl-btn-font-family);
+      font-family: var(--tl-font-family-sans-serif);
       font-size: var(--tl-btn-font-size);
       font-weight: normal;
       text-align: var(--tl-btn-text-align);
@@ -165,7 +167,7 @@
         text-decoration: var(--tl-btn-danger-text-decoration);
       }
 
-      // btn -success
+      // btn-success
       button.wvr-components.wvr-button.btn.btn-success,
       a.wvr-components.wvr-button.btn.btn-success {
         background: var(--tl-btn-success-background);
