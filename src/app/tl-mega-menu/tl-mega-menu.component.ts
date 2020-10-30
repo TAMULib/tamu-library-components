@@ -60,9 +60,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
     const mobileDisplay = (this._eRef.nativeElement as HTMLElement).querySelector('.mobile-display');
     const clickedElem = $event.target as HTMLElement;
     const wvrDropDownElement = clickedElem.closest('wvr-dropdown-component');
-
     const active = mobileDisplay.classList.contains('active');
-
     if (active) {
       this.sections.forEach(s => s.close());
       mobileDisplay.classList.remove('active');
