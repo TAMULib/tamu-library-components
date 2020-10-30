@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Injector, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostBinding, Injector, Input, OnInit } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.component';
 import { TlMegaMenuComponent } from '../tl-mega-menu.component';
 
@@ -11,13 +11,19 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
 
   private parent: TlMegaMenuComponent;
 
+  /** Toggles the mobile-layout class on the root element. */
+  @HostBinding('class.mobile-layout') mobileLayout = this.isMobileLayout;
+
+  /** Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable. */
+  @HostBinding('style.--wvr-nav-list-component-max-height') wvrNavListComponentMaxHeight: string;
+
   /** The text value to be displayed as section title in the tl-mega-menu dropdown menu. */
   @Input() sectionTitle = 'Section Title';
 
   /** The href value for the view all button. */
   @Input() viewAllHref: string;
 
-  private elem = this._eRef.nativeElement as HTMLElement;
+  active = false;
 
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
@@ -38,23 +44,21 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
     // tslint:disable-next-line: radix
     let mobileDisplayMaxHeight = parseInt(this.parent.mobileDisplayMaxHeight.replace('px', ''));
     mobileDisplayMaxHeight += this.getExpandedHeight();
-    this.elem.classList.add('active');
+    this.active = true;
     this.parent.mobileDisplayMaxHeight = `${mobileDisplayMaxHeight}px`;
-    this.parent.mobileDisplayWvrNavListComponentMaxHeight = `${this.getExpandedHeight()}px`;
+    this.wvrNavListComponentMaxHeight = `${this.getExpandedHeight()}px`;
   }
 
   close(): void {
-    this.elem.classList.remove('active');
     // tslint:disable-next-line: radix
     let mobileDisplayMaxHeight = parseInt(this.parent.mobileDisplayMaxHeight.replace('px', ''));
-    setTimeout(() => {
-      mobileDisplayMaxHeight -= this.getExpandedHeight();
-      this.parent.mobileDisplayMaxHeight = `${mobileDisplayMaxHeight}px`;
-    });
+    this.active = false;
+    mobileDisplayMaxHeight -= this.getExpandedHeight();
+    this.parent.mobileDisplayMaxHeight = `${mobileDisplayMaxHeight}px`;
   }
 
   toggleOpenClose(): void {
-    this.elem.classList.contains('active') ?
+    this.active ?
     this.close() :
     this.open();
   }
