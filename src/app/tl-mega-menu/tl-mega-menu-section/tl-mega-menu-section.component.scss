@@ -53,10 +53,17 @@
 
   wvr-nav-list-component {
     ::ng-deep {
+      
+      ul{
+        height: auto;
+      }
+
       tl-nav-li {
         width: 100%;
+                 
         a {
-          padding: 4px 0px 4px 25px;
+          padding: 4px 0px 6px 25px;
+          margin-bottom:2px;
           color: var(--tl-deep-grey);
           font-weight: lighter;
           width: 100%;
@@ -71,5 +78,5 @@
       }
     }
   }
-}
 
+}
