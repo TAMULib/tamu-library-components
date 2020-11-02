@@ -56,5 +56,4 @@ package-lock.json
 src/config.json
 src/config-template.json
 
-
 .wvr-ud/static-assets/styles.css
