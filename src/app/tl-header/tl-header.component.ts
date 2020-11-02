@@ -1,8 +1,9 @@
-import { Component, Injector, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, Injector, Input, ViewEncapsulation } from '@angular/core';
+import { AppConfig, APP_CONFIG } from '@wvr/elements';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-header-element',
+  selector: 'tl-header-component',
   templateUrl: './tl-header.component.html',
   styleUrls: ['./tl-header.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
@@ -10,7 +11,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 export class TamuHeaderComponent extends TamuAbstractBaseComponent {
 
   /** This is a URL pointing to the location of the logo. */
-  logoSrc = 'https://demos.library.tamu.edu/tl-components/latest/assets/tamu-logo.svg';
+  logoSrc =  `${this.appConfig.assetsUrl}/icons/tl/tamu-logo.svg`;
 
   /** The text value to be displayed beside the TAMU logo. */
   logoText = ' Texas A&M University Libraries';
@@ -48,7 +49,7 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   }
 
   // tslint:disable-next-line:unnecessary-constructor
-  constructor(injector: Injector) {
+  constructor(injector: Injector, @Inject(APP_CONFIG) private readonly appConfig: AppConfig) {
     super(injector);
   }
 

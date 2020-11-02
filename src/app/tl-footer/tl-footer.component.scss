@@ -2,7 +2,8 @@
 @import "../shared/styles/tl-branded-btn.scss";
 
 :host {
-  wvr-footer-element {
+  font-family: var(--tl-font-family-sans-serif);
+  wvr-footer-component {
     // Weaver Component overrides
     --wvr-navbar-padding: 0px;
     --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
@@ -11,7 +12,7 @@
   }
 
    // Weaver Nav List overrides for top navigation
-   wvr-nav-list-element wvr-nav-li-element {
+   wvr-nav-list-component wvr-nav-li-component {
     --wvr-nav-link-color: var(--tl-white);
     --wvr-nav-link-color-hover: var(--tl-deep-yellow);
     --wvr-nav-link-background-hover: transparent;
@@ -19,10 +20,10 @@
     --wvr-nav-li-width: max-content;
   }
   @media (max-width: 767px) {
-    wvr-footer-element {
+    wvr-footer-component {
       --footer-height: auto;
       --footer-height: auto;
-      wvr-nav-list-element {
+      wvr-nav-list-component {
         ul.flex-row {
           flex-direction: column !important;
         }

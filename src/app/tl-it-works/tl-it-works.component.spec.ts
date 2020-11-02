@@ -1,6 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
 import { TamuItWorksComponent } from './tl-it-works.component';
 
 describe('TamuItWorksComponent', () => {
@@ -8,7 +10,10 @@ describe('TamuItWorksComponent', () => {
   let fixture: ComponentFixture<TamuItWorksComponent>;
 
   beforeEach(async(() => TestBed.configureTestingModule({
-    imports: [BrowserAnimationsModule],
+    imports: [
+      BrowserAnimationsModule,
+      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+    ],
     declarations: [TamuItWorksComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   })

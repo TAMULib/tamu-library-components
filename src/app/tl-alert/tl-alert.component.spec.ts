@@ -1,6 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert.component';
 
 describe('TlAlertComponent', () => {
@@ -9,7 +11,10 @@ describe('TlAlertComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
+      imports: [
+        BrowserAnimationsModule,
+        StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+      ],
       declarations: [ TlAlertComponent ]
     })
     .compileComponents();
@@ -22,7 +27,8 @@ describe('TlAlertComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component)
+      .toBeTruthy();
   });
 
   it('should customize alertClass', () => {

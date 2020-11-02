@@ -1,6 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
 import { TlIconComponent } from './tl-icon.component';
 
 describe('TlIconComponent', () => {
@@ -8,7 +10,10 @@ describe('TlIconComponent', () => {
   let fixture: ComponentFixture<TlIconComponent>;
 
   beforeEach(async(() => TestBed.configureTestingModule({
-    imports: [BrowserAnimationsModule],
+    imports: [
+      BrowserAnimationsModule,
+      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+    ],
     declarations: [TlIconComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   })

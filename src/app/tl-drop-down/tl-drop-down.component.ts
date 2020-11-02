@@ -2,7 +2,7 @@ import { Component, HostBinding, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-drop-down-element',
+  selector: 'tl-drop-down-component',
   templateUrl: './tl-drop-down.component.html',
   styleUrls: ['./tl-drop-down.component.scss']
 })
@@ -109,7 +109,7 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
   }
 
   /** Used to override the button font family in a drop down */
-  @HostBinding('style.--tl-btn-font-family') @Input() btnFontFamily;
+  @HostBinding('style.--tl-font-family-sans-serif') @Input() btnFontFamily;
 
   /** Used to override the button font size in a drop down */
   @HostBinding('style.--tl-btn-font-size') @Input() btnFontSize;

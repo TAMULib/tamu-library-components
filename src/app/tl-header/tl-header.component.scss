@@ -2,8 +2,9 @@
 @import "../shared/styles/tl-branded-btn.scss";
 
 :host {
+  font-family: var(--tl-font-family-sans-serif);
 
-  wvr-header-element {
+  wvr-header-component {
     // Weaver Component overrides
     --wvr-navbar-padding: 0px;
     --wvr-font-family-sans-serif: var(--tl-font-family-sans-serif);
@@ -14,23 +15,23 @@
     --title-row-height: 85px;
     --bottom-nav-height: 65px;
 
-    wvr-nav-list-element[top-navigation-mobile] > ul > wvr-nav-li-element > li > a,
-    wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a {
+    wvr-nav-list-component[top-navigation-mobile] > ul > wvr-nav-li-component > li > a,
+    wvr-nav-list-component[top-navigation] > ul > wvr-nav-li-component > li > a {
       padding: 12px;
       text-decoration: none;
       color: var(--tl-white);
     }
 
-    wvr-nav-list-element[top-navigation-mobile] > ul > wvr-nav-li-element > li > a:hover,
-    wvr-nav-list-element[top-navigation] > ul > wvr-nav-li-element > li > a:hover {
+    wvr-nav-list-component[top-navigation-mobile] > ul > wvr-nav-li-component > li > a:hover,
+    wvr-nav-list-component[top-navigation] > ul > wvr-nav-li-component > li > a:hover {
       color: var(--tl-black);
     }
 
     // Weaver Nav List overrides for top navigation
-    wvr-nav-list-element[top-navigation-mobile] wvr-nav-li-element,
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element,
-    wvr-nav-list-element[top-navigation] .dropdown,
-    wvr-nav-list-element[top-navigation-mobile] .dropdown {
+    wvr-nav-list-component[top-navigation-mobile] wvr-nav-li-component,
+    wvr-nav-list-component[top-navigation] wvr-nav-li-component,
+    wvr-nav-list-component[top-navigation] .dropdown,
+    wvr-nav-list-component[top-navigation-mobile] .dropdown {
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
       border-right: 1px solid #6a0000;
@@ -56,7 +57,7 @@
         font-size: 16px;
       }
 
-      .hours wvr-dropdown-menu-item {
+      .hours wvre-dropdown-menu-item {
         .caldate {
           padding: 10px 0 0 0;
           font-size: 13px;
@@ -84,7 +85,7 @@
             text-decoration: underline;
           }
         }
-        wvr-dropdown-menu {
+        wvre-dropdown-menu {
           line-height: 0.6rem;
           margin-left: -20px;
           padding: 0px 15px;
@@ -112,7 +113,7 @@
           color: var(--tl-black);
         }
 
-          wvr-dropdown-menu > wvr-dropdown-menu-item {
+          wvre-dropdown-menu > wvre-dropdown-menu-item {
           border-bottom: 1px solid #e0e0e0;
           padding: 10px 0px;
           display: flex;
@@ -131,48 +132,48 @@
           }
         }
 
-        wvr-dropdown-menu > wvr-dropdown-menu-item:hover > .helpLink {
+        wvre-dropdown-menu > wvre-dropdown-menu-item:hover > .helpLink {
           background: #b0b0b0;
           border-radius: 5px;
         }
 
-        wvr-dropdown-menu > wvr-dropdown-menu-item:first-child,
-        wvr-dropdown-menu > wvr-dropdown-menu-item:last-child {
+        wvre-dropdown-menu > wvre-dropdown-menu-item:first-child,
+        wvre-dropdown-menu > wvre-dropdown-menu-item:last-child {
           border-bottom: 0px;
         }
       }
     }
 
-    wvr-nav-list-element[top-navigation] .dropdown:hover {
+    wvr-nav-list-component[top-navigation] .dropdown:hover {
       .wvr-button {
         color: var(--tl-black);
       }
     }
 
-    wvr-nav-list-element[top-navigation] wvr-nav-li-element:last-child,
-    wvr-nav-list-element[top-navigation] .dropdown:last-child {
+    wvr-nav-list-component[top-navigation] wvr-nav-li-component:last-child,
+    wvr-nav-list-component[top-navigation] .dropdown:last-child {
       border: none;
     }
 
-    wvr-nav-list-element[bottom-navigation] wvr-nav-li,
-    wvr-nav-list-element[bottom-navigation] wvr-nav-li-element {
+    wvr-nav-list-component[bottom-navigation] wvre-nav-li,
+    wvr-nav-list-component[bottom-navigation] wvr-nav-li-component {
       --wvr-nav-link-color: var(--tl-black);
       --wvr-nav-link-color-hover: var(--tl-white);
       --wvr-nav-link-background-hover: var(--tl-deep-grey);
       width: fit-content;
-      .nav-item > a wvr-text {
-        font-family: sans-serif;
+      .nav-item > a wvre-text {
+        font-family: var(--tl-font-family-sans-serif);
         font-weight: 600;
         font-size: 16px;
         color: black;
       }
 
-      .nav-item:hover > a wvr-text {
+      .nav-item:hover > a wvre-text {
         color: white;
       }
 
 
-      :hover wvr-dropdown-btn {
+      :hover wvre-dropdown-btn {
           color: white;
           svg {
             color: white;
@@ -183,7 +184,7 @@
         display: flex;
         height: 100%;
         width: 100%;
-        wvr-dropdown-element {
+        wvr-dropdown-component {
           display: flex;
           height: 100%;
           width: 100%;
@@ -192,10 +193,10 @@
             .dropdown {
               height: 100%;
               width: 100%;
-              wvr-text {
+              wvre-text {
                 font-size: var(--tl-font-size);
               }
-              wvr-button-element {
+              wvr-button-component {
                 display: flex;
                 height: 100%;
                 width: 100%;
@@ -258,7 +259,7 @@
         }
       }
 
-      .mobile-menu > div > div > wvr-nav-li > li {
+      .mobile-menu > div > div > wvre-nav-li > li {
         display: flex;
         > a {
           justify-content: start !important;
@@ -266,8 +267,8 @@
           width: 100%;
           background: var(--tl-deep-yellow);
           border-bottom: 1px solid rgb(175, 175, 175);
-          wvr-text {
-            font-family: sans-serif;
+          wvre-text {
+            font-family: var(--tl-font-family-sans-serif);
             font-weight: 600;
             font-size: 16px;
             color: black;
@@ -275,11 +276,11 @@
         }
       }
 
-      wvr-nav-list-element[top-navigation-mobile] {
+      wvr-nav-list-component[top-navigation-mobile] {
 
         .dropdown,
-        wvr-nav-li-element,
-        wvr-nav-li {
+        wvr-nav-li-component,
+        wvre-nav-li {
           flex: 1 1 auto;
           border-right: none;
         }
@@ -293,8 +294,8 @@
         li {
           justify-content: left!important;
 
-          wvr-dropdown-element,
-          wvr-dropdown {
+          wvr-dropdown-component,
+          wvre-dropdown {
             width: 100%;
           }
 
@@ -303,7 +304,7 @@
           }
 
 
-          wvr-button-element {
+          wvr-button-component {
             display: flex;
             width:100%;
             button-wrapper {
@@ -320,9 +321,9 @@
             padding-top: 6px !important;
             padding-bottom: 6px !important;
             margin-top: 0px !important;
-            wvr-dropdown-btn,
-            wvr-text-element,
-            wvr-text {
+            wvre-dropdown-btn,
+            wvr-text-component,
+            wvre-text {
               font-family: var(--tl-font-family-sans-serif);
               font-weight: bold;
               font-size: 16px;
@@ -341,7 +342,7 @@
         background: var(--tl-deep-yellow);
         overflow: hidden;
         border-bottom: grey;
-        wvr-dropdown-element {
+        wvr-dropdown-component {
           display: flex;
           width: 100%;
           .wvr-dropdown {
@@ -350,7 +351,7 @@
             .dropdown {
               display: flex !important;
               width: 100%;
-              wvr-button-element {
+              wvr-button-component {
                 display: flex;
                 width: 100%;
                 button-wrapper {
@@ -404,15 +405,15 @@
     z-index: 1100;
     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
     div.mobile-menu-content {
-        wvr-nav-li > li.nav-item {
+        wvre-nav-li > li.nav-item {
           a {
             white-space: nowrap;
           }
-          .mobile-display tl-mega-menu-section-element,
+          .mobile-display tl-mega-menu-section-component,
             .mobile-display tl-mega-menu-section {
               white-space: nowrap;
             }
-          tl-mega-menu > wvr-dropdown-element > .wvr-dropdown .dropdown wvr-button-element {
+          tl-mega-menu > wvr-dropdown-component > .wvr-dropdown .dropdown wvr-button-component {
             white-space: nowrap;
           }
         }

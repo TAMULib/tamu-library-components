@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { StoreModule } from '@ngrx/store';
+import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
 import { TlTabsComponent } from './tl-tabs.component';
 
 describe('TlTabsComponent', () => {
@@ -9,7 +10,10 @@ describe('TlTabsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
+      imports: [
+        BrowserAnimationsModule,
+        StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+      ],
       declarations: [ TlTabsComponent ]
     })
     .compileComponents();

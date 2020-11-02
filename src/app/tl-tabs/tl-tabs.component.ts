@@ -3,7 +3,7 @@ import { __extends } from 'tslib';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-tabs-element',
+  selector: 'tl-tabs-component',
   templateUrl: './tl-tabs.component.html',
   styleUrls: ['./tl-tabs.component.scss']
 })
