@@ -7,4 +7,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-document.addEventListener('DOMContentLoaded', weaverBootstrap(TamuLibModule));
+document.addEventListener('DOMContentLoaded', () => {
+  weaverBootstrap(TamuLibModule)('/config.json');
+});
