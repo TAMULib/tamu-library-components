@@ -2,3 +2,5 @@ node_modules/
 dist/
 static/
 tmp/
+src/assets/icons/*
+!src/assets/icons/tl
