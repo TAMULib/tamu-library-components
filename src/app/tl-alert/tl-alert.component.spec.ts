@@ -31,12 +31,12 @@ describe('TlAlertComponent', () => {
       .toBeTruthy();
   });
 
-  it('should customize alertClass', () => {
-    expect(component.alertClass)
+  it('should customize themeVariant', () => {
+    expect(component.themeVariant)
       .toBeUndefined();
-    component.alertClass = 'success';
+    component.themeVariant = 'success';
     fixture.detectChanges();
-    expect(component.alertClass)
+    expect(component.themeVariant)
       .toEqual('success');
   });
 

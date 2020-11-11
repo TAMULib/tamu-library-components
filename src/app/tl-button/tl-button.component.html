@@ -1,7 +1,7 @@
 <tl-button-wrapper #animationRoot>
   <wvr-button-component
     *ngIf="href!== ''"
-    [btnClass]="btnClass"
+    [themeVariant]="themeVariant"
     [btnSize]="btnSize"
     [href]="href"
     [wvrBtnType]="wvrBtnType">
@@ -9,7 +9,7 @@
   </wvr-button-component>
   <wvr-button-component
     *ngIf="href === ''"
-    [btnClass]="btnClass"
+    [themeVariant]="themeVariant"
     [btnSize]="btnSize"
     [wvrBtnType]="wvrBtnType">
     <ng-content select="wvre-text, wvr-text-component" ngProjectAs="wvre-btn-content"></ng-content>
