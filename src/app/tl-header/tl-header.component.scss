@@ -73,6 +73,12 @@
         font-size: 16px;
       }
 
+      .hours {
+        a {
+          text-decoration: none;
+        }
+      }
+
       .hours wvre-dropdown-menu-item {
         .caldate {
           padding: 10px 0 0 0;
@@ -85,6 +91,9 @@
       }
 
       .libraries {
+        a {
+          text-decoration: none;
+        }
         .libraries-link {
           margin-bottom: 18px;
           a {
@@ -120,6 +129,11 @@
       }
 
       .help {
+
+        a {
+          text-decoration: none;
+        }
+
         .wvr-button {
           color: var(--tl-white);
         }

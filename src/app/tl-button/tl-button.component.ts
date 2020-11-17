@@ -9,7 +9,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 export class TlButtonComponent extends TamuAbstractBaseComponent {
 
   /** Used to override the button class. */
-  @Input() btnClass;
+  @Input() themeVariant;
 
   /** Used to define the size for button component.  */
   @Input() btnSize = '';

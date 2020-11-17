@@ -1,19 +1,28 @@
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
-import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
+import { provideMockStore } from '@ngrx/store/testing';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TlMegaMenuComponent } from './tl-mega-menu.component';
 
 describe('MegaMenuComponent', () => {
   let component: TlMegaMenuComponent;
   let fixture: ComponentFixture<TlMegaMenuComponent>;
   let debugElement: DebugElement;
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule,
-      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+      BrowserAnimationsModule
+    ],
+    providers: [
+      provideMockStore({initialState}),
+      {
+        provide: APP_CONFIG,
+        useValue: testAppConfig
+      }
     ],
     declarations: [ TlMegaMenuComponent ]
   })

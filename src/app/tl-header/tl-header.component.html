@@ -17,7 +17,12 @@
 
 <ng-template #topNavContent>
   <wvr-nav-li-component (click)="toggleMobileMenu()">
-    <wvr-dropdown-component [btnHref]="'https://library.tamu.edu/about/hours.html'" [toggleOn]="'mouseover'" class="hours" [menuYOffset]="'-2px'" [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
+    <wvr-dropdown-component class="hours"
+      [btnType]="'link'"
+      [btnHref]="'https://library.tamu.edu/about/hours.html'"
+      [toggleOn]="'mouseover'" 
+      [menuYOffset]="'-2px'" 
+      [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
         <wvr-text-component value="Hours"></wvr-text-component>
       </wvre-dropdown-btn>
@@ -77,7 +82,13 @@
     </wvr-dropdown-component>
   </wvr-nav-li-component>
   <wvr-nav-li-component >
-    <wvr-dropdown-component [btnHref]="'https://library.tamu.edu/about/index.html'" [toggleOn]="'mouseover'" [menuXOffset]="'-65px'" [menuYOffset]="'-2px'" class="libraries"  [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
+    <wvr-dropdown-component class="libraries"
+      [btnType]="'link'"
+      [btnHref]="'https://library.tamu.edu/about/index.html'"
+      [toggleOn]="'mouseover'" 
+      [menuXOffset]="'-65px'" 
+      [menuYOffset]="'-2px'"
+      [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
         <wvr-text-component value="Libraries"></wvr-text-component>
       </wvre-dropdown-btn>
@@ -147,7 +158,13 @@
     </wvr-dropdown-component>
   </wvr-nav-li-component>
   <wvr-nav-li-component>
-    <wvr-dropdown-component [btnHref]="'https://library.tamu.edu'" [toggleOn]="'mouseover'" [menuXOffset]="'-150px'" [menuYOffset]="'-2px'" class="information-for" [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
+    <wvr-dropdown-component class="information-for"
+      [btnType]="'link'"
+      [btnHref]="'https://library.tamu.edu'"
+      [toggleOn]="'mouseover'"
+      [menuXOffset]="'-150px'"
+      [menuYOffset]="'-2px'"
+      [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
         <wvr-text-component value="Information for"></wvr-text-component>
       </wvre-dropdown-btn>
@@ -197,7 +214,13 @@
   </wvr-nav-li-component>
 
   <wvr-nav-li-component>
-    <wvr-dropdown-component [btnHref]="'http://askus.library.tamu.edu/'" [toggleOn]="'mouseover'" [menuXOffset]="'-365px'" [menuYOffset]="'-2px'" class="help" [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
+    <wvr-dropdown-component class="help"
+      [btnType]="'link'"
+      [btnHref]="'http://askus.library.tamu.edu/'" 
+      [toggleOn]="'mouseover'"
+      [menuXOffset]="'-365px'"
+      [menuYOffset]="'-2px'"
+      [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
         <wvr-text-component value="Help"></wvr-text-component>
       </wvre-dropdown-btn>
