@@ -1,18 +1,25 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
-import { Alignment, metaReducers, ROOT_REDUCER } from '@wvr/elements';
+import { provideMockStore } from '@ngrx/store/testing';
+import { Alignment, APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TamuNavListComponent } from './tl-nav-list.component';
 
 describe('TamuNavListComponent', () => {
   let component: TamuNavListComponent;
   let fixture: ComponentFixture<TamuNavListComponent>;
+  const initialState = { themes: {} };
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule,
-      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+      BrowserAnimationsModule
+    ],
+    providers: [
+      provideMockStore({initialState}),
+      {
+        provide: APP_CONFIG,
+        useValue: testAppConfig
+      }
     ],
     declarations: [TamuNavListComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]

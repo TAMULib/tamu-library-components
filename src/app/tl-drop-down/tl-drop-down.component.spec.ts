@@ -1,20 +1,27 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TlDropDownComponent } from './tl-drop-down.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
-import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
+import { provideMockStore } from '@ngrx/store/testing';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TlDropDownComponent } from './tl-drop-down.component';
 
 describe('TlDropDownComponent', () => {
   let component: TlDropDownComponent;
   let fixture: ComponentFixture<TlDropDownComponent>;
+  const initialState = { themes: {} };
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule,
-      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+      BrowserAnimationsModule
     ],
     declarations: [TlDropDownComponent],
+    providers: [
+      provideMockStore({initialState}),
+      {
+        provide: APP_CONFIG,
+        useValue: testAppConfig
+      }
+    ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   })
     .compileComponents()));

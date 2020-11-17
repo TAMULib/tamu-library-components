@@ -2,18 +2,26 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
-import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
+import { provideMockStore } from '@ngrx/store/testing';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert.component';
 
 describe('TlAlertComponent', () => {
   let component: TlAlertComponent;
   let fixture: ComponentFixture<TlAlertComponent>;
+  const initialState = { themes: {} };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        BrowserAnimationsModule,
-        StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+        BrowserAnimationsModule
+      ],
+      providers: [
+        provideMockStore({initialState}),
+        {
+          provide: APP_CONFIG,
+          useValue: testAppConfig
+        }
       ],
       declarations: [ TlAlertComponent ]
     })
