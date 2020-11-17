@@ -12,7 +12,9 @@ describe('TlMegaMenuSectionComponent', () => {
   let fixture: ComponentFixture<TlMegaMenuSectionComponent>;
   let parentComponent: TlMegaMenuComponent;
   let parentFixture: ComponentFixture<TlMegaMenuComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [

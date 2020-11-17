@@ -8,7 +8,9 @@ import { TamuNavListComponent } from './tl-nav-list.component';
 describe('TamuNavListComponent', () => {
   let component: TamuNavListComponent;
   let fixture: ComponentFixture<TamuNavListComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [

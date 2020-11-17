@@ -8,7 +8,9 @@ import { TlDropDownComponent } from './tl-drop-down.component';
 describe('TlDropDownComponent', () => {
   let component: TlDropDownComponent;
   let fixture: ComponentFixture<TlDropDownComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [

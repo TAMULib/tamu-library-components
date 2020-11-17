@@ -8,7 +8,9 @@ import { TlCardComponent } from './tl-card.component';
 describe('TlCardComponent', () => {
   let component: TlCardComponent;
   let fixture: ComponentFixture<TlCardComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

@@ -9,7 +9,9 @@ import { TlAlertComponent } from './tl-alert.component';
 describe('TlAlertComponent', () => {
   let component: TlAlertComponent;
   let fixture: ComponentFixture<TlAlertComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

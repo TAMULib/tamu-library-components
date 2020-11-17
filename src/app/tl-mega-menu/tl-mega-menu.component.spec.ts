@@ -9,7 +9,9 @@ describe('MegaMenuComponent', () => {
   let component: TlMegaMenuComponent;
   let fixture: ComponentFixture<TlMegaMenuComponent>;
   let debugElement: DebugElement;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [

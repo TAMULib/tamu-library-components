@@ -9,7 +9,9 @@ import { TlButtonComponent } from './tl-button.component';
 describe('TlButtonComponent', () => {
   let component: TlButtonComponent;
   let fixture: ComponentFixture<TlButtonComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [

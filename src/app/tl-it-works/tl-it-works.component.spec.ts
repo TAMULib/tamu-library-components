@@ -8,7 +8,9 @@ import { TamuItWorksComponent } from './tl-it-works.component';
 describe('TamuItWorksComponent', () => {
   let component: TamuItWorksComponent;
   let fixture: ComponentFixture<TamuItWorksComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [

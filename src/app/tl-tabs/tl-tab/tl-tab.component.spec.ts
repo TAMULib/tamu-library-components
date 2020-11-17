@@ -8,7 +8,9 @@ import { TlTabComponent } from './tl-tab.component';
 describe('TlTabComponent', () => {
   let component: TlTabComponent;
   let fixture: ComponentFixture<TlTabComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

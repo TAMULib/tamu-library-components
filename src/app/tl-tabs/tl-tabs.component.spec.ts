@@ -7,7 +7,9 @@ import { TlTabsComponent } from './tl-tabs.component';
 describe('TlTabsComponent', () => {
   let component: TlTabsComponent;
   let fixture: ComponentFixture<TlTabsComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

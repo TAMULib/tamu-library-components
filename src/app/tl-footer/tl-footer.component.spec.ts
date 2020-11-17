@@ -8,7 +8,9 @@ import { TamuFooterComponent } from './tl-footer.component';
 describe('TlFooterComponent', () => {
   let component: TamuFooterComponent;
   let fixture: ComponentFixture<TamuFooterComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [

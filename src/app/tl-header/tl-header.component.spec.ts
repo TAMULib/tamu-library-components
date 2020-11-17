@@ -8,7 +8,9 @@ import { TamuHeaderComponent } from './tl-header.component';
 describe('TamuHeaderComponent', () => {
   let component: TamuHeaderComponent;
   let fixture: ComponentFixture<TamuHeaderComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [

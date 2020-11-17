@@ -8,7 +8,9 @@ import { TlIconComponent } from './tl-icon.component';
 describe('TlIconComponent', () => {
   let component: TlIconComponent;
   let fixture: ComponentFixture<TlIconComponent>;
-  const initialState = { themes: {} };
+  const initialState = { theme: {
+    themes: {}
+  }};
 
   beforeEach(async(() => TestBed.configureTestingModule({
     imports: [
