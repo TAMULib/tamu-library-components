@@ -85,6 +85,9 @@ export class TamuLibModule {
         console.warn(e);
       }
     });
+    setTimeout(() => {
+      document.querySelector('body').style.display = 'block';
+    });
   }
 
 }
