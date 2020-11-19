@@ -14,6 +14,11 @@
       box-sizing: border-box;
 
     }
+    .index-container {
+      margin: 12px;
+      padding: 15px;
+      border-bottom: 1px solid grey;
+    }
   </style>
 </head>
 
@@ -901,6 +906,7 @@
   <br />
   <div class="container" style="text-align: center;">
     <wvre-text value="DropDown Component" text-decoration="underline"></wvre-text><br /><br />
+
     <tl-drop-down theme-variant="primary" hidden-in-mobile="true">
         <tl-dropdown-btn>
           <wvre-text value="Primary Dropdown"></wvre-text>
@@ -1240,12 +1246,50 @@
     </tl-tabs>
   </div>
 
+  <div class="container index-container">
+
+    <wvre-text value="Wvr Theme Color Preview" text-decoration="underline"></wvre-text><br /><br />
+
+    <wvre-color-preview></wvre-color-preview>
+
+  </div>
+
   <tl-footer></tl-footer>
 
   <wvre-manifest name="Directory App" base-url="https://api-dev.library.tamu.edu/directory-service" mapping-strategy="weaver">
     <wvre-manifest-entry name="All Sorted" path="/ldap/all-sorted" methods="GET"></wvre-manifest-entry>
     <wvre-manifest-entry name="Departments" path="/ldap/departments" methods="GET" mapping-strategy="none"></wvre-manifest-entry>
   </wvre-manifest>
+
+  <wvre-theme name="default" active="true" variants="{
+    primary: {
+      baseColor: '#375a7f'
+    },
+    secondary: {
+      baseColor: '#500000'
+    },
+    success: {
+      baseColor: '#00bc8c'
+    },
+    danger: {
+      baseColor: '#E4002B'
+    },
+    warning: {
+      baseColor: '#ffc222'
+    },
+    info: {
+      baseColor: '#5bc0de'
+    },
+    light: {
+      baseColor: '#f8f9fa'
+    },
+    dark: {
+      baseColor: '#343a40'
+    },
+    accent: {
+      baseColor: 'tan'
+    }
+  }"></wvre-theme>
 
   <script defer src="tl-components.js"></script>
 
