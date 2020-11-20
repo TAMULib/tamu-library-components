@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.6.0] - 11-20-20
+### Resolves
+
+- Tamu components should bring in all icons on build, from an icon manifest. (#152)
+- config.json doesn't load inside iframe. (#205)
+- Handlebars templating for retrieved data should be supported by tl components. (#221)
+- TL Mega Menu should remain open when clicked. (#224)
+- TL Components and should support an extensible list of branded colors. (Primary, secondary, danger, warning... etc). (#225)
+- Refactor color usage across tl components to use branded color list, and include fallback support. (#226)
+
 ## [1.5.0] - 11-02-20
 ### Resolves
 
