@@ -3,6 +3,7 @@
 ## [1.6.0] - 11-20-20
 ### Resolves
 
+- Updated to Angular 11
 - Tamu components should bring in all icons on build, from an icon manifest. (#152)
 - config.json doesn't load inside iframe. (#205)
 - Handlebars templating for retrieved data should be supported by tl components. (#221)
