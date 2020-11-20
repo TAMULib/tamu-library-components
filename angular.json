@@ -55,6 +55,7 @@
               "outputHashing": "none",
               "sourceMap": false,
               "extractLicenses": true,
+              "extractCss": false,
               "namedChunks": false,
               "commonChunk": false,
               "vendorChunk": false,
