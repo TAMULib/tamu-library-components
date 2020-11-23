@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import { AfterViewInit, Component, HostBinding, HostListener, Injector, Input, OnInit } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { debounce } from '@wvr/elements';
