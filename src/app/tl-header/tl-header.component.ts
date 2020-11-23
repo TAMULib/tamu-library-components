@@ -49,7 +49,7 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   }
 
   // tslint:disable-next-line:unnecessary-constructor
-  constructor(injector: Injector, @Inject(APP_CONFIG) private readonly appConfig: AppConfig) {
+  constructor(injector: Injector) {
     super(injector);
   }
 

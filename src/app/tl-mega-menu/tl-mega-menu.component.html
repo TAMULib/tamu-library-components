@@ -1,5 +1,5 @@
 <wvr-dropdown-component
-  [btnType]="'link'"
+  [themeVariant]="'link'"
   [toggleOn]="'mouseover'"
   menuXOffset="{{menuXOffset}}px"
   [menuYOffset]="'-2px'"
@@ -44,7 +44,7 @@
       </div>
     </div>
     <div class="mega-menu-view-all container pt-2" *ngIf="viewAllHref">
-      <tl-button [href]="viewAllHref" [btnClass]="'primary'">
+      <tl-button [href]="viewAllHref" [themeVariant]="'primary'">
         <wvr-text-component [value]="viewAllButtonDisplayText"></wvr-text-component>
       </tl-button>
     </div>

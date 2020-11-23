@@ -8,8 +8,8 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 })
 export class TlAlertComponent extends TamuAbstractBaseComponent {
 
-  /** Used to override the alert class. */
-  @Input() alertClass: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
+  /** Used to override the theme variant. */
+  @Input() themeVariant;
 
   /** Used to override the type of alert.  */
   @Input() alertType: 'basic' | 'self-closing' | 'custom';

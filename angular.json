@@ -35,7 +35,8 @@
             ],
             "scripts": [
               {
-                "input": "node_modules/document-register-element/build/document-register-element.js"
+                "input": "node_modules/document-register-element/build/document-register-element.js",
+                "inject": true
               }
             ],
             "allowedCommonJsDependencies": [
@@ -53,8 +54,8 @@
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
-              "extractCss": false,
               "extractLicenses": true,
+              "extractCss": false,
               "namedChunks": false,
               "commonChunk": false,
               "vendorChunk": false,
@@ -63,7 +64,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "2.2mb",
-                  "maximumError": "3mb"
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",

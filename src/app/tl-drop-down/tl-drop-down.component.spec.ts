@@ -1,20 +1,29 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TlDropDownComponent } from './tl-drop-down.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
-import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
+import { provideMockStore } from '@ngrx/store/testing';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TlDropDownComponent } from './tl-drop-down.component';
 
 describe('TlDropDownComponent', () => {
   let component: TlDropDownComponent;
   let fixture: ComponentFixture<TlDropDownComponent>;
+  const initialState = { theme: {
+    themes: {}
+  }};
 
-  beforeEach(async(() => TestBed.configureTestingModule({
+  beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule,
-      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+      BrowserAnimationsModule
     ],
     declarations: [TlDropDownComponent],
+    providers: [
+      provideMockStore({initialState}),
+      {
+        provide: APP_CONFIG,
+        useValue: testAppConfig
+      }
+    ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   })
     .compileComponents()));
@@ -31,11 +40,11 @@ describe('TlDropDownComponent', () => {
   });
 
   it('should have customization for dropdown button type styling', () => {
-    expect(component.btnType)
+    expect(component.themeVariant)
       .toEqual(undefined);
-    component.btnType = 'primary';
+    component.themeVariant = 'primary';
     fixture.detectChanges();
-    expect(component.btnType)
+    expect(component.themeVariant)
       .toEqual('primary');
   });
 
@@ -160,7 +169,7 @@ describe('TlDropDownComponent', () => {
   it('should have customization of the button background color in drop down based on the button type', () => {
     expect(component.btnBackground)
       .toEqual('var(--tl-btn-undefined-background)');
-    component.btnType = 'primary';
+    component.themeVariant = 'primary';
     expect(component.btnBackground)
       .toEqual('var(--tl-btn-primary-background)');
   });
@@ -168,7 +177,7 @@ describe('TlDropDownComponent', () => {
   it('should have customization of the button active background color in drop down based on the button type', () => {
     expect(component.btnBackgroundActive)
       .toEqual('var(--tl-btn-undefined-active-background)');
-    component.btnType = 'primary';
+    component.themeVariant = 'primary';
     expect(component.btnBackgroundActive)
       .toEqual('var(--tl-btn-primary-active-background)');
   });
@@ -176,7 +185,7 @@ describe('TlDropDownComponent', () => {
   it('should have customization of the button hover background color in drop down based on the button type', () => {
     expect(component.btnBackgroundHover)
       .toEqual('var(--tl-btn-undefined-hover-background)');
-    component.btnType = 'primary';
+    component.themeVariant = 'primary';
     expect(component.btnBackgroundHover)
       .toEqual('var(--tl-btn-primary-hover-background)');
   });
@@ -184,7 +193,7 @@ describe('TlDropDownComponent', () => {
   it('should have customization of the button border color in drop down based on the button type', () => {
     expect(component.btnBorderColor)
       .toEqual('var(--tl-btn-undefined-border)');
-    component.btnType = 'primary';
+    component.themeVariant = 'primary';
     expect(component.btnBorderColor)
       .toEqual('var(--tl-btn-primary-border)');
   });
@@ -192,7 +201,7 @@ describe('TlDropDownComponent', () => {
   it('should have customization of the active button border color in drop down based on the button type', () => {
     expect(component.btnBorderActive)
       .toEqual('var(--tl-btn-undefined-active-border)');
-    component.btnType = 'primary';
+    component.themeVariant = 'primary';
     expect(component.btnBorderActive)
       .toEqual('var(--tl-btn-primary-active-border)');
   });
@@ -200,7 +209,7 @@ describe('TlDropDownComponent', () => {
   it('should have customization of the button in focus - border color in drop down based on the button type', () => {
     expect(component.btnBorderFocus)
       .toEqual('var(--tl-btn-undefined-focus-border)');
-    component.btnType = 'primary';
+    component.themeVariant = 'primary';
     expect(component.btnBorderFocus)
       .toEqual('var(--tl-btn-primary-focus-border)');
   });
@@ -208,7 +217,7 @@ describe('TlDropDownComponent', () => {
   it('should have customization of the hover state of button in focus - border color in drop down based on the button type', () => {
     expect(component.btnBorderHover)
       .toEqual('var(--tl-btn-undefined-hover-border)');
-    component.btnType = 'primary';
+    component.themeVariant = 'primary';
     expect(component.btnBorderHover)
       .toEqual('var(--tl-btn-primary-hover-border)');
   });

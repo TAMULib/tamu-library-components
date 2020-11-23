@@ -14,10 +14,15 @@
       box-sizing: border-box;
 
     }
+    .index-container {
+      margin: 12px;
+      padding: 15px;
+      border-bottom: 1px solid grey;
+    }
   </style>
 </head>
 
-<body>
+<body style="display: none;">
   <tl-header page-title="TL Header">
     <wvre-nav-li href="find-my-librarian">
       <wvre-text value="Find My Librarian"></wvre-text>
@@ -718,7 +723,7 @@
     <wvre-text value="Card Component" text-decoration="underline"></wvre-text>
     <br /><br />
 
-    <tl-card card-type="primary" panel-format="solid">
+    <tl-card theme-variant="primary" panel-format="solid">
       <tl-card-header>
         <wvre-text value="Card Header with solid panel formatting"></wvre-text>
       </tl-card-header>
@@ -739,7 +744,7 @@
 
       <wvre-text value="A basic tl card with header and button"></wvre-text>
 
-      <tl-button btn-class="primary">
+      <tl-button theme-variant="primary">
         <wvre-text value="Card Button"></wvre-text>
       </tl-button>
 
@@ -785,7 +790,7 @@
         <wvre-text value="Gmail"></wvre-text>
       </tl-card-link>
 
-      <tl-button btn-class="secondary">
+      <tl-button theme-variant="secondary">
         <wvre-text value="Go somewhere"></wvre-text>
       </tl-button>
 
@@ -804,14 +809,14 @@
 
     <!-- Primary Alert with Close button -->
     <tl-alert
-      alert-class="primary"
+      theme-variant="primary"
       alert-type="basic">
         <wvre-text value="A simple primary alert."></wvre-text>
     </tl-alert>
 
     <!-- Secondary Alert with Close button -->
     <tl-alert
-      alert-class="secondary"
+      theme-variant="secondary"
       alert-type="self-closing"
       close-timer="15000">
         <wvre-text value="A self closing secondary alert."></wvre-text>
@@ -819,49 +824,49 @@
 
     <!-- Success Alert with Close button -->
     <tl-alert
-      alert-class="success"
+      theme-variant="success"
       alert-type="basic">
         <wvre-text value="A simple success alert."></wvre-text>
     </tl-alert>
 
     <!-- Danger Alert with Close button -->
     <tl-alert
-      alert-class="danger"
+      theme-variant="danger"
       alert-type="basic">
         <wvre-text value="A simple danger alert."></wvre-text>
     </tl-alert>
 
     <!-- Warning Alert with Close button -->
     <tl-alert
-      alert-class="warning"
+      theme-variant="warning"
       alert-type="basic">
         <wvre-text value="A simple warning alert."></wvre-text>
     </tl-alert>
 
     <!-- Info Alert with Close button -->
     <tl-alert
-      alert-class="info"
+      theme-variant="info"
       alert-type="basic">
         <wvre-text value="A simple info alert."></wvre-text>
     </tl-alert>
 
     <!-- Light Alert with Close button -->
     <tl-alert
-      alert-class="light"
+      theme-variant="light"
       alert-type="basic">
         <wvre-text value="A simple light alert."></wvre-text>
     </tl-alert>
 
     <!-- Dark Alert with Close button -->
     <tl-alert
-      alert-class="dark"
+      theme-variant="dark"
       alert-type="basic">
         <wvre-text value="A simple dark alert."></wvre-text>
     </tl-alert>
 
     <!-- Custom Alert with Close button -->
     <tl-alert
-      alert-class="success"
+      theme-variant="success"
       alert-type="custom">
         <tl-custom-alert>
           <h4 class="alert-heading">
@@ -879,7 +884,7 @@
 
     <!-- Custom Alert with No Close button -->
     <tl-alert
-      alert-class="danger"
+      theme-variant="danger"
       alert-type="custom"
       closable="false">
         <tl-custom-alert>
@@ -901,7 +906,8 @@
   <br />
   <div class="container" style="text-align: center;">
     <wvre-text value="DropDown Component" text-decoration="underline"></wvre-text><br /><br />
-    <tl-drop-down btn-type="primary" hidden-in-mobile="true">
+
+    <tl-drop-down theme-variant="primary" hidden-in-mobile="true">
         <tl-dropdown-btn>
           <wvre-text value="Primary Dropdown"></wvre-text>
         </tl-dropdown-btn>
@@ -918,7 +924,7 @@
       </tl-dropdown-menu>
     </tl-drop-down>
 
-    <tl-drop-down btn-type="secondary">
+    <tl-drop-down theme-variant="secondary">
       <tl-dropdown-btn>
         <wvre-text value=" Secondary Dropdown"></wvre-text>
       </tl-dropdown-btn>
@@ -935,7 +941,7 @@
       </tl-dropdown-menu>
     </tl-drop-down>
 
-    <tl-drop-down btn-type="success">
+    <tl-drop-down theme-variant="success">
       <tl-dropdown-btn>
         <wvre-text value=" Success Dropdown "></wvre-text>
       </tl-dropdown-btn>
@@ -952,7 +958,7 @@
       </tl-dropdown-menu>
     </tl-drop-down>
 
-    <tl-drop-down btn-type="info">
+    <tl-drop-down theme-variant="info">
       <tl-dropdown-btn>
         <wvre-text value=" Info Dropdown "></wvre-text>
       </tl-dropdown-btn>
@@ -969,7 +975,7 @@
       </tl-dropdown-menu>
     </tl-drop-down>
 
-    <tl-drop-down btn-type="warning">
+    <tl-drop-down theme-variant="warning">
       <tl-dropdown-btn>
         <wvre-text value=" Warning Dropdown "></wvre-text>
       </tl-dropdown-btn>
@@ -986,7 +992,7 @@
       </tl-dropdown-menu>
     </tl-drop-down>
 
-    <tl-drop-down btn-type="danger">
+    <tl-drop-down theme-variant="danger">
       <tl-dropdown-btn>
         <wvre-text value=" Danger Dropdown "></wvre-text>
       </tl-dropdown-btn>
@@ -1003,7 +1009,7 @@
       </tl-dropdown-menu>
     </tl-drop-down>
 
-    <tl-drop-down btn-type="dark">
+    <tl-drop-down theme-variant="dark">
       <tl-dropdown-btn>
         <wvre-text value=" Dark Dropdown "></wvre-text>
       </tl-dropdown-btn>
@@ -1020,7 +1026,7 @@
       </tl-dropdown-menu>
     </tl-drop-down>
 
-    <tl-drop-down btn-type="light">
+    <tl-drop-down theme-variant="light">
       <tl-dropdown-btn>
         <wvre-text value=" Light Dropdown "></wvre-text>
       </tl-dropdown-btn>
@@ -1059,28 +1065,28 @@
   <br />
   <div class="container" style="text-align: center;">
     <wvre-text value="Button Component" text-decoration="underline"></wvre-text><br /><br />
-    <tl-button btn-class="primary" animate="{click: 'rotateToggle'}">
+    <tl-button theme-variant="primary" animate="{click: 'rotateToggle'}">
       <wvre-text value="Primary"></wvre-text>
     </tl-button>
-    <tl-button btn-class="secondary">
+    <tl-button theme-variant="secondary">
       <wvre-text value="Secondary"></wvre-text>
     </tl-button>
-    <tl-button btn-class="info">
+    <tl-button theme-variant="info">
       <wvre-text value="Info"></wvre-text>
     </tl-button>
-    <tl-button btn-class="warning">
+    <tl-button theme-variant="warning">
       <wvre-text value="Warning"></wvre-text>
     </tl-button>
-    <tl-button btn-class="danger">
+    <tl-button theme-variant="danger">
       <wvre-text value="Danger"></wvre-text>
     </tl-button>
-    <tl-button btn-class="success">
+    <tl-button theme-variant="success">
       <wvre-text value="Success"></wvre-text>
     </tl-button>
-    <tl-button btn-class="light">
+    <tl-button theme-variant="light">
       <wvre-text value="Light"></wvre-text>
     </tl-button>
-    <tl-button btn-class="dark">
+    <tl-button theme-variant="dark">
       <wvre-text value="Dark"></wvre-text>
     </tl-button>
   </div>
@@ -1196,6 +1202,26 @@
 
   </div>
 
+  <div class="container index-container">
+
+    <wvre-text value="Wvr Store, and Communication" text-decoration="underline"></wvre-text><br /><br />
+
+    <wvre-list list-type="unstyled" hidden-in-mobile="true" wvr-data="[
+      {
+        manifest: 'Directory App',
+        entry: 'All Sorted',
+        as: 'allSorted'
+      }
+    ]">
+      <template wvr-compile>
+        {{#each allSorted}}
+          <wvre-list-item>{{fullName}}</wvre-list-item>
+        {{/each}}
+      </template>
+    </wvre-list>
+
+  </div>
+
   <hr><br><br><br>
   <div style="padding: 50px">
     <tl-tabs>
@@ -1220,7 +1246,50 @@
     </tl-tabs>
   </div>
 
+  <div class="container index-container">
+
+    <wvre-text value="Wvr Theme Color Preview" text-decoration="underline"></wvre-text><br /><br />
+
+    <wvre-color-preview></wvre-color-preview>
+
+  </div>
+
   <tl-footer></tl-footer>
+
+  <wvre-manifest name="Directory App" base-url="https://api-dev.library.tamu.edu/directory-service" mapping-strategy="weaver">
+    <wvre-manifest-entry name="All Sorted" path="/ldap/all-sorted" methods="GET"></wvre-manifest-entry>
+    <wvre-manifest-entry name="Departments" path="/ldap/departments" methods="GET" mapping-strategy="none"></wvre-manifest-entry>
+  </wvre-manifest>
+
+  <wvre-theme name="default" active="true" variants="{
+    primary: {
+      baseColor: '#375a7f'
+    },
+    secondary: {
+      baseColor: '#500000'
+    },
+    success: {
+      baseColor: '#00bc8c'
+    },
+    danger: {
+      baseColor: '#E4002B'
+    },
+    warning: {
+      baseColor: '#ffc222'
+    },
+    info: {
+      baseColor: '#5bc0de'
+    },
+    light: {
+      baseColor: '#f8f9fa'
+    },
+    dark: {
+      baseColor: '#343a40'
+    },
+    accent: {
+      baseColor: 'tan'
+    }
+  }"></wvre-theme>
 
   <script defer src="tl-components.js"></script>
 
