@@ -12,6 +12,7 @@ const server = new StaticServer({
   port: 8080,
   name: 'tl-component-dist-server',
   followSymlink: true,
+  cors: '*'
 });
 
 server.start(function () {
