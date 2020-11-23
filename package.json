@@ -1,6 +1,6 @@
 {
   "name": "tamu-library-components",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "private": true,
   "config": {
     "DOCKER_SERVER": "10.55.134.48/weaver/tl-components"
