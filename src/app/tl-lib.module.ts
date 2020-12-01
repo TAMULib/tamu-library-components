@@ -1,7 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
-import { BrowserModule } from '@angular/platform-browser';
-import { WvrLibModule } from '@wvr/elements';
+import { registerCustomElements, showHiddentContent, WvrLibModule, wvrTimeout, WVR_ELEMENTS } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlCardComponent } from './tl-card/tl-card.component';
@@ -17,7 +15,7 @@ import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
-const elements = [
+const TL_ELEMENTS = [
   { component: TlAlertComponent, selector: 'tl-alert' },
   { component: TlButtonComponent, selector: 'tl-button' },
   { component: TlCardComponent, selector: 'tl-card' },
@@ -34,7 +32,7 @@ const elements = [
 ];
 
 /** This property contains a list of TAMU components classes. */
-const components = [
+const TL_COMPONENTS = [
   TlAlertComponent,
   TlButtonComponent,
   TlCardComponent,
@@ -50,43 +48,33 @@ const components = [
   TlTabComponent
 ];
 
-const registerCustomElements = (injector: Injector) => {
-  elements.forEach(element => {
-    try {
-      customElements.define(element.selector, createCustomElement(element.component, { injector }));
-    } catch (e) {
-      // console.warn(e);
-    }
-  });
-};
-
 /** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
-    BrowserModule,
     WvrLibModule
   ],
-  exports: [
-    ...components
-  ],
+  exports: [],
   providers: [],
   declarations: [
-    ...components
+    ...TL_COMPONENTS
   ],
   bootstrap: [],
-  entryComponents: [
-    ...components
-  ],
+  entryComponents: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TamuLibModule {
 
   constructor(private readonly injector: Injector) {
-    registerCustomElements(injector);
+
   }
 
   ngDoBootstrap(): void {
-    // OVERRIDE
+    registerCustomElements(this.injector, WVR_ELEMENTS);
+    registerCustomElements(this.injector, TL_ELEMENTS);
+    showHiddentContent(this.injector);
+    wvrTimeout(() => {
+      document.querySelector('body').style.display = 'block';
+    });
   }
 
 }
