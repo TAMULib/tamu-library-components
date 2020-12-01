@@ -1,14 +1,15 @@
 /* istanbul ignore file */
 
-import { AfterViewInit, Component, HostBinding, HostListener, Injector, Input, OnInit } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input, OnInit } from '@angular/core';
 import { debounce } from '@wvr/elements';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
 
 @Component({
   selector: 'tl-mega-menu-component',
   templateUrl: './tl-mega-menu.component.html',
-  styleUrls: ['./tl-mega-menu.component.scss']
+  styleUrls: ['./tl-mega-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements OnInit, AfterViewInit {
   /** The default text value to be displayed for tl-mega menu title. */

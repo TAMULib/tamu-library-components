@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
+import { BrowserModule } from '@angular/platform-browser';
 import { WvrLibModule } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
@@ -62,6 +63,7 @@ const registerCustomElements = (injector: Injector) => {
 /** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
+    BrowserModule,
     WvrLibModule
   ],
   exports: [

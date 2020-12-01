@@ -1,10 +1,11 @@
-import { AfterContentInit, Component, Injector, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-icon-component',
   templateUrl: './tl-icon.component.html',
-  styleUrls: ['./tl-icon.component.scss']
+  styleUrls: ['./tl-icon.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlIconComponent extends TamuAbstractBaseComponent {
 
