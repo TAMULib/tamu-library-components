@@ -1,5 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
-import { registerCustomElements, showHiddentContent, WvrLibModule, wvrTimeout, WVR_ELEMENTS } from '@wvr/elements';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { registerCustomElements, showHiddentContent, WvrCoreModule, WvrListComponent, WvrListItemComponent, WvrNavLiComponent, WvrSharedModule, WvrTextComponent, wvrTimeout } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlCardComponent } from './tl-card/tl-card.component';
@@ -16,6 +18,12 @@ import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const TL_ELEMENTS = [
+  // required weaver elements
+  { component: WvrListComponent, selector: 'wvre-list' },
+  { component: WvrListItemComponent, selector: 'wvre-list-item' },
+  { component: WvrNavLiComponent, selector: 'wvre-nav-li' },
+  { component: WvrTextComponent, selector: 'wvre-text' },
+  // tamu library elements
   { component: TlAlertComponent, selector: 'tl-alert' },
   { component: TlButtonComponent, selector: 'tl-button' },
   { component: TlCardComponent, selector: 'tl-card' },
@@ -51,7 +59,10 @@ const TL_COMPONENTS = [
 /** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
-    WvrLibModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    WvrSharedModule,
+    WvrCoreModule
   ],
   exports: [],
   providers: [],
@@ -69,7 +80,6 @@ export class TamuLibModule {
   }
 
   ngDoBootstrap(): void {
-    registerCustomElements(this.injector, WVR_ELEMENTS);
     registerCustomElements(this.injector, TL_ELEMENTS);
     showHiddentContent(this.injector);
     wvrTimeout(() => {
