@@ -1,6 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-import { BrowserModule } from '@angular/platform-browser';
 import { WvrLibModule } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
@@ -13,8 +12,8 @@ import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu/tl-mega-menu-section/tl-mega-menu-section.component';
 import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
-import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
+import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const elements = [
@@ -50,10 +49,19 @@ const components = [
   TlTabComponent
 ];
 
+const registerCustomElements = (injector: Injector) => {
+  elements.forEach(element => {
+    try {
+      customElements.define(element.selector, createCustomElement(element.component, { injector }));
+    } catch (e) {
+      // console.warn(e);
+    }
+  });
+};
+
 /** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
-    BrowserModule,
     WvrLibModule
   ],
   exports: [
@@ -72,22 +80,7 @@ const components = [
 export class TamuLibModule {
 
   constructor(private readonly injector: Injector) {
-
-  }
-
-  ngDoBootstrap(): void {
-    elements.forEach(element => {
-      try {
-        customElements.define(element.selector, createCustomElement(element.component, {
-          injector: this.injector
-         }));
-      } catch (e) {
-        console.warn(e);
-      }
-    });
-    setTimeout(() => {
-      document.querySelector('body').style.display = 'block';
-    });
+    registerCustomElements(injector);
   }
 
 }

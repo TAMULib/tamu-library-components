@@ -4,19 +4,22 @@ const fs = require('fs-extra');
 const concat = require('concat');
 const cp = require('child_process');
 
+const componentsPath = 'dist/tl-components';
+
 const assetPath = 'dist/tl-components';
 const bundlePath = 'dist/bundle';
 
 cp.fork(__dirname + '/build-tl-config-template.js');
 
 (async function build() {
+
+  // options: es5 and es2015
+  const esv = 'es2015';
+
   const files = [
-    'dist/tl-components/runtime-es5.js',
-    'dist/tl-components/polyfills-es5.js',
-    'dist/tl-components/styles-es5.js',
-    'dist/tl-components/scripts.js',
-    // 'dist/tl-components/vendor-es5.js',
-    'dist/tl-components/main-es5.js'
+    `${componentsPath}/polyfills-${esv}.js`,
+    `${componentsPath}/styles-${esv}.js`,
+    `${componentsPath}/main-${esv}.js`
   ];
 
   fs.ensureDir(bundlePath);
