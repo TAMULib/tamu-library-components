@@ -26,7 +26,7 @@ if(fs.existsSync('./dist')) {
 
 if(fs.existsSync('./static')) {
   fs.writeFile('./static/config.json', configTemplate);
-  // fs.writeFile('./static/tamu-library-components/docs/usage/config.json', configTemplate);
+  fs.writeFile('./static/tamu-library-components/docs/usage/config.json', configTemplate);
 }
 
 fs.writeFile('./src/config.json', configTemplate);
