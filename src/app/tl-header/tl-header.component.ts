@@ -11,7 +11,9 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 export class TamuHeaderComponent extends TamuAbstractBaseComponent {
 
   /** This is a URL pointing to the location of the logo. */
-  logoSrc =  `${this.appConfig.assetsUrl}/icons/tl/tamu-logo.svg`;
+  logoSrc = `${this.appConfig.assetsUrl}/icons/tl/tamu-logo.svg`;
+
+  askUsSrc = `${this.appConfig.assetsUrl}/images/askus.png`;
 
   /** The text value to be displayed beside the TAMU logo. */
   logoText = ' Texas A&M University Libraries';
