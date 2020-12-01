@@ -83,4 +83,8 @@ export class TamuLibModule {
     registerCustomElements(injector);
   }
 
+  ngDoBootstrap(): void {
+    // OVERRIDE
+  }
+
 }
