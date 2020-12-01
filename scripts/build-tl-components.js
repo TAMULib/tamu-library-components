@@ -25,7 +25,7 @@ cp.fork(__dirname + '/build-tl-config-template.js');
   fs.ensureDir(bundlePath);
 
   await concat(files, `${bundlePath}/tl-components.js`);
-  fs.copy('dist/tl-components/assets', "dist/static/docs/usage/assets");
+  fs.copy(`${assetPath}/assets`, "dist/static/docs/usage/assets");
   fs.copy(`${assetPath}/assets`, `${bundlePath}/assets`);
 
 })();
