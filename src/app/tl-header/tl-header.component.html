@@ -1,7 +1,6 @@
 <wvr-header-component [logoSrc]="logoSrc" [logoHref]="logoHref" [logoText]="logoText" [logoImgHeight]="logoImgHeight"
   [logoImgWidth]="logoImgWidth" [logoImgMargin]="logoImgMargin" [headerTitle]="pageTitle" [headerTitleUrl]="pageTitleUrl"
-  [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
-  [bottomNavBackground]="bottomNavBackground">
+  [themeVariant]="themeVariant">
   <wvr-nav-list-component top-navigation aligned="RIGHT">
     <ng-container wvr-nav-items>
       <ng-container *ngTemplateOutlet="topNavContent"></ng-container>
@@ -20,8 +19,8 @@
     <wvr-dropdown-component class="hours"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu/about/hours.html'"
-      [toggleOn]="'mouseover'" 
-      [menuYOffset]="'-2px'" 
+      [toggleOn]="'mouseover'"
+      [menuYOffset]="'-2px'"
       [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
         <wvr-text-component value="Hours"></wvr-text-component>
@@ -85,8 +84,8 @@
     <wvr-dropdown-component class="libraries"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu/about/index.html'"
-      [toggleOn]="'mouseover'" 
-      [menuXOffset]="'-65px'" 
+      [toggleOn]="'mouseover'"
+      [menuXOffset]="'-65px'"
       [menuYOffset]="'-2px'"
       [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
@@ -216,7 +215,7 @@
   <wvr-nav-li-component>
     <wvr-dropdown-component class="help"
       [btnType]="'link'"
-      [btnHref]="'http://askus.library.tamu.edu/'" 
+      [btnHref]="'http://askus.library.tamu.edu/'"
       [toggleOn]="'mouseover'"
       [menuXOffset]="'-365px'"
       [menuYOffset]="'-2px'"
@@ -290,3 +289,8 @@
     </ng-container>
   </wvr-nav-list-component>
 </ng-template>
+
+
+  <!-- [titleRowBackground]="titleRowBackground"
+  [topNavBackground]="topNavBackground"
+  [bottomNavBackground]="bottomNavBackground" -->

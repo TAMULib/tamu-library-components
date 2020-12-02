@@ -10,6 +10,8 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 })
 export class TamuHeaderComponent extends TamuAbstractBaseComponent {
 
+  themeVariant = 'success';
+
   /** This is a URL pointing to the location of the logo. */
   logoSrc =  `${this.appConfig.assetsUrl}/icons/tl/tamu-logo.svg`;
 
@@ -29,13 +31,13 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   logoHref = 'https://library.tamu.edu';
 
   /** This defines the TAMU css variable: --tl-primary. */
-  titleRowBackground = 'var(--tl-primary)';
+  // titleRowBackground = 'var(--tl-primary)';
 
   /** This defines the css variable: --tl-primary-dark-accent. */
-  topNavBackground = 'var(--tl-primary-dark-accent)';
+  // topNavBackground = 'var(--tl-primary-dark-accent)';
 
   /** This defines the TAMU css variable: grayColor. */
-  bottomNavBackground = 'var(--tl-grey)';
+  // bottomNavBackground = 'var(--tl-grey)';
 
   /** This defines the TAMU page  header title and is displayed as page title. */
   @Input() pageTitle = 'TL Header Component';
