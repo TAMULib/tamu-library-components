@@ -32,7 +32,7 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
   }
 
   ngOnInit(): void {
-    const elem = this._eRef.nativeElement as HTMLElement;
+    const elem = this.eRef.nativeElement as HTMLElement;
     const parentElem = elem.closest('tl-mega-menu') as HTMLElement;
     if (parentElem) {
       this.parent = this.componentRegistry.getComponentByElement(parentElem) as TlMegaMenuComponent;
@@ -69,11 +69,11 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
   }
 
   getElementHeight(): number {
-    return (this._eRef.nativeElement as HTMLElement).clientHeight;
+    return (this.eRef.nativeElement as HTMLElement).clientHeight;
   }
 
   getExpandedHeight(): number {
-    const elem = (this._eRef.nativeElement as HTMLElement);
+    const elem = (this.eRef.nativeElement as HTMLElement);
     const lis = elem.querySelectorAll('tl-nav-li');
     const liHeight = lis.length ? lis[0].clientHeight : 0;
 

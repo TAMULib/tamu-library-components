@@ -74,7 +74,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
   @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
     /* istanbul ignore else*/
     if (!this.outOfHeader) {
-      const nativeElem = this._eRef.nativeElement as HTMLElement;
+      const nativeElem = this.eRef.nativeElement as HTMLElement;
       const header = document.querySelector('tl-header');
       const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]');
       /* istanbul ignore else*/
