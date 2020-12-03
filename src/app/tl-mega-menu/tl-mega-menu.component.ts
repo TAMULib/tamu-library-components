@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
 import { debounce } from '@wvr/elements';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
@@ -11,7 +11,7 @@ import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-
   styleUrls: ['./tl-mega-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements OnInit, AfterViewInit {
+export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterViewInit {
   /** The default text value to be displayed for tl-mega menu title. */
   @Input() menuTitle = 'Mega Menu';
 
@@ -55,8 +55,8 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
   addSection(section: TlMegaMenuSectionComponent): void {
     this.sections.push(section);
     this.sectionTitleHeight = section.getElementHeight() > this.sectionTitleHeight ?
-                              section.getElementHeight() :
-                              this.sectionTitleHeight;
+      section.getElementHeight() :
+      this.sectionTitleHeight;
   }
 
   /** This toggles the display of mobile menu on click event. */
