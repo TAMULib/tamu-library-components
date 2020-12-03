@@ -37,7 +37,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   /** Allows for the override of the --tl-mobile-display-max-height variable. */
   @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight = '0px';
 
-  private sections: Array<TlMegaMenuSectionComponent>;
+  private readonly sections: Array<TlMegaMenuSectionComponent>;
 
   private sectionTitleHeight = 0;
 
@@ -63,7 +63,9 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   toggleMobileMenuOpen(): void {
     this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionTitleHeight}px`;
     if (this.active) {
-      this.sections.forEach(s => s.close());
+      this.sections.forEach(s => {
+        s.close();
+      });
       this.active = false;
     } else {
       this.active = true;

@@ -34,6 +34,8 @@ import '@angular/localize/init';
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
  * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
  */
+
+// tslint:disable-next-line:no-import-side-effect
 import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 
 /**
@@ -68,6 +70,7 @@ import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
 (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
 
+// tslint:disable-next-line:no-import-side-effect
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 /***************************************************************************************************

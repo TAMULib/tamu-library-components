@@ -33,9 +33,9 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
 
   ngOnInit(): void {
     const elem = this.eRef.nativeElement as HTMLElement;
-    const parentElem = elem.closest('tl-mega-menu') as HTMLElement;
+    const parentElem = elem.closest('tl-mega-menu');
     if (parentElem) {
-      this.parent = this.componentRegistry.getComponentByElement(parentElem) as TlMegaMenuComponent;
+      this.parent = this.componentRegistry.getComponentByElement(parentElem as HTMLElement) as TlMegaMenuComponent;
     } else {
       console.warn(`TlMegaMenuSectionComponent (${this.id}) is not within a TLMegamMenuComponent`);
     }
