@@ -53,6 +53,7 @@ static/
 .vscode/
 
 package-lock.json
+yarn.lock
 src/config.json
 src/config-template.json
 src/assets/icons/*
