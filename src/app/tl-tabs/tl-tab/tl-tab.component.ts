@@ -1,10 +1,11 @@
-import { Component, Injector, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-tab-component',
   templateUrl: './tl-tab.component.html',
-  styleUrls: ['./tl-tab.component.scss']
+  styleUrls: ['./tl-tab.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlTabComponent extends TamuAbstractBaseComponent {
 
