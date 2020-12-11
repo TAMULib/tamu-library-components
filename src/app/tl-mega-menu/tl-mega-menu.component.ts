@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 
-import { AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
-import { debounce } from '@wvr/elements';
+import { AfterContentInit, AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
+import { debounce, wvrTimeout } from '@wvr/elements';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
 
@@ -11,7 +11,7 @@ import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-
   styleUrls: ['./tl-mega-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterViewInit {
+export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
   /** The default text value to be displayed for tl-mega menu title. */
   @Input() menuTitle = 'Mega Menu';
 
@@ -48,8 +48,11 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   }
 
   /** This adjusts the dropdown menu x offset on page load. */
-  ngAfterViewInit(): void {
-    this.calculateMenuXOffset();
+  ngAfterContentInit(): void {
+    super.ngAfterContentInit();
+    wvrTimeout(() => {
+      this.calculateMenuXOffset();
+    });
   }
 
   addSection(section: TlMegaMenuSectionComponent): void {

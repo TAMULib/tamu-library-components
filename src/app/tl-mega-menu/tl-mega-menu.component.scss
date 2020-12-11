@@ -24,11 +24,11 @@
           color: var(--tl-black) !important;
         }
         .btn {
-          tl-icon-component.x-icon svg {
+          tl-icon-component.x-icon img {
             transition: transform 0.25s ease-in-out;
             transform: rotate(0deg);
           }
-          tl-icon-component.plus-icon svg {
+          tl-icon-component.plus-icon img {
             transition: transform 0.25s ease-in-out;
             transform: rotate(0deg);
           }
@@ -42,7 +42,7 @@
     ::ng-deep {
       .wvr-dropdown .dropdown {
         .btn {
-          tl-icon-component.x-icon svg {
+          tl-icon-component.x-icon img {
             transition: transform 0.25s ease-in-out;
             transform: rotate(90deg);
           }
@@ -55,7 +55,7 @@
     ::ng-deep {
       .wvr-dropdown .dropdown {
         .btn {
-          tl-icon-component.plus-icon svg {
+          tl-icon-component.plus-icon img {
             transition: transform 0.25s ease-in-out;
             transform: rotate(45deg);
           }
