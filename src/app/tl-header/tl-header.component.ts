@@ -1,17 +1,19 @@
-import { Component, Inject, Injector, Input, ViewEncapsulation } from '@angular/core';
-import { AppConfig, APP_CONFIG } from '@wvr/elements';
+import { ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-header-component',
   templateUrl: './tl-header.component.html',
   styleUrls: ['./tl-header.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TamuHeaderComponent extends TamuAbstractBaseComponent {
 
   /** This is a URL pointing to the location of the logo. */
-  logoSrc =  `${this.appConfig.assetsUrl}/icons/tl/tamu-logo.svg`;
+  logoSrc = `${this.appConfig.assetsUrl}/icons/tl/tamu-logo.svg`;
+
+  askUsSrc = `${this.appConfig.assetsUrl}/images/askus.png`;
 
   /** The text value to be displayed beside the TAMU logo. */
   logoText = ' Texas A&M University Libraries';

@@ -1,4 +1,4 @@
-import { Component, Injector, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { Alignment } from '@wvr/elements';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
@@ -10,7 +10,8 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
   selector: 'tl-nav-list-component',
   templateUrl: './tl-nav-list.component.html',
   styleUrls: ['./tl-nav-list.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TamuNavListComponent extends TamuAbstractBaseComponent {
 

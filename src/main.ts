@@ -8,5 +8,8 @@ if (environment.production) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  weaverBootstrap(TamuLibModule)(isDevMode() ? '/config.json' : undefined);
+  weaverBootstrap(TamuLibModule)(isDevMode() ? '/config.json' : undefined)
+    .catch(error => {
+      console.error(error);
+    });
 });

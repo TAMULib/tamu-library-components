@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
-import { WvrLibModule } from '@wvr/elements';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { registerCustomElements, showHiddentContent, WvrColorPreviewComponent, WvrCoreModule, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrSharedModule, WvrTextComponent, WvrThemeComponent, wvrTimeout } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlCardComponent } from './tl-card/tl-card.component';
@@ -13,11 +13,21 @@ import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu/tl-mega-menu-section/tl-mega-menu-section.component';
 import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
-import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
+import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
-const elements = [
+const TL_ELEMENTS = [
+  // required weaver elements
+  { component: WvrColorPreviewComponent, selector: 'wvre-color-preview' },
+  { component: WvrListComponent, selector: 'wvre-list' },
+  { component: WvrListItemComponent, selector: 'wvre-list-item' },
+  { component: WvrNavLiComponent, selector: 'wvre-nav-li' },
+  { component: WvrManifestComponent, selector: 'wvre-manifest' },
+  { component: WvrManifestEntryComponent, selector: 'wvre-manifest-entry' },
+  { component: WvrTextComponent, selector: 'wvre-text' },
+  { component: WvrThemeComponent, selector: 'wvre-theme' },
+  // tamu library elements
   { component: TlAlertComponent, selector: 'tl-alert' },
   { component: TlButtonComponent, selector: 'tl-button' },
   { component: TlCardComponent, selector: 'tl-card' },
@@ -34,7 +44,7 @@ const elements = [
 ];
 
 /** This property contains a list of TAMU components classes. */
-const components = [
+const TL_COMPONENTS = [
   TlAlertComponent,
   TlButtonComponent,
   TlCardComponent,
@@ -53,20 +63,18 @@ const components = [
 /** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    WvrLibModule
+    WvrSharedModule,
+    WvrCoreModule
   ],
-  exports: [
-    ...components
-  ],
+  exports: [],
   providers: [],
   declarations: [
-    ...components
+    ...TL_COMPONENTS
   ],
   bootstrap: [],
-  entryComponents: [
-    ...components
-  ],
+  entryComponents: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TamuLibModule {
@@ -76,16 +84,9 @@ export class TamuLibModule {
   }
 
   ngDoBootstrap(): void {
-    elements.forEach(element => {
-      try {
-        customElements.define(element.selector, createCustomElement(element.component, {
-          injector: this.injector
-         }));
-      } catch (e) {
-        console.warn(e);
-      }
-    });
-    setTimeout(() => {
+    registerCustomElements(this.injector, TL_ELEMENTS);
+    showHiddentContent(this.injector);
+    wvrTimeout(() => {
       document.querySelector('body').style.display = 'block';
     });
   }

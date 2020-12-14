@@ -1,11 +1,12 @@
-import { Component, Injector, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-it-works-component',
   templateUrl: './tl-it-works.component.html',
   styleUrls: ['./tl-it-works.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TamuItWorksComponent extends TamuAbstractBaseComponent {
 
