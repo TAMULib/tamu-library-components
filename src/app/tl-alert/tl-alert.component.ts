@@ -1,10 +1,11 @@
-import { Component, Injector, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-alert-component',
   templateUrl: './tl-alert.component.html',
-  styleUrls: ['./tl-alert.component.scss']
+  styleUrls: ['./tl-alert.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlAlertComponent extends TamuAbstractBaseComponent {
 
