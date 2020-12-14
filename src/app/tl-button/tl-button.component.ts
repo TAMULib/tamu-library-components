@@ -1,10 +1,11 @@
-import { Component, Injector, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-button-component',
   templateUrl: './tl-button.component.html',
-  styleUrls: ['./tl-button.component.scss']
+  styleUrls: ['./tl-button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlButtonComponent extends TamuAbstractBaseComponent {
 
