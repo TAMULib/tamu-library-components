@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input, OnInit } from '@angular/core';
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input, OnInit } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.component';
 import { TlMegaMenuComponent } from '../tl-mega-menu.component';
 
@@ -8,7 +8,7 @@ import { TlMegaMenuComponent } from '../tl-mega-menu.component';
   styleUrls: ['./tl-mega-menu-section.component.scss'],
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implements AfterViewInit, OnInit  {
+export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implements AfterContentInit, OnInit  {
 
   private parent: TlMegaMenuComponent;
 
@@ -41,8 +41,11 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
     }
   }
 
-  ngAfterViewInit(): void {
-    this.parent.addSection(this);
+  ngAfterContentInit(): void {
+    super.ngAfterContentInit();
+    setTimeout(() => {
+      this.parent.addSection(this);
+    });
   }
 
   open(): void {

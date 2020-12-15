@@ -57,11 +57,13 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     this.sectionTitleHeight = section.getElementHeight() > this.sectionTitleHeight ?
       section.getElementHeight() :
       this.sectionTitleHeight;
+      console.log(section.getElementHeight());
   }
 
   /** This toggles the display of mobile menu on click event. */
   toggleMobileMenuOpen(): void {
     this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionTitleHeight}px`;
+
     if (this.active) {
       this.sections.forEach(s => {
         s.close();
