@@ -2,10 +2,10 @@
   *ngIf="!viewAllHref"
   (click)="toggleOpenClose()">
   {{sectionTitle}}
-  <tl-icon *ngIf="isMobileLayout" set="bootstrap-icons" name="chevron-right"></tl-icon>
+  <tl-icon-component *ngIf="isMobileLayout" [set]="'bootstrap'" [name]="'chevron-right'" [size]="'16px'"></tl-icon-component>
 </p>
 <a class="section-title" href="{{viewAllHref}}" *ngIf="viewAllHref">{{sectionTitle}}
-  <tl-icon *ngIf="isMobileLayout" set="bootstrap-icons" name="chevron-right"></tl-icon>
+  <tl-icon-component *ngIf="isMobileLayout" [set]="'bootstrap'" [name]="'chevron-right'" [size]="'16px'"></tl-icon-component>
 </a>
 <wvr-nav-list-component
   vertical="true"
