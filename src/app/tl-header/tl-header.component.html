@@ -20,8 +20,8 @@
     <wvr-dropdown-component class="hours"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu/about/hours.html'"
-      [toggleOn]="'mouseover'"
-      [menuYOffset]="'-2px'"
+      [toggleOn]="'mouseover'" 
+      [menuYOffset]="'-2px'" 
       [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
         <wvr-text-component value="Hours"></wvr-text-component>
@@ -29,55 +29,53 @@
       <wvre-dropdown-menu>
         <wvre-dropdown-menu-item>
           <div class="todayshours">
-            <div class="caldate">
-              <wvr-text-component value="Business Library &amp; Collaboration Commons"></wvr-text-component>
-              <span>
-                <wvr-text-component value="7am - 6pm"></wvr-text-component>
-              </span>
+            <div class="caldate true">
+              <wvre-text
+                value="Business Library &amp; Collaboration Commons"
+              ></wvre-text>
+              <span><wvre-text value="7am - 6pm"></wvre-text></span>
             </div>
-            <div class="caldate">
-              <wvr-text-component value="Cushing Memorial Library &amp; Archives"></wvr-text-component>
-              <span>
-                <wvr-text-component value="8am - 5pm"></wvr-text-component>
-              </span>
+            <div class="caldate true">
+              <wvre-text
+                value="Cushing Memorial Library &amp; Archives"
+              ></wvre-text>
+              <span><wvre-text value="8am - 5pm"></wvre-text></span>
             </div>
-            <div class="caldate">
-              <wvr-text-component value="Medical Sciences Library"></wvr-text-component>
-              <span>
-                <wvr-text-component value="Reservations are required 7 am - 6 pm"></wvr-text-component>
-              </span>
+            <div class="caldate false">
+              <wvre-text value="Medical Sciences Library"></wvre-text>
+              <span
+                ><wvr-text
+                  value="Reservations are required 7 am - 6 pm"
+                ></wvr-text
+              ></span>
             </div>
-            <div class="caldate">
-              <wvr-text-component value="Policy Sciences &amp; Economics Library"></wvr-text-component>
-              <span>
-                <wvr-text-component value="9am - 5pm"></wvr-text-component>
-              </span>
+            <div class="caldate true">
+              <wvre-text
+                value="Policy Sciences &amp; Economics Library"
+              ></wvre-text>
+              <span><wvre-text value="9am - 5pm"></wvre-text></span>
             </div>
-            <div class="caldate">
-              <wvr-text-component value="Sterling C. Evans Library"></wvr-text-component>
-              <span>
-                <wvr-text-component value="7am - 6pm"></wvr-text-component>
-              </span>
+            <div class="caldate true">
+              <wvre-text value="Sterling C. Evans Library"></wvre-text>
+              <span><wvre-text value="7am - 6pm"></wvre-text></span>
             </div>
-            <div class="caldate">
-              <wvr-text-component value="Sterling C. Evans Library Annex"></wvr-text-component>
-              <span>
-                <wvr-text-component value="Closed"></wvr-text-component>
-              </span>
+            <div class="caldate false">
+              <wvre-text value="Sterling C. Evans Library Annex"></wvre-text>
+              <span><wvre-text value="Closed"></wvre-text></span>
             </div>
-            <div class="caldate">
-              <wvr-text-component value="AskUs (chat, email, text)"></wvr-text-component>
-              <span>
-                <wvr-text-component value="10am - 5pm"></wvr-text-component>
-              </span>
+            <div class="caldate true">
+              <wvre-text value="AskUs (chat, email, text)"></wvre-text>
+              <span><wvre-text value="10am - 5pm"></wvre-text></span>
             </div>
           </div>
           <br />
         </wvre-dropdown-menu-item>
 
         <wvre-dropdown-menu-item>
-          <a class="btn btn-info btn-sm w-100" href="//library.tamu.edu/about/hours.html">
-            <wvr-text-component value="View All Hours"></wvr-text-component>
+          <a
+            class="btn btn-info btn-sm w-100"
+            href="//library.tamu.edu/about/hours.html"
+            ><wvre-text value="View All Hours"></wvre-text>
           </a>
         </wvre-dropdown-menu-item>
       </wvre-dropdown-menu>
@@ -87,8 +85,8 @@
     <wvr-dropdown-component class="libraries"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu/about/index.html'"
-      [toggleOn]="'mouseover'"
-      [menuXOffset]="'-65px'"
+      [toggleOn]="'mouseover'" 
+      [menuXOffset]="'-65px'" 
       [menuYOffset]="'-2px'"
       [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
@@ -218,7 +216,7 @@
   <wvr-nav-li-component>
     <wvr-dropdown-component class="help"
       [btnType]="'link'"
-      [btnHref]="'http://askus.library.tamu.edu/'"
+      [btnHref]="'http://askus.library.tamu.edu/'" 
       [toggleOn]="'mouseover'"
       [menuXOffset]="'-365px'"
       [menuYOffset]="'-2px'"
