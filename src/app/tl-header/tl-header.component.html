@@ -1,7 +1,6 @@
 <wvr-header-component [logoSrc]="logoSrc" [logoHref]="logoHref" [logoText]="logoText" [logoImgHeight]="logoImgHeight"
   [logoImgWidth]="logoImgWidth" [logoImgMargin]="logoImgMargin" [headerTitle]="pageTitle" [headerTitleUrl]="pageTitleUrl"
-  [titleRowBackground]="titleRowBackground" [topNavBackground]="topNavBackground"
-  [bottomNavBackground]="bottomNavBackground">
+  [titleRowThemeVariant]="'primary'" [topNavThemeVariant]="'dark'">
   <wvr-nav-list-component top-navigation aligned="RIGHT">
     <ng-container wvr-nav-items>
       <ng-container *ngTemplateOutlet="topNavContent"></ng-container>

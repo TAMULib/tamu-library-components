@@ -15,6 +15,13 @@
     --title-row-height: 85px;
     --bottom-nav-height: 65px;
 
+    .title-row {
+      background-color: #500000 !important;
+      a span {
+        color: white !important;
+      }
+    }
+
     wvr-nav-list-component[top-navigation-mobile]
       > ul
       > wvr-nav-li-component
@@ -259,6 +266,7 @@
 
     .top-nav {
       border-bottom: 1px solid #333333;
+      background: #3c0000 !important;
       .container {
         > div {
           height: auto;
