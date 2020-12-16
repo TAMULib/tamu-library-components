@@ -1,4 +1,4 @@
-import { Component, Injector, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
@@ -10,7 +10,8 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
   selector: 'tl-footer-component',
   templateUrl: './tl-footer.component.html',
   styleUrls: ['./tl-footer.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TamuFooterComponent extends TamuAbstractBaseComponent {
 
