@@ -106,24 +106,16 @@ describe('MegaMenuComponent', () => {
     firstChild.style.position = 'relative';
     firstChild.style.left = '200px';
 
-    // component.calculateMenuXOffset();
-
-    // tslint:disable-next-line: no-void-expression
-    // expect(component.menuXOffset)
-    //   .toBe(0);
-    // TODO: fix this test
+    expect(component.menuXOffset)
+      .toBe(0);
 
     tick(90000);
     component.calculateMenuXOffset();
 
-    // tslint:disable-next-line: no-void-expression
-    expect(component.menuXOffset)
-      .toBe(0);
-    // TODO: fix this test
+    tick(90000);
 
-    // tick(99000);
-    // expect(component.menuXOffset)
-    //     .toBeGreaterThan(0);
+    expect(component.menuXOffset)
+      .toEqual(100);
 
   }));
 
