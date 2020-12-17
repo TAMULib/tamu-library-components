@@ -19,6 +19,11 @@
     --wvr-nav-link-text-decoration-hover: underline;
     --wvr-nav-li-width: max-content;
   }
+
+  .bg-secondary {
+    background-color: #500000 !important;
+  }
+
   @media (max-width: 767px) {
     wvr-footer-component {
       --footer-height: auto;
