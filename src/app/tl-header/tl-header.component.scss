@@ -179,6 +179,33 @@
       }
     }
 
+    wvr-nav-list-component[bottom-navigation] wvr-nav-li-component.supportTheLibraries {
+      --wvr-nav-link-background-hover: #355963;
+      width: fit-content;
+      font-family: var(--tl-font-family-sans-serif);
+      font-weight: 600;
+      font-size: 16px;
+      a {
+        margin: 0px 5px;
+        color: #355963;
+        text-decoration: none;
+        tl-icon-component svg {
+          fill: #355963;
+          width: 24px;
+          height: 65px;
+          margin-right: 5px;
+        }
+      }
+    }
+    wvr-nav-list-component[bottom-navigation] wvr-nav-li-component.supportTheLibraries:hover {
+      a {
+        color:#fff;
+        tl-icon-component svg {
+          fill: var(--tl-white);
+        }
+      }
+    }
+
     wvr-nav-list-component[top-navigation] wvr-nav-li-component.covidUpdate {
       background: var(--tl-deep-yellow);
       a {
@@ -457,6 +484,22 @@
           .dropdown
           wvr-button-component {
           white-space: nowrap;
+        }
+      }
+      wvr-nav-li-component.supportTheLibraries {
+        a{
+          color: var(--tl-black);
+          white-space: nowrap;
+          justify-content: start !important;
+          padding: 20px 16px 8px;
+          height: 65px;
+          width: 100%;
+          background: var(--tl-deep-yellow);
+          border-bottom: 1px solid #afafaf;
+          text-decoration: none;
+        }
+        tl-icon-component svg {
+          display: none;
         }
       }
     }
