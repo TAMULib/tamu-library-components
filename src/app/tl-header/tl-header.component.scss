@@ -186,7 +186,9 @@
       font-weight: 600;
       font-size: 16px;
       a {
-        margin: 0px 5px;
+        display: flex;
+        align-items: center;
+        margin: 0px 10px;
         color: #355963;
         text-decoration: none;
         tl-icon-component svg {
@@ -491,7 +493,7 @@
           color: var(--tl-black);
           white-space: nowrap;
           justify-content: start !important;
-          padding: 20px 16px 8px;
+          padding: 8px 16px;
           height: 65px;
           width: 100%;
           background: var(--tl-deep-yellow);
