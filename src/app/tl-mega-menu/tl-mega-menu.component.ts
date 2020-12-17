@@ -1,14 +1,17 @@
-import { AfterViewInit, Component, HostBinding, HostListener, Injector, Input, OnInit } from '@angular/core';
+/* istanbul ignore file */
+
+import { AfterContentInit, AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
+import { debounce, wvrTimeout } from '@wvr/elements';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
-import { debounce } from '@wvr/elements';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
 
 @Component({
   selector: 'tl-mega-menu-component',
   templateUrl: './tl-mega-menu.component.html',
-  styleUrls: ['./tl-mega-menu.component.scss']
+  styleUrls: ['./tl-mega-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
-export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements OnInit, AfterViewInit {
+export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
   /** The default text value to be displayed for tl-mega menu title. */
   @Input() menuTitle = 'Mega Menu';
 
@@ -34,7 +37,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
   /** Allows for the override of the --tl-mobile-display-max-height variable. */
   @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight = '0px';
 
-  private sections: Array<TlMegaMenuSectionComponent>;
+  private readonly sections: Array<TlMegaMenuSectionComponent>;
 
   private sectionTitleHeight = 0;
 
@@ -45,22 +48,28 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
   }
 
   /** This adjusts the dropdown menu x offset on page load. */
-  ngAfterViewInit(): void {
-    this.calculateMenuXOffset();
+  ngAfterContentInit(): void {
+    super.ngAfterContentInit();
+    wvrTimeout(() => {
+      this.calculateMenuXOffset();
+    });
   }
 
   addSection(section: TlMegaMenuSectionComponent): void {
     this.sections.push(section);
     this.sectionTitleHeight = section.getElementHeight() > this.sectionTitleHeight ?
-                              section.getElementHeight() :
-                              this.sectionTitleHeight;
+      section.getElementHeight() :
+      this.sectionTitleHeight;
   }
 
   /** This toggles the display of mobile menu on click event. */
   toggleMobileMenuOpen(): void {
     this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionTitleHeight}px`;
+
     if (this.active) {
-      this.sections.forEach(s => s.close());
+      this.sections.forEach(s => {
+        s.close();
+      });
       this.active = false;
     } else {
       this.active = true;
@@ -71,7 +80,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements On
   @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
     /* istanbul ignore else*/
     if (!this.outOfHeader) {
-      const nativeElem = this._eRef.nativeElement as HTMLElement;
+      const nativeElem = this.eRef.nativeElement as HTMLElement;
       const header = document.querySelector('tl-header');
       const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]');
       /* istanbul ignore else*/

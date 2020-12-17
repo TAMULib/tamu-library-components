@@ -20,6 +20,13 @@ Object.keys(defaults.parsed)
     configTemplate = configTemplate.replace(`$${key}`, defaults.parsed[key])
   });
 
-fs.writeFile('./dist/bundle/config.json', configTemplate);
-fs.writeFile('./static/tamu-library-components/docs/usage/config.json', configTemplate);
+if(fs.existsSync('./dist')) {
+  fs.writeFile('./dist/bundle/config.json', configTemplate);
+}
+
+if(fs.existsSync('./static')) {
+  fs.writeFile('./static/config.json', configTemplate);
+  fs.writeFile('./static/tamu-library-components/docs/usage/config.json', configTemplate);
+}
+
 fs.writeFile('./src/config.json', configTemplate);

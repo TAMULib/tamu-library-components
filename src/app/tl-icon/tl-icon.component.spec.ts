@@ -1,20 +1,29 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
-import { metaReducers, ROOT_REDUCER } from '@wvr/elements';
+import { provideMockStore } from '@ngrx/store/testing';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TlIconComponent } from './tl-icon.component';
 
 describe('TlIconComponent', () => {
   let component: TlIconComponent;
   let fixture: ComponentFixture<TlIconComponent>;
+  const initialState = { theme: {
+    themes: {}
+  }};
 
-  beforeEach(async(() => TestBed.configureTestingModule({
+  beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule,
-      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+      BrowserAnimationsModule
     ],
     declarations: [TlIconComponent],
+    providers: [
+      provideMockStore({initialState}),
+      {
+        provide: APP_CONFIG,
+        useValue: testAppConfig
+      }
+    ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   })
     .compileComponents()));

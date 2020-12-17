@@ -1,15 +1,13 @@
-import { Component, HostBinding, Injector, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-drop-down-component',
   templateUrl: './tl-drop-down.component.html',
-  styleUrls: ['./tl-drop-down.component.scss']
+  styleUrls: ['./tl-drop-down.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlDropDownComponent extends TamuAbstractBaseComponent {
-
-  /** Used to override the drop-down menu button type. */
-  @Input() btnType;
 
   /** Used to convert the dropdown menu button into a link. */
   @Input() btnHref;
@@ -55,37 +53,37 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
 
   /** Used to override the button background in a drop down */
   get btnBackground(): string {
-    return `var(--tl-btn-${this.btnType}-background)`;
+    return `var(--tl-btn-${this.themeVariant}-background)`;
   }
 
   /** Used to override the button background active state in a drop down */
   get btnBackgroundActive(): string {
-    return `var(--tl-btn-${this.btnType}-active-background)`;
+    return `var(--tl-btn-${this.themeVariant}-active-background)`;
   }
 
   /** Used to override the button background hover state in a drop down */
   get btnBackgroundHover(): string {
-    return `var(--tl-btn-${this.btnType}-hover-background)`;
+    return `var(--tl-btn-${this.themeVariant}-hover-background)`;
   }
 
   /** Used to override the button border in a drop down */
   get btnBorderColor(): string {
-    return `var(--tl-btn-${this.btnType}-border)`;
+    return `var(--tl-btn-${this.themeVariant}-border)`;
   }
 
   /** Used to override the button active state border in a drop down */
   get btnBorderActive(): string {
-    return `var(--tl-btn-${this.btnType}-active-border)`;
+    return `var(--tl-btn-${this.themeVariant}-active-border)`;
   }
 
   /** Used to override the button focus state border in a drop down */
   get btnBorderFocus(): string {
-    return `var(--tl-btn-${this.btnType}-focus-border)`;
+    return `var(--tl-btn-${this.themeVariant}-focus-border)`;
   }
 
   /** Used to override the button active state border in a drop down */
   get btnBorderHover(): string {
-    return `var(--tl-btn-${this.btnType}-hover-border)`;
+    return `var(--tl-btn-${this.themeVariant}-hover-border)`;
   }
 
   /** Used to override the border radius of button in a dropdown */
@@ -95,17 +93,17 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
 
   /** Used to override the button color in a drop down */
   get btnColor(): string {
-    return `var(--tl-btn-${this.btnType}-color)`;
+    return `var(--tl-btn-${this.themeVariant}-color)`;
   }
 
   /** Used to override the button color active state in a drop down */
   get btnColorActive(): string {
-    return `var(--tl-btn-${this.btnType}-active-color)`;
+    return `var(--tl-btn-${this.themeVariant}-active-color)`;
   }
 
   /** Used to override the button color hover state in a drop down */
   get btnColorHover(): string {
-    return `var(--tl-btn-${this.btnType}-hover-color)`;
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
   }
 
   /** Used to override the button font family in a drop down */
@@ -122,22 +120,22 @@ export class TlDropDownComponent extends TamuAbstractBaseComponent {
 
   /** Used to override the text decoration property of button in a drop down */
   get btnTextDecoration(): string {
-    return `var(--tl-btn-${this.btnType}-hover-color)`;
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
   }
 
   /** Used to override the active state of button text decoration property in a drop down */
   get btnTextDecorationActive(): string {
-    return `var(--tl-btn-${this.btnType}-hover-color)`;
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
   }
 
   /** Used to override the focus state of button text decoration property in a drop down */
   get btnTextDecorationFocus(): string {
-    return `var(--tl-btn-${this.btnType}-hover-color)`;
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
   }
 
   /** Used to override the hover state of button text decoration property in a drop down */
   get btnTextDecorationHover(): string {
-    return `var(--tl-btn-${this.btnType}-hover-color)`;
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
   }
 
   // tslint:disable-next-line:unnecessary-constructor

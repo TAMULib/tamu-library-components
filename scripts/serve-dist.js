@@ -9,9 +9,10 @@ const bundlePath = `${basePath}/bundle`;
 
 const server = new StaticServer({
   rootPath: 'dist/bundle',
-  port: 8080,
+  port: 8081,
   name: 'tl-component-dist-server',
   followSymlink: true,
+  cors: '*'
 });
 
 server.start(function () {

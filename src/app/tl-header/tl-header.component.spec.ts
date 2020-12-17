@@ -1,24 +1,29 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
-import { APP_CONFIG, metaReducers, ROOT_REDUCER, testAppConfig } from '@wvr/elements';
+import { provideMockStore } from '@ngrx/store/testing';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TamuHeaderComponent } from './tl-header.component';
 
 describe('TamuHeaderComponent', () => {
   let component: TamuHeaderComponent;
   let fixture: ComponentFixture<TamuHeaderComponent>;
+  const initialState = { theme: {
+    themes: {}
+  }};
 
-  beforeEach(async(() => TestBed.configureTestingModule({
+  beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule,
-      StoreModule.forRoot(ROOT_REDUCER, { metaReducers })
+      BrowserAnimationsModule
     ],
     declarations: [TamuHeaderComponent],
-    providers: [{
-      provide: APP_CONFIG,
-      useValue: testAppConfig
-    }],
+    providers: [
+      {
+        provide: APP_CONFIG,
+        useValue: testAppConfig
+      },
+      provideMockStore({initialState})
+    ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   })
     .compileComponents()

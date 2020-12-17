@@ -15,7 +15,7 @@
       "prefix": "tl",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "preserveSymlinks": true,
             "outputPath": "dist/tl-components",
@@ -33,13 +33,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-              {
-                "input": "node_modules/document-register-element/build/document-register-element.js"
-              }
-            ],
+            "scripts": [],
             "allowedCommonJsDependencies": [
-              "css-element-queries"
+              "css-element-queries",
+              "handlebars/dist/cjs/handlebars"
             ]
           },
           "configurations": {
@@ -53,8 +50,8 @@
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
-              "extractCss": false,
               "extractLicenses": true,
+              "extractCss": false,
               "namedChunks": false,
               "commonChunk": false,
               "vendorChunk": false,
@@ -62,20 +59,15 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2.2mb",
-                  "maximumError": "3mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "250kb",
-                  "maximumError": "500kb"
+                  "maximumWarning": "3mb",
+                  "maximumError": "4mb"
                 }
               ]
             }
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "tamu-library-components:build"
           },
@@ -92,7 +84,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",

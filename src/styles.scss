@@ -3,11 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .wvr-bootstrap {
-  @import '~bootstrap/scss/bootstrap.scss';
+  @import '~@wvr/elements/styles/variables';
+  @import '~bootstrap/scss/bootstrap';
+  @import '~@wvr/elements/styles/mixins';
+  @import '~@wvr/elements/styles/overrides';
 }
 
 .wvr-hidden {
-  display: none!important;
+  display: none !important;
 }
 
 body {
