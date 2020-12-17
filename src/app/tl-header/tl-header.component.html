@@ -19,8 +19,8 @@
     <wvr-dropdown-component class="hours"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu/about/hours.html'"
-      [toggleOn]="'mouseover'" 
-      [menuYOffset]="'-2px'" 
+      [toggleOn]="'mouseover'"
+      [menuYOffset]="'-2px'"
       [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
         <wvr-text-component value="Hours"></wvr-text-component>
@@ -84,8 +84,8 @@
     <wvr-dropdown-component class="libraries"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu/about/index.html'"
-      [toggleOn]="'mouseover'" 
-      [menuXOffset]="'-65px'" 
+      [toggleOn]="'mouseover'"
+      [menuXOffset]="'-65px'"
       [menuYOffset]="'-2px'"
       [btnFontFamily]="'var(--tl-font-family-sans-serif)'">
       <wvre-dropdown-btn>
@@ -215,7 +215,7 @@
   <wvr-nav-li-component>
     <wvr-dropdown-component class="help"
       [btnType]="'link'"
-      [btnHref]="'http://askus.library.tamu.edu/'" 
+      [btnHref]="'http://askus.library.tamu.edu/'"
       [toggleOn]="'mouseover'"
       [menuXOffset]="'-365px'"
       [menuYOffset]="'-2px'"
@@ -279,6 +279,12 @@
 
 <ng-template #bottomNavContent>
     <ng-content select="wvre-nav-li"></ng-content>
+    <wvr-nav-li-component class="ml-auto supportTheLibraries">
+      <a href="https://library.tamu.edu/about/giving/">
+        <tl-icon-component [set]="'bootstrap'" [name]="'gift-fill'"></tl-icon-component>
+        <wvr-text-component value="Give to the Libraries"></wvr-text-component>
+      </a>
+    </wvr-nav-li-component>
 </ng-template>
 
 <ng-template #mobileMenuContent>
