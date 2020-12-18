@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.7.0] - 12-18-20
+### Resolves
+
+- 'Give to the Libraries' item to be added in the bottom navidgation section in tl-header (#254)
+- TL Components should utilize externals to reduce bundle size. (#117)
+- Remove scss, rendered unnecessary by the recent theme features. (#276)
+- Remove scss, rendered unnecessary by the recent theme features. (#239)
+- Library hours disappear when moving from mobile layout to desktop layout. This also happens with the icons in the help dropdown. (#238)
+- Dropdown buttons and buttons exhibit different theming behavior (#241)
+- TL Components Documentation and Report pages should use theme-variant as opposed to theme-varient (#245)
+- TL Usage Documentation should use wvr ud scripts (#236)
+- FIx Mega Menu resize test. (#240)
+
 ## [1.6.0] - 11-20-20
 ### Resolves
 

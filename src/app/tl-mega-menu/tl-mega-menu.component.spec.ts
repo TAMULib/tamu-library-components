@@ -1,5 +1,5 @@
 import { DebugElement } from '@angular/core';
-import { ComponentFixture, fakeAsync, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
@@ -106,16 +106,15 @@ describe('MegaMenuComponent', () => {
     firstChild.style.position = 'relative';
     firstChild.style.left = '200px';
 
-    // component.calculateMenuXOffset();
+    expect(component.menuXOffset)
+      .toBe(0);
 
-    // tslint:disable-next-line: no-void-expression
-    // expect(component.menuXOffset)
-    //   .toBe(0);
-    // TODO: fix this test
+    tick(900000);
+    component.calculateMenuXOffset();
+    tick(900000);
 
-    // tick(99000);
-    // expect(component.menuXOffset)
-    //     .toBeGreaterThan(0);
+    expect(component.menuXOffset)
+      .toEqual(100);
 
   }));
 
