@@ -492,13 +492,14 @@
         a{
           color: var(--tl-black);
           white-space: nowrap;
-          justify-content: start !important;
-          padding: 8px 16px;
+          justify-content: start!important;
+          padding: 23px 16px;
           height: 65px;
           width: 100%;
           background: var(--tl-deep-yellow);
           border-bottom: 1px solid #afafaf;
           text-decoration: none;
+          font-weight: 700;
         }
         tl-icon-component svg {
           display: none;
