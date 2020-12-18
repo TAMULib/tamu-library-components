@@ -82,6 +82,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
     if (!this.outOfHeader) {
       const nativeElem = this.eRef.nativeElement as HTMLElement;
       const header = document.querySelector('tl-header');
+      if (!header) { return; }
       const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]');
       /* istanbul ignore else*/
       if (bottomNav) {
