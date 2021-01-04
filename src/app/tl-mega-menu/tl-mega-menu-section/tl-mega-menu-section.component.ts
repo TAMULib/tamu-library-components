@@ -1,4 +1,5 @@
 import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input, OnInit } from '@angular/core';
+import { wvrTimeout } from '@wvr/elements';
 import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.component';
 import { TlMegaMenuComponent } from '../tl-mega-menu.component';
 
@@ -45,7 +46,7 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
     super.ngAfterContentInit();
     setTimeout(() => {
       this.parent.addSection(this);
-    });
+    }, 500);
   }
 
   open(): void {
