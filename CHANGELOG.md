@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.7.2] - 1-5-21
+### Resolves
+
+- Patches iPhone bug
+
 ## [1.7.0] - 12-18-20
 ### Resolves
 
