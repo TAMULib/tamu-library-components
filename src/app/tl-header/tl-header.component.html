@@ -15,7 +15,7 @@
 </wvr-header-component>
 
 <ng-template #topNavContent>
-  <wvr-nav-li-component (click)="toggleMobileMenu()">
+  <!-- <wvr-nav-li-component (click)="toggleMobileMenu()">
     <wvr-dropdown-component class="hours"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu/about/hours.html'"
@@ -79,6 +79,11 @@
         </wvre-dropdown-menu-item>
       </wvre-dropdown-menu>
     </wvr-dropdown-component>
+  </wvr-nav-li-component> -->
+  <wvr-nav-li-component>
+    <a href="https://library.tamu.edu/about/hours.html">
+      <wvr-text-component value="Hours"></wvr-text-component>
+    </a>
   </wvr-nav-li-component>
   <wvr-nav-li-component >
     <wvr-dropdown-component class="libraries"
