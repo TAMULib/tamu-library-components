@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.7.3] - 1-14-21
+### Resolves
+
+- Converts Hours dropdown into a link
+
 ## [1.7.2] - 1-5-21
 ### Resolves
 
