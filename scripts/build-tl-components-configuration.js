@@ -27,6 +27,21 @@ if(fs.existsSync('./dist')) {
 if(fs.existsSync('./static')) {
   fs.writeFile('./static/config.json', configTemplate);
   fs.writeFile('./static/tamu-library-components/docs/usage/config.json', configTemplate);
+
+  fs.copy('./static/config.json', './static/tamu-library-components/config.json', err => {
+    if (err) return console.error('Could not copy config file to static/tamu-library-components', err);
+    console.log('Copied config file to static/tamu-library-components successfully');
+  });
+
+  fs.copy('./static/config.json', './static/tamu-library-components/docs/config.json', err => {
+    if (err) return console.error('Could not copy config file to static/tamu-library-components/docs', err);
+    console.log('Copied config file to static/tamu-library-components/docs successfully');
+  });
+
+  fs.copy('./static/config.json', './static/tamu-library-components/docs/usage/assets/config.json', err => {
+    if (err) return console.error('Could not copy config file to static/tamu-library-components/docs/usage/assets path', err);
+    console.log('Copied config file to static/tamu-library-components/docs/usage/assets successfully');
+  });
 }
 
 fs.writeFile('./src/config.json', configTemplate);
