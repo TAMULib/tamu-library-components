@@ -157,7 +157,7 @@ describe('TlDropDownComponent', () => {
       .toEqual('mouseover');
   });
 
-  it('should have customization tfor dropdown display type', () => {
+  it('should have customization for dropdown display type', () => {
     expect(component.toggleOn)
       .toEqual('click');
     component.toggleOn = 'mouseover';
@@ -220,6 +220,40 @@ describe('TlDropDownComponent', () => {
     component.themeVariant = 'primary';
     expect(component.btnBorderHover)
       .toEqual('var(--tl-btn-primary-hover-border)');
+  });
+
+  it("should have as default value for menuYOffset '-6px'", () => {
+    expect(component.menuYOffset)
+      .toEqual('-6px');
+  });
+
+  it("should have as default toggle value 'click'", () => {
+    expect(component.toggleOn)
+      .toEqual('click');
+  });
+
+  it('should have customization of the button color based on theme variant', () => {
+    expect(component.btnColor)
+      .toEqual('var(--tl-btn-undefined-color)');
+    component.themeVariant = 'primary';
+    expect(component.btnColor)
+      .toEqual('var(--tl-btn-primary-color)');
+  });
+
+  it('should have customization of the button color on hover based on theme variant', () => {
+    expect(component.btnColorHover)
+      .toEqual('var(--tl-btn-undefined-hover-color)');
+    component.themeVariant = 'primary';
+    expect(component.btnColorHover)
+      .toEqual('var(--tl-btn-primary-hover-color)');
+  });
+
+  it('should have customization of the button text decoration on hover based on theme variant', () => {
+    expect(component.btnTextDecorationHover)
+      .toEqual('var(--tl-btn-undefined-hover-color)');
+    component.themeVariant = 'primary';
+    expect(component.btnTextDecorationHover)
+      .toEqual('var(--tl-btn-primary-hover-color)');
   });
 
 });
