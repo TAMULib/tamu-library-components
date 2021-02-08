@@ -1,0 +1,55 @@
+<example name="TL Nav List Basic">
+  <desciption>
+    The basic <code>tl-nav-list</code> component with no customizations.
+  </desciption>
+  <snippet>
+    
+   <tl-nav-list>
+     <tl-nav-li href="#">
+       <tl-text value="Link One"></tl-text>
+     </tl-nav-li>
+     <tl-nav-li href="#">
+       <tl-text value="Link Two"></tl-text>
+     </tl-nav-li>
+     <tl-nav-li href="#">
+       <tl-text value="Link Three"></tl-text>
+     </tl-nav-li>
+   </tl-nav-list>
+
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
+import { Alignment } from '@wvr/elements';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+/**
+ * The TamuNavList Component represents a navigation list.
+ * Elements within this list must be of type : wvr-nav-li elements and can be either links of action elements.
+ */
+@Component({
+  selector: 'tl-nav-list-component',
+  templateUrl: './tl-nav-list.component.html',
+  styleUrls: ['./tl-nav-list.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom,
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TamuNavListComponent extends TamuAbstractBaseComponent {
+
+  /** The aligned property describing the positioning of the list elements. */
+  @Input() aligned: Alignment = Alignment.LEFT;
+
+  /** This allows the display of the list horizontally. */
+  @Input() vertical = false;
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-nav-list-component [aligned]="aligned" [vertical]="vertical">
+  <ng-container wvr-nav-items="">
+    <ng-content select="wvre-nav-li, tl-nav-li" ngprojectas="wvre-nav-li"></ng-content>
+  </ng-container>
+</wvr-nav-list-component></component-template><component-scss>@import "../shared/styles/tl-encapsulated.scss";
+@import "../shared/styles/tl-branded-btn.scss";
+</component-scss></example>

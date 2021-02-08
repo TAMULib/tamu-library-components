@@ -1,0 +1,11 @@
+.navbar.navbar-dark {
+  background-color: #500000 !important;
+}
+
+body {
+  background: ghostwhite;
+}
+
+.sidebar {
+  max-width: 325px;
+}

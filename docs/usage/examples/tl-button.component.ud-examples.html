@@ -1,0 +1,87 @@
+<example name="TL Button Basic">
+  <desciption>
+    The basic <code>tl-button</code> component with no customizations.
+  </desciption>
+  <snippet>
+    <tl-button theme-variant="primary">
+      <wvre-text value="Primary"></wvre-text>
+    </tl-button>
+
+    <tl-button theme-variant="secondary">
+      <wvre-text value="Secondary"></wvre-text>
+    </tl-button>
+
+    <tl-button theme-variant="info">
+      <wvre-text value="Info"></wvre-text>
+    </tl-button>
+
+    <tl-button theme-variant="warning">
+      <wvre-text value="Warning"></wvre-text>
+    </tl-button>
+
+    <tl-button theme-variant="danger">
+      <wvre-text value="Danger"></wvre-text>
+    </tl-button>
+<!-- This is when a form passes!  -->
+    <tl-button theme-variant="success">
+      <wvre-text value="Success"></wvre-text>
+    </tl-button>
+
+    <tl-button theme-variant="light">
+      <wvre-text value="Light"></wvre-text>
+    </tl-button>
+
+    <tl-button theme-variant="dark">
+      <wvre-text value="Dark"></wvre-text>
+    </tl-button>
+
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-button-component',
+  templateUrl: './tl-button.component.html',
+  styleUrls: ['./tl-button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlButtonComponent extends TamuAbstractBaseComponent {
+
+  /** Used to override the button class. */
+  @Input() themeVariant;
+
+  /** Used to define the size for button component.  */
+  @Input() btnSize = '';
+
+  /** Used to define the type of a button.  */
+  @Input() wvrBtnType = 'button';
+
+  /** Allows for the button component to be an anchor tag component if hrefUrl property present. */
+  @Input() href;
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><tl-button-wrapper #animationroot="">
+  <wvr-button-component *ngif="href!== ''" [themevariant]="themeVariant" [btnsize]="btnSize" [href]="href" [wvrbtntype]="wvrBtnType">
+    <ng-content select="wvre-text, wvr-text-component" ngprojectas="wvre-btn-content"></ng-content>
+  </wvr-button-component>
+  <wvr-button-component *ngif="href === ''" [themevariant]="themeVariant" [btnsize]="btnSize" [wvrbtntype]="wvrBtnType">
+    <ng-content select="wvre-text, wvr-text-component" ngprojectas="wvre-btn-content"></ng-content>
+  </wvr-button-component>
+</tl-button-wrapper>
+</component-template><component-scss>// @import "../shared/styles/tl-branded-btn.scss";
+
+// :host {
+
+//   font-family: var(--tl-font-family-sans-serif);
+
+//   tl-button-wrapper {
+//     display: inline-block;
+//   }
+  
+// }
+</component-scss></example>

@@ -1,0 +1,175 @@
+<example name="TL Card Basic">
+  <desciption>
+    The basic <code>tl-card</code> component.
+  </desciption>
+  <snippet>
+    <tl-card>
+      <tl-card-header>
+        <wvre-text value="Card Header"></wvre-text>
+      </tl-card-header>
+      <tl-card-img src="assets/kitten2.jpeg"></tl-card-img>
+      <tl-card-title>
+        <wvre-text value="Card Title1"></wvre-text>
+      </tl-card-title>
+      <wvre-text value="Some quick example text to build on the card title and make up the bulk of the card's content."></wvre-text>
+      <wvre-list top="" list-type="group-flush">
+        <wvre-list-item>
+          <wvre-text value="Top List Item 1"></wvre-text>
+        </wvre-list-item>
+        <wvre-list-item context="warning">
+          <wvre-text value="Top List Item 2"></wvre-text>
+        </wvre-list-item>
+        <wvre-list-item context="success">
+          <wvre-text value="Top List Item 3"></wvre-text>
+        </wvre-list-item>
+      </wvre-list>
+      <tl-card-link href="www.google.com">
+        <wvre-text value="Google"></wvre-text>
+      </tl-card-link>
+      <tl-card-link href="www.gmail.com">
+        <wvre-text value="Gmail"></wvre-text>
+      </tl-card-link>
+      <tl-button theme-variant="secondary">
+        <wvre-text value="Go somewhere"></wvre-text>
+      </tl-button>
+      <tl-card-footer>
+        <wvre-text value="Card Footer"></wvre-text>
+      </tl-card-footer>
+    </tl-card>
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-card-component',
+  templateUrl: './tl-card.component.html',
+  styleUrls: ['./tl-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlCardComponent extends TamuAbstractBaseComponent {
+
+  /** Used to override the type of card. */
+  @Input() themeVariant;
+
+  /** Used to describe the format of card. */
+  @Input() panelFormat: 'solid' | 'outlined' | 'mixed';
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-card-component [themevariant]="themeVariant" [panelformat]="panelFormat" [selectorprefix]="'tl'">
+  <ng-content></ng-content>
+  <ng-content select="tl-card-header" ngprojectas="wvre-card-header"></ng-content>
+  <ng-content select="tl-card-title" ngprojectas="wvre-card-title"></ng-content>
+  <ng-content select="tl-card-img" ngprojectas="wvre-card-img"></ng-content>
+  <ng-content select="wvre-list[top]" ngprojectas="wvre-list[top]"></ng-content>
+  <ng-content select="wvre-list[bottom]" ngprojectas="wvre-list[bottom]"></ng-content>
+  <ng-content select="tl-card-link" ngprojectas="wvre-card-link"></ng-content>
+  <ng-content select="tl-button" ngprojectas="wvre-button"></ng-content>
+  <ng-content select="tl-card-footer" ngprojectas="wvre-card-footer"></ng-content>
+</wvr-card-component>
+</component-template><component-scss>@import "../shared/styles/tl-encapsulated.scss";
+@import "../shared/styles/tl-branded-btn.scss";
+
+:host {
+
+  .card.wvr-card {
+
+    :ng-deep {
+
+      .card.wvr-card {
+        .btn.btn-danger,
+        .btn.btn-dark,
+        .btn.btn-info,
+        .btn.btn-light,
+        .btn.btn-primary,
+        .wvr-button.btn.btn-secondary,
+        .btn.btn-success,
+        .btn.btn-warning {
+          border: var(--tl-btn-border) !important;
+        }
+      }
+    }
+  }
+
+}
+</component-scss></example>
+
+<example name="TL Card Panel">
+  <desciption>
+    The <code>tl-card</code> component implemented as a bootstrap 3 style panel.
+  </desciption>
+  <snippet>
+    <tl-card theme-variant="primary" panel-format="solid">
+      <tl-card-header>
+        <wvre-text value="Panel Header"></wvre-text>
+      </tl-card-header>
+      <tl-card-title>
+        <wvre-text value="Panel Title"></wvre-text>
+      </tl-card-title>
+      <wvre-text value="This is a basic panel body"></wvre-text>
+    </tl-card>
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-card-component',
+  templateUrl: './tl-card.component.html',
+  styleUrls: ['./tl-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlCardComponent extends TamuAbstractBaseComponent {
+
+  /** Used to override the type of card. */
+  @Input() themeVariant;
+
+  /** Used to describe the format of card. */
+  @Input() panelFormat: 'solid' | 'outlined' | 'mixed';
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-card-component [themevariant]="themeVariant" [panelformat]="panelFormat" [selectorprefix]="'tl'">
+  <ng-content></ng-content>
+  <ng-content select="tl-card-header" ngprojectas="wvre-card-header"></ng-content>
+  <ng-content select="tl-card-title" ngprojectas="wvre-card-title"></ng-content>
+  <ng-content select="tl-card-img" ngprojectas="wvre-card-img"></ng-content>
+  <ng-content select="wvre-list[top]" ngprojectas="wvre-list[top]"></ng-content>
+  <ng-content select="wvre-list[bottom]" ngprojectas="wvre-list[bottom]"></ng-content>
+  <ng-content select="tl-card-link" ngprojectas="wvre-card-link"></ng-content>
+  <ng-content select="tl-button" ngprojectas="wvre-button"></ng-content>
+  <ng-content select="tl-card-footer" ngprojectas="wvre-card-footer"></ng-content>
+</wvr-card-component>
+</component-template><component-scss>@import "../shared/styles/tl-encapsulated.scss";
+@import "../shared/styles/tl-branded-btn.scss";
+
+:host {
+
+  .card.wvr-card {
+
+    :ng-deep {
+
+      .card.wvr-card {
+        .btn.btn-danger,
+        .btn.btn-dark,
+        .btn.btn-info,
+        .btn.btn-light,
+        .btn.btn-primary,
+        .wvr-button.btn.btn-secondary,
+        .btn.btn-success,
+        .btn.btn-warning {
+          border: var(--tl-btn-border) !important;
+        }
+      }
+    }
+  }
+
+}
+</component-scss></example>
