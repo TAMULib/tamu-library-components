@@ -1,8 +1,6 @@
 [![Build Status](https://github.com/TAMULib/tamu-library-components/workflows/Build/badge.svg)](https://github.com/TAMULib/tamu-library-components/actions?query=workflow%3ABuild)
 [![Coverage Status](https://coveralls.io/repos/github/TAMULib/tamu-library-components/badge.svg?branch=master)](https://coveralls.io/github/TAMULib/tamu-library-components?branch=master) 
 [![Compodoc Coverage](https://tamulib.github.io/tamu-library-components/docs/development/images/coverage-badge-documentation.svg)](https://tamulib.github.io/tamu-library-components/docs/development/coverage.html)
-
-# Lighthouse Badges
 [![Performance](https://tamulib.github.io/tamu-library-components/reports/audit/assets/performance.svg)](https://tamulib.github.io/tamu-library-components/reports/audit/#performance)
 [![Accessibility](https://tamulib.github.io/tamu-library-components/reports/audit/assets/accessibility.svg)](https://tamulib.github.io/tamu-library-components/reports/audit/#accessibility)
 [![Best Practices](https://tamulib.github.io/tamu-library-components/reports/audit/assets/best-practices.svg)](https://tamulib.github.io/tamu-library-components/reports/audit/#best-practices)
