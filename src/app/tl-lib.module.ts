@@ -6,6 +6,7 @@ import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlCardComponent } from './tl-card/tl-card.component';
 import { TlDropDownComponent } from './tl-drop-down/tl-drop-down.component';
+import { TlEditorComponent } from './tl-editor/tl-editor.component';
 import { TamuFooterComponent } from './tl-footer/tl-footer.component';
 import { TamuHeaderComponent } from './tl-header/tl-header.component';
 import { TlIconComponent } from './tl-icon/tl-icon.component';
@@ -32,6 +33,7 @@ const TL_ELEMENTS = [
   { component: TlButtonComponent, selector: 'tl-button' },
   { component: TlCardComponent, selector: 'tl-card' },
   { component: TlDropDownComponent, selector: 'tl-drop-down' },
+  { component: TlEditorComponent, selector: 'tl-editor' },
   { component: TamuFooterComponent, selector: 'tl-footer' },
   { component: TamuHeaderComponent, selector: 'tl-header' },
   { component: TlIconComponent, selector: 'tl-icon' },
@@ -49,6 +51,7 @@ const TL_COMPONENTS = [
   TlButtonComponent,
   TlCardComponent,
   TlDropDownComponent,
+  TlEditorComponent,
   TamuFooterComponent,
   TamuHeaderComponent,
   TamuItWorksComponent,
