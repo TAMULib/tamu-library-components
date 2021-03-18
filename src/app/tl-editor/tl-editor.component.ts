@@ -11,7 +11,7 @@ export class TlEditorComponent extends TamuAbstractBaseComponent {
 
   initialValue = 'This is tl-editor';
 
-  skinUrl =  `src/assets/skins/ui/oxide-dark`;
+  skin = 'oxide';
 
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {

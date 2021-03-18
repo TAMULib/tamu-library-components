@@ -4,10 +4,10 @@
 :host {
 
   wvr-editor-component {
-
+    font-family: var(--tl-font-family-sans-serif);
     ::ng-deep {
       .wvr-editor {
-        border: 2px solid green;
+        font-family: var(--tl-font-family-sans-serif);
       }
     }
   }

@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 import { registerCustomElements, showHiddentContent, WvrColorPreviewComponent, WvrCoreModule, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrSharedModule, WvrTextComponent, WvrThemeComponent, wvrTimeout } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
@@ -68,11 +69,14 @@ const TL_COMPONENTS = [
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    EditorModule,
     WvrSharedModule,
     WvrCoreModule
   ],
   exports: [],
-  providers: [],
+  providers: [
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'assets/tinymce/tinymce.min.js' }
+  ],
   declarations: [
     ...TL_COMPONENTS
   ],
