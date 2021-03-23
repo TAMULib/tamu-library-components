@@ -7,7 +7,6 @@ import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlCardComponent } from './tl-card/tl-card.component';
 import { TlDropDownComponent } from './tl-drop-down/tl-drop-down.component';
-import { TlEditorComponent } from './tl-editor/tl-editor.component';
 import { TamuFooterComponent } from './tl-footer/tl-footer.component';
 import { TamuHeaderComponent } from './tl-header/tl-header.component';
 import { TlIconComponent } from './tl-icon/tl-icon.component';
@@ -17,6 +16,7 @@ import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
+import {TlWysiwygComponent } from './tl-wysiwyg/tl-wysiwyg.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const TL_ELEMENTS = [
@@ -34,7 +34,6 @@ const TL_ELEMENTS = [
   { component: TlButtonComponent, selector: 'tl-button' },
   { component: TlCardComponent, selector: 'tl-card' },
   { component: TlDropDownComponent, selector: 'tl-drop-down' },
-  { component: TlEditorComponent, selector: 'tl-editor' },
   { component: TamuFooterComponent, selector: 'tl-footer' },
   { component: TamuHeaderComponent, selector: 'tl-header' },
   { component: TlIconComponent, selector: 'tl-icon' },
@@ -43,7 +42,8 @@ const TL_ELEMENTS = [
   { component: TlMegaMenuSectionComponent, selector: 'tl-mega-menu-section' },
   { component: TamuNavListComponent, selector: 'tl-nav-list' },
   { component: TlTabsComponent, selector: 'tl-tabs' },
-  { component: TlTabComponent, selector: 'tl-tab' }
+  { component: TlTabComponent, selector: 'tl-tab' },
+  { component: TlWysiwygComponent, selector: 'tl-wysiwyg' }
 ];
 
 /** This property contains a list of TAMU components classes. */
@@ -52,7 +52,6 @@ const TL_COMPONENTS = [
   TlButtonComponent,
   TlCardComponent,
   TlDropDownComponent,
-  TlEditorComponent,
   TamuFooterComponent,
   TamuHeaderComponent,
   TamuItWorksComponent,
@@ -61,7 +60,8 @@ const TL_COMPONENTS = [
   TlMegaMenuSectionComponent,
   TamuNavListComponent,
   TlTabsComponent,
-  TlTabComponent
+  TlTabComponent,
+  TlWysiwygComponent
 ];
 
 /** The main module for the TAMU Compnent library. */

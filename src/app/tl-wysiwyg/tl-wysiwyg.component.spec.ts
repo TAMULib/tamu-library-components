@@ -2,11 +2,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
-import { TlEditorComponent } from './tl-editor.component';
+import { TlWysiwygComponent } from './tl-wysiwyg.component';
 
-describe('TlEditorComponent', () => {
-  let component: TlEditorComponent;
-  let fixture: ComponentFixture<TlEditorComponent>;
+describe('TlWysiwygComponent', () => {
+  let component: TlWysiwygComponent;
+  let fixture: ComponentFixture<TlWysiwygComponent>;
   const initialState = { theme: {
     themes: {}
   }};
@@ -23,13 +23,13 @@ describe('TlEditorComponent', () => {
           useValue: testAppConfig
         }
       ],
-      declarations: [ TlEditorComponent ]
+      declarations: [ TlWysiwygComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TlEditorComponent);
+    fixture = TestBed.createComponent(TlWysiwygComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
