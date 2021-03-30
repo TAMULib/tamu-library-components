@@ -27,6 +27,9 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   /** This variable allows customizing the text value of View All button in the mega menu. */
   @Input() viewAllButtonText: string;
 
+  /** This variable allows customizing the drop down menu animation speed in milliseconds. */
+  ddAnimationSpeed = 500;
+
   active = false;
 
   /** This returns customized text or the default value to be displayed on the mega menu View All button. */
