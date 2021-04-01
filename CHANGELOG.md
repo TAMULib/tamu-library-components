@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.8.0] - 1-14-21
+## [1.8.0] - 03-31-21
 ### Resolves
 - The tl-header display not accurate on iPad. (#256)
 - Tamu Library Components should expose the Weaver WYSIWYG component. (#271)
