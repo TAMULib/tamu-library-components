@@ -56,7 +56,11 @@
     "@ngrx/store": "^10.1.1",
     "@ngrx/store-devtools": "^10.1.1",
     "@tinymce/tinymce-angular": "^4.2.1",
+<<<<<<< HEAD
     "@wvr/elements": "1.9.0",
+=======
+    "@wvr/elements": "next",
+>>>>>>> 0676aa1ff64ebd3ded2114bfabc75c6da22b29d2
     "bootstrap": "^4.5.3",
     "document-register-element": "^1.14.5",
     "handlebars": "^4.7.6",
