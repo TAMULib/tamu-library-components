@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 import { registerCustomElements, showHiddentContent, WvrColorPreviewComponent, WvrCoreModule, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrSharedModule, WvrTextComponent, WvrThemeComponent, wvrTimeout } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
@@ -15,6 +16,7 @@ import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
+import {TlWysiwygComponent } from './tl-wysiwyg/tl-wysiwyg.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const TL_ELEMENTS = [
@@ -40,7 +42,8 @@ const TL_ELEMENTS = [
   { component: TlMegaMenuSectionComponent, selector: 'tl-mega-menu-section' },
   { component: TamuNavListComponent, selector: 'tl-nav-list' },
   { component: TlTabsComponent, selector: 'tl-tabs' },
-  { component: TlTabComponent, selector: 'tl-tab' }
+  { component: TlTabComponent, selector: 'tl-tab' },
+  { component: TlWysiwygComponent, selector: 'tl-wysiwyg' }
 ];
 
 /** This property contains a list of TAMU components classes. */
@@ -57,7 +60,8 @@ const TL_COMPONENTS = [
   TlMegaMenuSectionComponent,
   TamuNavListComponent,
   TlTabsComponent,
-  TlTabComponent
+  TlTabComponent,
+  TlWysiwygComponent
 ];
 
 /** The main module for the TAMU Compnent library. */
@@ -65,11 +69,14 @@ const TL_COMPONENTS = [
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    EditorModule,
     WvrSharedModule,
     WvrCoreModule
   ],
   exports: [],
-  providers: [],
+  providers: [
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'assets/tinymce/tinymce.min.js' }
+  ],
   declarations: [
     ...TL_COMPONENTS
   ],

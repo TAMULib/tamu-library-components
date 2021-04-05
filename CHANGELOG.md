@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0] - 03-31-21
+### Resolves
+- The tl-header display not accurate on iPad. (#256)
+- Tamu Library Components should expose the Weaver WYSIWYG component. (#271)
+- Links in the information for dropdown are causing 404s. (#273)
+- The mouse hover reaction time for the menu should be set to 0.5s. (#275)
+
 ## [1.7.3] - 1-14-21
 ### Resolves
 
