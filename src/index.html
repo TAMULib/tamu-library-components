@@ -720,6 +720,29 @@
 
   <hr><br><br><br>
   <div class="container" style="text-align: center;margin: 10px 60px;">
+    <wvre-text value="Modal Component" text-decoration="underline"></wvre-text><br /><br />
+    <!-- <tl-modal title="Weaver Modal" btn-text="Launch Modal">
+      <tl-modal-body>
+        <wvre-text value="Modal Message in the Body"></wvre-text>
+      </tl-modal-body>
+      <tl-modal-footer>
+        <tl-button btn-txt="cancel" theme-variant="secondary">
+        </tl-button>
+      </tl-modal-footer>
+    </tl-modal> -->
+
+    <wvre-modal title="Weaver Modal" btn-text="Launch Modal">
+      <wvre-modal-body>
+        <wvre-text value="Modal Message in the Body"></wvre-text>
+      </wvre-modal-body>
+      <wvre-modal-footer>
+        <wvre-button btn-txt="cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Weaver Modal'}">
+        </wvre-button>
+      </wvre-modal-footer>
+    </wvre-modal>
+    <br /><br />
+  </div>
+  <div class="container" style="text-align: center;margin: 10px 60px;">
     <wvre-text value="Editor Component" text-decoration="underline"></wvre-text><br /><br />
     <tl-wysiwyg></tl-wysiwyg> <br /><br />
   </div>
