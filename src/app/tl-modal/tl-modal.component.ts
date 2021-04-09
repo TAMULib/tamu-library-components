@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, Injector } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -7,20 +6,20 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
   templateUrl: './tl-modal.component.html',
   styleUrls: ['./tl-modal.component.scss']
 })
-export class TlModalComponent extends TamuAbstractBaseComponent implements AfterViewInit{
+export class TlModalComponent extends TamuAbstractBaseComponent {
 
-  btnText = 'Launch Tl Button Modal';
+  btnThemeVariant = 'primary';
 
-  btnThemeVariant = 'warning';
+  @Input() title;
 
-  title = 'Test Title';
+  @Input() btnText;
 
-  constructor(injector: Injector, private modalService: NgbModal) {
+  constructor(injector: Injector) {
     super(injector);
   }
 
-  ngAfterViewInit(): void {
-    console.log('HERE');
+  ngOnInit(): void {
+    super.ngOnInit();
   }
 
 }

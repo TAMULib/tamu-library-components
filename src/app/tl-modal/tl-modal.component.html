@@ -1,11 +1,7 @@
-<tl-modal-wrapper #animationRoot
-[themeVariant]="themeVariant">
-  <wvre-modal [btnTxt]="btnText">
-    <wvr-button-component [themeVariant]="btnThemeVariant">
-      <wvre-text value="ABC"></wvre-text>
-    </wvr-button-component>
-    <ng-content select="tl-modal-body" ngProjectAs="wvre-modal-body"></ng-content>
-    <ng-content select="tl-modal-footer" ngProjectAs="wvre-modal-footer"></ng-content>
-  </wvre-modal>
-</tl-modal-wrapper>
-
+<wvr-modal-component #animationRoot
+  [themeVariant]="btnThemeVariant"
+  [title]="title"
+  [btnText]="btnText">
+  <ng-content select="tl-modal-body" ngProjectAs="wvre-modal-body"></ng-content>
+  <ng-content select="tl-modal-footer" ngProjectAs="wvre-modal-footer"></ng-content>
+</wvr-modal-component>
