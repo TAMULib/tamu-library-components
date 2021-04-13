@@ -1,0 +1,14 @@
+@import "../shared/styles/tl-encapsulated.scss";
+@import "../shared/styles/tl-branded-btn.scss";
+
+:host {
+
+  wvr-modal-component {
+    font-family: var(--tl-font-family-sans-serif);
+    ::ng-deep {
+      .wvr-modal {
+        font-family: var(--tl-font-family-sans-serif);
+      }
+    }
+  }
+}
