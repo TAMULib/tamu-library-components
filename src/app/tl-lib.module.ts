@@ -16,6 +16,7 @@ import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
+import { TlThemesComponent } from './tl-themes/tl-themes.component';
 import {TlWysiwygComponent } from './tl-wysiwyg/tl-wysiwyg.component';
 
 /** This property contains a list of TAMU components and the selector tags. */
@@ -43,6 +44,7 @@ const TL_ELEMENTS = [
   { component: TamuNavListComponent, selector: 'tl-nav-list' },
   { component: TlTabsComponent, selector: 'tl-tabs' },
   { component: TlTabComponent, selector: 'tl-tab' },
+  { component: TlThemesComponent, selector: 'tl-themes' },
   { component: TlWysiwygComponent, selector: 'tl-wysiwyg' }
 ];
 
@@ -61,6 +63,7 @@ const TL_COMPONENTS = [
   TamuNavListComponent,
   TlTabsComponent,
   TlTabComponent,
+  TlThemesComponent,
   TlWysiwygComponent
 ];
 
