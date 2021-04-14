@@ -17,7 +17,8 @@ import { TlModalComponent } from './tl-modal/tl-modal.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
-import {TlWysiwygComponent } from './tl-wysiwyg/tl-wysiwyg.component';
+import { TlWysiwygComponent } from './tl-wysiwyg/tl-wysiwyg.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const TL_ELEMENTS = [
@@ -74,7 +75,8 @@ const TL_COMPONENTS = [
     BrowserModule,
     EditorModule,
     WvrSharedModule,
-    WvrCoreModule
+    WvrCoreModule,
+    StoreDevtoolsModule.instrument()
   ],
   exports: [],
   providers: [

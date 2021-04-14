@@ -23,9 +23,9 @@ export class TlButtonComponent extends TamuAbstractBaseComponent {
 
   @Input() btnTxt;
 
-  @Input() dispatchAction;
+  @Input() dispatchAction = '{}';
 
-  @Input() dispatchActionProps;
+  @Input() dispatchActionProps = '{}';
 
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
