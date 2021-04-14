@@ -1,24 +1,24 @@
 import { ThemeVariants } from '@wvr/elements';
 
-export const tamuTheme: ThemeVariants = {
+export const csrrs: ThemeVariants = {
   primary: {
     baseColor: '#fff'
   },
-  // primaryAccent: {
-  //   baseColor: '#fff'
-  // },
-  // primaryNeutral: {
-  //   baseColor: '#fff'
-  // },
+  primaryAccent: {
+    baseColor: '#fff'
+  },
+  primaryNeutral: {
+    baseColor: '#fff'
+  },
   secondary: {
     baseColor: '#fff'
   },
-  // secondaryAccent: {
-  //   baseColor: '#fff'
-  // },
-  // secondaryNeutral: {
-  //   baseColor: '#fff'
-  // }
+  secondaryAccent: {
+    baseColor: '#fff'
+  },
+  secondaryNeutral: {
+    baseColor: '#fff'
+  },
   success: {
     baseColor: '#fff'
   },
@@ -35,9 +35,6 @@ export const tamuTheme: ThemeVariants = {
     baseColor: '#fff'
   },
   light: {
-    baseColor: '#fff'
-  },
-  accent: {
     baseColor: '#fff'
   }
 };

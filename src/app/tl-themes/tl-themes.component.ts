@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
-// import { actions, ThemeVariants } from '@wvr/elements';
+import { actions, ThemeVariants } from '@wvr/elements';
 import * as themes from '../shared/themes';
 
 @Component({
@@ -10,11 +10,23 @@ import * as themes from '../shared/themes';
 })
 export class TlThemesComponent extends TamuAbstractBaseComponent implements OnInit {
 
-  private _themeName = 'tamu';
-  @Input() set activeTheme(value: string) {
+  private _themeName;
+  @Input() set activeTheme(name: string) {
     if (Object.keys(themes)
-          .includes(value)) {
-      this._themeName = value;
+          .includes(name)) {
+      this.store.dispatch(actions.Theme.select({
+        name
+      }));
+      this._themeName = name;
+    }
+  }
+
+  ngOnInit(): void {
+    super.ngOnInit();
+    if (!this._themeName) {
+      this.store.dispatch(actions.Theme.select({
+        name: 'tamu'
+      }));
     }
   }
 
