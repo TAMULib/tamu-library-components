@@ -2,7 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
-import { registerCustomElements, showHiddentContent, WvrColorPreviewComponent, WvrCoreModule, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrSharedModule, WvrTextComponent, WvrThemeComponent, wvrTimeout } from '@wvr/elements';
+import { actions, registerCustomElements, showHiddentContent, ThemeVariants, WvrColorPreviewComponent, WvrCoreModule, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrSharedModule, WvrTextComponent, WvrThemeComponent, wvrTimeout } from '@wvr/elements';
 import { TlAlertComponent } from './tl-alert/tl-alert.component';
 import { TlButtonComponent } from './tl-button/tl-button.component';
 import { TlCardComponent } from './tl-card/tl-card.component';
@@ -19,7 +19,10 @@ import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
 import { TlThemesComponent } from './tl-themes/tl-themes.component';
 import { TlWysiwygComponent } from './tl-wysiwyg/tl-wysiwyg.component';
+import { Store } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { RootState } from '@wvr/elements/lib/core/store';
+import * as themes from './shared/themes';
 
 /** This property contains a list of TAMU components and the selector tags. */
 const TL_ELEMENTS = [
@@ -101,6 +104,18 @@ export class TamuLibModule {
   ngDoBootstrap(): void {
     registerCustomElements(this.injector, TL_ELEMENTS);
     showHiddentContent(this.injector);
+
+    const store = this.injector.get<Store<RootState>>(Store);
+
+    Object.keys(themes)
+      .forEach(name => {
+        const theme: ThemeVariants = themes[name];
+        store.dispatch(actions.Theme.add({
+          name,
+          theme
+        }));
+      });
+
     wvrTimeout(() => {
       document.querySelector('body').style.display = 'block';
     });
