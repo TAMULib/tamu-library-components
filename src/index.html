@@ -720,6 +720,18 @@
 
   <hr><br><br><br>
   <div class="container" style="text-align: center;margin: 10px 60px;">
+    <wvre-text value="Modal Component" text-decoration="underline"></wvre-text><br /><br />
+    <tl-modal title="Tl Modal Title" btn-text="Launch Tl Modal Button">
+      <tl-modal-body>
+        <wvre-text value="Tl Modal Message"></wvre-text>
+      </tl-modal-body>
+      <tl-modal-footer>
+        <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal Title'}">
+        </tl-button>
+      </tl-modal-footer>
+    </tl-modal>
+  </div>
+  <div class="container" style="text-align: center;margin: 10px 60px;">
     <wvre-text value="Editor Component" text-decoration="underline"></wvre-text><br /><br />
     <tl-wysiwyg></tl-wysiwyg> <br /><br />
   </div>

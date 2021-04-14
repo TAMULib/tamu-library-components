@@ -21,6 +21,12 @@ export class TlButtonComponent extends TamuAbstractBaseComponent {
   /** Allows for the button component to be an anchor tag component if hrefUrl property present. */
   @Input() href;
 
+  @Input() btnTxt;
+
+  @Input() dispatchAction;
+
+  @Input() dispatchActionProps;
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);

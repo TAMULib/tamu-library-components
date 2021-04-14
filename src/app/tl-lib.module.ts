@@ -13,6 +13,7 @@ import { TlIconComponent } from './tl-icon/tl-icon.component';
 import { TamuItWorksComponent } from './tl-it-works/tl-it-works.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu/tl-mega-menu-section/tl-mega-menu-section.component';
 import { TlMegaMenuComponent } from './tl-mega-menu/tl-mega-menu.component';
+import { TlModalComponent } from './tl-modal/tl-modal.component';
 import { TamuNavListComponent } from './tl-nav-list/tl-nav-list.component';
 import { TlTabComponent } from './tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from './tl-tabs/tl-tabs.component';
@@ -40,6 +41,7 @@ const TL_ELEMENTS = [
   { component: TlIconComponent, selector: 'tl-icon' },
   { component: TamuItWorksComponent, selector: 'tl-it-works' },
   { component: TlMegaMenuComponent, selector: 'tl-mega-menu' },
+  { component: TlModalComponent, selector: 'tl-modal'},
   { component: TlMegaMenuSectionComponent, selector: 'tl-mega-menu-section' },
   { component: TamuNavListComponent, selector: 'tl-nav-list' },
   { component: TlTabsComponent, selector: 'tl-tabs' },
@@ -60,6 +62,7 @@ const TL_COMPONENTS = [
   TlIconComponent,
   TlMegaMenuComponent,
   TlMegaMenuSectionComponent,
+  TlModalComponent,
   TamuNavListComponent,
   TlTabsComponent,
   TlTabComponent,
