@@ -109,7 +109,7 @@ export class TamuLibModule {
 
     Object.keys(themes)
       .forEach(name => {
-        const theme: ThemeVariants = themes[name];
+        const theme: ThemeVariants = themes[name].theme;
         store.dispatch(actions.Theme.add({
           name,
           theme

@@ -14,12 +14,4 @@ export class TlModalComponent extends TamuAbstractBaseComponent {
 
   @Input() btnText;
 
-  constructor(injector: Injector) {
-    super(injector);
-  }
-
-  ngOnInit(): void {
-    super.ngOnInit();
-  }
-
 }

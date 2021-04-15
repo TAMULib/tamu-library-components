@@ -1,5 +1,5 @@
-import * as tamu from './tamu';
-import * as csrrs from './csrrs';
+import * as tamu from './tamu-theme';
+import * as csrrs from './csrrs-theme';
 
 export {
   tamu,
