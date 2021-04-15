@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Injector } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -9,7 +9,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 })
 export class TlWysiwygComponent extends TamuAbstractBaseComponent {
 
-  initialValue = 'This is tl-wysiwyg editor';
+  @Input() initialValue = '';
 
   skin = 'oxide';
 
