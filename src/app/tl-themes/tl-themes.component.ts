@@ -18,15 +18,15 @@ export class TlThemesComponent extends TamuAbstractBaseComponent implements OnIn
         name
       }));
       this._themeName = name;
+    } else {
+      console.warn(`'${name}' is not a known theme!`);
     }
   }
 
   ngOnInit(): void {
     super.ngOnInit();
     if (!this._themeName) {
-      this.store.dispatch(actions.Theme.select({
-        name: 'tamu'
-      }));
+      this.activeTheme = 'tamu';
     }
   }
 
