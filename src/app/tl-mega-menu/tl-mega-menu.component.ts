@@ -44,6 +44,8 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   private sectionTitleHeight = 0;
 
+  variantTypes = ['button'];
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
