@@ -2,6 +2,7 @@
 @import "../shared/styles/tl-branded-btn.scss";
 
 :host {
+  
   font-family: var(--tl-font-family-sans-serif);
 
   wvr-header-component {
@@ -16,9 +17,9 @@
     --bottom-nav-height: 65px;
 
     .title-row {
-      background-color: #500000 !important;
+      background-color: var(--primary-button-bg);
       a span {
-        color: white !important;
+        color: var(--primary-button-color) ;
       }
     }
 
@@ -57,7 +58,7 @@
     wvr-nav-list-component[top-navigation-mobile] .dropdown {
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
-      border-right: 1px solid #6a0000;
+      border-right: 1px solid var(--secondary-button-box-shadow-color);
       font-size: 14px;
 
       .wvr-button {
@@ -104,13 +105,13 @@
         .libraries-link {
           margin-bottom: 18px;
           a {
-            color: #500000;
+            color: var(--primary);
             text-decoration: underline;
           }
         }
 
         p {
-          color: #4d4d4d;
+          color: var(--primaryNeutral);
           a {
             color: #2b5d7d;
             text-decoration: underline;
@@ -125,13 +126,13 @@
 
       .information-for {
         a {
-          color: #2b5d7d;
+          color: var(--secondary-button-hover-bg); 
           text-decoration: none;
           line-height: 2;
           padding: 10px 20px;
         }
         a:hover {
-          color: #23527c;
+          color: var(--secondary-button-bg);
         }
       }
 
@@ -149,26 +150,26 @@
         }
 
         wvre-dropdown-menu > wvre-dropdown-menu-item {
-          border-bottom: 1px solid #e0e0e0;
+          border-bottom: 1px solid var(--light);
           padding: 10px 0px;
           display: flex;
           a {
-            color: #500000;
+            color: var(--primary-button-bg);
             padding: 8px 0px 8px 8px;
             text-decoration: none;
             width: 100%;
           }
           tl-icon-component svg {
-            fill: var(--tl-deep-grey);
+            fill: var(--dark);
             width: 35px;
             height: 35px;
             margin-right: 5px;
-            background: var(--tl-white);
+            background: var(--light);
           }
         }
 
         wvre-dropdown-menu > wvre-dropdown-menu-item:hover > .helpLink {
-          background: #b0b0b0;
+          background: var(--secondaryNeutral);
           border-radius: 5px;
         }
 
@@ -180,7 +181,7 @@
     }
 
     wvr-nav-list-component[bottom-navigation] wvr-nav-li-component.supportTheLibraries {
-      --wvr-nav-link-background-hover: #355963;
+      --wvr-nav-link-background-hover: var(--secondary);
       width: fit-content;
       font-family: var(--tl-font-family-sans-serif);
       font-weight: 600;
@@ -189,10 +190,10 @@
         display: flex;
         align-items: center;
         margin: 0 20px;
-        color: #355963;
+        color: var(--secondary);
         text-decoration: none;
         tl-icon-component svg {
-          fill: #355963;
+          fill: var(--secondary);
           width: 24px;
           height: 65px;
           margin-right: 5px;
@@ -201,7 +202,7 @@
     }
     wvr-nav-list-component[bottom-navigation] wvr-nav-li-component.supportTheLibraries:hover {
       a {
-        color:#fff;
+        color: var(--tl-white);
         tl-icon-component svg {
           fill: var(--tl-white);
         }
@@ -209,7 +210,7 @@
     }
 
     wvr-nav-list-component[top-navigation] wvr-nav-li-component.covidUpdate {
-      background: var(--tl-deep-yellow);
+      background: var(--warning);
       a {
         color: var(--tl-black);
       }
@@ -230,23 +231,23 @@
     wvr-nav-list-component[bottom-navigation] wvr-nav-li-component {
       --wvr-nav-link-color: var(--tl-black);
       --wvr-nav-link-color-hover: var(--tl-white);
-      --wvr-nav-link-background-hover: var(--tl-deep-grey);
+      --wvr-nav-link-background-hover: var(--dark);
       width: fit-content;
       .nav-item > a wvre-text {
         font-family: var(--tl-font-family-sans-serif);
         font-weight: 700;
         font-size: 16px;
-        color: black;
+        color: var(--tl-black);
       }
 
       .nav-item:hover > a wvre-text {
-        color: white;
+        color: var(--tl-white);
       }
 
       :hover wvre-dropdown-btn {
-        color: white;
+        color: var(--tl-white);
         svg {
-          color: white
+          color: var(--tl-white)
         }
       }
 
@@ -294,8 +295,11 @@
     }
 
     .top-nav {
-      border-bottom: 1px solid #333333;
-      background: #3c0000 !important;
+      border-bottom: 1px solid var(--primaryNeutral);
+      background: var(--primaryAccent-button-bg);
+      .navbar-brand wvre-text-node {
+        color: var(--primaryAccent-button-color);
+      }
       .container {
         > div {
           height: auto;
@@ -308,7 +312,7 @@
       --top-nav-height: auto;
       --wvr-nav-li-width: fit-content;
       header {
-        box-shadow: 1px 1px 5px 2px #000;
+        box-shadow: 1px 1px 5px 2px var(--tl-black);
       }
 
       [top-navigation],
@@ -319,7 +323,7 @@
       }
 
       .top-nav {
-        border-bottom: 1px solid #333333;
+        border-bottom: 1px solid var(--primaryNeutral);
         .container {
           > div {
             width: 100%;
@@ -337,12 +341,12 @@
           height: 65px;
           width: 100%;
           background: var(--tl-deep-yellow);
-          border-bottom: 1px solid rgb(175, 175, 175);
+          border-bottom: 1px solid var(--secondaryNeutral);
           wvre-text {
             font-family: var(--tl-font-family-sans-serif);
             font-weight: 600;
             font-size: 16px;
-            color: black;
+            color: var(--tl-black);
           }
         }
       }
@@ -396,7 +400,7 @@
               font-family: var(--tl-font-family-sans-serif);
               font-weight: bold;
               font-size: 16px;
-              color: black;
+              color: var(--tl-black);
             }
           }
         }
@@ -410,7 +414,7 @@
         width: 100%;
         background: var(--tl-deep-yellow);
         overflow: hidden;
-        border-bottom: grey;
+        border-bottom: var(--secondaryNeutral);
         wvr-dropdown-component {
           display: flex;
           width: 100%;
@@ -428,7 +432,7 @@
                   width: 100%;
                   height: 68px;
                   align-items: center;
-                  border-bottom: thin solid rgb(175, 175, 175);
+                  border-bottom: thin solid var(--secondaryNeutral);
                   button {
                     display: flex;
                     width: 100%;
@@ -465,7 +469,7 @@
   .mobile-menu {
     position: absolute;
     display: none;
-    background: rgb(175, 175, 175);
+    background: var(--secondaryNeutral);
     width: 75%;
     opacity: 1;
     box-shadow: 3px 3px 10px 0px var(--tl-black);
@@ -498,7 +502,7 @@
           height: 65px;
           width: 100%;
           background: var(--tl-deep-yellow);
-          border-bottom: 1px solid #afafaf;
+          border-bottom: 1px solid var(--secondaryNeutral);
           text-decoration: none;
           font-weight: 700;
         }
