@@ -16,9 +16,6 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 })
 export class TamuFooterComponent extends TamuAbstractBaseComponent {
 
-  /** Used to override the background color. */
-  backgroundColor = 'var(--primary-button-bg)';
-
   /** Used to iterate the footer navigation list. */
   links: Array<Link> = [
     { href: 'https://howdy.tamu.edu/uPortal/normal/render.uP', value: 'howdy.tamu.edu' },
