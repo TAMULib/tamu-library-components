@@ -13,15 +13,15 @@
 
    // Weaver Nav List overrides for top navigation
    wvr-nav-list-component wvr-nav-li-component {
-    --wvr-nav-link-color: var(--tl-white);
-    --wvr-nav-link-color-hover: var(--tl-deep-yellow);
+    --wvr-nav-link-color: var(--primary-button-color);
+    --wvr-nav-link-color-hover: var(--warning-button-bg);
     --wvr-nav-link-background-hover: transparent;
     --wvr-nav-link-text-decoration-hover: underline;
     --wvr-nav-li-width: max-content;
   }
 
   .bg-secondary {
-    background-color: #500000 !important;
+    background-color: var(--primary-button-bg) !important;
   }
 
   @media (max-width: 992px) {
