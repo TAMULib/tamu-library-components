@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Injector, ViewEncapsulation } from '@angular/core';
+import { ThemeVariantName } from '@wvr/elements';
 import { Link } from '../shared/link';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
@@ -16,7 +17,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 export class TamuFooterComponent extends TamuAbstractBaseComponent {
 
   /** Used to override the background color. */
-  backgroundColor = 'var(--tl-primary)';
+  backgroundColor = 'var(--primary-button-bg)';
 
   /** Used to iterate the footer navigation list. */
   links: Array<Link> = [
@@ -29,6 +30,8 @@ export class TamuFooterComponent extends TamuAbstractBaseComponent {
     { href: 'https://askus.library.tamu.edu/contact/index', value: 'Comments' },
     { href: 'https://library.tamu.edu/status/', value: 'Services Status' }
   ];
+
+  variantTypes = ['button'];
 
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {

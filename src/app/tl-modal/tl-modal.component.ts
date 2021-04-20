@@ -13,7 +13,7 @@ export class TlModalComponent extends TamuAbstractBaseComponent {
   @Input() title;
 
   @Input() btnText;
-  
+
   @Input() btnVisible = 'true';
 
   constructor(injector: Injector) {
