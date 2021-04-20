@@ -40,9 +40,4 @@ describe('TlFooterComponent', () => {
       .toBeTruthy();
   });
 
-  it("should have as backgroundColor 'var(--tl-primary)'", () => {
-    expect(component.backgroundColor)
-      .toEqual('var(--tl-primary)');
-  });
-
 });
