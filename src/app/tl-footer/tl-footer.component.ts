@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, Injector, ViewEncapsulation } from '@angular/core';
-import { ThemeVariantName } from '@wvr/elements';
 import { Link } from '../shared/link';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
