@@ -3,6 +3,9 @@
     *ngIf="href!== ''"
     [themeVariant]="themeVariant"
     [btnSize]="btnSize"
+    [btnTxt]="btnTxt"
+    [dispatchAction]="dispatchAction"
+    [dispatchActionProps]="dispatchActionProps"
     [href]="href"
     [wvrBtnType]="wvrBtnType">
     <ng-content select="wvre-text, wvr-text-component" ngProjectAs="wvre-btn-content"></ng-content>
@@ -11,6 +14,9 @@
     *ngIf="href === ''"
     [themeVariant]="themeVariant"
     [btnSize]="btnSize"
+    [btnTxt]="btnTxt"
+    [dispatchAction]="dispatchAction"
+    [dispatchActionProps]="dispatchActionProps"
     [wvrBtnType]="wvrBtnType">
     <ng-content select="wvre-text, wvr-text-component" ngProjectAs="wvre-btn-content"></ng-content>
   </wvr-button-component>

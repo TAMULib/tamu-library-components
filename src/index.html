@@ -720,6 +720,28 @@
 
   <hr><br><br><br>
   <div class="container" style="text-align: center;margin: 10px 60px;">
+    <wvre-text value="Modal Component" text-decoration="underline"></wvre-text><br /><br />
+    <tl-modal title="Tl Modal Title" btn-text="Launch Tl Modal Button">
+      <tl-modal-body>
+        <wvre-text value="Tl Modal Message"></wvre-text>
+      </tl-modal-body>
+      <tl-modal-footer>
+        <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal Title'}">
+        </tl-button>
+      </tl-modal-footer>
+    </tl-modal>
+
+    <tl-modal title="Tl Modal 2" btn-text="Launch Tl Modal Button" btn-visible="false">
+      <tl-modal-body>
+        <wvre-text value="Tl Modal Message"></wvre-text>
+      </tl-modal-body>
+      <tl-modal-footer>
+        <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal 2'}">
+        </tl-button>
+      </tl-modal-footer>
+    </tl-modal>
+  </div>
+  <div class="container" style="text-align: center;margin: 10px 60px;">
     <wvre-text value="Editor Component" text-decoration="underline"></wvre-text><br /><br />
     <tl-wysiwyg></tl-wysiwyg> <br /><br />
   </div>
@@ -1072,8 +1094,20 @@
     <tl-button theme-variant="primary" animate="{click: 'rotateToggle'}">
       <wvre-text value="Primary"></wvre-text>
     </tl-button>
+    <tl-button theme-variant="primaryAccent" animate="{click: 'rotateToggle'}">
+      <wvre-text value="Primary Accent"></wvre-text>
+    </tl-button>
+    <tl-button theme-variant="primaryNeutral" animate="{click: 'rotateToggle'}">
+      <wvre-text value="Primary Neutral"></wvre-text>
+    </tl-button>
     <tl-button theme-variant="secondary">
       <wvre-text value="Secondary"></wvre-text>
+    </tl-button>
+    <tl-button theme-variant="secondaryAccent">
+      <wvre-text value="Secondary Accent"></wvre-text>
+    </tl-button>
+    <tl-button theme-variant="secondaryNeutral">
+      <wvre-text value="Secondary Neutral"></wvre-text>
     </tl-button>
     <tl-button theme-variant="info">
       <wvre-text value="Info"></wvre-text>
@@ -1265,35 +1299,11 @@
     <wvre-manifest-entry name="Departments" path="/ldap/departments" methods="GET" mapping-strategy="none"></wvre-manifest-entry>
   </wvre-manifest>
 
-  <wvre-theme name="default" active="true" variants="{
-    primary: {
-      baseColor: '#375a7f'
-    },
-    secondary: {
-      baseColor: '#500000'
-    },
-    success: {
-      baseColor: '#00bc8c'
-    },
-    danger: {
-      baseColor: '#E4002B'
-    },
-    warning: {
-      baseColor: '#ffc222'
-    },
-    info: {
-      baseColor: '#5bc0de'
-    },
-    light: {
-      baseColor: '#f8f9fa'
-    },
-    dark: {
-      baseColor: '#343a40'
-    },
-    accent: {
-      baseColor: 'tan'
-    }
-  }"></wvre-theme>
+  <!-- <tl-themes></tl-themes> -->
+  <tl-themes active-theme="tamu"></tl-themes>
+  <!-- <tl-themes active-theme="foo"></tl-themes> -->
+  <!-- <tl-themes active-theme="csrrs"></tl-themes> -->
+
 
   <script defer src="tl-components.js"></script>
 
