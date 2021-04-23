@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.9.0] - 04-23-21
+### Resolves
+- TAMU Library Component should expose the weaver modal component. (#270)
+- tl-modal should support the toggling of the modal launch button. (#290)
+- TL Components should offer a tl-themes components.(#281)
+- TLThemes should provide a csrrs theme.(#282)
+- The TL Header should support re-theming via the themes supplied by the TL Themes component.(#283)
+- TL-components mega menu dropdown should have a longer debounce on hover before triggering the open.(#284)
+- The TL Footer should support re-theming via the themes supplied by the TL Themes component.(#286)
+
 ## [1.8.0] - 03-31-21
 ### Resolves
 - The tl-header display not accurate on iPad. (#256)
