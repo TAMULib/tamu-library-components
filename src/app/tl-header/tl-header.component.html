@@ -283,7 +283,7 @@
 
 <ng-template #bottomNavContent>
     <ng-content select="wvre-nav-li"></ng-content>
-    <wvr-nav-li-component class="ml-auto supportTheLibraries">
+    <wvr-nav-li-component class="ml-auto call-to-action" *ngIf="!suppressCallToAction==='true'">
       <a href="https://library.tamu.edu/about/giving/">
         <tl-icon-component [set]="'bootstrap'" [name]="'gift-fill'"></tl-icon-component>
         <wvr-text-component value="Give to the Libraries"></wvr-text-component>
