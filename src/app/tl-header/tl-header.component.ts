@@ -45,7 +45,7 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   @Input() pageTitleUrl = '/';
 
   /** This boolean attribute is used to supress display of "Give to the Libraries" button. */
-  @Input() suppressCallToAction: 'true' | 'false' = 'true';
+  @Input() suppressCallToAction: 'true' | 'false' = 'false';
 
   mobileMenuClosed = true;
 
