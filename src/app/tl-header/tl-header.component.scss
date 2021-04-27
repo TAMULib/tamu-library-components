@@ -17,9 +17,9 @@
     --bottom-nav-height: 65px;
 
     .title-row {
-      background-color: var(--primary-button-bg);
+      background-color: var(--primary-default-bg);
       a span {
-        color: var(--primary-button-color) ;
+        color: var(--primary-default-color) ;
       }
     }
 
@@ -58,7 +58,7 @@
     wvr-nav-list-component[top-navigation-mobile] .dropdown {
       --wvr-nav-link-background-hover: var(--tl-deep-yellow);
       --wvr-nav-li-width: contain;
-      border-right: 1px solid var(--secondary-button-box-shadow-color);
+      border-right: 1px solid var(--secondary-default-box-shadow-color);
       font-size: 14px;
 
       .wvr-button {
@@ -126,13 +126,13 @@
 
       .information-for {
         a {
-          color: var(--secondary-button-hover-bg);
+          color: var(--secondary-default-hover-bg);
           text-decoration: none;
           line-height: 2;
           padding: 10px 20px;
         }
         a:hover {
-          color: var(--secondary-button-bg);
+          color: var(--secondary-default-bg);
         }
       }
 
@@ -154,7 +154,7 @@
           padding: 10px 0px;
           display: flex;
           a {
-            color: var(--primary-button-bg);
+            color: var(--primary-default-bg);
             padding: 8px 0px 8px 8px;
             text-decoration: none;
             width: 100%;
@@ -296,9 +296,9 @@
 
     .top-nav {
       border-bottom: 1px solid var(--primaryNeutral);
-      background: var(--primaryAccent-button-bg);
+      background: var(--primaryAccent-default-bg);
       .navbar-brand wvre-text-node {
-        color: var(--primaryAccent-button-color);
+        color: var(--primaryAccent-default-color);
       }
       .container {
         > div {
