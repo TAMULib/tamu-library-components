@@ -2,7 +2,7 @@
 @import "../shared/styles/tl-branded-btn.scss";
 
 :host {
-  
+
   font-family: var(--tl-font-family-sans-serif);
 
   wvr-header-component {
@@ -126,7 +126,7 @@
 
       .information-for {
         a {
-          color: var(--secondary-button-hover-bg); 
+          color: var(--secondary-button-hover-bg);
           text-decoration: none;
           line-height: 2;
           padding: 10px 20px;
@@ -180,7 +180,7 @@
       }
     }
 
-    wvr-nav-list-component[bottom-navigation] wvr-nav-li-component.supportTheLibraries {
+    wvr-nav-list-component[bottom-navigation] wvr-nav-li-component.call-to-action {
       --wvr-nav-link-background-hover: var(--secondary);
       width: fit-content;
       font-family: var(--tl-font-family-sans-serif);
@@ -200,7 +200,7 @@
         }
       }
     }
-    wvr-nav-list-component[bottom-navigation] wvr-nav-li-component.supportTheLibraries:hover {
+    wvr-nav-list-component[bottom-navigation] wvr-nav-li-component.call-to-action:hover {
       a {
         color: var(--tl-white);
         tl-icon-component svg {
@@ -493,7 +493,7 @@
           white-space: nowrap;
         }
       }
-      wvr-nav-li-component.supportTheLibraries {
+      wvr-nav-li-component.call-to-action {
         a{
           color: var(--tl-black);
           white-space: nowrap;
