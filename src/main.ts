@@ -1,6 +1,6 @@
 import { enableProdMode, isDevMode } from '@angular/core';
 import { weaverBootstrap } from '@wvr/elements';
-import { TamuLibModule } from './app/tl-lib.module';
+import { TamuLibModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {

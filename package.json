@@ -98,6 +98,7 @@
     "karma-jasmine-html-reporter": "^1.5.4",
     "lighthouse": "^6.5.0",
     "lighthouse-badges": "^1.0.37",
+    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.4",
