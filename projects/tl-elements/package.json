@@ -1,0 +1,13 @@
+{
+  "name": "tl-elements",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.2.11",
+    "@angular/core": "^11.2.11",
+    "@wvr/elements": "next"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "@tinymce/tinymce-angular": "^4.2.1"
+  }
+}

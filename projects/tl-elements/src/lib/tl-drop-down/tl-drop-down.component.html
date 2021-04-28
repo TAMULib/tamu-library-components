@@ -1,0 +1,37 @@
+<wvr-dropdown-component
+  [btnHref]="btnHref"
+  [toggleOn]="toggleOn"
+  [themeVariant]="themeVariant"
+  [menuBackground]="'var(--tl-dropdown-menu-background)'"
+  [menuBorder]="'var(--tl-dropdown-menu-border)'"
+  [menuBorderRadius]="'var(--tl-dropdown-menu-border-radius)'"
+  [menuBorderDisplay]="'var(--tl-dropdown-menu-border-display)'"
+  [menuFlexDirection]="'var(--tl-dropdown-menu-flex-direction)'"
+  [menuPadding]="'var(--tl-dropdown-menu-padding)'"
+  [menuWidth]="'var(--tl-dropdown-menu-width)'"
+  [menuXOffset]="'var(--tl-dropdown-menu-x-offset)'"
+  [menuYOffset]="'var(--tl-dropdown-menu-y-offset)'"
+  [menuItemMargin]="'var(--tl-dropdown-menu-item-margin)'"
+  [backgroundActive]="btnBackgroundActive"
+  [btnBorderColor]="btnBorderColor"
+  [btnBorderActive]="btnBorderActive"
+  [btnBorderFocus]="btnBorderFocus"
+  [btnBorderRadius]="'var(--tl-btn-border-radius)'"
+  [btnBoxShadowFocus]="'var(--tl-btn-focus-box-shadow)'"
+  [btnColorActive]="btnColorActive"
+  [fontFamily]="'var(--tl-font-family-sans-serif)'"
+  [fontSize]="'var(--tl-btn-font-size)'"
+  [lineHeight]="'var(--tl-btn-line-height)'"
+  [textAlign]="'var(--tl-btn-text-align)'"
+  [textDecoration]="btnTextDecoration"
+  [textDecorationActive]="btnTextDecorationActive"
+  [textDecorationFocus]="btnTextDecorationFocus"
+  ngbDropdownAnchor
+  >
+  <wvre-dropdown-btn>
+    <ng-content select="tl-dropdown-btn"></ng-content>
+  </wvre-dropdown-btn>
+  <wvre-dropdown-menu>
+    <ng-content select="tl-dropdown-menu"></ng-content>
+  </wvre-dropdown-menu>
+</wvr-dropdown-component>

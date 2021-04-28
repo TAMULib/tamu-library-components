@@ -1,0 +1,14 @@
+<wvr-card-component
+  [themeVariant]="themeVariant"
+  [panelFormat]="panelFormat"
+  [selectorPrefix]="'tl'">
+  <ng-content></ng-content>
+  <ng-content select="tl-card-header" ngProjectAs="wvre-card-header"></ng-content>
+  <ng-content select="tl-card-title" ngProjectAs="wvre-card-title"></ng-content>
+  <ng-content select="tl-card-img" ngProjectAs="wvre-card-img"></ng-content>
+  <ng-content select="wvre-list[top]" ngProjectAs="wvre-list[top]"></ng-content>
+  <ng-content select="wvre-list[bottom]" ngProjectAs="wvre-list[bottom]"></ng-content>
+  <ng-content select="tl-card-link" ngProjectAs="wvre-card-link"></ng-content>
+  <ng-content select="tl-button" ngProjectAs="wvre-button"></ng-content>
+  <ng-content select="tl-card-footer" ngProjectAs="wvre-card-footer"></ng-content>
+</wvr-card-component>

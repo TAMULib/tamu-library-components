@@ -1,0 +1,62 @@
+<wvr-dropdown-component
+  [themeVariant]="'link'"
+  [toggleOn]="'mouseover'"
+  menuXOffset="{{menuXOffset}}px"
+  [menuYOffset]="'-2px'"
+  [menuWidth]="'928px'"
+  [btnTextDecoration]="'none'"
+  [btnColor]="'var(--tl-black)'"
+  [btnFontWeight]="'bolder'"
+  [btnColorHover]="'var(--tl-black)'"
+  [btnTextDecorationHover]="'none'"
+  [btnFontFamily]="'var(--tl-font-family-sans-serif)'"
+  [ngClass]="{active: active}"
+  [openDelay]="openDelay"
+  ngbDropdownAnchor
+  >
+  <wvre-dropdown-btn (click)="toggleMobileMenuOpen()">
+    {{menuTitle}}
+    <tl-icon-component
+      class="x-icon"
+      [hiddenInMobile]="true"
+      [set]="'bootstrap'"
+      [name]="'caret-right-fill'"
+      [size]="'11px'">
+    </tl-icon-component>
+    <tl-icon-component
+      class="plus-icon"
+      [set]="'bootstrap'"
+      [name]="'plus'"
+      [size]="'24px'">
+    </tl-icon-component>
+  </wvre-dropdown-btn>
+  <wvre-dropdown-menu>
+    <div class="tl-mega-menu-custom-top" *ngIf="!isMobileLayout">
+      <div class="flex-fill align-self-stretch">
+        <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
+      </div>
+    </div>
+    <div class="mega-menu-sections d-flex justify-content-between flex-wrap"  *ngIf="!isMobileLayout">
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
+    <div class="tl-mega-menu-custom-bottom" *ngIf="!isMobileLayout">
+      <div class="flex-fill align-self-stretch">
+        <ng-content select="tl-mega-menu-custom[bottom-content]"></ng-content>
+      </div>
+    </div>
+    <div class="mega-menu-view-all container pt-2" *ngIf="viewAllHref">
+      <tl-button [href]="viewAllHref" [themeVariant]="'primary'">
+        <wvr-text-component [value]="viewAllButtonDisplayText"></wvr-text-component>
+      </tl-button>
+    </div>
+  </wvre-dropdown-menu>
+</wvr-dropdown-component>
+
+<div *ngIf="isMobileLayout" class="mobile-display" [ngClass]="{active: active}">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+  <tl-mega-menu-section-component [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section-component>
+</div>
+
+<ng-template #content>
+  <ng-content select="tl-mega-menu-section"></ng-content>
+</ng-template>
