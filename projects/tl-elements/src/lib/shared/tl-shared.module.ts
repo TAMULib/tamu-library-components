@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
-import { WvrCoreModule, WvrSharedModule } from '@wvr/elements';
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { InlineSVGModule } from 'ng-inline-svg';
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
 import { TlCardComponent } from '../tl-card/tl-card.component';
@@ -18,7 +18,6 @@ import { TlTabComponent } from '../tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from '../tl-tabs/tl-tabs.component';
 import { TlThemesComponent } from '../tl-themes/tl-themes.component';
 import { TlWysiwygComponent } from '../tl-wysiwyg/tl-wysiwyg.component';
-import { InlineSVGModule } from 'ng-inline-svg';
 
 /** This property contains a list of components classes. */
 export const TL_COMPONENTS = [
@@ -40,17 +39,25 @@ export const TL_COMPONENTS = [
   TlWysiwygComponent
 ];
 
+export const TL_PIPES = [];
+
+const MODULES = [
+  CommonModule,
+  EditorModule,
+  InlineSVGModule
+];
+
 @NgModule({
-  declarations: [
-    ...TL_COMPONENTS
-  ],
   imports: [
-    CommonModule,
-    EditorModule,
-    InlineSVGModule
+    ...MODULES
   ],
   exports: [
-    ...TL_COMPONENTS
+    ...TL_COMPONENTS,
+    ...TL_PIPES
+  ],
+  declarations: [
+    ...TL_COMPONENTS,
+    ...TL_PIPES
   ],
   providers: [],
   schemas: [

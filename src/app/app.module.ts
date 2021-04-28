@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Store } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
+import { TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 import { actions, AppConfig, APP_CONFIG, registerCustomElements, RootState, showHiddentContent, ThemeVariants, WvrCoreModule, WvrSharedModule, wvrTimeout } from '@wvr/elements';
-import { TLCoreModule, TLSharedModule, TL_ELEMENTS } from '../../projects/tl-elements/src/public-api';
 import * as themes from '../../projects/tl-elements/src/lib/utility/themes';
+import { TLCoreModule, TLSharedModule, TL_ELEMENTS } from '../../projects/tl-elements/src/public-api';
 
 const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUrl}/tinymce/tinymce.min.js`;
 
@@ -15,22 +15,21 @@ const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUr
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    EditorModule,
-    WvrCoreModule,
-    WvrSharedModule,
-    TLSharedModule,
-    TLCoreModule,
     StoreDevtoolsModule.instrument({
       maxAge: 25, // retains last 25 states
       logOnly: true // restrict extension to log-only mode
-    })
+    }),
+    WvrSharedModule,
+    TLSharedModule,
+    WvrCoreModule,
+    TLCoreModule
   ],
   exports: [],
   providers: [
     {
       provide: TINYMCE_SCRIPT_SRC,
       useFactory: getTinyMCEScript,
-      deps: [ APP_CONFIG ]
+      deps: [APP_CONFIG]
     }
   ],
   declarations: [],

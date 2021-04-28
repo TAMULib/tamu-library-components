@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, Optional, SkipSelf } from '@angular/core';
-import { WvrColorPreviewComponent, WvrCoreModule, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrSharedModule, WvrTextComponent, WvrThemeComponent } from '@wvr/elements';
+import { WvrColorPreviewComponent, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrTextComponent, WvrThemeComponent } from '@wvr/elements';
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
 import { TlCardComponent } from '../tl-card/tl-card.component';
@@ -38,7 +38,7 @@ export const TL_ELEMENTS = [
   { component: TlIconComponent, selector: 'tl-icon' },
   { component: TamuItWorksComponent, selector: 'tl-it-works' },
   { component: TlMegaMenuComponent, selector: 'tl-mega-menu' },
-  { component: TlModalComponent, selector: 'tl-modal'},
+  { component: TlModalComponent, selector: 'tl-modal' },
   { component: TlMegaMenuSectionComponent, selector: 'tl-mega-menu-section' },
   { component: TamuNavListComponent, selector: 'tl-nav-list' },
   { component: TlTabsComponent, selector: 'tl-tabs' },
@@ -64,9 +64,11 @@ const PROVIDERS = [];
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TLCoreModule {
+
   constructor(@Optional() @SkipSelf() parentModule: TLCoreModule) {
     if (parentModule) {
       throw new Error('CoreModule is already loaded. Import it in the AppModule only');
     }
   }
+
 }
