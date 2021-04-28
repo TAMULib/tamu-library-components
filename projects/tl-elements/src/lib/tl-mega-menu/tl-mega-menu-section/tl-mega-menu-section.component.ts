@@ -1,5 +1,5 @@
 import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input, OnInit } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../../utility/tl-abstract-base.component';
 import { TlMegaMenuComponent } from '../tl-mega-menu.component';
 
 @Component({

@@ -47,10 +47,7 @@ export const TL_ELEMENTS = [
   { component: TlWysiwygComponent, selector: 'tl-wysiwyg' }
 ];
 
-const MODULES = [
-  WvrSharedModule,
-  WvrCoreModule
-];
+const MODULES = [];
 
 const PROVIDERS = [];
 

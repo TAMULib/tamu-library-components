@@ -4,9 +4,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Store } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
-import { actions, registerCustomElements, RootState, showHiddentContent, ThemeVariants, WvrCoreModule, WvrSharedModule, wvrTimeout } from '@wvr/elements';
+import { actions, AppConfig, APP_CONFIG, registerCustomElements, RootState, showHiddentContent, ThemeVariants, WvrCoreModule, WvrSharedModule, wvrTimeout } from '@wvr/elements';
 import { TLCoreModule, TLSharedModule, TL_ELEMENTS } from '../../projects/tl-elements/src/public-api';
 import * as themes from '../../projects/tl-elements/src/lib/utility/themes';
+
+const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUrl}/tinymce/tinymce.min.js`;
 
 /** The main module for the TAMU Compnent library. */
 @NgModule({
@@ -14,6 +16,8 @@ import * as themes from '../../projects/tl-elements/src/lib/utility/themes';
     BrowserAnimationsModule,
     BrowserModule,
     EditorModule,
+    WvrCoreModule,
+    WvrSharedModule,
     TLSharedModule,
     TLCoreModule,
     StoreDevtoolsModule.instrument({
@@ -23,7 +27,11 @@ import * as themes from '../../projects/tl-elements/src/lib/utility/themes';
   ],
   exports: [],
   providers: [
-    { provide: TINYMCE_SCRIPT_SRC, useValue: 'assets/tinymce/tinymce.min.js' }
+    {
+      provide: TINYMCE_SCRIPT_SRC,
+      useFactory: getTinyMCEScript,
+      deps: [ APP_CONFIG ]
+    }
   ],
   declarations: [],
   bootstrap: [],

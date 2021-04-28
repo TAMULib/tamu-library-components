@@ -3,5 +3,8 @@
   "dest": "../../dist/tl-elements",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "@tinymce/tinymce-angular"
+  ]
 }

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Injector, ViewEncapsulation } from '@angular/core';
 import { Link } from '../utility/link';
-import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
 
 /**
  * A fullwidth footer component which attaches to the bottom of the document body.

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-icon-component',

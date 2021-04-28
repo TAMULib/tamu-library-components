@@ -18,6 +18,7 @@ import { TlTabComponent } from '../tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from '../tl-tabs/tl-tabs.component';
 import { TlThemesComponent } from '../tl-themes/tl-themes.component';
 import { TlWysiwygComponent } from '../tl-wysiwyg/tl-wysiwyg.component';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 /** This property contains a list of components classes. */
 export const TL_COMPONENTS = [
@@ -46,15 +47,12 @@ export const TL_COMPONENTS = [
   imports: [
     CommonModule,
     EditorModule,
-    WvrSharedModule,
-    WvrCoreModule
+    InlineSVGModule
   ],
   exports: [
     ...TL_COMPONENTS
   ],
-  providers: [
-    { provide: TINYMCE_SCRIPT_SRC, useValue: 'assets/tinymce/tinymce.min.js' }
-  ],
+  providers: [],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ]
