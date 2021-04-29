@@ -45,12 +45,12 @@ export const TL_PIPES = [];
 const MODULES = [
   CommonModule,
   EditorModule,
-  InlineSVGModule
+  InlineSVGModule,
+  WvrSharedModule
 ];
 
 @NgModule({
   imports: [
-    WvrSharedModule,
     ...MODULES
   ],
   exports: [
