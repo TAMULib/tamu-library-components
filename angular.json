@@ -132,6 +132,46 @@
           }
         }
       }
+    },
+    "tl-elements": {
+      "projectType": "library",
+      "root": "projects/tl-elements",
+      "sourceRoot": "projects/tl-elements/src",
+      "prefix": "tl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/tl-elements/tsconfig.lib.json",
+            "project": "projects/tl-elements/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tl-elements/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tl-elements/src/test.ts",
+            "tsConfig": "projects/tl-elements/tsconfig.spec.json",
+            "karmaConfig": "projects/tl-elements/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tl-elements/tsconfig.lib.json",
+              "projects/tl-elements/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "tamu-library-components"

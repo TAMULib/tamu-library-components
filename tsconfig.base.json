@@ -2,7 +2,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "outDir": "projects",
     "sourceMap": true,
     "declaration": true,
     "downlevelIteration": true,
@@ -18,7 +20,17 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "wvr-elements": [
+        "projects/tl-elements/src/public-api",
+        "dist/tl-elements"
+      ],
+      "wvr-elements/*": [
+        "projects/tl-elements/src/public-api/*",
+        "dist/tl-elements/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "ivyCompiler": true
