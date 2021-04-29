@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, Optional, SkipSelf } from '@angular/core';
-import { WvrColorPreviewComponent, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrTextComponent, WvrThemeComponent } from '@wvr/elements';
+import { WvrColorPreviewComponent, WvrCoreModule, WvrListComponent, WvrListItemComponent, WvrManifestComponent, WvrManifestEntryComponent, WvrNavLiComponent, WvrTextComponent, WvrThemeComponent } from '@wvr/elements';
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
 import { TlCardComponent } from '../tl-card/tl-card.component';
@@ -47,15 +47,17 @@ export const TL_ELEMENTS = [
   { component: TlWysiwygComponent, selector: 'tl-wysiwyg' }
 ];
 
-const MODULES = [];
+const MODULES = [
+  WvrCoreModule
+];
 
 const PROVIDERS = [];
 
 @NgModule({
-  declarations: [],
   imports: [
     ...MODULES
   ],
+  declarations: [],
   exports: [],
   providers: [
     ...PROVIDERS

@@ -19,9 +19,7 @@ const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUr
       maxAge: 25, // retains last 25 states
       logOnly: true // restrict extension to log-only mode
     }),
-    WvrSharedModule,
     TLSharedModule,
-    WvrCoreModule,
     TLCoreModule
   ],
   exports: [],

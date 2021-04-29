@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { WvrCoreModule, WvrSharedModule } from '@wvr/elements';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
@@ -49,6 +50,7 @@ const MODULES = [
 
 @NgModule({
   imports: [
+    WvrSharedModule,
     ...MODULES
   ],
   exports: [

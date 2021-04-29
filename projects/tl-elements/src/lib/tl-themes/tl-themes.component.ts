@@ -4,7 +4,7 @@ import { actions, ThemeVariants } from '@wvr/elements';
 import * as themes from '../utility/themes';
 
 @Component({
-  selector: 'tl-themes',
+  selector: 'tl-themes-component',
   templateUrl: './tl-themes.component.html',
   styleUrls: ['./tl-themes.component.scss']
 })

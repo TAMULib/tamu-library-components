@@ -5,6 +5,8 @@
     "entryFile": "src/public-api.ts"
   },
   "allowedNonPeerDependencies": [
-    "@tinymce/tinymce-angular"
+    "@tinymce/tinymce-angular",
+    "ng-inline-svg",
+    "@wvr/elements"
   ]
 }
