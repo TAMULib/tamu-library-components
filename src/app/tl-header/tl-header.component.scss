@@ -2,7 +2,7 @@
 @import "../shared/styles/tl-branded-btn.scss";
 
 :host {
-  
+
   font-family: var(--tl-font-family-sans-serif);
 
   wvr-header-component {
@@ -21,6 +21,10 @@
       a span {
         color: var(--primary-button-color) ;
       }
+    }
+
+    .bottom-nav {
+      background-color: var(--secondaryNeutral-button-bg);
     }
 
     wvr-nav-list-component[top-navigation-mobile]
@@ -126,7 +130,7 @@
 
       .information-for {
         a {
-          color: var(--secondary-button-hover-bg); 
+          color: var(--secondary-button-hover-bg);
           text-decoration: none;
           line-height: 2;
           padding: 10px 20px;
