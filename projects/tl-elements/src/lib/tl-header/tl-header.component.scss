@@ -23,6 +23,10 @@
       }
     }
 
+    .bottom-nav {
+      background-color: var(--secondaryNeutral-default-bg);
+    }
+
     wvr-nav-list-component[top-navigation-mobile]
       > ul
       > wvr-nav-li-component

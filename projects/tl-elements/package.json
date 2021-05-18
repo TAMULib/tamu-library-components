@@ -1,6 +1,6 @@
 {
   "name": "@wvr/tl-elements",
-  "version": "1.10.0-rc1",
+  "version": "1.10.0",
   "peerDependencies": {
     "@angular/common": "^11.2.11",
     "@angular/core": "^11.2.11"
