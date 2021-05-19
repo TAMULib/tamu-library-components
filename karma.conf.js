@@ -4,29 +4,34 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine', '@angular-devkit/build-angular', "viewport"],
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
+      require('karma-coverage'),
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-viewport')
+      require('karma-ng-html2js-preprocessor')
     ],
+
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    coverageIstanbulReporter: {
+
+    coverageReporter: {
+      type: "lcov",
       dir: require('path').join(__dirname, './static/tamu-library-components/reports/coverage/tamu-library-components'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml'],
+
+    browsers: ['ChromeHeadless'],
+    reporters: ['progress', 'kjhtml', 'coverage'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
     singleRun: false,
     restartOnFileChange: true,
     failOnEmptyTestSuite: false

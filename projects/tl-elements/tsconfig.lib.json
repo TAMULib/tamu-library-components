@@ -8,7 +8,7 @@
   },
   "exclude": [
     "src/test.ts",
-    "src/lib/wvr-lib.module.ts",
+    "src/lib/tl-lib.module.ts",
     "**/*.spec.ts"
   ]
 }
