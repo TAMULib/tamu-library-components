@@ -22,6 +22,8 @@
     "clean:dist": "rimraf dist",
     "clean:static": "rimraf static",
     "publish:docker": "node scripts/docker-push.js",
+    "publish:npm": "npm run build && node scripts/build-publish.js $1",
+    "publish:npm-next": "npm run publish:npm next",
     "link": "npm link @wvr/elements",
     "lint": "ng lint",
     "ng": "ng",
