@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.10.0] - 05-12-21
+### Resolves
+
+- ngRX actions not firing on the tl-wysiwyg component. (#285)
+- Tl Header Should Utilize the weaver default variant instead of button.. (#300)
+- Tl Footer Should Utilize the weaver default variant instead of button. (#301)
+- TL Header should use brand-secondary-neutral for the bottom nav background. (#306)
+
+
 ## [1.9.0] - 04-23-21
 ### Resolves
 - TAMU Library Component should expose the weaver modal component. (#270)

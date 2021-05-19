@@ -1,0 +1,33 @@
+{
+  "name": "@wvr/tl-elements",
+  "version": "1.10.0",
+  "description": "Collection of angular components for TAMU's Custom Web Component UI",
+  "author": "Texas A&M University Libraries",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TAMULib/tamu-library-components"
+  },
+  "bugs": {
+    "url": "https://github.com/TAMULib/tamu-library-components/issues"
+  },
+  "homepage": "https://github.com/TAMULib/tamu-library-components",
+  "keywords": [
+    "tamu",
+    "a&m",
+    "library",
+    "angular",
+    "web components"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^11.2.11",
+    "@angular/core": "^11.2.11"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "@tinymce/tinymce-angular": "^4.2.1",
+    "ng-inline-svg": "^12.1.0",
+    "@wvr/elements": "^1.11.0"
+  }
+}

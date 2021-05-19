@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/projects"
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
+  },
+  "exclude": [
+    "src/test.ts",
+    "src/lib/tl-lib.module.ts",
+    "**/*.spec.ts"
+  ]
+}

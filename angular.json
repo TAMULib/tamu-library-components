@@ -18,7 +18,7 @@
           "builder": "ngx-build-plus:browser",
           "options": {
             "preserveSymlinks": true,
-            "outputPath": "dist/tl-components",
+            "outputPath": "dist/tamu-library-components",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,7 +66,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "3mb",
-                  "maximumError": "4mb"
+                  "maximumError": "4.2mb"
                 }
               ]
             }
@@ -129,6 +129,46 @@
             "production": {
               "devServerTarget": "tamu-library-components:serve:production"
             }
+          }
+        }
+      }
+    },
+    "tl-elements": {
+      "projectType": "library",
+      "root": "projects/tl-elements",
+      "sourceRoot": "projects/tl-elements/src",
+      "prefix": "tl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/tl-elements/tsconfig.lib.json",
+            "project": "projects/tl-elements/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tl-elements/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "projects/tl-elements/src/test.ts",
+            "tsConfig": "projects/tl-elements/tsconfig.spec.json",
+            "karmaConfig": "projects/tl-elements/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tl-elements/tsconfig.lib.json",
+              "projects/tl-elements/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

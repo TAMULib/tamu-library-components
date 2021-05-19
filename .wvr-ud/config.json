@@ -2,10 +2,10 @@
   "output": "static/tamu-library-components/docs/usage",
   "basePath": "/tamu-library-components/docs/usage/",
   "includes": [
-    "src/app/**/*"
+    "projects/tl-elements/src/lib/**/*"
   ],
   "excludes": [
-    "src/app/tl-it-works"
+    "projects/tl-elements/src/lib/wvr-it-works"
   ],
   "additionalScript": [
     "dist/bundle/tl-components.js"
