@@ -152,7 +152,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "projects/tl-elements/src/test.ts",
             "tsConfig": "projects/tl-elements/tsconfig.spec.json",
