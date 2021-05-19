@@ -18,7 +18,7 @@
           "builder": "ngx-build-plus:browser",
           "options": {
             "preserveSymlinks": true,
-            "outputPath": "dist/tl-components",
+            "outputPath": "dist/tamu-library-components",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

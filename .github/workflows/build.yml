@@ -42,7 +42,7 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.github_token }}
-          path-to-lcov: ${{ github.workspace }}/static/tamu-library-components/reports/coverage/tamu-library-components/lcov.info
+          path-to-lcov: ${{ github.workspace }}/static/tamu-library-components/reports/coverage/tl-elements/lcov.info
 
       - name: "Build Static Production"
         run: xvfb-run --auto-servernum npm run build:static-production
