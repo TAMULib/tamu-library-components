@@ -34,6 +34,6 @@ cp.fork(__dirname + '/build-tl-config-template.js');
 
   fs.copy('projects/tl-elements/src/lib/shared/styles', `${elementsPath}/styles`);
   fs.copy('scripts', `${elementsPath}/scripts`);
-  fs.copy('.tl-ud', `${elementsPath}/.tl-ud`);
+  fs.copy('.wvr-ud', `${elementsPath}/.wvr-ud`);
 
 })();
