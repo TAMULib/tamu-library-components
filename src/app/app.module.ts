@@ -56,7 +56,16 @@ export class TamuLibModule {
       });
 
     wvrTimeout(() => {
-      document.querySelector('body').style.display = 'block';
+      const elements = document.querySelectorAll('.wvr-components-loading:not(body)');
+      elements.forEach(function(element) {
+        element.classList.remove('wvr-components-loading');
+      });
+
+      const bodyElem = document.querySelector('body');
+      if (bodyElem) {
+        bodyElem.classList.remove('wvr-components-loading');
+        bodyElem.classList.remove('wvr-hidden');
+      }
     });
   }
 
