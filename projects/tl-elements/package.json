@@ -9,6 +9,6 @@
     "tslib": "^2.0.0",
     "@tinymce/tinymce-angular": "^4.2.1",
     "ng-inline-svg": "^12.1.0",
-    "@wvr/elements": "next"
+    "@wvr/elements": "^1.11.0"
   }
 }
