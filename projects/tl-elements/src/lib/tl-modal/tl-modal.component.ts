@@ -1,4 +1,4 @@
-import { Component, Injector, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
 
 @Component({
@@ -15,9 +15,5 @@ export class TlModalComponent extends TamuAbstractBaseComponent {
   @Input() btnText;
 
   @Input() btnVisible = 'true';
-
-  constructor(injector: Injector) {
-    super(injector);
-  }
 
 }
