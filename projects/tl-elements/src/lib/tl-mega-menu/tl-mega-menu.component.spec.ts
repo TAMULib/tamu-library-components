@@ -1,32 +1,41 @@
-import { DebugElement } from '@angular/core';
-import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA, DebugElement } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
-import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { APP_CONFIG, testAppConfig, WvrDropdownComponent } from '@wvr/elements';
+import { TlIconComponent } from '../tl-icon/tl-icon.component';
+import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
 import { TlMegaMenuComponent } from './tl-mega-menu.component';
 
-describe('MegaMenuComponent', () => {
+describe('TlMegaMenuComponent', () => {
   let component: TlMegaMenuComponent;
   let fixture: ComponentFixture<TlMegaMenuComponent>;
   let debugElement: DebugElement;
-  const initialState = { theme: {
-    themes: {}
-  }};
+  const initialState = {
+    theme: {
+      themes: {}
+    }
+  };
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [
       BrowserAnimationsModule
     ],
     providers: [
-      provideMockStore({initialState}),
+      provideMockStore({ initialState }),
       {
         provide: APP_CONFIG,
         useValue: testAppConfig
       }
     ],
-    declarations: [ TlMegaMenuComponent ]
-  })
-    .compileComponents()));
+    declarations: [
+      TlIconComponent,
+      TlMegaMenuComponent,
+      TlMegaMenuSectionComponent,
+      WvrDropdownComponent
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  }).compileComponents()));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TlMegaMenuComponent);
@@ -71,7 +80,7 @@ describe('MegaMenuComponent', () => {
     component.toggleMobileMenuOpen();
 
     expect(component.active)
-    .toBeFalse();
+      .toBeFalse();
 
   });
 
