@@ -8,6 +8,9 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -53,35 +56,46 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "buildOptimizer": true,
               "optimization": true,
-              "outputHashing": "none",
               "sourceMap": false,
-              "extractLicenses": true,
               "extractCss": false,
+              "extractLicenses": true,
               "namedChunks": false,
               "commonChunk": false,
               "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "3mb",
-                  "maximumError": "4.2mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "4.5mb"
                 }
-              ]
+              ],
+              "outputHashing": "none"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "commonChunk": true,
+              "namedChunks": true,
+              "vendorChunk": true
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "ngx-build-plus:dev-server",
-          "options": {
-            "browserTarget": "tamu-library-components:build"
-          },
           "configurations": {
             "production": {
               "browserTarget": "tamu-library-components:build:production"
+            },
+            "development": {
+              "browserTarget": "tamu-library-components:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -148,8 +162,12 @@
           "configurations": {
             "production": {
               "tsConfig": "projects/tl-elements/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/tl-elements/tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "ngx-build-plus:karma",
