@@ -5,7 +5,6 @@ import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component
 /**
  * A fullwidth footer component which attaches to the bottom of the document body.
  */
-
 @Component({
   selector: 'tl-footer-component',
   templateUrl: './tl-footer.component.html',
@@ -32,6 +31,10 @@ export class TamuFooterComponent extends TamuAbstractBaseComponent {
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
+  }
+
+  index(index: number, link: Link): number {
+    return index;
   }
 
 }

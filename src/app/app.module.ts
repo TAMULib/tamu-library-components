@@ -1,10 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Injector, NgModule } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
-import { actions, AppConfig, APP_CONFIG, registerCustomElements, RootState, showHiddentContent, ThemeVariants, WvrCoreModule, WvrSharedModule, wvrTimeout } from '@wvr/elements';
+import { actions, AppConfig, APP_CONFIG, registerCustomElements, RootState, showHiddentContent, ThemeVariants, wvrTimeout } from '@wvr/elements';
 import { themes } from '../../projects/tl-elements/src/lib/utility/themes';
 import { TLCoreModule, TLSharedModule, TL_ELEMENTS } from '../../projects/tl-elements/src/public-api';
 
@@ -13,8 +11,6 @@ const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUr
 /** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
     StoreDevtoolsModule.instrument({
       maxAge: 25, // retains last 25 states
       logOnly: true // restrict extension to log-only mode
@@ -33,7 +29,7 @@ const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUr
   declarations: [],
   bootstrap: [],
   entryComponents: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: []
 })
 export class TamuLibModule {
 
@@ -57,7 +53,7 @@ export class TamuLibModule {
 
     wvrTimeout(() => {
       const elements = document.querySelectorAll('.wvr-components-loading:not(body)');
-      elements.forEach(function(element) {
+      elements.forEach(element => {
         element.classList.remove('wvr-components-loading');
       });
 

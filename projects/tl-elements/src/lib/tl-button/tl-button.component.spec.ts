@@ -1,30 +1,28 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TLSharedModule } from '../shared/tl-shared.module';
 import { TlButtonComponent } from './tl-button.component';
 
 describe('TlButtonComponent', () => {
   let component: TlButtonComponent;
   let fixture: ComponentFixture<TlButtonComponent>;
-  const initialState = { theme: {
-    themes: {}
-  }};
+  const initialState = {
+    theme: {
+      themes: {}
+    }
+  };
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
-    imports: [
-      BrowserAnimationsModule
-    ],
+    imports: [TLSharedModule],
+    declarations: [TlButtonComponent],
     providers: [
-      provideMockStore({initialState}),
+      provideMockStore({ initialState }),
       {
         provide: APP_CONFIG,
         useValue: testAppConfig
       }
-    ],
-    declarations: [TlButtonComponent],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    ]
   })
     .compileComponents()));
 

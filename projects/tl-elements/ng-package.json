@@ -2,11 +2,12 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/tl-elements",
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "@wvr/elements": "elements",
+      "@tinymce/tinymce-angular": "tinymceAngular",
+      "ng-inline-svg": "ngInlineSvg"
+    }
   },
-  "allowedNonPeerDependencies": [
-    "@tinymce/tinymce-angular",
-    "ng-inline-svg",
-    "@wvr/elements"
-  ]
+  "allowedNonPeerDependencies": []
 }

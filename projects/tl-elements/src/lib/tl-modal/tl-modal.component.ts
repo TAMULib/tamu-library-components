@@ -16,6 +16,7 @@ export class TlModalComponent extends TamuAbstractBaseComponent {
 
   @Input() btnVisible = 'true';
 
+  // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
   }
