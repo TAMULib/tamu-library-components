@@ -1,9 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
-import { APP_CONFIG, testAppConfig, WvrNavListComponent } from '@wvr/elements';
-import { TlIconComponent } from '../../tl-icon/tl-icon.component';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TLSharedModule } from '../../shared/tl-shared.module';
 import { TlMegaMenuComponent } from '../tl-mega-menu.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section.component';
 
@@ -20,12 +19,11 @@ describe('TlMegaMenuSectionComponent', () => {
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule
+      HttpClientTestingModule,
+      TLSharedModule
     ],
     declarations: [
-      TlMegaMenuSectionComponent,
-      TlIconComponent,
-      WvrNavListComponent
+      TlMegaMenuSectionComponent
     ],
     providers: [
       provideMockStore({ initialState }),
@@ -33,9 +31,9 @@ describe('TlMegaMenuSectionComponent', () => {
         provide: APP_CONFIG,
         useValue: testAppConfig
       }
-    ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
-  }).compileComponents()));
+    ]
+  })
+    .compileComponents()));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TlMegaMenuSectionComponent);

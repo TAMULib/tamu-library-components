@@ -1,9 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
-import { APP_CONFIG, testAppConfig, WvrTabComponent } from '@wvr/elements';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TLSharedModule } from '../../shared/tl-shared.module';
 import { TlTabComponent } from './tl-tab.component';
 
 describe('TlTabComponent', () => {
@@ -16,10 +15,8 @@ describe('TlTabComponent', () => {
   };
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
-    imports: [
-      BrowserAnimationsModule,
-      BrowserModule
-    ],
+    imports: [TLSharedModule],
+    declarations: [TlTabComponent],
     providers: [
       provideMockStore({ initialState }),
       {
@@ -27,12 +24,12 @@ describe('TlTabComponent', () => {
         useValue: testAppConfig
       }
     ],
-    declarations: [
-      TlTabComponent,
-      WvrTabComponent
-    ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
-  }).compileComponents()));
+    schemas: [
+      CUSTOM_ELEMENTS_SCHEMA,
+      NO_ERRORS_SCHEMA
+    ]
+  })
+    .compileComponents()));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TlTabComponent);

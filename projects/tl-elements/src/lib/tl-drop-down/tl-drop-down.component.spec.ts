@@ -1,9 +1,7 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 import { provideMockStore } from '@ngrx/store/testing';
-import { APP_CONFIG, testAppConfig, WvrDropdownComponent } from '@wvr/elements';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TLSharedModule } from '../shared/tl-shared.module';
 import { TlDropDownComponent } from './tl-drop-down.component';
 
 describe('TlDropDownComponent', () => {
@@ -16,23 +14,17 @@ describe('TlDropDownComponent', () => {
   };
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
-    imports: [
-      BrowserAnimationsModule
-    ],
-    declarations: [
-      TlDropDownComponent,
-      WvrDropdownComponent,
-      NgbDropdown
-    ],
+    imports: [TLSharedModule],
+    declarations: [TlDropDownComponent],
     providers: [
       provideMockStore({ initialState }),
       {
         provide: APP_CONFIG,
         useValue: testAppConfig
       }
-    ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
-  }).compileComponents()));
+    ]
+  })
+    .compileComponents()));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TlDropDownComponent);

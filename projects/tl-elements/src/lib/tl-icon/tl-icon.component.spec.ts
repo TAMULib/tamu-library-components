@@ -1,10 +1,9 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
-import { APP_CONFIG, testAppConfig, WvrIconComponent } from '@wvr/elements';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TLSharedModule } from '../shared/tl-shared.module';
 import { TlIconComponent } from './tl-icon.component';
 
 describe('TlIconComponent', () => {
@@ -18,14 +17,10 @@ describe('TlIconComponent', () => {
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule,
       HttpClientTestingModule,
-      InlineSVGModule
+      TLSharedModule
     ],
-    declarations: [
-      TlIconComponent,
-      WvrIconComponent
-    ],
+    declarations: [TlIconComponent],
     providers: [
       provideMockStore({ initialState }),
       {
@@ -33,8 +28,12 @@ describe('TlIconComponent', () => {
         useValue: testAppConfig
       }
     ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
-  }).compileComponents()));
+    schemas: [
+      CUSTOM_ELEMENTS_SCHEMA,
+      NO_ERRORS_SCHEMA
+    ]
+  })
+    .compileComponents()));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TlIconComponent);
