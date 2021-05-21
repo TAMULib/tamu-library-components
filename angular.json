@@ -26,7 +26,6 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -37,7 +36,6 @@
                 "input": "node_modules/tinymce",
                 "output": "/assets/tinymce/"
               }
-
             ],
             "styles": [
               "src/styles.scss"
