@@ -44,7 +44,7 @@ export const TL_ELEMENTS: Array<WvrElementDesc> = [
   { component: TlTabsComponent, selector: 'tl-tabs', lazy: true },
   { component: TlTabComponent, selector: 'tl-tab', lazy: true },
   { component: TlThemesComponent, selector: 'tl-themes', lazy: false },
-  { component: TlWysiwygComponent, selector: 'tl-wysiwyg', lazy: true },
+  { component: TlWysiwygComponent, selector: 'tl-wysiwyg', lazy: true }
 ];
 
 const MODULES = [
