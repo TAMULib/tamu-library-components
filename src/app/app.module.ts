@@ -1,4 +1,5 @@
 import { Injector, NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Store } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
@@ -11,6 +12,7 @@ const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUr
 /** The main module for the TAMU Compnent library. */
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     StoreDevtoolsModule.instrument({
       maxAge: 25, // retains last 25 states
       logOnly: true // restrict extension to log-only mode
