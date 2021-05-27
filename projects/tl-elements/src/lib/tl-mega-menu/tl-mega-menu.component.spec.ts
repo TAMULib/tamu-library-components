@@ -1,6 +1,7 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TLSharedModule } from '../shared/tl-shared.module';
@@ -18,6 +19,7 @@ describe('TlMegaMenuComponent', () => {
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [
+      BrowserAnimationsModule,
       HttpClientTestingModule,
       TLSharedModule
     ],
