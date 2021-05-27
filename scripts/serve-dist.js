@@ -16,6 +16,6 @@ server.get('/', (req, res) => {
 
 server.use('/', express.static(path.join(__dirname, '../dist/bundle')));
 
-server.listen(8080, () => {
-  console.log('Server listening to', 8080);
+server.listen(8081, () => {
+  console.log('Server listening to', 8081);
 });
