@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TLSharedModule } from '../shared/tl-shared.module';
@@ -14,7 +15,10 @@ describe('TamuItWorksComponent', () => {
   };
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
-    imports: [TLSharedModule],
+    imports: [
+      BrowserAnimationsModule,
+      TLSharedModule
+    ],
     declarations: [TamuItWorksComponent],
     providers: [
       provideMockStore({ initialState }),

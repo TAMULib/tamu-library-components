@@ -12,8 +12,21 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-
     }
+
+    body {
+      transition: opacity 0.5s ease-in;
+    }
+
+    .wvr-components-loading {
+      opacity: 0;
+    }
+
+    .wvr-hidden,
+    [wvr-hide-content] {
+      display: none;
+    }
+
     .index-container {
       margin: 12px;
       padding: 15px;
@@ -741,10 +754,7 @@
       </tl-modal-footer>
     </tl-modal>
   </div>
-  <div class="container" style="text-align: center;margin: 10px 60px;">
-    <wvre-text value="Editor Component" text-decoration="underline"></wvre-text><br /><br />
-    <tl-wysiwyg></tl-wysiwyg> <br /><br />
-  </div>
+
   <div class="container" style="text-align: center;margin: 10px 60px;">
     <wvre-text value="Card Component" text-decoration="underline"></wvre-text>
     <br /><br />
@@ -779,7 +789,7 @@
     <br>
 
     <tl-card>
-      <tl-card-img src="assets/kitten2.jpeg"></tl-card-img>
+      <tl-card-img src="assets/kitten2.jpeg" height="143" width="286"></tl-card-img>
       <tl-card-title>
         <wvre-text value="Card Title1"></wvre-text>
       </tl-card-title>
@@ -1284,12 +1294,14 @@
     </tl-tabs>
   </div>
 
+  <div class="container" style="text-align: center;margin: 10px 60px;">
+    <wvre-text value="Editor Component" text-decoration="underline"></wvre-text><br /><br />
+    <tl-wysiwyg></tl-wysiwyg> <br /><br />
+  </div>
+
   <div class="container index-container">
-
     <wvre-text value="Wvr Theme Color Preview" text-decoration="underline"></wvre-text><br /><br />
-
     <wvre-color-preview></wvre-color-preview>
-
   </div>
 
   <tl-footer></tl-footer>
