@@ -1,11 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbDropdown, NgbDropdownModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
-import { EditorModule } from '@tinymce/tinymce-angular';
 import { WvrSharedModule } from '@wvr/elements';
-import { InlineSVGModule } from 'ng-inline-svg';
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
 import { TlCardComponent } from '../tl-card/tl-card.component';
@@ -46,14 +41,7 @@ export const TL_COMPONENTS = [
 export const TL_PIPES = [];
 
 const MODULES = [
-  BrowserAnimationsModule,
   CommonModule,
-  EditorModule,
-  FormsModule,
-  InlineSVGModule,
-  NgbDropdownModule,
-  NgbModalModule,
-  ReactiveFormsModule,
   WvrSharedModule
 ];
 
@@ -69,9 +57,7 @@ const MODULES = [
     ...TL_COMPONENTS,
     ...TL_PIPES
   ],
-  providers: [
-    NgbDropdown
-  ],
+  providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TLSharedModule { }
