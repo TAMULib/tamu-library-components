@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0] - 06-04-21
+### Resolves
+
+- Tl components should offer the same build script support offered by Weaver Components (#309)
+- Tl components should build without warnings (#310)
+- Lighthouse requires node 12. (#315)
+
 ## [1.10.0] - 05-12-21
 ### Resolves
 
