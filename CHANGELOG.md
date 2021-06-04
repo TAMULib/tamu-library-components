@@ -15,6 +15,10 @@
 - Tl Footer Should Utilize the weaver default variant instead of button. (#301)
 - TL Header should use brand-secondary-neutral for the bottom nav background. (#306)
 
+## [1.9.1] - 05-05-21
+### Resolves
+
+- Sets bottom nav background color to secondaryNeutral.
 
 ## [1.9.0] - 04-23-21
 ### Resolves
