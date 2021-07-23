@@ -1,10 +1,9 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Injector, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Store } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
-import { actions, AppConfig, APP_CONFIG, registerCustomElements, RootState, showHiddentContent, ThemeVariants, WvrCoreModule, WvrSharedModule, wvrTimeout } from '@wvr/elements';
+import { actions, AppConfig, APP_CONFIG, registerWeaverElements, RootState, ThemeVariants } from '@wvr/elements';
 import { themes } from '../../projects/tl-elements/src/lib/utility/themes';
 import { TLCoreModule, TLSharedModule, TL_ELEMENTS } from '../../projects/tl-elements/src/public-api';
 
@@ -14,13 +13,12 @@ const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUr
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    BrowserModule,
     StoreDevtoolsModule.instrument({
       maxAge: 25, // retains last 25 states
       logOnly: true // restrict extension to log-only mode
     }),
-    TLSharedModule,
-    TLCoreModule
+    TLCoreModule,
+    TLSharedModule
   ],
   exports: [],
   providers: [
@@ -33,18 +31,15 @@ const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUr
   declarations: [],
   bootstrap: [],
   entryComponents: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: []
 })
 export class TamuLibModule {
 
   constructor(private readonly injector: Injector) {
-
+    registerWeaverElements(injector, TL_ELEMENTS);
   }
 
   ngDoBootstrap(): void {
-    registerCustomElements(this.injector, TL_ELEMENTS);
-    showHiddentContent(this.injector);
-
     const store = this.injector.get<Store<RootState>>(Store);
     Object.keys(themes)
       .forEach(name => {
@@ -54,19 +49,6 @@ export class TamuLibModule {
           theme
         }));
       });
-
-    wvrTimeout(() => {
-      const elements = document.querySelectorAll('.wvr-components-loading:not(body)');
-      elements.forEach(function(element) {
-        element.classList.remove('wvr-components-loading');
-      });
-
-      const bodyElem = document.querySelector('body');
-      if (bodyElem) {
-        bodyElem.classList.remove('wvr-components-loading');
-        bodyElem.classList.remove('wvr-hidden');
-      }
-    });
   }
 
 }

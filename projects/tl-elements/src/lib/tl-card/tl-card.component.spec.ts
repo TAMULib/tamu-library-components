@@ -1,34 +1,34 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TLSharedModule } from '../shared/tl-shared.module';
 import { TlCardComponent } from './tl-card.component';
 
 describe('TlCardComponent', () => {
   let component: TlCardComponent;
   let fixture: ComponentFixture<TlCardComponent>;
-  const initialState = { theme: {
-    themes: {}
-  }};
+  const initialState = {
+    theme: {
+      themes: {}
+    }
+  };
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        BrowserAnimationsModule
-      ],
-      declarations: [ TlCardComponent ],
-      providers: [
-        provideMockStore({initialState}),
-        {
-          provide: APP_CONFIG,
-          useValue: testAppConfig
-        }
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-    .compileComponents();
-  });
+  beforeEach(waitForAsync(() => TestBed.configureTestingModule({
+    imports: [
+      BrowserAnimationsModule,
+      TLSharedModule
+    ],
+    declarations: [TlCardComponent],
+    providers: [
+      provideMockStore({ initialState }),
+      {
+        provide: APP_CONFIG,
+        useValue: testAppConfig
+      }
+    ]
+  })
+    .compileComponents()));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TlCardComponent);

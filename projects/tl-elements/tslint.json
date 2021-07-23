@@ -12,6 +12,7 @@
       "element",
       "tl",
       "kebab-case"
-    ]
+    ],
+    "no-implicit-dependencies": false
   }
 }

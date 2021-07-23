@@ -23,7 +23,7 @@ export class TlButtonComponent extends TamuAbstractBaseComponent {
 
   @Input() btnTxt;
 
-  @Input() dispatchAction = '{}';
+  @Input() dispatchAction = 'Store.Action';
 
   @Input() dispatchActionProps = '{}';
 

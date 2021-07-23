@@ -16,7 +16,7 @@ export class TlAlertComponent extends TamuAbstractBaseComponent {
   @Input() alertType: 'basic' | 'self-closing' | 'custom';
 
   /** Used to override if close button has to be present for an alert.  */
-  @Input() closable: 'true' | 'false' = 'true';
+  @Input() closeable: 'true' | 'false' = 'true';
 
   @Input() closeTimer;
 

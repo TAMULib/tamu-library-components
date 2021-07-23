@@ -1,5 +1,8 @@
-<p class="section-title" [ngClass]="{active: active, 'mobile-layout': isMobileLayout}"
-  *ngIf="!viewAllHref"
+<p *ngIf="!viewAllHref" class="section-title"
+  [ngClass]="{
+    active: active,
+    'mobile-layout': isMobileLayout
+  }"
   (click)="toggleOpenClose()">
   {{sectionTitle}}
   <tl-icon-component *ngIf="isMobileLayout" [set]="'bootstrap'" [name]="'chevron-right'" [size]="'16px'"></tl-icon-component>
@@ -9,6 +12,9 @@
 </a>
 <wvr-nav-list-component
   vertical="true"
-  [ngClass]="{active: active, 'mobile-layout': isMobileLayout}">
+  [ngClass]="{
+    active: active,
+    'mobile-layout': isMobileLayout
+  }">
     <ng-content select="tl-nav-li, tl-mega-menu-custom" ngProjectAs="wvre-nav-li"></ng-content>
 </wvr-nav-list-component>

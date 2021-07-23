@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditorModule } from '@tinymce/tinymce-angular';
-import { WvrCoreModule, WvrSharedModule } from '@wvr/elements';
+import { WvrSharedModule } from '@wvr/elements';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
@@ -45,7 +46,9 @@ export const TL_PIPES = [];
 const MODULES = [
   CommonModule,
   EditorModule,
+  FormsModule,
   InlineSVGModule,
+  ReactiveFormsModule,
   WvrSharedModule
 ];
 
@@ -62,8 +65,6 @@ const MODULES = [
     ...TL_PIPES
   ],
   providers: [],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TLSharedModule { }
