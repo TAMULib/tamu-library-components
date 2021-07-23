@@ -1,30 +1,36 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DebugElement } from '@angular/core';
-import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
+import { TLSharedModule } from '../shared/tl-shared.module';
 import { TlMegaMenuComponent } from './tl-mega-menu.component';
 
-describe('MegaMenuComponent', () => {
+describe('TlMegaMenuComponent', () => {
   let component: TlMegaMenuComponent;
   let fixture: ComponentFixture<TlMegaMenuComponent>;
   let debugElement: DebugElement;
-  const initialState = { theme: {
-    themes: {}
-  }};
+  const initialState = {
+    theme: {
+      themes: {}
+    }
+  };
 
   beforeEach(waitForAsync(() => TestBed.configureTestingModule({
     imports: [
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      HttpClientTestingModule,
+      TLSharedModule
     ],
+    declarations: [TlMegaMenuComponent],
     providers: [
-      provideMockStore({initialState}),
+      provideMockStore({ initialState }),
       {
         provide: APP_CONFIG,
         useValue: testAppConfig
       }
-    ],
-    declarations: [ TlMegaMenuComponent ]
+    ]
   })
     .compileComponents()));
 
@@ -71,7 +77,7 @@ describe('MegaMenuComponent', () => {
     component.toggleMobileMenuOpen();
 
     expect(component.active)
-    .toBeFalse();
+      .toBeFalse();
 
   });
 

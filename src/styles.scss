@@ -9,10 +9,8 @@
   @import '~@wvr/elements/styles/overrides';
 }
 
-.wvr-components-loading,
-.wvr-hidden {
-  display: none;
-}
+@import '~@wvr/elements/styles/wvr-elements';
+@import '../projects/tl-elements/src/lib/shared/styles/tl-elements';
 
 body {
   margin: 0;
