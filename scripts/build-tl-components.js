@@ -19,7 +19,6 @@ cp.fork(__dirname + '/build-tl-config-template.js');
 
   const files = [
     `${componentsPath}/polyfills-${esv}.js`,
-    `${componentsPath}/styles-${esv}.js`,
     `${componentsPath}/main-${esv}.js`
   ];
 
@@ -31,6 +30,7 @@ cp.fork(__dirname + '/build-tl-config-template.js');
 
   fs.copy(`${componentsPath}/assets`, `${usagePath}/assets`);
   fs.copy(`${componentsPath}/assets`, `${bundlePath}/assets`);
+  fs.copy(`${componentsPath}/styles.css`, `${bundlePath}/styles.css`);
 
   fs.copy('projects/tl-elements/src/lib/shared/styles', `${elementsPath}/styles`);
   fs.copy('scripts', `${elementsPath}/scripts`);
