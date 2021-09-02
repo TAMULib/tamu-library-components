@@ -5,12 +5,7 @@ const shell = require('shelljs')
 const angularCli = require('@angular/cli');
 const elementsPath = 'dist/tl-elements';
 
-shell
-  .exec('npm link @wvr/elements');
-
-shell
-  .cd('projects/tl-elements')
-  .exec('npm link @wvr/elements');
+shell.exec('npm link @wvr/elements');
 
 angularCli.default({
   cliArgs: ['b'],
