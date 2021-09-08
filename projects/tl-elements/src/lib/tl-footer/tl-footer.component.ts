@@ -1,5 +1,4 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, Injector, Input, ViewEncapsulation } from '@angular/core';
-import { AppConfig, APP_CONFIG } from '@wvr/elements';
 import { Link } from '../utility/link';
 import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
 
