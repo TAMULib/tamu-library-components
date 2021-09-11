@@ -740,8 +740,7 @@
         <wvre-text value="Tl Modal Message"></wvre-text>
       </tl-modal-body>
       <tl-modal-footer>
-        <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal Title'}">
-        </tl-button>
+        <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal Title'}"></tl-button>
       </tl-modal-footer>
     </tl-modal>
 
@@ -750,8 +749,7 @@
         <wvre-text value="Tl Modal Message"></wvre-text>
       </tl-modal-body>
       <tl-modal-footer>
-        <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal 2'}">
-        </tl-button>
+        <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal 2'}"></tl-button>
       </tl-modal-footer>
     </tl-modal>
   </div>
@@ -761,80 +759,94 @@
     <br /><br />
 
     <tl-card theme-variant="primary" panel-format="solid">
-      <tl-card-header>
+      <template card-header>
         <wvre-text value="Card Header with solid panel formatting"></wvre-text>
-      </tl-card-header>
-      <tl-card-title>
+      </template>
+      <template card-title>
         <wvre-text value="This is a title"></wvre-text>
-      </tl-card-title>
-      <wvre-text value="This is a basic card body"></wvre-text>
+      </template>
+      <template card-content>
+        <wvre-text value="This is a basic card body"></wvre-text>
+      </template>
     </tl-card>
+
     <br /><br />
+
     <tl-card>
-      <tl-card-header>
+      <template card-header>
         <wvre-text value="Card Header"></wvre-text>
-      </tl-card-header>
-
-      <tl-card-title>
+      </template>
+      <template card-title>
         <wvre-text value="Card Title1"></wvre-text>
-      </tl-card-title>
-
-      <wvre-text value="A basic tl card with header and button"></wvre-text>
-
-      <tl-button theme-variant="primary">
-        <wvre-text value="Card Button"></wvre-text>
-      </tl-button>
-
+      </template>
+      <template card-content>
+        <wvre-text value="A basic tl card with header and button"></wvre-text>
+      </template>
+      <template card-buttons>
+        <tl-button theme-variant="primary">
+          <wvre-text value="Card Button"></wvre-text>
+        </tl-button>
+      </template>
     </tl-card>
 
-    <br>
+    <br /><br />
 
     <tl-card>
-      <tl-card-img src="assets/kitten2.jpeg" height="143" width="286"></tl-card-img>
-      <tl-card-title>
+      <template card-image>
+        <img src="assets/kitten2.jpeg" height="143" width="286" />
+      </template>
+      <template card-title>
         <wvre-text value="Card Title1"></wvre-text>
-      </tl-card-title>
-      <wvre-text value="Some quick example text to build on the card title and make up the bulk of the card's content."></wvre-text>
-
-      <wvre-list top list-type="group-flush">
-        <wvre-list-item>
-          <wvre-text value="Top List Item 1"></wvre-text>
-        </wvre-list-item>
-        <wvre-list-item context="warning">
-          <wvre-text value="Top List Item 2"></wvre-text>
-        </wvre-list-item>
-        <wvre-list-item context="success">
-          <wvre-text value="Top List Item 3"></wvre-text>
-        </wvre-list-item>
-      </wvre-list>
-
-      <wvre-list bottom list-type="group-flush">
-        <wvre-list-item>
-          <wvre-text value="Bottom List Item 1"></wvre-text>
-        </wvre-list-item>
-        <wvre-list-item context="warning">
-          <wvre-text value="Bottom List Item 2"></wvre-text>
-        </wvre-list-item>
-        <wvre-list-item context="success">
-          <wvre-text value="Bottom List Item 3"></wvre-text>
-        </wvre-list-item>
-      </wvre-list>
-
-      <tl-card-link href="www.google.com">
-        <wvre-text value="Google"></wvre-text>
-      </tl-card-link>
-      <tl-card-link href="www.gmail.com">
-        <wvre-text value="Gmail"></wvre-text>
-      </tl-card-link>
-
-      <tl-button theme-variant="secondary">
-        <wvre-text value="Go somewhere"></wvre-text>
-      </tl-button>
-
-      <tl-card-footer>
+      </template>
+      <template card-content>
+        <wvre-text value="Some quick example text to build on the card title and make up the bulk of the card's content."></wvre-text>
+      </template>
+      <template card-list-top>
+        <wvre-list list-type="group-flush">
+          <template list-items>
+            <wvre-list-item>
+              <wvre-text value="Top List Item 1"></wvre-text>
+            </wvre-list-item>
+            <wvre-list-item context="warning">
+              <wvre-text value="Top List Item 2"></wvre-text>
+            </wvre-list-item>
+            <wvre-list-item context="success">
+              <wvre-text value="Top List Item 3"></wvre-text>
+            </wvre-list-item>
+          </template>
+        </wvre-list>
+      </template>
+      <template card-list-bottom>
+        <wvre-list list-type="group-flush">
+          <template list-items>
+            <wvre-list-item>
+              <wvre-text value="Bottom List Item 1"></wvre-text>
+            </wvre-list-item>
+            <wvre-list-item context="warning">
+              <wvre-text value="Bottom List Item 2"></wvre-text>
+            </wvre-list-item>
+            <wvre-list-item context="success">
+              <wvre-text value="Bottom List Item 3"></wvre-text>
+            </wvre-list-item>
+          </template>
+        </wvre-list>
+      </template>
+      <template card-links>
+        <a href="www.google.com" class="card-link">
+          <wvre-text value="Google"></wvre-text>
+        </a>
+        <a href="www.gmail.com" class="card-link">
+          <wvre-text value="Gmail"></wvre-text>
+        </a>
+      </template>
+      <template card-buttons>
+        <tl-button theme-variant="secondary">
+          <wvre-text value="Go somewhere"></wvre-text>
+        </tl-button>
+      </template>
+      <template card-footer>
         <wvre-text value="Card Footer"></wvre-text>
-      </tl-card-footer>
-
+      </template>
     </tl-card>
 
   </div>
