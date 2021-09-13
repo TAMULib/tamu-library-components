@@ -736,21 +736,21 @@
   <div class="container" style="text-align: center;margin: 10px 60px;">
     <wvre-text value="Modal Component" text-decoration="underline"></wvre-text><br /><br />
     <tl-modal title="Tl Modal Title" btn-text="Launch Tl Modal Button">
-      <tl-modal-body>
+      <template modal-body>
         <wvre-text value="Tl Modal Message"></wvre-text>
-      </tl-modal-body>
-      <tl-modal-footer>
+      </template>
+      <template modal-footer>
         <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal Title'}"></tl-button>
-      </tl-modal-footer>
+      </template>
     </tl-modal>
 
     <tl-modal title="Tl Modal 2" btn-text="Launch Tl Modal Button" btn-visible="false">
-      <tl-modal-body>
+      <template modal-body>
         <wvre-text value="Tl Modal Message"></wvre-text>
-      </tl-modal-body>
-      <tl-modal-footer>
+      </template>
+      <template modal-footer>
         <tl-button btn-txt="Cancel" theme-variant="secondary" dispatch-action="Modal.closeModal" dispatch-action-props="{id: 'Tl Modal 2'}"></tl-button>
-      </tl-modal-footer>
+      </template>
     </tl-modal>
   </div>
 
