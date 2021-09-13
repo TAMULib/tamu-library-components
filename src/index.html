@@ -861,97 +861,91 @@
     <wvre-text value="Alert Component" text-decoration="underline"></wvre-text><br /><br />
 
     <!-- Primary Alert with Close button -->
-    <tl-alert
-      theme-variant="primary"
-      alert-type="basic">
-        <wvre-text value="A simple primary alert."></wvre-text>
+    <tl-alert theme-variant="primary" alert-type="basic">
+        <template alert-content>
+          <wvre-text value="A simple primary alert."></wvre-text>
+        </template>
     </tl-alert>
 
     <!-- Secondary Alert with Close button -->
-    <tl-alert
-      theme-variant="secondary"
-      alert-type="self-closing"
-      close-timer="15000">
+    <tl-alert theme-variant="secondary" alert-type="self-closing" close-timer="15000">
+      <template alert-content>
         <wvre-text value="A self closing secondary alert."></wvre-text>
+      </template>
     </tl-alert>
 
     <!-- Success Alert with Close button -->
-    <tl-alert
-      theme-variant="success"
-      alert-type="basic">
+    <tl-alert theme-variant="success" alert-type="basic">
+      <template alert-content>
         <wvre-text value="A simple success alert."></wvre-text>
+      </template>
     </tl-alert>
 
     <!-- Danger Alert with Close button -->
-    <tl-alert
-      theme-variant="danger"
-      alert-type="basic">
+    <tl-alert theme-variant="danger" alert-type="basic">
+      <template alert-content>
         <wvre-text value="A simple danger alert."></wvre-text>
+      </template>
     </tl-alert>
 
     <!-- Warning Alert with Close button -->
-    <tl-alert
-      theme-variant="warning"
-      alert-type="basic">
+    <tl-alert theme-variant="warning" alert-type="basic">
+      <template alert-content>
         <wvre-text value="A simple warning alert."></wvre-text>
+      </template>
     </tl-alert>
 
     <!-- Info Alert with Close button -->
-    <tl-alert
-      theme-variant="info"
-      alert-type="basic">
+    <tl-alert theme-variant="info" alert-type="basic">
+      <template alert-content>
         <wvre-text value="A simple info alert."></wvre-text>
+      </template>
     </tl-alert>
 
     <!-- Light Alert with Close button -->
-    <tl-alert
-      theme-variant="light"
-      alert-type="basic">
+    <tl-alert theme-variant="light" alert-type="basic">
+      <template alert-content>
         <wvre-text value="A simple light alert."></wvre-text>
+      </template>
     </tl-alert>
 
     <!-- Dark Alert with Close button -->
-    <tl-alert
-      theme-variant="dark"
-      alert-type="basic">
+    <tl-alert theme-variant="dark" alert-type="basic">
+      <template alert-content>
         <wvre-text value="A simple dark alert."></wvre-text>
+      </template>
     </tl-alert>
 
     <!-- Custom Alert with Close button -->
-    <tl-alert
-      theme-variant="success"
-      alert-type="custom">
-        <tl-custom-alert>
-          <h4 class="alert-heading">
-            <wvre-text value="Custom Alert Heading"></wvre-text>
-          </h4>
-          <p>
-            <wvre-text value="Custom Alert Body"></wvre-text>
-          </p>
-          <hr>
-          <p class="mb-0">
-            <wvre-text value="Custom Alert footer section."></wvre-text>
-          </p>
-        </tl-custom-alert>
+    <tl-alert theme-variant="success" alert-type="custom">
+      <template custom-alert-content>
+        <h4 class="alert-heading">
+          <wvre-text value="Custom Alert Heading"></wvre-text>
+        </h4>
+        <p>
+          <wvre-text value="Custom Alert Body"></wvre-text>
+        </p>
+        <hr>
+        <p class="mb-0">
+          <wvre-text value="Custom Alert footer section."></wvre-text>
+        </p>
+      </template>
     </tl-alert>
 
     <!-- Custom Alert with No Close button -->
-    <tl-alert
-      theme-variant="danger"
-      alert-type="custom"
-      closable="false">
-        <tl-custom-alert>
-          <h4 class="alert-heading">
-            <wvre-text value="Custom Alert Heading"></wvre-text>
-          </h4>
-          <p>
-            <wvre-text value="Custom Alert Body"></wvre-text>
-          </p>
-          <hr>
-          <p class="mb-0">
-            <wvre-text value="Custom Alert footer section."></wvre-text>
-          </p>
-        </tl-custom-alert>
+    <tl-alert theme-variant="danger" alert-type="custom" closable="false">
+      <template custom-alert-content>
+        <h4 class="alert-heading">
+          <wvre-text value="Custom Alert Heading"></wvre-text>
+        </h4>
+        <p>
+          <wvre-text value="Custom Alert Body"></wvre-text>
+        </p>
+        <hr>
+        <p class="mb-0">
+          <wvre-text value="Custom Alert footer section."></wvre-text>
+        </p>
+      </template>
     </tl-alert>
   </div>
   <br />

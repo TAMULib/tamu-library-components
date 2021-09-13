@@ -3,10 +3,5 @@
   [themeVariant]="themeVariant"
   [closeable]="closeable"
   [closeTimer]="closeTimer">
-  <template alert-content>
-    <ng-content select="wvre-text, wvr-text-component" ngProjectAs="wvre-text"></ng-content>
-  </template>
-  <template custom-alert-content>
-  <ng-content select="tl-custom-alert"></ng-content>
-</template>
+  <ng-content select="template" ngProjectAs="template"></ng-content>
 </wvr-alert-component>
