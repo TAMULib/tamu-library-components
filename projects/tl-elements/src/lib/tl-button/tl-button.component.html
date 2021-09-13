@@ -8,9 +8,7 @@
     [dispatchActionProps]="dispatchActionProps"
     [href]="href"
     [wvrBtnType]="wvrBtnType">
-    <template button-content>
-      <ng-content select="wvre-text, wvr-text-component"></ng-content>
-    </template>
+    <ng-content select="template[button-content]" ngProjectAs="template[button-content]"></ng-content>
   </wvr-button-component>
   <wvr-button-component
     *ngIf="href === ''"
@@ -20,8 +18,6 @@
     [dispatchAction]="dispatchAction"
     [dispatchActionProps]="dispatchActionProps"
     [wvrBtnType]="wvrBtnType">
-    <template button-content>
-      <ng-content select="wvre-text, wvr-text-component"></ng-content>
-    </template>
+    <ng-content select="template[button-content]" ngProjectAs="template[button-content]"></ng-content>
   </wvr-button-component>
 </tl-button-wrapper>
