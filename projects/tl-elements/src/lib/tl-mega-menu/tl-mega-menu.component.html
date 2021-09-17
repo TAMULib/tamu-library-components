@@ -47,11 +47,11 @@
       </div>
     </div>
     <div class="mega-menu-view-all container pt-2" *ngIf="viewAllHref">
-      <tl-button [href]="viewAllHref" [themeVariant]="'primary'">
+      <tl-button-component [href]="viewAllHref" [themeVariant]="'primary'">
         <template button-content>
           <wvr-text-component [value]="viewAllButtonDisplayText"></wvr-text-component>
         </template>
-      </tl-button>
+      </tl-button-component>
     </div>
   </template>
 </wvr-dropdown-component>
