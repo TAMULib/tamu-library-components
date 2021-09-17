@@ -24,8 +24,8 @@
     "tslib": "^2.3.1"
   },
   "peerDependencies": {
-    "@angular/common": "^12.2.5",
-    "@angular/core": "^12.2.5",
+    "@angular/common": "^12.2.6",
+    "@angular/core": "^12.2.6",
     "@tinymce/tinymce-angular": "^4.2.1",
     "@wvr/elements": "next",
     "ng-inline-svg": "^12.1.0"
