@@ -15,7 +15,7 @@
   ngbDropdownAnchor
   >
   <template dropdown-button>
-    <div (click)="toggleMobileMenuOpen()">
+    <span (click)="toggleMobileMenuOpen()">
       {{menuTitle}}
       <tl-icon-component
         class="x-icon"
@@ -30,7 +30,7 @@
         [name]="'plus'"
         [size]="'24px'">
       </tl-icon-component>
-    </div>
+    </span>
   </template>
   <template dropdown-menu>
     <div class="tl-mega-menu-custom-top" *ngIf="!isMobileLayout">

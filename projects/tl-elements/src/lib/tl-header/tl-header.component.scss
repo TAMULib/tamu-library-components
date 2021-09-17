@@ -183,7 +183,7 @@
     }
 
     wvr-nav-list-component[bottom-navigation]
-      wvr-nav-li-component.call-to-action {
+    wvr-nav-li-component.call-to-action {
       --wvr-nav-link-background-hover: var(--secondary);
       width: fit-content;
       font-family: var(--tl-font-family-sans-serif);
@@ -204,7 +204,7 @@
       }
     }
     wvr-nav-list-component[bottom-navigation]
-      wvr-nav-li-component.call-to-action:hover {
+    wvr-nav-li-component.call-to-action:hover {
       a {
         color: var(--tl-white);
         tl-icon-component svg {
@@ -244,7 +244,7 @@
         color: var(--tl-white);
       }
 
-      :hover wvre-dropdown-btn {
+      :hover {
         color: var(--tl-white);
         svg {
           color: var(--tl-white);
