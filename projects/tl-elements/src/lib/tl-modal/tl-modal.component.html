@@ -3,6 +3,6 @@
   [title]="title"
   [btnText]="btnText"
   [btnVisible]="btnVisible">
-  <ng-content select="tl-modal-body" ngProjectAs="wvre-modal-body"></ng-content>
-  <ng-content select="tl-modal-footer" ngProjectAs="wvre-modal-footer"></ng-content>
+  <ng-content select="template[modal-body]" ngProjectAs="template[modal-body]"></ng-content>
+  <ng-content select="template[modal-footer]" ngProjectAs="template[modal-footer]"></ng-content>
 </wvr-modal-component>

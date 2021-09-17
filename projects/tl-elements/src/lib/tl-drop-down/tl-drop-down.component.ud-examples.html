@@ -3,12 +3,11 @@
     The basic <code>tl-drop-down</code> component with no customizations.
   </desciption>
   <snippet>
-    
     <tl-drop-down btn-type="primary" hidden-in-mobile="true">
-        <tl-dropdown-btn>
-          <wvre-text value="Primary Dropdown"></wvre-text>
-        </tl-dropdown-btn>
-      <tl-dropdown-menu>
+      <template dropdown-button>
+        <wvre-text value="Primary Dropdown"></wvre-text>
+      </template>
+      <template dropdown-menu>
         <wvre-dropdown-menu-item>
           <wvre-text value="Drop Down Item 1"></wvre-text>
         </wvre-dropdown-menu-item>
@@ -18,8 +17,7 @@
         <wvre-dropdown-menu-item>
           <wvre-text value="Drop Down Item 3"></wvre-text>
         </wvre-dropdown-menu-item>
-      </tl-dropdown-menu>
+      </template>
     </tl-drop-down>
-
   </snippet>
 </example>
