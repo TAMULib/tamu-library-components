@@ -236,6 +236,9 @@
         font-size: 16px;
         color: var(--tl-black);
       }
+      .nav-item > a.nav-link wvre-text {
+        margin-top: 4px;
+      }
 
       .nav-item:hover > a wvre-text {
         color: var(--tl-white);
