@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { AfterContentInit, AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
 import { debounce, wvrTimeout } from '@wvr/elements';
 import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
