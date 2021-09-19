@@ -125,15 +125,15 @@
       .information-for {
         div[template="dropdown-menu"] > wvre-dropdown-menu-item {
           display: block;
-          a {
-            color: var(--secondary-default-hover-bg);
-            text-decoration: none;
-            line-height: 2;
-            padding: 10px 20px;
-          }
-          a:hover {
-            color: var(--secondary-default-bg);
-          }
+        }
+        a {
+          color: var(--secondary-default-hover-bg);
+          text-decoration: none;
+          line-height: 2;
+          padding: 10px 20px;
+        }
+        a:hover {
+          color: var(--secondary-default-bg);
         }
       }
 
