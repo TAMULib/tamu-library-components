@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { Alignment } from '@wvr/elements';
-import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 /**
  * The TamuNavList Component represents a navigation list.

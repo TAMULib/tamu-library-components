@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
-import { actions, ThemeVariants, wvrTimeout } from '@wvr/elements';
-import { themes } from '../utility/themes';
+import { actions } from '@wvr/elements';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { themes } from '../shared/themes';
 
 @Component({
   selector: 'tl-themes-component',

@@ -20,4 +20,4 @@ export * from './lib/tl-tabs/tl-tabs.component';
 export * from './lib/tl-tabs/tl-tab/tl-tab.component';
 export * from './lib/tl-themes/tl-themes.component';
 export * from './lib/tl-wysiwyg/tl-wysiwyg.component';
-export * from './lib/utility/themes';
+export * from './lib/shared/themes';
