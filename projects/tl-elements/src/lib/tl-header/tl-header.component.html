@@ -18,6 +18,7 @@
 
   <template bottom-navigation>
     <wvr-nav-list-component bottom-navigation *ngIf="!isMobileLayout">
+      <template nav-list-items [wvrContentProjection]="eRef" template="nav-list-items"></template>
       <template nav-list-items>
         <ng-container *ngTemplateOutlet="bottomNavContent"></ng-container>
       </template>
@@ -25,12 +26,15 @@
   </template>
 
   <template mobile-menu>
-    <ng-container *ngTemplateOutlet="bottomNavContent"></ng-container>
-    <wvr-nav-list-component top-navigation-mobile>
-      <template nav-list-items>
-        <ng-container *ngTemplateOutlet="topNavContent"></ng-container>
-      </template>
-    </wvr-nav-list-component>
+    <div *ngIf="isMobileLayout">
+      <wvr-nav-list-component [wvrContentProjection]="eRef" template="nav-list-items"></wvr-nav-list-component>
+      <ng-container *ngTemplateOutlet="bottomNavContent"></ng-container>
+      <wvr-nav-list-component top-navigation-mobile>
+        <template nav-list-items>
+          <ng-container *ngTemplateOutlet="topNavContent"></ng-container>
+        </template>
+      </wvr-nav-list-component>
+    </div>
   </template>
 
 </wvr-header-component>
@@ -235,7 +239,6 @@
 </ng-template>
 
 <ng-template #bottomNavContent>
-  <ng-content select="wvre-nav-li"></ng-content>
   <wvr-nav-li-component class="ml-auto call-to-action" *ngIf="suppressCallToAction !=='true'">
     <a href="https://library.tamu.edu/about/giving/">
       <tl-icon-component [set]="'bootstrap'" [name]="'gift-fill'"></tl-icon-component>
