@@ -120,11 +120,6 @@
             text-decoration: underline;
           }
         }
-        wvre-dropdown-menu {
-          line-height: 0.6rem;
-          margin-left: -20px;
-          padding: 0px 15px;
-        }
       }
 
       .information-for {
@@ -151,7 +146,7 @@
           color: var(--tl-black);
         }
 
-        wvre-dropdown-menu > wvre-dropdown-menu-item {
+        div[template="dropdown-menu"] > wvre-dropdown-menu-item {
           border-bottom: 1px solid var(--light);
           padding: 10px 0px;
           display: flex;
@@ -170,13 +165,13 @@
           }
         }
 
-        wvre-dropdown-menu > wvre-dropdown-menu-item:hover > .helpLink {
+        div[template="dropdown-menu"] > wvre-dropdown-menu-item:hover > .helpLink {
           background: var(--secondaryNeutral);
           border-radius: 5px;
         }
 
-        wvre-dropdown-menu > wvre-dropdown-menu-item:first-child,
-        wvre-dropdown-menu > wvre-dropdown-menu-item:last-child {
+        div[template="dropdown-menu"] > wvre-dropdown-menu-item:first-child,
+        div[template="dropdown-menu"] > wvre-dropdown-menu-item:last-child {
           border-bottom: 0px;
         }
       }
