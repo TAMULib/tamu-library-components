@@ -93,7 +93,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
       if (bottomNav) {
         let wvrBtn;
         const frameReq = requestAnimationFrame(() => {
-          wvrBtn = nativeElem.querySelector('wvre-dropdown-btn');
+          wvrBtn = nativeElem.querySelector('div[template="dropdown-button"]');
           /* istanbul ignore else*/
           if (wvrBtn) {
             this.menuXOffset = (bottomNav.firstChild as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;

@@ -140,7 +140,7 @@
     }
 
     .wvr-dropdown .dropdown {
-      wvre-dropdown-btn {
+      div[template="dropdown-button"] {
         width: 100%;
         tl-icon-component.plus-icon {
           display: none;
@@ -174,12 +174,12 @@
     }
 
     ::ng-deep {
-      wvre-dropdown-menu {
+      div[template="dropdown-menu"] {
         display: none;
       }
 
       .wvr-dropdown .dropdown {
-        wvre-dropdown-btn {
+        div[template="dropdown-button"] {
           tl-icon-component.plus-icon {
             display: inline-block;
           }
