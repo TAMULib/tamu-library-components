@@ -246,7 +246,7 @@
       }
 
       :hover {
-        color: var(--tl-white);
+        span[button-content],
         svg {
           color: var(--tl-white);
         }
