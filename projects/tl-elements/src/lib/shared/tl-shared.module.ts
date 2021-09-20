@@ -7,7 +7,7 @@ import { InlineSVGModule } from 'ng-inline-svg';
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
 import { TlCardComponent } from '../tl-card/tl-card.component';
-import { TlDropDownComponent } from '../tl-drop-down/tl-drop-down.component';
+import { TlDropDownComponent } from '../tl-dropdown/tl-dropdown.component';
 import { TlFooterComponent } from '../tl-footer/tl-footer.component';
 import { TlHeaderComponent } from '../tl-header/tl-header.component';
 import { TlIconComponent } from '../tl-icon/tl-icon.component';

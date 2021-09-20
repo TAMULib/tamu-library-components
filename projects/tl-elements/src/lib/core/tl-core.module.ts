@@ -3,7 +3,7 @@ import { WvrColorPreviewComponent, WvrCoreModule, WvrElementDesc, WvrListCompone
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
 import { TlCardComponent } from '../tl-card/tl-card.component';
-import { TlDropDownComponent } from '../tl-drop-down/tl-drop-down.component';
+import { TlDropDownComponent } from '../tl-dropdown/tl-dropdown.component';
 import { TlFooterComponent } from '../tl-footer/tl-footer.component';
 import { TlHeaderComponent } from '../tl-header/tl-header.component';
 import { TlIconComponent } from '../tl-icon/tl-icon.component';
@@ -32,7 +32,7 @@ export const TL_ELEMENTS: Array<WvrElementDesc> = [
   { component: TlAlertComponent, selector: 'tl-alert', lazy: true },
   { component: TlButtonComponent, selector: 'tl-button', lazy: true },
   { component: TlCardComponent, selector: 'tl-card', lazy: true },
-  { component: TlDropDownComponent, selector: 'tl-drop-down', lazy: true },
+  { component: TlDropDownComponent, selector: 'tl-dropdown', lazy: true },
   { component: TlFooterComponent, selector: 'tl-footer', lazy: true },
   { component: TlHeaderComponent, selector: 'tl-header', lazy: true },
   { component: TlIconComponent, selector: 'tl-icon', lazy: true },

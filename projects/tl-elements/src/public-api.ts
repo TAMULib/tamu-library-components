@@ -7,7 +7,7 @@ export * from './lib/shared/tl-shared.module';
 export * from './lib/tl-alert/tl-alert.component';
 export * from './lib/tl-button/tl-button.component';
 export * from './lib/tl-card/tl-card.component';
-export * from './lib/tl-drop-down/tl-drop-down.component';
+export * from './lib/tl-dropdown/tl-dropdown.component';
 export * from './lib/tl-footer/tl-footer.component';
 export * from './lib/tl-header/tl-header.component';
 export * from './lib/tl-icon/tl-icon.component';
