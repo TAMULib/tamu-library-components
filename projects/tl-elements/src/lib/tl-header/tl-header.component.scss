@@ -240,9 +240,6 @@
         display: flex;
         align-items: center;
       }
-      .nav-item > a.nav-link wvre-text {
-        margin-top: 4px;
-      }
 
       .nav-item:hover > a wvre-text {
         color: var(--tl-white);
@@ -272,6 +269,7 @@
                 font-size: var(--tl-font-size);
               }
               wvr-button-component {
+                margin-top: 1px;
                 display: flex;
                 height: 100%;
                 width: 100%;
@@ -396,7 +394,7 @@
             padding-top: 6px !important;
             padding-bottom: 6px !important;
             margin-top: 0px !important;
-            div[template="dropdown-button"],
+            div[dropdown-button],
             wvr-text-component,
             wvre-text {
               font-family: var(--tl-font-family-sans-serif);
