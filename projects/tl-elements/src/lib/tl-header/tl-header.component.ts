@@ -8,7 +8,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TamuHeaderComponent extends TamuAbstractBaseComponent {
+export class TlHeaderComponent extends TamuAbstractBaseComponent {
 
   /** This is a URL pointing to the location of the logo. */
   logoSrc = `${this.appConfig.assetsUrl}/icons/tl/tamu-logo.svg`;

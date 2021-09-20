@@ -8,7 +8,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TamuItWorksComponent extends TamuAbstractBaseComponent {
+export class TlItWorksComponent extends TamuAbstractBaseComponent {
 
   /** The text value to be displayed in the page title. */
   title = 'tl-it-works-component';

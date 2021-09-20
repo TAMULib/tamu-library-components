@@ -3,11 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TLSharedModule } from '../shared/tl-shared.module';
-import { TamuFooterComponent } from './tl-footer.component';
+import { TlFooterComponent } from './tl-footer.component';
 
 describe('TlFooterComponent', () => {
-  let component: TamuFooterComponent;
-  let fixture: ComponentFixture<TamuFooterComponent>;
+  let component: TlFooterComponent;
+  let fixture: ComponentFixture<TlFooterComponent>;
   const initialState = {
     theme: {
       themes: {}
@@ -19,7 +19,7 @@ describe('TlFooterComponent', () => {
       BrowserAnimationsModule,
       TLSharedModule
     ],
-    declarations: [TamuFooterComponent],
+    declarations: [TlFooterComponent],
     providers: [
       provideMockStore({ initialState }),
       {
@@ -32,7 +32,7 @@ describe('TlFooterComponent', () => {
     .catch(err => { console.error(err); })));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TamuFooterComponent);
+    fixture = TestBed.createComponent(TlFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

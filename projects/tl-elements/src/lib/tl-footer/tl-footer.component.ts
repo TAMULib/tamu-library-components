@@ -12,7 +12,7 @@ import { Link } from '../shared/link';
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TamuFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit {
+export class TlFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit {
 
   @Input() loginUrl: string;
 
