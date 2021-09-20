@@ -117,17 +117,17 @@
           color: var(--primaryNeutral);
           a {
             color: #2b5d7d;
-            text-decoration: underline;
+            wvr-text-component {
+              text-decoration: underline;
+            }
           }
-        }
-        wvre-dropdown-menu {
-          line-height: 0.6rem;
-          margin-left: -20px;
-          padding: 0px 15px;
         }
       }
 
       .information-for {
+        wvre-dropdown-menu-item {
+          display: block;
+        }
         a {
           color: var(--secondary-default-hover-bg);
           text-decoration: none;
@@ -151,7 +151,7 @@
           color: var(--tl-black);
         }
 
-        wvre-dropdown-menu > wvre-dropdown-menu-item {
+        wvre-dropdown-menu-item {
           border-bottom: 1px solid var(--light);
           padding: 10px 0px;
           display: flex;
@@ -170,20 +170,20 @@
           }
         }
 
-        wvre-dropdown-menu > wvre-dropdown-menu-item:hover > .helpLink {
+        wvre-dropdown-menu-item:hover > .helpLink {
           background: var(--secondaryNeutral);
           border-radius: 5px;
         }
 
-        wvre-dropdown-menu > wvre-dropdown-menu-item:first-child,
-        wvre-dropdown-menu > wvre-dropdown-menu-item:last-child {
+        wvre-dropdown-menu-item:first-child,
+        wvre-dropdown-menu-item:last-child {
           border-bottom: 0px;
         }
       }
     }
 
     wvr-nav-list-component[bottom-navigation]
-      wvr-nav-li-component.call-to-action {
+    wvr-nav-li-component.call-to-action {
       --wvr-nav-link-background-hover: var(--secondary);
       width: fit-content;
       font-family: var(--tl-font-family-sans-serif);
@@ -204,7 +204,7 @@
       }
     }
     wvr-nav-list-component[bottom-navigation]
-      wvr-nav-li-component.call-to-action:hover {
+    wvr-nav-li-component.call-to-action:hover {
       a {
         color: var(--tl-white);
         tl-icon-component svg {
@@ -236,13 +236,17 @@
         font-size: 16px;
         color: var(--tl-black);
       }
+      .nav-item > a.nav-link {
+        display: flex;
+        align-items: center;
+      }
 
       .nav-item:hover > a wvre-text {
         color: var(--tl-white);
       }
 
-      :hover wvre-dropdown-btn {
-        color: var(--tl-white);
+      :hover {
+        span[button-content],
         svg {
           color: var(--tl-white);
         }
@@ -265,6 +269,7 @@
                 font-size: var(--tl-font-size);
               }
               wvr-button-component {
+                margin-top: 1px;
                 display: flex;
                 height: 100%;
                 width: 100%;
@@ -330,20 +335,19 @@
         }
       }
 
-      .mobile-menu > div > div > wvre-nav-li > li {
+      .mobile-menu > div > div > wvr-nav-list-component > wvre-nav-li > li > a {
         display: flex;
-        > a {
-          justify-content: start !important;
-          height: 65px;
-          width: 100%;
-          background: var(--tl-deep-yellow);
-          border-bottom: 1px solid var(--secondaryNeutral);
-          wvre-text {
-            font-family: var(--tl-font-family-sans-serif);
-            font-weight: 600;
-            font-size: 16px;
-            color: var(--tl-black);
-          }
+        align-items: center;
+        justify-content: flex-start;
+        height: 65px;
+        width: 100%;
+        background: var(--tl-deep-yellow);
+        border-bottom: 1px solid var(--secondaryNeutral);
+        wvre-text {
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 600;
+          font-size: 16px;
+          color: var(--tl-black);
         }
       }
 
@@ -390,7 +394,7 @@
             padding-top: 6px !important;
             padding-bottom: 6px !important;
             margin-top: 0px !important;
-            wvre-dropdown-btn,
+            div[dropdown-button],
             wvr-text-component,
             wvre-text {
               font-family: var(--tl-font-family-sans-serif);
@@ -487,6 +491,13 @@
           .dropdown
           wvr-button-component {
           white-space: nowrap;
+          span[button-content] {
+            width: 100%;
+            span {
+              display: inline-block;
+              width: 100%;
+            }
+          }
         }
       }
       wvr-nav-li-component.call-to-action {

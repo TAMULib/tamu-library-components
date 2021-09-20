@@ -1,5 +1,5 @@
 import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input, OnInit } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../../utility/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.component';
 import { TlMegaMenuComponent } from '../tl-mega-menu.component';
 
 @Component({
@@ -32,6 +32,7 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
   }
 
   ngOnInit(): void {
+    super.ngOnInit();
     const elem = this.eRef.nativeElement as HTMLElement;
     const parentElem = elem.closest('tl-mega-menu');
     if (parentElem) {
@@ -45,7 +46,7 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
     super.ngAfterContentInit();
     setTimeout(() => {
       this.parent.addSection(this);
-    }, 500);
+    }, 1500);
   }
 
   open(): void {
@@ -66,9 +67,11 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
   }
 
   toggleOpenClose(): void {
-    this.active ?
-    this.close() :
-    this.open();
+    if (this.active) {
+      this.close();
+    } else {
+      this.open();
+    }
   }
 
   getElementHeight(): number {

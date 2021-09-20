@@ -1,6 +1,6 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, Injector, Input, ViewEncapsulation } from '@angular/core';
-import { Link } from '../utility/link';
-import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { Link } from '../shared/link';
 
 /**
  * A fullwidth footer component which attaches to the bottom of the document body.
@@ -12,7 +12,7 @@ import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TamuFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit {
+export class TlFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit {
 
   @Input() loginUrl: string;
 

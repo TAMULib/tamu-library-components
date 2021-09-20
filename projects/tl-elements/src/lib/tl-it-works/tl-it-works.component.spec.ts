@@ -3,11 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TLSharedModule } from '../shared/tl-shared.module';
-import { TamuItWorksComponent } from './tl-it-works.component';
+import { TlItWorksComponent } from './tl-it-works.component';
 
-describe('TamuItWorksComponent', () => {
-  let component: TamuItWorksComponent;
-  let fixture: ComponentFixture<TamuItWorksComponent>;
+describe('TlItWorksComponent', () => {
+  let component: TlItWorksComponent;
+  let fixture: ComponentFixture<TlItWorksComponent>;
   const initialState = {
     theme: {
       themes: {}
@@ -19,7 +19,7 @@ describe('TamuItWorksComponent', () => {
       BrowserAnimationsModule,
       TLSharedModule
     ],
-    declarations: [TamuItWorksComponent],
+    declarations: [TlItWorksComponent],
     providers: [
       provideMockStore({ initialState }),
       {
@@ -32,7 +32,7 @@ describe('TamuItWorksComponent', () => {
     .catch(err => { console.error(err); })));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TamuItWorksComponent);
+    fixture = TestBed.createComponent(TlItWorksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

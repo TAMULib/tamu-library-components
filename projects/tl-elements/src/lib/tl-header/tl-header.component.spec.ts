@@ -4,11 +4,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TLSharedModule } from '../shared/tl-shared.module';
-import { TamuHeaderComponent } from './tl-header.component';
+import { TlHeaderComponent } from './tl-header.component';
 
-describe('TamuHeaderComponent', () => {
-  let component: TamuHeaderComponent;
-  let fixture: ComponentFixture<TamuHeaderComponent>;
+describe('TlHeaderComponent', () => {
+  let component: TlHeaderComponent;
+  let fixture: ComponentFixture<TlHeaderComponent>;
   const initialState = {
     theme: {
       themes: {}
@@ -21,7 +21,7 @@ describe('TamuHeaderComponent', () => {
       HttpClientTestingModule,
       TLSharedModule
     ],
-    declarations: [TamuHeaderComponent],
+    declarations: [TlHeaderComponent],
     providers: [
       provideMockStore({ initialState }),
       {
@@ -34,7 +34,7 @@ describe('TamuHeaderComponent', () => {
     .catch(err => { console.error(err); })));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TamuHeaderComponent);
+    fixture = TestBed.createComponent(TlHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

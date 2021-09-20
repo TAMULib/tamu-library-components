@@ -3,11 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { Alignment, APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TLSharedModule } from '../shared/tl-shared.module';
-import { TamuNavListComponent } from './tl-nav-list.component';
+import { TlNavListComponent } from './tl-nav-list.component';
 
-describe('TamuNavListComponent', () => {
-  let component: TamuNavListComponent;
-  let fixture: ComponentFixture<TamuNavListComponent>;
+describe('TlNavListComponent', () => {
+  let component: TlNavListComponent;
+  let fixture: ComponentFixture<TlNavListComponent>;
   const initialState = {
     theme: {
       themes: {}
@@ -19,7 +19,7 @@ describe('TamuNavListComponent', () => {
       BrowserAnimationsModule,
       TLSharedModule
     ],
-    declarations: [TamuNavListComponent],
+    declarations: [TlNavListComponent],
     providers: [
       provideMockStore({ initialState }),
       {
@@ -32,7 +32,7 @@ describe('TamuNavListComponent', () => {
     .catch(err => { console.error(err); })));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TamuNavListComponent);
+    fixture = TestBed.createComponent(TlNavListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
