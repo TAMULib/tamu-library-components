@@ -140,7 +140,7 @@
     }
 
     .wvr-dropdown .dropdown {
-      div[template="dropdown-button"] {
+      wvr-button-component {
         width: 100%;
         tl-icon-component.plus-icon {
           display: none;
@@ -179,7 +179,7 @@
       }
 
       .wvr-dropdown .dropdown {
-        div[template="dropdown-button"] {
+        wvr-button-component {
           tl-icon-component.plus-icon {
             display: inline-block;
           }

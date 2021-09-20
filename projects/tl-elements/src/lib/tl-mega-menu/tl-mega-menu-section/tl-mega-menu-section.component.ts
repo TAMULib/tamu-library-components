@@ -45,7 +45,7 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
     super.ngAfterContentInit();
     setTimeout(() => {
       this.parent.addSection(this);
-    }, 500);
+    }, 1000);
   }
 
   open(): void {
@@ -66,9 +66,11 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
   }
 
   toggleOpenClose(): void {
-    this.active ?
-    this.close() :
-    this.open();
+    if (this.active) {
+      this.close();
+    } else {
+      this.open();
+    }
   }
 
   getElementHeight(): number {

@@ -62,9 +62,9 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   addSection(section: TlMegaMenuSectionComponent): void {
     this.sections.push(section);
-    this.sectionTitleHeight = section.getElementHeight() > this.sectionTitleHeight ?
-      section.getElementHeight() :
-      this.sectionTitleHeight;
+    this.sectionTitleHeight = section.getElementHeight() > this.sectionTitleHeight
+      ? section.getElementHeight()
+      : this.sectionTitleHeight;
   }
 
   /** This toggles the display of mobile menu on click event. */
