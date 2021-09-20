@@ -117,7 +117,9 @@
           color: var(--primaryNeutral);
           a {
             color: #2b5d7d;
-            text-decoration: underline;
+            wvr-text-component {
+              text-decoration: underline;
+            }
           }
         }
       }
