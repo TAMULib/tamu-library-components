@@ -491,6 +491,13 @@
           .dropdown
           wvr-button-component {
           white-space: nowrap;
+          span[button-content] {
+            width: 100%;
+            span {
+              display: inline-block;
+              width: 100%;
+            }
+          }
         }
       }
       wvr-nav-li-component.call-to-action {

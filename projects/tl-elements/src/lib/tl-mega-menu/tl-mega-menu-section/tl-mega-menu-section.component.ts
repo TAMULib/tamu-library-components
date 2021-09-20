@@ -45,7 +45,7 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
     super.ngAfterContentInit();
     setTimeout(() => {
       this.parent.addSection(this);
-    }, 1000);
+    }, 1250);
   }
 
   open(): void {
