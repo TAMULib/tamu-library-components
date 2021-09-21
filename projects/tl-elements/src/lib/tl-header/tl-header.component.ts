@@ -47,6 +47,8 @@ export class TlHeaderComponent extends TamuAbstractBaseComponent {
   /** This boolean attribute is used to supress display of "Give to the Libraries" button. */
   @Input() suppressCallToAction: 'true' | 'false' = 'false';
 
+  suppressTopNavList: Array<string> = [];
+
   mobileMenuClosed = true;
 
   // tslint:disable-next-line:unnecessary-constructor
@@ -56,6 +58,26 @@ export class TlHeaderComponent extends TamuAbstractBaseComponent {
 
   toggleMobileMenu(): void {
     this.mobileMenuClosed = !this.mobileMenuClosed;
+  }
+
+  @Input() set suppressTopNav(value: string) {
+    this.suppressTopNavList.length = 0;
+
+    if (value.trim().toLowerCase() == 'all') {
+      this.suppressTopNavList.push('all');
+    }
+    else {
+      let values = value.split(',');
+
+      for (let key in values) {
+        this.suppressTopNavList.push(values[key].trim().toLowerCase());
+      }
+    }
+  }
+
+  showTopNav(value: string): boolean {
+    return this.suppressTopNavList.indexOf('all') == -1
+      && this.suppressTopNavList.indexOf(value.trim().toLowerCase()) == -1;
   }
 
 }
