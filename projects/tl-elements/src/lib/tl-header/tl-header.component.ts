@@ -47,6 +47,7 @@ export class TlHeaderComponent extends TamuAbstractBaseComponent {
   /** This boolean attribute is used to supress display of "Give to the Libraries" button. */
   @Input() suppressCallToAction: 'true' | 'false' = 'false';
 
+  /** This defines an array containing each top navigation to be suppressed or contains 'all' to suppress all top navigation. */
   suppressTopNavList: Array<string> = [];
 
   mobileMenuClosed = true;
@@ -56,10 +57,24 @@ export class TlHeaderComponent extends TamuAbstractBaseComponent {
     super(injector);
   }
 
+  /**
+   * Toggles Mobile Menu from open to closed.
+   */
   toggleMobileMenu(): void {
     this.mobileMenuClosed = !this.mobileMenuClosed;
   }
 
+  /**
+   * Designates top navigation to suppress.
+   *
+   * @param {string} value
+   *   - A CSV string of supported top navigation names.
+   *   - May specify 'all' to designate suppression of all top navigation.
+   *   - Each CSV will be trimmed.
+   *   - Each CSV will be treated in a case insensitive manner.
+   *
+   * @returns {void}
+   */
   @Input() set suppressTopNav(value: string) {
     this.suppressTopNavList.length = 0;
 
@@ -75,6 +90,18 @@ export class TlHeaderComponent extends TamuAbstractBaseComponent {
     }
   }
 
+  /**
+   * Method for checking whether or not a given top navigation is to be suppressed.
+   *
+   * @param {string} value
+   *   - The name of the top navigation.
+   *   - This will be trimmed.
+   *   - This is treated in a case insensitive manner.
+   *
+   * @returns {boolean}
+   *   - TRUE when the top navigation is not to be suppressed.
+   *   - FALSE when the top navigation is to be suppressed.
+   */
   showTopNav(value: string): boolean {
     return this.suppressTopNavList.indexOf('all') == -1
       && this.suppressTopNavList.indexOf(value.trim().toLowerCase()) == -1;
