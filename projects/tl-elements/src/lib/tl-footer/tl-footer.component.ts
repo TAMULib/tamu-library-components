@@ -1,6 +1,8 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Injector, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+export const LOGIN_LABEL = 'Login';
 
 /**
  * A fullwidth footer component which attaches to the bottom of the document body.
@@ -12,7 +14,7 @@ import { Link } from '../shared/link';
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TlFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit {
+export class TlFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit, OnChanges {
 
   @Input() loginUrl: string;
 
@@ -36,11 +38,23 @@ export class TlFooterComponent extends TamuAbstractBaseComponent implements Afte
   }
 
   ngAfterViewInit(): void {
-    if (!!this.loginUrl) {
-      this.links.push({
-          href: this.loginUrl,
-          value: 'Login'
-      });
+    setTimeout(() => {
+      console.log('component set to yahoo');
+      this.loginUrl = 'http://yahoo.com';
+      this.cdRef.detectChanges();
+    }, 15000);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+    if (!!changes.loginUrl) {
+      this.links = this.links.filter(link => link.value !== LOGIN_LABEL);
+      if (!!changes.loginUrl.currentValue && changes.loginUrl.currentValue.length) {
+        this.links.push({
+          href: changes.loginUrl.currentValue,
+          value: LOGIN_LABEL
+        });
+      }
     }
   }
 

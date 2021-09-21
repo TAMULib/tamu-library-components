@@ -1,15 +1,5 @@
-import { enableProdMode, isDevMode } from '@angular/core';
-import { weaverBootstrap } from '@wvr/elements';
+import { weaverInit } from '@wvr/elements';
 import { TamuLibModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-if (environment.production) {
-  enableProdMode();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  weaverBootstrap(TamuLibModule)(isDevMode() ? '/config.json' : undefined)
-    .catch(error => {
-      console.error(error);
-    });
-});
+weaverInit(TamuLibModule, environment);
