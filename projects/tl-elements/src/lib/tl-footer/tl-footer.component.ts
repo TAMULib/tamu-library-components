@@ -47,11 +47,12 @@ export class TlFooterComponent extends TamuAbstractBaseComponent implements Afte
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
-    if (!!changes.loginUrl) {
+    if (changes.loginUrl) {
       this.links = this.links.filter(link => link.value !== LOGIN_LABEL);
-      if (!!changes.loginUrl.currentValue && changes.loginUrl.currentValue.length) {
+      if (this.loginUrl) {
+        console.log('add login link', this.loginUrl);
         this.links.push({
-          href: changes.loginUrl.currentValue,
+          href: this.loginUrl,
           value: LOGIN_LABEL
         });
       }
