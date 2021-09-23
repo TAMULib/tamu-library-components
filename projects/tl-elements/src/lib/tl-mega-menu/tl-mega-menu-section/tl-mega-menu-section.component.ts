@@ -38,7 +38,7 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
     if (parentElem) {
       this.parent = this.componentRegistry.getComponentByElement(parentElem as HTMLElement) as TlMegaMenuComponent;
     } else {
-      console.warn(`TlMegaMenuSectionComponent (${this.id}) is not within a TLMegamMenuComponent`);
+      console.warn(`TlMegaMenuSectionComponent (${this.id}) is not within a TlMegaMenuComponent`);
     }
   }
 

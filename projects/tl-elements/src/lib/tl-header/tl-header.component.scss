@@ -17,6 +17,7 @@
 
     .title-row {
       background-color: var(--primary-default-bg);
+
       a span {
         color: var(--primary-default-color);
       }
@@ -105,8 +106,10 @@
         a {
           text-decoration: none;
         }
+
         .libraries-link {
           margin-bottom: 18px;
+
           a {
             color: var(--primary);
             text-decoration: underline;
@@ -115,6 +118,7 @@
 
         p {
           color: var(--primaryNeutral);
+
           a {
             color: #2b5d7d;
             wvr-text-component {
@@ -128,12 +132,14 @@
         wvre-dropdown-menu-item {
           display: block;
         }
+
         a {
           color: var(--secondary-default-hover-bg);
           text-decoration: none;
           line-height: 2;
           padding: 10px 20px;
         }
+
         a:hover {
           color: var(--secondary-default-bg);
         }
@@ -147,6 +153,7 @@
         .wvr-button {
           color: var(--tl-white);
         }
+
         .wvr-button:hover {
           color: var(--tl-black);
         }
@@ -155,12 +162,14 @@
           border-bottom: 1px solid var(--light);
           padding: 10px 0px;
           display: flex;
+
           a {
             color: var(--primary-default-bg);
             padding: 8px 0px 8px 8px;
             text-decoration: none;
             width: 100%;
           }
+
           tl-icon-component svg {
             fill: var(--dark);
             width: 35px;
@@ -203,6 +212,7 @@
         }
       }
     }
+
     wvr-nav-list-component[bottom-navigation]
     wvr-nav-li-component.call-to-action:hover {
       a {
@@ -230,12 +240,14 @@
       --wvr-nav-link-color-hover: var(--tl-white);
       --wvr-nav-link-background-hover: var(--dark);
       width: fit-content;
+
       .nav-item > a wvre-text {
         font-family: var(--tl-font-family-sans-serif);
         font-weight: 700;
         font-size: 16px;
         color: var(--tl-black);
       }
+
       .nav-item > a.nav-link {
         display: flex;
         align-items: center;
@@ -252,29 +264,36 @@
         }
       }
 
+      tl-dropdown-menu,
       tl-mega-menu {
         display: flex;
         height: 100%;
         width: 100%;
+
         wvr-dropdown-component {
           display: flex;
           height: 100%;
           width: 100%;
+
           .wvr-dropdown {
             width: 100%;
             .dropdown {
               height: 100%;
               width: 100%;
+
               wvre-text {
                 font-size: var(--tl-font-size);
               }
+
               wvr-button-component {
                 margin-top: 1px;
                 display: flex;
                 height: 100%;
                 width: 100%;
+
                 button-wrapper {
                   width: 100%;
+
                   button {
                     height: 100%;
                     width: 100%;
@@ -299,9 +318,11 @@
     .top-nav {
       border-bottom: 1px solid var(--primaryNeutral);
       background: var(--primaryAccent-default-bg);
+
       .navbar-brand wvre-text-node {
         color: var(--primaryAccent-default-color);
       }
+
       .container {
         > div {
           height: auto;
@@ -325,10 +346,12 @@
 
       .top-nav {
         border-bottom: 1px solid var(--primaryNeutral);
+
         .container {
           > div {
             width: 100%;
           }
+
           > a.navbar-brand {
             margin: auto;
           }
@@ -343,6 +366,7 @@
         width: 100%;
         background: var(--tl-deep-yellow);
         border-bottom: 1px solid var(--secondaryNeutral);
+
         wvre-text {
           font-family: var(--tl-font-family-sans-serif);
           font-weight: 600;
@@ -380,6 +404,7 @@
           wvr-button-component {
             display: flex;
             width: 100%;
+
             button-wrapper {
               width: 100%;
               .btn {
@@ -394,6 +419,7 @@
             padding-top: 6px !important;
             padding-bottom: 6px !important;
             margin-top: 0px !important;
+
             div[dropdown-button],
             wvr-text-component,
             wvre-text {
@@ -410,29 +436,36 @@
         text-align: center;
       }
 
+      tl-dropdown-menu,
       tl-mega-menu {
         width: 100%;
         background: var(--tl-deep-yellow);
         overflow: hidden;
         border-bottom: var(--secondaryNeutral);
+
         wvr-dropdown-component {
           display: flex;
           width: 100%;
+
           .wvr-dropdown {
             display: flex !important;
             width: 100%;
+
             .dropdown {
               display: flex !important;
               width: 100%;
+
               wvr-button-component {
                 display: flex;
                 width: 100%;
+
                 button-wrapper {
                   display: flex;
                   width: 100%;
                   height: 68px;
                   align-items: center;
                   border-bottom: thin solid var(--secondaryNeutral);
+
                   button {
                     display: flex;
                     width: 100%;
@@ -459,6 +492,7 @@
       }
     }
   }
+
   .mobile-menu-button {
     display: none;
     margin-left: 10px;
@@ -476,21 +510,33 @@
     left: 0;
     z-index: 1100;
     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
     div.mobile-menu-content {
       wvre-nav-li > li.nav-item {
         a {
           white-space: nowrap;
         }
+
+        .mobile-display tl-dropdown-menu-section-component,
+        .mobile-display tl-dropdown-menu-section
         .mobile-display tl-mega-menu-section-component,
         .mobile-display tl-mega-menu-section {
           white-space: nowrap;
         }
+
+        tl-dropdown-menu
+          > wvr-dropdown-component
+          > .wvr-dropdown
+          .dropdown
+          wvr-button-component,
         tl-mega-menu
           > wvr-dropdown-component
           > .wvr-dropdown
           .dropdown
           wvr-button-component {
+
           white-space: nowrap;
+
           span[button-content] {
             width: 100%;
             span {
@@ -500,6 +546,7 @@
           }
         }
       }
+
       wvr-nav-li-component.call-to-action {
         a {
           color: var(--tl-black);
@@ -513,6 +560,7 @@
           text-decoration: none;
           font-weight: 700;
         }
+
         tl-icon-component svg {
           display: none;
         }

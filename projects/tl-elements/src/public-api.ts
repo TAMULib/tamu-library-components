@@ -8,6 +8,8 @@ export * from './lib/tl-alert/tl-alert.component';
 export * from './lib/tl-button/tl-button.component';
 export * from './lib/tl-card/tl-card.component';
 export * from './lib/tl-dropdown/tl-dropdown.component';
+export * from './lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component';
+export * from './lib/tl-dropdown-menu/tl-dropdown-menu.component';
 export * from './lib/tl-footer/tl-footer.component';
 export * from './lib/tl-header/tl-header.component';
 export * from './lib/tl-icon/tl-icon.component';

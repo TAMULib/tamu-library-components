@@ -12,6 +12,7 @@ import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
+
   /** The default text value to be displayed for tl-mega menu title. */
   @Input() menuTitle = 'Mega Menu';
 

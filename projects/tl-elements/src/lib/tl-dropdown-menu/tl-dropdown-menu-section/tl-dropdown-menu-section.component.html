@@ -1,0 +1,5 @@
+<wvr-nav-list-component vertical="true" class="section-content" [ngClass]="{ 'mobile-layout': isMobileLayout }">
+  <template nav-list-items>
+    <ng-content select="tl-nav-li, tl-dropdown-menu-custom" ngProjectAs="wvr-nav-li"></ng-content>
+  </template>
+</wvr-nav-list-component>
