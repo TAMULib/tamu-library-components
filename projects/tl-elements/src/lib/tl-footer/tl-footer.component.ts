@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, Injector, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { Link } from '../shared/link';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
@@ -14,7 +14,7 @@ export const LOGIN_LABEL = 'Login';
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TlFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit, OnChanges {
+export class TlFooterComponent extends TamuAbstractBaseComponent implements OnChanges {
 
   @Input() loginUrl: string;
 
@@ -37,20 +37,10 @@ export class TlFooterComponent extends TamuAbstractBaseComponent implements Afte
     super(injector);
   }
 
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      console.log('component set to yahoo');
-      this.loginUrl = 'http://yahoo.com';
-      this.cdRef.detectChanges();
-    }, 15000);
-  }
-
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
     if (changes.loginUrl) {
       this.links = this.links.filter(link => link.value !== LOGIN_LABEL);
       if (this.loginUrl) {
-        console.log('add login link', this.loginUrl);
         this.links.push({
           href: this.loginUrl,
           value: LOGIN_LABEL
