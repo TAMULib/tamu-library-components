@@ -1331,7 +1331,7 @@
 
   <div class="container" style="text-align: center;margin: 10px 60px;">
     <wvre-text value="Editor Component" text-decoration="underline"></wvre-text><br /><br />
-    <tl-wysiwyg initial-value="Hello, TAMU!"></tl-wysiwyg>
+    <tl-wysiwyg initial-value="Hello, TAMU!" emit-event="saveTlWysiwyg" id="saveTlWysiwyg" ></tl-wysiwyg>
     <br /><br />
   </div>
 
@@ -1354,6 +1354,12 @@
 
 
   <script defer src="tl-components.js"></script>
+  <!-- This script section is to demonstrate that save event listener is triggered when the contents of wysiwyg editor are saved -->
+  <!-- <script>
+    const tlWysiwygElem = document.querySelector('#saveTlWysiwyg');
+    window.addEventListener('saveTlWysiwyg', console.log);
+    console.log(tlWysiwygElem);
+  </script> -->
 
 </body>
 

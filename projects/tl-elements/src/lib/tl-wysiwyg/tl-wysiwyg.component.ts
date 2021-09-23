@@ -10,6 +10,8 @@ export class TlWysiwygComponent extends TamuAbstractBaseComponent {
 
   @Input() initialValue = '';
 
+  @Input() emitEvent = '';
+
   skin = 'oxide';
 
   // tslint:disable-next-line:unnecessary-constructor
