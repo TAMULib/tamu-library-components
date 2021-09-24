@@ -40,12 +40,13 @@
 </wvr-header-component>
 
 <ng-template #topNavContent>
-  <wvr-nav-li-component>
+  <wvr-nav-li-component *ngIf="showTopNav('hours')">
     <a href="https://library.tamu.edu/about/hours.html">
       <wvr-text-component value="Hours"></wvr-text-component>
     </a>
   </wvr-nav-li-component>
-  <wvr-nav-li-component>
+
+  <wvr-nav-li-component *ngIf="showTopNav('libraries')">
     <wvr-dropdown-component class="libraries"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu/about/index.html'"
@@ -123,7 +124,8 @@
       </template>
     </wvr-dropdown-component>
   </wvr-nav-li-component>
-  <wvr-nav-li-component>
+
+  <wvr-nav-li-component *ngIf="showTopNav('information for')">
     <wvr-dropdown-component class="information-for"
       [btnType]="'link'"
       [btnHref]="'https://library.tamu.edu'"
@@ -173,13 +175,14 @@
       </template>
     </wvr-dropdown-component>
   </wvr-nav-li-component>
-  <wvr-nav-li-component>
+
+  <wvr-nav-li-component *ngIf="showTopNav('mylibrary')">
     <a href="https://library.tamu.edu/mylibrary/">
       <wvr-text-component value="MyLibrary"></wvr-text-component>
     </a>
   </wvr-nav-li-component>
 
-  <wvr-nav-li-component>
+  <wvr-nav-li-component *ngIf="showTopNav('help')">
     <wvr-dropdown-component class="help"
       [btnType]="'link'"
       [btnHref]="'http://askus.library.tamu.edu/'"
@@ -235,7 +238,6 @@
       </template>
     </wvr-dropdown-component>
   </wvr-nav-li-component>
-
 </ng-template>
 
 <ng-template #bottomNavContent>
