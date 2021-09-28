@@ -1,0 +1,30 @@
+@import "../shared/styles/tl-encapsulated.scss";
+@import "../shared/styles/tl-branded-btn.scss";
+:host {
+    wvr-tabs-component {
+        ::ng-deep {
+            .nav-tabs {
+                .nav-link {
+                    color: var(--wvr-gray);
+                    border-right: 1px solid var(--wvr-gray);
+                    border-left: 1px solid var(--wvr-gray);
+                    border-top: 5px solid var(--wvr-gray);
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+                .nav-link:hover,
+                .nav-link:focus {
+                    color: var(--wvr-gray-dark);
+                    border-top: 5px solid var(--primary);
+                }
+
+                .nav-item.show .nav-link,
+                .nav-link.active {
+                    color: var(--wvr-gray-dark);
+                    background-color: var(--wvr-white);
+                    border-top: 5px solid  var(--primary);
+                }
+            }
+        }
+    }
+}
