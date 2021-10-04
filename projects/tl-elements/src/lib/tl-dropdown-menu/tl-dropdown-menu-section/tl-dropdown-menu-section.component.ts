@@ -18,16 +18,10 @@ export class TlDropDownMenuSectionComponent extends TamuAbstractBaseComponent im
   /** Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable. */
   @HostBinding('style.--wvr-nav-list-component-max-height') wvrNavListComponentMaxHeight: string;
 
-  constructor(injector: Injector) {
-    super(injector);
-  }
-
   /**
    * Perform initialization operations.
    *
    * This will identify the parent element.
-   *
-   * @returns {void}
    */
   ngOnInit(): void {
     super.ngOnInit();
@@ -46,8 +40,6 @@ export class TlDropDownMenuSectionComponent extends TamuAbstractBaseComponent im
    * Perform after-initialization operations.
    *
    * This will add the section to the parent's component.
-   *
-   * @returns {void}
    */
   ngAfterContentInit(): void {
     super.ngAfterContentInit();
@@ -60,7 +52,7 @@ export class TlDropDownMenuSectionComponent extends TamuAbstractBaseComponent im
   /**
    * Get the clientHeight of the element.
    *
-   * @returns {number} the height of the element, in pixels.
+   * @returns the height of the element, in pixels.
    */
   getElementHeight(): number {
     return (this.eRef.nativeElement as HTMLElement).clientHeight;

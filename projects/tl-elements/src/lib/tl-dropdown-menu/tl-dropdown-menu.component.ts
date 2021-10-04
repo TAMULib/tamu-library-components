@@ -39,9 +39,7 @@ export class TlDropDownMenuComponent extends TamuAbstractBaseComponent implement
    *
    * The section title height will be auto-adjusted based on the added section.
    *
-   * @param {TlDropDownMenuSectionComponent} The section to append.
-   *
-   * @returns {void}
+   * @param The section to append.
    */
   addSection(section: TlDropDownMenuSectionComponent): void {
     this.sections.push(section);
@@ -54,8 +52,6 @@ export class TlDropDownMenuComponent extends TamuAbstractBaseComponent implement
 
   /**
    * Toggles the mobile view menu open or closed.
-   *
-   * @returns {void}
    */
   toggleMobileMenuOpen(): void {
     this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionHeight}px`;

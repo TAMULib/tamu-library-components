@@ -67,25 +67,28 @@ export class TlHeaderComponent extends TamuAbstractBaseComponent {
   /**
    * Designates top navigation to suppress.
    *
-   * @param {string} value
+   * @param value
    *   - A CSV string of supported top navigation names.
    *   - May specify 'all' to designate suppression of all top navigation.
    *   - Each CSV will be trimmed.
    *   - Each CSV will be treated in a case insensitive manner.
-   *
-   * @returns {void}
    */
   @Input() set suppressTopNav(value: string) {
     this.suppressTopNavList.length = 0;
 
-    if (value.trim().toLowerCase() == 'all') {
-      this.suppressTopNavList.push('all');
-    }
-    else {
-      let values = value.split(',');
+    const sanitized = value
+      .trim()
+      .toLowerCase();
 
-      for (let key in values) {
-        this.suppressTopNavList.push(values[key].trim().toLowerCase());
+    if (sanitized === 'all') {
+      this.suppressTopNavList.push('all');
+    } else {
+      const values = value.split(',');
+
+      for (const key of values) {
+        this.suppressTopNavList.push(values[key]
+          .trim()
+          .toLowerCase());
       }
     }
   }
@@ -93,18 +96,20 @@ export class TlHeaderComponent extends TamuAbstractBaseComponent {
   /**
    * Method for checking whether or not a given top navigation is to be suppressed.
    *
-   * @param {string} value
+   * @param value
    *   - The name of the top navigation.
    *   - This will be trimmed.
    *   - This is treated in a case insensitive manner.
    *
-   * @returns {boolean}
+   * @returns
    *   - TRUE when the top navigation is not to be suppressed.
    *   - FALSE when the top navigation is to be suppressed.
    */
   showTopNav(value: string): boolean {
-    return this.suppressTopNavList.indexOf('all') == -1
-      && this.suppressTopNavList.indexOf(value.trim().toLowerCase()) == -1;
+    return this.suppressTopNavList.indexOf('all') === -1
+      && this.suppressTopNavList.indexOf(value
+        .trim()
+        .toLowerCase()) === -1;
   }
 
 }
