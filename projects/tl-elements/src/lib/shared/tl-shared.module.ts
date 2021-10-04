@@ -8,6 +8,8 @@ import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
 import { TlCardComponent } from '../tl-card/tl-card.component';
 import { TlDropDownComponent } from '../tl-dropdown/tl-dropdown.component';
+import { TlDropDownMenuSectionComponent } from '../tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component';
+import { TlDropDownMenuComponent } from '../tl-dropdown-menu/tl-dropdown-menu.component';
 import { TlFooterComponent } from '../tl-footer/tl-footer.component';
 import { TlHeaderComponent } from '../tl-header/tl-header.component';
 import { TlIconComponent } from '../tl-icon/tl-icon.component';
@@ -27,6 +29,8 @@ export const TL_COMPONENTS = [
   TlButtonComponent,
   TlCardComponent,
   TlDropDownComponent,
+  TlDropDownMenuSectionComponent,
+  TlDropDownMenuComponent,
   TlFooterComponent,
   TlHeaderComponent,
   TlItWorksComponent,
