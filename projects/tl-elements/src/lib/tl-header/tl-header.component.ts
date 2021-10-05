@@ -85,8 +85,8 @@ export class TlHeaderComponent extends TamuAbstractBaseComponent {
     } else {
       const values = value.split(',');
 
-      for (const key of values) {
-        this.suppressTopNavList.push(values[key]
+      for (const name of values) {
+        this.suppressTopNavList.push(name
           .trim()
           .toLowerCase());
       }
