@@ -1,10 +1,13 @@
 @import "../shared/styles/tl-encapsulated.scss";
 @import "../shared/styles/tl-branded-btn.scss";
+@import '~@wvr/elements/styles/variables';
+
 :host {
     wvr-tabs-component {
         ::ng-deep {
             .nav-tabs {
-                .nav-link {
+
+                .nav-item .nav-link {
                     color: var(--wvr-gray);
                     border-right: 1px solid var(--wvr-gray);
                     border-left: 1px solid var(--wvr-gray);
@@ -12,19 +15,175 @@
                     border-top-left-radius: 0;
                     border-top-right-radius: 0;
                 }
-                .nav-link:hover,
-                .nav-link:focus {
-                    color: var(--wvr-gray-dark);
-                    border-top: 5px solid var(--primary);
+
+                // .nav-item .nav-link:hover,
+                // .nav-item .nav-link:focus {
+                //     color: var(--wvr-gray-dark);
+                //     border-color: var(--primary);
+                // }
+
+                // .nav-item.show .nav-link,
+                // .nav-link.active {
+                //     color: var(--wvr-gray-dark);
+                //     background-color: var(--wvr-white);
+                //     border-top: 5px solid  var(--primary);
+                // }
+
+                .nav-item:is([tab-inactive-color="primary"]) .nav-link,
+                .nav-link:is([tab-inactive-color="primary"]) {
+                    border-color: var(--primary);
                 }
 
-                .nav-item.show .nav-link,
-                .nav-link.active {
-                    color: var(--wvr-gray-dark);
-                    background-color: var(--wvr-white);
-                    border-top: 5px solid  var(--primary);
+                .nav-item:is([tab-active-color="primary"]) .nav-link,
+                .nav-item.show:is([tab-active-color="primary"]) .nav-link,
+                .nav-link.active:is([tab-active-color="primary"]) {
+                    border-color: var(--primary);
                 }
-            }
+
+                // primaryAccent
+                .nav-item:is([tab-inactive-color="primaryAccent"]) .nav-link,
+                .nav-link:is([tab-inactive-color="primaryAccent"]) {
+                    border-color: var(--primaryAccent);
+                }
+
+                .nav-item:is([tab-active-color="primaryAccent"]) .nav-link,
+                .nav-item.show:is([tab-active-color="primaryAccent"]) .nav-link,
+                .nav-link.active:is([tab-active-color="primaryAccent"]) {
+                    border-color: var(--primaryAccent);
+                }
+
+                // primaryNeutral
+                .nav-item:is([tab-inactive-color="primaryNeutral"]) .nav-link,
+                .nav-link:is([tab-inactive-color="primaryNeutral"]) {
+                    border-color: var(--primaryNeutral);
+                }
+
+                .nav-item:is([tab-active-color="primaryNeutral"]) .nav-link,
+                .nav-item.show:is([tab-active-color="primaryNeutral"]) .nav-link,
+                .nav-link.active:is([tab-active-color="primaryNeutral"]) {
+                    border-color: var(--primaryNeutral);
+                }
+
+                //secondary
+                .nav-item:is([tab-inactive-color="secondary"]) .nav-link,
+                .nav-link:is([tab-inactive-color="secondary"]) {
+                    border-color: var(--secondary);
+                }
+
+                .nav-item:is([tab-active-color="secondary"]) .nav-link,
+                .nav-item.show:is([tab-active-color="secondary"]) .nav-link,
+                .nav-link.active:is([tab-active-color="secondary"]) {
+                    border-color: var(--secondary);
+                }                        
+
+                // secondaryAccent
+                .nav-item:is([tab-inactive-color="secondaryAccent"]) .nav-link,
+                .nav-link:is([tab-inactive-color="secondaryAccent"]) {
+                    border-color: var(--secondaryAccent);
+                }
+
+                .nav-item:is([tab-active-color="secondaryAccent"]) .nav-link,
+                .nav-item.show:is([tab-active-color="secondaryAccent"]) .nav-link,
+                .nav-link.active:is([tab-active-color="secondaryAccent"]) {
+                    border-color: var(--secondaryAccent);
+                }
+
+                // secondaryNeutral
+                .nav-item:is([tab-inactive-color="secondaryNeutral"]) .nav-link,
+                .nav-link:is([tab-inactive-color="secondaryNeutral"]) {
+                    border-color: var(--secondaryNeutral);
+                }
+
+                .nav-item:is([tab-active-color="secondaryNeutral"]) .nav-link,
+                .nav-item.show:is([tab-active-color="secondaryNeutral"]) .nav-link,
+                .nav-link.active:is([tab-active-color="secondaryNeutral"]) {
+                    border-color: var(--secondaryNeutral);
+                }
+
+                //info
+                .nav-item:is([tab-inactive-color="info"]) .nav-link,
+                .nav-link:is([tab-inactive-color="info"]) {
+                    border-color: var(--info);
+                }
+
+                .nav-item:is([tab-active-color="info"]) .nav-link,
+                .nav-item.show:is([tab-active-color="info"]) .nav-link,
+                .nav-link.active:is([tab-active-color="info"]) {
+                    border-color: var(--info);
+                }
+
+                // success
+                .nav-item:is([tab-inactive-color="success"]) .nav-link,
+                .nav-link:is([tab-inactive-color="success"]) {
+                    border-color: var(--success);
+                }
+
+                .nav-item:is([tab-active-color="success"]) .nav-link,
+                .nav-item.show:is([tab-active-color="success"]) .nav-link,
+                .nav-link.active:is([tab-active-color="success"]) {
+                    border-color: var(--success);
+                }
+
+                // danger
+                .nav-item:is([tab-inactive-color="danger"]) .nav-link,
+                .nav-link:is([tab-inactive-color="danger"]) {
+                    border-color: var(--danger);
+                }
+
+                .nav-item:is([tab-active-color="danger"]) .nav-link,
+                .nav-item.show:is([tab-active-color="danger"]) .nav-link,
+                .nav-link.active:is([tab-active-color="danger"]) {
+                    border-color: var(--danger);
+                }
+
+                // warning
+                .nav-item:is([tab-inactive-color="warning"]) .nav-link,
+                .nav-link:is([tab-inactive-color="warning"]) {
+                    border-color: var(--warning);
+                }
+
+                .nav-item:is([tab-active-color="warning"]) .nav-link,
+                .nav-item.show:is([tab-active-color="warning"]) .nav-link,
+                .nav-link.active:is([tab-active-color="warning"]) {
+                    border-color: var(--warning);
+                }
+
+                // info
+                .nav-item:is([tab-inactive-color="info"]) .nav-link,
+                .nav-link:is([tab-inactive-color="info"]) {
+                    border-color: var(--info);
+                }
+
+                .nav-item:is([tab-active-color="info"]) .nav-link,
+                .nav-item.show:is([tab-active-color="info"]) .nav-link,
+                .nav-link.active:is([tab-active-color="info"]) {
+                    border-color: var(--info);
+                }
+
+                // dark
+                .nav-item:is([tab-inactive-color="dark"]) .nav-link,
+                .nav-link:is([tab-inactive-color="dark"]) {
+                    border-color: var(--dark);
+                }
+
+                .nav-item:is([tab-active-color="dark"]) .nav-link,
+                .nav-item.show:is([tab-active-color="dark"]) .nav-link,
+                .nav-link.active:is([tab-active-color="dark"]) {
+                    border-color: var(--dark);
+                }
+
+                // light
+                .nav-item:is([tab-inactive-color="light"]) .nav-link,
+                .nav-link:is([tab-inactive-color="light"]) {
+                    border-color: var(--light);
+                }
+
+                .nav-item:is([tab-active-color="light"]) .nav-link,
+                .nav-item.show:is([tab-active-color="light"]) .nav-link,
+                .nav-link.active:is([tab-active-color="light"]) {
+                    border-color: var(--light);
+                }                
+            }           
         }
     }
 }

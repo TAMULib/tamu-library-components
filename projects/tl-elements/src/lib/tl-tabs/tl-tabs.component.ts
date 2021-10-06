@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Injector } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Injector } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -9,6 +9,7 @@ import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component'
 })
 export class TlTabsComponent extends TamuAbstractBaseComponent {
 
+  // @HostBinding('style.--${this.themeVariant}-tab-inactive-color') tabInactiveColor: any;
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
