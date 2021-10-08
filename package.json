@@ -69,7 +69,7 @@
     "@ngrx/store-devtools": "^12.4.0",
     "@tinymce/tinymce-angular": "^4.2.4",
     "@ungap/custom-elements": "^1.0.0",
-    "@wvr/elements": "2.0.0-rc.4",
+    "@wvr/elements": "next",
     "bootstrap": "^4.6.0",
     "css-element-queries": "^1.2.3",
     "handlebars": "^4.7.7",

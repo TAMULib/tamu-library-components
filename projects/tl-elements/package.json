@@ -27,7 +27,7 @@
     "@angular/common": "^12.2.7",
     "@angular/core": "^12.2.7",
     "@tinymce/tinymce-angular": "^4.2.1",
-    "@wvr/elements": "2.0.0-rc.4",
+    "@wvr/elements": "next",
     "ng-inline-svg": "^12.1.0"
   }
 }
