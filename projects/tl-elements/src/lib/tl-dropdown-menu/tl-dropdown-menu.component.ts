@@ -1,7 +1,6 @@
 /* istanbul ignore file */
 
-import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
-import { debounce, wvrTimeout } from '@wvr/elements';
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { TlDropDownMenuSectionComponent } from './tl-dropdown-menu-section/tl-dropdown-menu-section.component';
 
@@ -33,6 +32,11 @@ export class TlDropDownMenuComponent extends TamuAbstractBaseComponent implement
 
   /** A container for all menu sections attached to this menu. */
   private readonly sections: Array<TlDropDownMenuSectionComponent> = [];
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   /**
    * Append a section to the menu.

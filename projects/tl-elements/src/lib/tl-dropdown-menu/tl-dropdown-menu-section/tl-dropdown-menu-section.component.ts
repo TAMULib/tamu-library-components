@@ -1,4 +1,4 @@
-import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input, OnInit } from '@angular/core';
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, OnInit } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../../shared/tl-abstract-base.component';
 import { TlDropDownMenuComponent } from '../tl-dropdown-menu.component';
 
@@ -17,6 +17,11 @@ export class TlDropDownMenuSectionComponent extends TamuAbstractBaseComponent im
 
   /** Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable. */
   @HostBinding('style.--wvr-nav-list-component-max-height') wvrNavListComponentMaxHeight: string;
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   /**
    * Perform initialization operations.
