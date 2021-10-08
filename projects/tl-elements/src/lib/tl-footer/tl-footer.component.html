@@ -1,7 +1,11 @@
 <wvr-footer-component [themeVariant]="'secondary'">
-  <wvr-nav-list-component aligned="CENTER">
-    <wvr-nav-li-component *ngFor="let link of links; trackBy:index" [href]="link.href">
-      <wvr-text-component [value]="link.value"></wvr-text-component>
-    </wvr-nav-li-component>
-  </wvr-nav-list-component>
+  <template footer-content>
+    <wvr-nav-list-component aligned="CENTER">
+      <template nav-list-items>
+        <wvr-nav-li-component *ngFor="let link of links; trackBy:index" [href]="link.href">
+          <wvr-text-component [value]="link.value"></wvr-text-component>
+        </wvr-nav-li-component>
+      </template>
+    </wvr-nav-list-component>
+  </template>
 </wvr-footer-component>

@@ -23,16 +23,19 @@
           text-decoration: none !important;
           color: var(--tl-black) !important;
         }
+
         .btn {
+          width: 100%;
+
           tl-icon-component.x-icon svg {
             transition: transform 0.25s ease-in-out;
             transform: rotate(0deg);
           }
+
           tl-icon-component.plus-icon svg {
             transition: transform 0.25s ease-in-out;
             transform: rotate(0deg);
           }
-          width: 100%;
         }
       }
     }
@@ -77,6 +80,7 @@
         flex-direction: column;
         width: 100%;
         padding: 0px;
+
         a {
           margin: 0px 15px 0px 0px;
           padding: 20px 0px 0px 60px;
@@ -85,6 +89,7 @@
           font-size: 17px;
           font-family: var(--tl-font-family-sans-serif);
           font-weight: 300;
+
           wvre-text {
             font-weight: 400;
             padding: 0px;
@@ -95,12 +100,14 @@
             width: 97%;
           }
         }
+
         a:hover {
           border-bottom: none;
           wvre-text {
             border-bottom: none;
           }
         }
+
         .section-title {
           cursor: pointer;
           margin: 0px 15px 0px 30px;
@@ -113,6 +120,7 @@
           border-bottom: 0.5px solid #e4e4e4;
           text-decoration: none;
         }
+
         a.mega-menu-view-all {
           cursor: pointer;
           margin: 0px 15px 0px 30px;
@@ -134,22 +142,24 @@
   }
 
   ::ng-deep {
-
     tl-button-component {
       --tl-btn-border-radius: 0px;
     }
 
     .wvr-dropdown .dropdown {
-      wvre-dropdown-btn {
+      wvr-button-component {
         width: 100%;
+
         tl-icon-component.plus-icon {
           display: none;
           float: right;
         }
+
         tl-icon-component.x-icon {
           display: inline-block;
         }
       }
+
       [ngbDropdownMenu] {
         padding: 20px 0px;
         border: 1px solid var(--tl-grey);
@@ -158,11 +168,9 @@
         box-shadow: 0px 2px 3px 1px var(--tl-grey);
       }
     }
-
   }
 
   @media (max-width: 992px) {
-
     wvr-dropdown-component {
       ::ng-deep {
         .wvr-dropdown .dropdown {
@@ -174,15 +182,16 @@
     }
 
     ::ng-deep {
-      wvre-dropdown-menu {
+      div[template="dropdown-menu"] {
         display: none;
       }
 
       .wvr-dropdown .dropdown {
-        wvre-dropdown-btn {
+        wvr-button-component {
           tl-icon-component.plus-icon {
             display: inline-block;
           }
+
           tl-icon-component.x-icon {
             display: none;
           }

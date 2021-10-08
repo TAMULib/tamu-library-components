@@ -1,0 +1,56 @@
+<wvr-dropdown-component
+  [themeVariant]="'link'"
+  [toggleOn]="'mouseover'"
+  [menuYOffset]="'-2px'"
+  [menuWidth]="menuWidth"
+  [btnTextDecoration]="'none'"
+  [btnColor]="'var(--tl-black)'"
+  [btnFontWeight]="'bolder'"
+  [btnColorHover]="'var(--tl-black)'"
+  [btnTextDecorationHover]="'none'"
+  [btnFontFamily]="'var(--tl-font-family-sans-serif)'"
+  [ngClass]="{active: active}"
+  [openDelay]="openDelay"
+  ngbDropdownAnchor>
+  <template dropdown-button>
+    <span (click)="toggleMobileMenuOpen()">
+      {{menuTitle}}
+      <tl-icon-component
+        class="x-icon"
+        [hiddenInMobile]="true"
+        [set]="'bootstrap'"
+        [name]="'caret-right-fill'"
+        [size]="'11px'">
+      </tl-icon-component>
+      <tl-icon-component
+        class="plus-icon"
+        [set]="'bootstrap'"
+        [name]="'plus'"
+        [size]="'24px'">
+      </tl-icon-component>
+    </span>
+  </template>
+  <template dropdown-menu>
+    <div *ngIf="!isMobileLayout" class="dropdown-menu-custom-top">
+      <div>
+        <ng-content select="tl-dropdown-menu-custom[top-content]"></ng-content>
+      </div>
+    </div>
+    <div *ngIf="!isMobileLayout" class="dropdown-menu-sections">
+      <ng-container *ngTemplateOutlet="sections"></ng-container>
+    </div>
+    <div *ngIf="!isMobileLayout" class="dropdown-menu-custom-bottom">
+      <div>
+        <ng-content select="tl-dropdown-menu-custom[bottom-content]"></ng-content>
+      </div>
+    </div>
+  </template>
+</wvr-dropdown-component>
+
+<div *ngIf="isMobileLayout" class="mobile-display" [ngClass]="{active: active}">
+  <ng-container *ngTemplateOutlet="sections"></ng-container>
+</div>
+
+<ng-template #sections>
+  <ng-content select="tl-dropdown-menu-section"></ng-content>
+</ng-template>

@@ -27,10 +27,6 @@
   [textDecorationActive]="btnTextDecorationActive"
   [textDecorationFocus]="btnTextDecorationFocus"
   ngbDropdownAnchor>
-  <wvre-dropdown-btn>
-    <ng-content select="tl-dropdown-btn"></ng-content>
-  </wvre-dropdown-btn>
-  <wvre-dropdown-menu>
-    <ng-content select="tl-dropdown-menu"></ng-content>
-  </wvre-dropdown-menu>
+  <ng-content select="template[dropdown-button]" ngProjectAs="template[dropdown-button]"></ng-content>
+  <ng-content select="template[dropdown-menu]" ngProjectAs="template[dropdown-menu]"></ng-content>
 </wvr-dropdown-component>

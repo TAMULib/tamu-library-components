@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0] - 10-08-21
+### Resolves
+
+- tl- and wvre- Tabs should allow form elements. (#321)
+- Refactor components for consistency. (#325)
+- Fix npm link scripts between weaver-components and tamu-library-components. (#329)
+- The TAMUWYSIWYGComponent should be extended to support initial content and saving of the data. (#335)
+- Tamu Components should support the TL Dropdown within the TL Header Bottom Nav, with mobile support. (#336)
+- TAMU Header should support the suppression of the top navigation links, both complete suppression and discriminate. (#337)
+- Tamu Library Components should extract CSS to avoid the removal of deprecated style strategy. (#339)
+- TL Components should utilize the latest version of Weaver Content projection. (#348)
+- TL-Header and TL-MegaMenu should not be circularly referent. (#352)
+- TL-Components should compile using the Ivy partial compiler option. (#353)
+
 ## [1.11.0] - 06-04-21
 ### Resolves
 
@@ -11,7 +25,7 @@
 ### Resolves
 
 - ngRX actions not firing on the tl-wysiwyg component. (#285)
-- Tl Header Should Utilize the weaver default variant instead of button.. (#300)
+- Tl Header Should Utilize the weaver default variant instead of button. (#300)
 - Tl Footer Should Utilize the weaver default variant instead of button. (#301)
 - TL Header should use brand-secondary-neutral for the bottom nav background. (#306)
 
@@ -22,6 +36,7 @@
 
 ## [1.9.0] - 04-23-21
 ### Resolves
+
 - TAMU Library Component should expose the weaver modal component. (#270)
 - tl-modal should support the toggling of the modal launch button. (#290)
 - TL Components should offer a tl-themes components.(#281)
@@ -32,6 +47,7 @@
 
 ## [1.8.0] - 03-31-21
 ### Resolves
+
 - The tl-header display not accurate on iPad. (#256)
 - Tamu Library Components should expose the Weaver WYSIWYG component. (#271)
 - Links in the information for dropdown are causing 404s. (#273)

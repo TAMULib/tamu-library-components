@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
-  selector: 'tl-drop-down-component',
-  templateUrl: './tl-drop-down.component.html',
-  styleUrls: ['./tl-drop-down.component.scss'],
+  selector: 'tl-dropdown-component',
+  templateUrl: './tl-dropdown.component.html',
+  styleUrls: ['./tl-dropdown.component.scss'],
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlDropDownComponent extends TamuAbstractBaseComponent {

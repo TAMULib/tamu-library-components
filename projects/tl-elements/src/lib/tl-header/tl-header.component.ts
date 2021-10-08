@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-header-component',
@@ -8,7 +8,7 @@ import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TamuHeaderComponent extends TamuAbstractBaseComponent {
+export class TlHeaderComponent extends TamuAbstractBaseComponent {
 
   /** This is a URL pointing to the location of the logo. */
   logoSrc = `${this.appConfig.assetsUrl}/icons/tl/tamu-logo.svg`;
@@ -47,6 +47,9 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
   /** This boolean attribute is used to supress display of "Give to the Libraries" button. */
   @Input() suppressCallToAction: 'true' | 'false' = 'false';
 
+  /** This defines an array containing each top navigation to be suppressed or contains 'all' to suppress all top navigation. */
+  suppressTopNavList: Array<string> = [];
+
   mobileMenuClosed = true;
 
   // tslint:disable-next-line:unnecessary-constructor
@@ -54,8 +57,59 @@ export class TamuHeaderComponent extends TamuAbstractBaseComponent {
     super(injector);
   }
 
+  /**
+   * Toggles Mobile Menu from open to closed.
+   */
   toggleMobileMenu(): void {
     this.mobileMenuClosed = !this.mobileMenuClosed;
+  }
+
+  /**
+   * Designates top navigation to suppress.
+   *
+   * @param value
+   *   - A CSV string of supported top navigation names.
+   *   - May specify 'all' to designate suppression of all top navigation.
+   *   - Each CSV will be trimmed.
+   *   - Each CSV will be treated in a case insensitive manner.
+   */
+  @Input() set suppressTopNav(value: string) {
+    this.suppressTopNavList.length = 0;
+
+    const sanitized = value
+      .trim()
+      .toLowerCase();
+
+    if (sanitized === 'all') {
+      this.suppressTopNavList.push('all');
+    } else {
+      const values = value.split(',');
+
+      for (const name of values) {
+        this.suppressTopNavList.push(name
+          .trim()
+          .toLowerCase());
+      }
+    }
+  }
+
+  /**
+   * Method for checking whether or not a given top navigation is to be suppressed.
+   *
+   * @param value
+   *   - The name of the top navigation.
+   *   - This will be trimmed.
+   *   - This is treated in a case insensitive manner.
+   *
+   * @returns
+   *   - TRUE when the top navigation is not to be suppressed.
+   *   - FALSE when the top navigation is to be suppressed.
+   */
+  showTopNav(value: string): boolean {
+    return this.suppressTopNavList.indexOf('all') === -1
+      && this.suppressTopNavList.indexOf(value
+        .trim()
+        .toLowerCase()) === -1;
   }
 
 }

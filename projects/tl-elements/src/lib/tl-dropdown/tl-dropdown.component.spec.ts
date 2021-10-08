@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { APP_CONFIG, testAppConfig } from '@wvr/elements';
 import { TLSharedModule } from '../shared/tl-shared.module';
-import { TlDropDownComponent } from './tl-drop-down.component';
+import { TlDropDownComponent } from './tl-dropdown.component';
 
 describe('TlDropDownComponent', () => {
   let component: TlDropDownComponent;

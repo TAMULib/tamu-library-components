@@ -4,37 +4,51 @@
   </desciption>
   <snippet>
     <tl-card>
-      <tl-card-header>
+      <template card-header>
         <wvre-text value="Card Header"></wvre-text>
-      </tl-card-header>
-      <tl-card-img src="assets/kitten2.jpeg"></tl-card-img>
-      <tl-card-title>
+      </template>
+      <template card-image>
+        <img src="assets/kitten2.jpeg"></img>
+      </template>
+      <template card-title>
         <wvre-text value="Card Title1"></wvre-text>
-      </tl-card-title>
-      <wvre-text value="Some quick example text to build on the card title and make up the bulk of the card's content."></wvre-text>
-      <wvre-list top list-type="group-flush">
-        <wvre-list-item>
-          <wvre-text value="Top List Item 1"></wvre-text>
-        </wvre-list-item>
-        <wvre-list-item context="warning">
-          <wvre-text value="Top List Item 2"></wvre-text>
-        </wvre-list-item>
-        <wvre-list-item context="success">
-          <wvre-text value="Top List Item 3"></wvre-text>
-        </wvre-list-item>
-      </wvre-list>
-      <tl-card-link href="www.google.com">
-        <wvre-text value="Google"></wvre-text>
-      </tl-card-link>
-      <tl-card-link href="www.gmail.com">
-        <wvre-text value="Gmail"></wvre-text>
-      </tl-card-link>
-      <tl-button theme-variant="secondary">
-        <wvre-text value="Go somewhere"></wvre-text>
-      </tl-button>
-      <tl-card-footer>
+      </template>
+      <template card-content>
+        <wvre-text value="Some quick example text to build on the card title and make up the bulk of the card's content."></wvre-text>
+      </template>
+      <template card-list-top>
+        <wvre-list list-type="group-flush">
+          <template list-items>
+            <wvre-list-item>
+              <wvre-text value="Top List Item 1"></wvre-text>
+            </wvre-list-item>
+            <wvre-list-item context="warning">
+              <wvre-text value="Top List Item 2"></wvre-text>
+            </wvre-list-item>
+            <wvre-list-item context="success">
+              <wvre-text value="Top List Item 3"></wvre-text>
+            </wvre-list-item>
+          </template>
+        </wvre-list>
+      </template>
+      <template card-links>
+        <a href="www.google.com" class="card-link">
+          <wvre-text value="Google"></wvre-text>
+        </a>
+        <a href="www.gmail.com" class="card-link">
+          <wvre-text value="Gmail"></wvre-text>
+        </a>
+      </template>
+      <template card-buttons>
+        <wvre-button theme-variant="secondary">
+          <template button-content>
+            <wvre-text value="Go somewhere"></wvre-text>
+          </template>
+        </wvre-button>
+      </template>
+      <template card-footer>
         <wvre-text value="Card Footer"></wvre-text>
-      </tl-card-footer>
+      </template>
     </tl-card>
   </snippet>
 </example>
@@ -45,12 +59,12 @@
   </desciption>
   <snippet>
     <tl-card theme-variant="primary" panel-format="solid">
-      <tl-card-header>
+      <template card-header>
         <wvre-text value="Panel Header"></wvre-text>
-      </tl-card-header>
-      <tl-card-title>
+      </template>
+      <template card-title>
         <wvre-text value="Panel Title"></wvre-text>
-      </tl-card-title>
+      </template>
       <wvre-text value="This is a basic panel body"></wvre-text>
     </tl-card>
   </snippet>

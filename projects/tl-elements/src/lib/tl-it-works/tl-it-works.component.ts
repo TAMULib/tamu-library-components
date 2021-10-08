@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Injector, Input, ViewEncapsulation } from '@angular/core';
-import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
   selector: 'tl-it-works-component',
@@ -8,7 +8,7 @@ import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TamuItWorksComponent extends TamuAbstractBaseComponent {
+export class TlItWorksComponent extends TamuAbstractBaseComponent {
 
   /** The text value to be displayed in the page title. */
   title = 'tl-it-works-component';

@@ -1,8 +1,8 @@
 /* istanbul ignore file */
 
-import { AfterContentInit, AfterViewInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
 import { debounce, wvrTimeout } from '@wvr/elements';
-import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
 
 @Component({
@@ -12,6 +12,7 @@ import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
+
   /** The default text value to be displayed for tl-mega menu title. */
   @Input() menuTitle = 'Mega Menu';
 
@@ -62,9 +63,9 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   addSection(section: TlMegaMenuSectionComponent): void {
     this.sections.push(section);
-    this.sectionTitleHeight = section.getElementHeight() > this.sectionTitleHeight ?
-      section.getElementHeight() :
-      this.sectionTitleHeight;
+    this.sectionTitleHeight = section.getElementHeight() > this.sectionTitleHeight
+      ? section.getElementHeight()
+      : this.sectionTitleHeight;
   }
 
   /** This toggles the display of mobile menu on click event. */
@@ -88,15 +89,15 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
       const nativeElem = this.eRef.nativeElement as HTMLElement;
       const header = document.querySelector('tl-header');
       if (!header) { return; }
-      const bottomNav = header.shadowRoot.querySelector('[bottom-navigation]');
+      const bottomNav = header.shadowRoot.querySelector('div[bottom-navigation]');
       /* istanbul ignore else*/
       if (bottomNav) {
         let wvrBtn;
         const frameReq = requestAnimationFrame(() => {
-          wvrBtn = nativeElem.querySelector('wvre-dropdown-btn');
+          wvrBtn = nativeElem.querySelector('wvr-button-component');
           /* istanbul ignore else*/
-          if (wvrBtn) {
-            this.menuXOffset = (bottomNav.firstChild as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
+          if (wvrBtn && bottomNav.children.length >= 2) {
+            this.menuXOffset = (bottomNav.children[1] as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
             cancelAnimationFrame(frameReq);
           }
         });

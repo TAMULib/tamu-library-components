@@ -8,7 +8,7 @@
 /bazel-out
 
 # dependencies
-/node_modules
+node_modules
 
 # profiling files
 chrome-profiler-events*.json
@@ -58,5 +58,6 @@ src/config.json
 src/config-template.json
 src/assets/icons/*
 !src/assets/icons/tl
+!src/assets/icons/bootstrap
 
 .wvr-ud/static-assets/styles.css

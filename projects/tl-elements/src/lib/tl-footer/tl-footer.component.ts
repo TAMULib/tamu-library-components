@@ -1,6 +1,8 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, Injector, Input, ViewEncapsulation } from '@angular/core';
-import { Link } from '../utility/link';
-import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
+import { ChangeDetectionStrategy, Component, Injector, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { Link } from '../shared/link';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+export const LOGIN_LABEL = 'Login';
 
 /**
  * A fullwidth footer component which attaches to the bottom of the document body.
@@ -12,7 +14,7 @@ import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TamuFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit {
+export class TlFooterComponent extends TamuAbstractBaseComponent implements OnChanges {
 
   @Input() loginUrl: string;
 
@@ -35,12 +37,15 @@ export class TamuFooterComponent extends TamuAbstractBaseComponent implements Af
     super(injector);
   }
 
-  ngAfterViewInit(): void {
-    if (!!this.loginUrl) {
-      this.links.push({
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.loginUrl) {
+      this.links = this.links.filter(link => link.value !== LOGIN_LABEL);
+      if (this.loginUrl) {
+        this.links.push({
           href: this.loginUrl,
-          value: 'Login'
-      });
+          value: LOGIN_LABEL
+        });
+      }
     }
   }
 

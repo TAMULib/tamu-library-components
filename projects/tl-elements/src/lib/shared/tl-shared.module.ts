@@ -7,15 +7,17 @@ import { InlineSVGModule } from 'ng-inline-svg';
 import { TlAlertComponent } from '../tl-alert/tl-alert.component';
 import { TlButtonComponent } from '../tl-button/tl-button.component';
 import { TlCardComponent } from '../tl-card/tl-card.component';
-import { TlDropDownComponent } from '../tl-drop-down/tl-drop-down.component';
-import { TamuFooterComponent } from '../tl-footer/tl-footer.component';
-import { TamuHeaderComponent } from '../tl-header/tl-header.component';
+import { TlDropDownComponent } from '../tl-dropdown/tl-dropdown.component';
+import { TlDropDownMenuSectionComponent } from '../tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component';
+import { TlDropDownMenuComponent } from '../tl-dropdown-menu/tl-dropdown-menu.component';
+import { TlFooterComponent } from '../tl-footer/tl-footer.component';
+import { TlHeaderComponent } from '../tl-header/tl-header.component';
 import { TlIconComponent } from '../tl-icon/tl-icon.component';
-import { TamuItWorksComponent } from '../tl-it-works/tl-it-works.component';
+import { TlItWorksComponent } from '../tl-it-works/tl-it-works.component';
 import { TlMegaMenuSectionComponent } from '../tl-mega-menu/tl-mega-menu-section/tl-mega-menu-section.component';
 import { TlMegaMenuComponent } from '../tl-mega-menu/tl-mega-menu.component';
 import { TlModalComponent } from '../tl-modal/tl-modal.component';
-import { TamuNavListComponent } from '../tl-nav-list/tl-nav-list.component';
+import { TlNavListComponent } from '../tl-nav-list/tl-nav-list.component';
 import { TlTabComponent } from '../tl-tabs/tl-tab/tl-tab.component';
 import { TlTabsComponent } from '../tl-tabs/tl-tabs.component';
 import { TlThemesComponent } from '../tl-themes/tl-themes.component';
@@ -27,14 +29,16 @@ export const TL_COMPONENTS = [
   TlButtonComponent,
   TlCardComponent,
   TlDropDownComponent,
-  TamuFooterComponent,
-  TamuHeaderComponent,
-  TamuItWorksComponent,
+  TlDropDownMenuSectionComponent,
+  TlDropDownMenuComponent,
+  TlFooterComponent,
+  TlHeaderComponent,
+  TlItWorksComponent,
   TlIconComponent,
   TlMegaMenuComponent,
   TlMegaMenuSectionComponent,
   TlModalComponent,
-  TamuNavListComponent,
+  TlNavListComponent,
   TlTabsComponent,
   TlTabComponent,
   TlThemesComponent,
