@@ -69,6 +69,7 @@
     "@tinymce/tinymce-angular": "^4.2.3",
     "@wvr/elements": "^1.11.1",
     "bootstrap": "^4.6.0",
+    "css-element-queries": "^1.2.3",
     "document-register-element": "^1.14.5",
     "handlebars": "^4.7.7",
     "jsdom": "^16.5.3",
