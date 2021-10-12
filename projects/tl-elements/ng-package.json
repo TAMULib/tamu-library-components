@@ -6,6 +6,7 @@
   },
   "allowedNonPeerDependencies": [
     "@tinymce/tinymce-angular",
+    "css-element-queries",
     "ng-inline-svg",
     "@wvr/elements"
   ]
