@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git+https://github.com/TAMULib/tamu-library-components.git"
   },
-  "version": "1.10.2",
+  "version": "1.11.1",
   "private": false,
   "license": "MIT",
   "config": {
