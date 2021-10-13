@@ -1,6 +1,6 @@
 {
   "name": "@wvr/tl-elements",
-  "version": "1.10.2",
+  "version": "1.11.1",
   "description": "Collection of angular components for TAMU's Custom Web Component UI",
   "author": "Texas A&M University Libraries",
   "private": false,
@@ -27,6 +27,7 @@
   "dependencies": {
     "tslib": "^2.0.0",
     "@tinymce/tinymce-angular": "^4.2.1",
+    "css-element-queries": "^1.2.3",
     "ng-inline-svg": "^12.1.0",
     "@wvr/elements": "^1.11.1"
   }
