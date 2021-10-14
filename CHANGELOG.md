@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.11.2] - 10-14-21
+### Resolves
+ - tl-components should support login button. (#346)
+
 ## [1.10.0] - 05-12-21
 ### Resolves
 
