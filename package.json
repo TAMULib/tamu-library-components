@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git+https://github.com/TAMULib/tamu-library-components.git"
   },
-  "version": "1.11.1",
+  "version": "1.11.2-rc.1",
   "private": false,
   "license": "MIT",
   "config": {
@@ -67,7 +67,7 @@
     "@ngrx/store": "^11.1.1",
     "@ngrx/store-devtools": "^11.1.1",
     "@tinymce/tinymce-angular": "^4.2.3",
-    "@wvr/elements": "^1.11.1",
+    "@wvr/elements": "^1.12.0",
     "bootstrap": "^4.6.0",
     "css-element-queries": "^1.2.3",
     "document-register-element": "^1.14.5",

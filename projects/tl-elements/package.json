@@ -29,6 +29,6 @@
     "@tinymce/tinymce-angular": "^4.2.1",
     "css-element-queries": "^1.2.3",
     "ng-inline-svg": "^12.1.0",
-    "@wvr/elements": "^1.11.1"
+    "@wvr/elements": "^1.12.0"
   }
 }
