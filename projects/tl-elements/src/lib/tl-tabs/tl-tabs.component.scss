@@ -1,0 +1,59 @@
+@import '~@wvr/elements/styles/variables';
+
+:host {
+
+  & ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
+    .nav-link {
+      border-width: 5px 1px 1px 1px;
+      border-radius: 0px;
+    }
+
+    .nav-link:not(.active) {
+      border-color: var(--secondaryNeutral);
+      border-bottom-color: transparent;
+    }
+
+    .nav-link.active,
+    .nav-link:not(.active):hover {
+      border-color: var(--primary);
+      border-bottom-color: transparent;
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &:is([inactive-tab-theme="#{$color}"]) ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
+      .nav-link:not(.active):is([inactive-tab-theme=""]),
+      .nav-link:not(.active):is([inactive-tab-theme=""]):active,
+      .nav-link:not(.active):is([inactive-tab-theme=""]):focus,
+      .nav-link:not(.active):is([inactive-tab-theme=""]):hover {
+        border-color: var(--#{$color}) !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+
+    &:is([active-tab-theme="#{$color}"]) ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
+      .nav-link.active:is([active-tab-theme=""]),
+      .nav-link.active:is([active-tab-theme=""]):active,
+      .nav-link.active:is([active-tab-theme=""]):focus,
+      .nav-link.active:is([active-tab-theme=""]):hover {
+        border-color: var(--#{$color}) !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+
+    & ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
+      .nav-link:is([inactive-tab-theme="#{$color}"]):not(.active),
+      .nav-link:is([inactive-tab-theme="#{$color}"]):not(.active):active,
+      .nav-link:is([inactive-tab-theme="#{$color}"]):not(.active):focus,
+      .nav-link:is([inactive-tab-theme="#{$color}"]):not(.active):hover,
+      .nav-link.active:is([active-tab-theme="#{$color}"]),
+      .nav-link.active:is([active-tab-theme="#{$color}"]):active,
+      .nav-link.active:is([active-tab-theme="#{$color}"]):focus,
+      .nav-link.active:is([active-tab-theme="#{$color}"]):hover {
+        border-color: var(--#{$color}) !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+  }
+
+}
