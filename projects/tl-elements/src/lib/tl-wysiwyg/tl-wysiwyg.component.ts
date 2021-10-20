@@ -12,10 +12,13 @@ export class TlWysiwygComponent extends TamuAbstractBaseComponent {
 
   @Input() emitEvent = '';
 
+  /** Provide customization of WYSIWYG skin theme. */
   skin = 'oxide';
 
+  /** Provide customization of WYSIWYG toolbar buttons. */
   toolbar = 'undo redo | bold italic removeformat | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | help cancel save';
 
+  /** Provide custom height. */
   @Input() height = '500';
 
   // tslint:disable-next-line:unnecessary-constructor
