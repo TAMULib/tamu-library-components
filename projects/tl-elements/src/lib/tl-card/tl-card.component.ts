@@ -15,6 +15,12 @@ export class TlCardComponent extends TamuAbstractBaseComponent {
   /** Used to describe the format of card. */
   @Input() panelFormat: 'solid' | 'outlined' | 'mixed';
 
+ /** Designate how to expand/collapse. */
+  @Input() collapseMethod: 'click' | 'none';
+
+  /** Designate the initial expanded/collapsed state. */
+  @Input() startCollapsed: boolean;
+
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
