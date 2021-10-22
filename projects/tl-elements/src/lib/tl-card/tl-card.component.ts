@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
 import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
 
 @Component({
@@ -20,6 +20,9 @@ export class TlCardComponent extends TamuAbstractBaseComponent {
 
   /** Designate the initial expanded/collapsed state. */
   @Input() startCollapsed: boolean;
+
+  /** Designate the actual expanded/collapsed state. */
+  @Input() collapsed: 'true' | 'false';
 
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
