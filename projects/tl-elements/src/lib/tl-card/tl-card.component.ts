@@ -22,12 +22,7 @@ export class TlCardComponent extends TamuAbstractBaseComponent {
   @Input() startCollapsed: boolean;
 
   /** Designate the actual expanded/collapsed state. */
-  @Input() collapsed: boolean;
-
-  /** Update the boolean when the element attribute changes. */
-  @HostBinding('attr.collapsed') get collapsedGetter(): string {
-    return this.collapsed ? 'true' : 'false';
-  }
+  @Input() collapsed: 'true' | 'false';
 
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
