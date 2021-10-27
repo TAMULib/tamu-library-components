@@ -55,10 +55,6 @@
       color: var(--tl-black);
     }
 
-    wvr-nav-list-component .dropdown .wvr-button:focus {
-      box-shadow: none;
-    }
-
     // Weaver Nav List overrides for top navigation
     wvr-nav-list-component[top-navigation-mobile] wvr-nav-li-component,
     wvr-nav-list-component[top-navigation] wvr-nav-li-component,
