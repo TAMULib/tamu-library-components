@@ -13,6 +13,11 @@
 - TL Components should utilize the latest version of Weaver Content projection. (#348)
 - TL-Header and TL-MegaMenu should not be circularly referent. (#352)
 - TL-Components should compile using the Ivy partial compiler option. (#353)
+- Navigation subsections not expanding in mobile view (#367)
+- In some browsers at some sizes, the footer will shudder/flicker due to loop involving scrollbar (#369)
+- The TL Tabs should support the toggling and coloring of the top border of tabs. (#361)
+- TL Card Should Support Expand/Collapse on Card Header click. (#375)
+- Mega Menu action button is not being themed maroon. (#368)
 
 ## [1.11.0] - 06-04-21
 ### Resolves
