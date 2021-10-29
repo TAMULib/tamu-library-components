@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0] - 10-08-21
+## [2.0.0] - 10-29-21
 ### Resolves
 
 - tl- and wvre- Tabs should allow form elements. (#321)
