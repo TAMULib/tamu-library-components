@@ -25,6 +25,7 @@
     "build:docker": "node scripts/build-docker.js",
     "build:link": "npm run build && node scripts/link-self",
     "build:link-wvr": "node scripts/link-wvr.js",
+    "build:npm-local": "node scripts/npm-local.js",
     "build:static": "npm run build:static-docs && npm run build:static-reports",
     "build:static-setup": "node scripts/build-tl-components-static.js",
     "build:static-docs": "npm run test:audit && npm run build:static-setup && npm run build:docs-setup && npm run build:docs-development && npm run build:docs-usage",
