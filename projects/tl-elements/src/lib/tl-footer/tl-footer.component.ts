@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Injector, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, Injector, Input, ViewEncapsulation } from '@angular/core';
 import { Link } from '../utility/link';
 import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component';
 
@@ -13,7 +13,9 @@ import { TamuAbstractBaseComponent } from '../utility/tl-abstract-base.component
   encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class TamuFooterComponent extends TamuAbstractBaseComponent {
+export class TamuFooterComponent extends TamuAbstractBaseComponent implements AfterViewInit {
+
+  @Input() loginUrl: string;
 
   /** Used to iterate the footer navigation list. */
   links: Array<Link> = [
@@ -32,6 +34,19 @@ export class TamuFooterComponent extends TamuAbstractBaseComponent {
   // tslint:disable-next-line:unnecessary-constructor
   constructor(injector: Injector) {
     super(injector);
+  }
+
+  ngAfterViewInit(): void {
+    if (!!this.loginUrl) {
+      this.links.push({
+          href: this.loginUrl,
+          value: 'Login'
+      });
+    }
+  }
+
+  index(index: number, link: Link): number {
+    return index;
   }
 
 }
