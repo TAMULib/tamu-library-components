@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.0] - 11-02-21
+### Resolves
+
+- Navigation subsections not expanding in mobile view (#367)
+- TAMU Header should support the suppression of the top navigation links, both complete suppression and discriminate. (#337)
+- tl-components should support login button (#346)
+
+
 ## [1.10.0] - 05-12-21
 ### Resolves
 
