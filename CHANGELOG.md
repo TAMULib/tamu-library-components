@@ -7,7 +7,6 @@
 - TAMU Header should support the suppression of the top navigation links, both complete suppression and discriminate. (#337)
 - tl-components should support login button (#346)
 
-
 ## [1.10.0] - 05-12-21
 ### Resolves
 
@@ -16,9 +15,9 @@
 - Tl Footer Should Utilize the weaver default variant instead of button. (#301)
 - TL Header should use brand-secondary-neutral for the bottom nav background. (#306)
 
-
 ## [1.9.0] - 04-23-21
 ### Resolves
+
 - TAMU Library Component should expose the weaver modal component. (#270)
 - tl-modal should support the toggling of the modal launch button. (#290)
 - TL Components should offer a tl-themes components.(#281)
