@@ -16,6 +16,10 @@
 
   wvr-dropdown-component {
     ::ng-deep {
+      @import "~@wvr/elements/styles/variables";
+      @import "~bootstrap/scss/bootstrap";
+      @import "~@wvr/elements/styles/mixins";
+      @import "~@wvr/elements/styles/overrides";
       .wvr-dropdown .dropdown {
         .btn.btn-link.dropdown-toggle,
         .btn.btn-link:not(:disabled):not(.disabled).active,
@@ -199,5 +203,4 @@
       }
     }
   }
-
 }
