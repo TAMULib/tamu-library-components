@@ -32,6 +32,8 @@ export class TlMegaMenuSectionComponent extends TamuAbstractBaseComponent implem
   }
 
   ngOnInit(): void {
+    super.ngOnInit();
+
     const elem = this.eRef.nativeElement as HTMLElement;
     const parentElem = elem.closest('tl-mega-menu');
     if (parentElem) {
