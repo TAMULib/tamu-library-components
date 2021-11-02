@@ -45,4 +45,8 @@ export class TamuFooterComponent extends TamuAbstractBaseComponent implements Af
     }
   }
 
+  index(index: number, link: Link): number {
+    return index;
+  }
+
 }
