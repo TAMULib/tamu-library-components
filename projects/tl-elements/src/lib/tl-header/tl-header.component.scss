@@ -54,6 +54,7 @@
       color: var(--tl-black);
     }
 
+
     // Weaver Nav List overrides for top navigation
     wvr-nav-list-component[top-navigation-mobile] wvr-nav-li-component,
     wvr-nav-list-component[top-navigation] wvr-nav-li-component,
@@ -179,6 +180,19 @@
         wvre-dropdown-menu > wvre-dropdown-menu-item:last-child {
           border-bottom: 0px;
         }
+      }
+    }
+
+    @media (min-width: 993px) and (max-width: 1083px) {
+      .libraries .dropdown-menu.show {
+        left: 340px !important;
+      }
+      .information-for .dropdown-menu.show {
+        left: 220px !important;
+      }
+
+      .help .dropdown-menu.show {
+        left: 75px !important;
       }
     }
 
