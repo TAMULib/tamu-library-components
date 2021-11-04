@@ -126,6 +126,7 @@
           margin-left: -20px;
           padding: 0px 15px;
         }
+
       }
 
       .information-for {
@@ -181,19 +182,41 @@
           border-bottom: 0px;
         }
       }
-    }
 
-    @media (min-width: 993px) and (max-width: 1083px) {
-      .libraries .dropdown-menu.show {
-        left: 340px !important;
-      }
-      .information-for .dropdown-menu.show {
-        left: 220px !important;
+      @media (min-width: 993px) and (max-width: 1100px) {
+
+        .libraries {
+          .wvr-dropdown .dropdown {
+            --wvr-dropdown-menu-x-offset: 150px !important;
+            .dropdown-menu {
+              left: var(--wvr-dropdown-menu-x-offset) !important;
+              transform: translate(-216px, 48px) !important;
+            }
+          }
+        }
+
+        .information-for {
+          .wvr-dropdown .dropdown {
+            --wvr-dropdown-menu-x-offset: 215px;
+            .dropdown-menu {
+              left: var(--wvr-dropdown-menu-x-offset) !important;
+              transform: translate(-364px, 48px) !important;
+            }
+          }
+        }
+
+        .help {
+          .wvr-dropdown .dropdown {
+            --wvr-dropdown-menu-x-offset: 75px;
+            .dropdown-menu {
+              left: var(--wvr-dropdown-menu-x-offset) !important;
+              transform: translate(-435px, 48px) !important;
+            }
+          }
+        }
+
       }
 
-      .help .dropdown-menu.show {
-        left: 75px !important;
-      }
     }
 
     wvr-nav-list-component[bottom-navigation]
