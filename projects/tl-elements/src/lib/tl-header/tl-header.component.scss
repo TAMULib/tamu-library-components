@@ -189,6 +189,41 @@
           border-bottom: 0px;
         }
       }
+
+      @media (min-width: 993px) and (max-width: 1100px) {
+
+        .libraries {
+          .wvr-dropdown .dropdown {
+            --wvr-dropdown-menu-x-offset: 150px !important;
+            .dropdown-menu {
+              left: var(--wvr-dropdown-menu-x-offset) !important;
+              transform: translate(-216px, 48px) !important;
+            }
+          }
+        }
+
+        .information-for {
+          .wvr-dropdown .dropdown {
+            --wvr-dropdown-menu-x-offset: 215px;
+            .dropdown-menu {
+              left: var(--wvr-dropdown-menu-x-offset) !important;
+              transform: translate(-364px, 48px) !important;
+            }
+          }
+        }
+
+        .help {
+          .wvr-dropdown .dropdown {
+            --wvr-dropdown-menu-x-offset: 75px;
+            .dropdown-menu {
+              left: var(--wvr-dropdown-menu-x-offset) !important;
+              transform: translate(-435px, 48px) !important;
+            }
+          }
+        }
+
+      }
+
     }
 
     wvr-nav-list-component[bottom-navigation]
