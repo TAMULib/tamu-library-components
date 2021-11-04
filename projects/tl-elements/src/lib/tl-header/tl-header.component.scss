@@ -452,6 +452,7 @@
       .mobile-menu.closed {
         width: 0px;
         opacity: 0;
+        overflow: hidden;
       }
     }
   }
