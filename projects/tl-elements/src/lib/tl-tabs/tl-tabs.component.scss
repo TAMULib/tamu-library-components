@@ -2,6 +2,18 @@
 
 :host {
 
+  wvr-tabs-component {
+    ::ng-deep {
+      a.nav-link {
+        color:#00648B;
+        text-decoration: none;
+      }
+      a.nav-link:hover {
+        color:#00648B;
+      }
+    }
+  }
+
   & ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
     .nav-link {
       border-width: 5px 1px 1px 1px;

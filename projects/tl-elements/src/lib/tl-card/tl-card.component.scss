@@ -3,22 +3,29 @@
 
 :host {
 
-  .card.wvr-card {
-
-    :ng-deep {
-
-      .card.wvr-card {
-        .btn.btn-danger,
-        .btn.btn-dark,
-        .btn.btn-info,
-        .btn.btn-light,
-        .btn.btn-primary,
-        .wvr-button.btn.btn-secondary,
-        .btn.btn-success,
-        .btn.btn-warning {
-          border: var(--tl-btn-border) !important;
-        }
+  wvr-card-component {
+    ::ng-deep {
+      a.card-link {
+        color:#00648B;
+        text-decoration: none;
       }
+      a.card-link:hover {
+        color: #003F58;
+      }
+
+      // .wvr-card {
+      //   .btn.btn-danger,
+      //   .btn.btn-dark,
+      //   .btn.btn-info,
+      //   .btn.btn-light,
+      //   .btn.btn-primary,
+      //   .wvr-button.btn.btn-secondary,
+      //   .btn.btn-success,
+      //   .btn.btn-warning {
+      //     border: var(--tl-btn-border) !important;
+      //   }
+      // }
+
     }
   }
 
