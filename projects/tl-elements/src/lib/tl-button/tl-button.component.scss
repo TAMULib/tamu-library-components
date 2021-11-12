@@ -1,15 +1,17 @@
 @import "../shared/styles/tl-branded-btn.scss";
 
 :host {
+
     wvr-button-component {
-        ::ng-deep {
-            a {
-                color:#00648B;
-                text-decoration: none;
-            }
-            a:hover {
-                color: #003F58;
-            }
+      ::ng-deep {
+        a {
+          color:#00648B;
+          text-decoration: none;
         }
+        a:hover {
+          color:#003F58;
+        }
+      }
     }
-}
+
+  }
