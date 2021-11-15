@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.1] - 11-15-21
+### Resolves
+
+- Mobile Mega menu not expanding. (#334)
+- Tamu Library Components should define a consistent link color by theme. (#385)
+- The mobile menu slide out tray continues to allow links to be clicked on when closed. (#389)
+- TL components should implement suppressTopNavList in 1x. (#394)
+- Verify that TAMU Library Components is showing icons in the mobile menu. (#395)
+- Some browsers, mobile menu expand/collapse icons does not appear all the way to the right. (#407)
+
 ## [2.0.0] - 10-08-21
 ### Resolves
 
