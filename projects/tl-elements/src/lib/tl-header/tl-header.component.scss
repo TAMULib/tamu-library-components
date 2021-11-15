@@ -159,6 +159,7 @@
           border-bottom: 0px;
         }
       }
+
     }
 
     wvr-nav-list-component[bottom-navigation]
@@ -459,6 +460,7 @@
       .mobile-menu.closed {
         width: 0px;
         opacity: 0;
+        overflow: hidden;
       }
     }
   }
@@ -510,8 +512,7 @@
           span[button-content] {
             width: 100%;
             span {
-              display: inline-block;
-              width: 100%;
+              display: block;
             }
           }
         }

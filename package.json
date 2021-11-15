@@ -39,6 +39,7 @@
     "publish:npm-next": "npm run publish:npm next",
     "lint": "ng lint",
     "ng": "ng",
+    "npm-local": "npm --registry http://localhost:4873 install --no-save @wvr/elements",
     "start": "node ./scripts/build-tl-components-configuration.js defaults-dev-overrides.env && ng serve --port 3000",
     "start:dist": "node ./scripts/build-tl-components-configuration.js defaults-dist-overrides.env && node ./scripts/serve-dist.js",
     "start:static": "node ./scripts/build-tl-components-configuration.js defaults-static-overrides.env && static-server static -p 8082",
