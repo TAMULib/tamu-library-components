@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1] - 11-17-21
+### Resolves
+
+- The mobile menu slide out tray continues to allow links to be clicked on when closed. by @kaladay in (#405)
+- Verify that TAMU Library Components is showing icons in the mobile menu. by @kaladay in (#404)
+- Tl header top nav dropdown menu position by @rmathew1011 in (#408)
+
 ## [1.12.0] - 11-02-21
 ### Resolves
 
