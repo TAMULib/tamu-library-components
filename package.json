@@ -72,7 +72,7 @@
     "@stomp/stompjs": "^6.1.2",
     "@tinymce/tinymce-angular": "^4.2.4",
     "@ungap/custom-elements": "^1.0.0",
-    "@wvr/elements": "next",
+    "@wvr/elements": "2.0.0",
     "bootstrap": "^4.6.0",
     "css-element-queries": "^1.2.3",
     "handlebars": "^4.7.7",
