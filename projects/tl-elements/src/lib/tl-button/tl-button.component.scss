@@ -1,11 +1,17 @@
-// @import "../shared/styles/tl-branded-btn.scss";
+@import "../shared/styles/tl-branded-btn.scss";
 
-// :host {
+:host {
 
-//   font-family: var(--tl-font-family-sans-serif);
+    wvr-button-component {
+      ::ng-deep {
+        a {
+          color:#00648B;
+          text-decoration: none;
+        }
+        a:hover {
+          color:#003F58;
+        }
+      }
+    }
 
-//   tl-button-wrapper {
-//     display: inline-block;
-//   }
-  
-// }
+  }

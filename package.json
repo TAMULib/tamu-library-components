@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git+https://github.com/TAMULib/tamu-library-components.git"
   },
-  "version": "2.0.0",
+  "version": "2.0.1-rc.1",
   "private": false,
   "license": "MIT",
   "config": {
@@ -25,6 +25,7 @@
     "build:docker": "node scripts/build-docker.js",
     "build:link": "npm run build && node scripts/link-self",
     "build:link-wvr": "node scripts/link-wvr.js",
+    "build:npm-local": "node scripts/npm-local.js",
     "build:static": "npm run build:static-docs && npm run build:static-reports",
     "build:static-setup": "node scripts/build-tl-components-static.js",
     "build:static-docs": "npm run test:audit && npm run build:static-setup && npm run build:docs-setup && npm run build:docs-development && npm run build:docs-usage",
@@ -38,6 +39,7 @@
     "publish:npm-next": "npm run publish:npm next",
     "lint": "ng lint",
     "ng": "ng",
+    "npm-local": "npm --registry http://localhost:4873 install --no-save @wvr/elements",
     "start": "node ./scripts/build-tl-components-configuration.js defaults-dev-overrides.env && ng serve --port 3000",
     "start:dist": "node ./scripts/build-tl-components-configuration.js defaults-dist-overrides.env && node ./scripts/serve-dist.js",
     "start:static": "node ./scripts/build-tl-components-configuration.js defaults-static-overrides.env && static-server static -p 8082",

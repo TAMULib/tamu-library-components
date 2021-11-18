@@ -1,15 +1,38 @@
+<about name="TL Mega Menu">
+  <p>This component represents a complex dropdown menu.</p>
+  <p>The mega menu provides a menu that can contain menus within itself.</p>
+  <p>The mega menu also directly supports mobile views.</p>
+
+  <div>
+    <p>Each menu item is composed of a section described by a <code>tl-mega-menu-section</code> element.</p>
+    <p>Within the <code>tl-mega-menu-section</code> element there is expected to be a <code>tl-nav-li</code> element for containing the desired row data.</p>
+  </div>
+
+  <div>
+    <p>The following attributes are available:</p>
+    <ul>
+      <li><code>menu-title</code>: The title of the mega menu.</li>
+      <li><code>menu-width</code>: The width of the menu, supporting CSS width values.</li>
+      <li><code>open-delay</code>: A unit of time in seconds for how long to wait before responding to a mouse hover event.</li>
+      <li><code>out-of-header</code>: One of <code>true</code> or <code>false</code>.</li>
+      <li><code>view-all-button-text</code>: The text to display for the View All button.</li>
+      <li><code>view-all-href</code>: When provided a URL, a View All button is displayed using the given URL.</li>
+    </ul>
+  </div>
+</about>
+
 <example name="TL Mega Menu Basic">
   <desciption>
     The basic <code>tl-mega-menu</code> component with no customizations.
   </desciption>
   <snippet>
-    
+
     <tl-mega-menu menu-title="Services"
                   view-all-href="/view-all"
                   view-all-button-text= "Customized View All Button"
                   hidden-in-mobile="true"
                   out-of-header="true">
-      
+
       <tl-mega-menu-section section-title="Section One">
         <tl-nav-li>
           <a href="/research/option1">
@@ -73,7 +96,7 @@
     The basic <code>tl-mega-menu</code> with custom content
   </desciption>
   <snippet>
-    
+
     <tl-mega-menu menu-title="Services"
                   view-all-href="/view-all"
                   view-all-button-text= "Customized View All Button"
