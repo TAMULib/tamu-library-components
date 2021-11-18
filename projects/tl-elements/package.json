@@ -1,6 +1,6 @@
 {
   "name": "@wvr/tl-elements",
-  "version": "1.12.0",
+  "version": "1.12.1-rc.1",
   "description": "Collection of angular components for TAMU's Custom Web Component UI",
   "author": "Texas A&M University Libraries",
   "private": false,
