@@ -11,10 +11,10 @@
     "DOCKER_SERVER": ""
   },
   "scripts": {
-    "build": "ng build --configuration production --single-bundle --output-hashing none",
+    "build": "ng build --configuration production --single-bundle --output-hashing none && npm run build:version",
     "build:clean": "npm run clean && npm run build",
     "build:tl-elements": "ng build --configuration production tl-elements",
-    "build:tl-components": "node scripts/build-tl-components.js",
+    "build:tl-components": "node scripts/build-tl-components.js && npm run build:version",
     "build:tl-components-static": "node scripts/build-tl-components-static.js",
     "build:lighthouse": "node scripts/build-lighthouse.js",
     "prebuild": "npm run build:tl-elements",
@@ -31,6 +31,7 @@
     "build:static-docs": "npm run test:audit && npm run build:static-setup && npm run build:docs-setup && npm run build:docs-development && npm run build:docs-usage",
     "build:static-reports": "npm run build:static-setup && npm run test:coverage",
     "build:static-production": "npm run build:static && node ./scripts/build-tl-components-configuration.js defaults-ci-overrides.env",
+    "build:version": "node ./scripts/build-version.js",
     "clean": "npm run clean:dist && npm run clean:static",
     "clean:dist": "rimraf dist",
     "clean:static": "rimraf static",
