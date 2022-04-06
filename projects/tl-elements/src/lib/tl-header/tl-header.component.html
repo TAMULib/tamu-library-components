@@ -15,14 +15,14 @@
 
 <ng-template #topNavContent>
   <wvr-nav-li-component *ngIf="showTopNav('hours')">
-    <a href="https://library.tamu.edu/about/hours.html">
+    <a href="https://library.tamu.edu/about/hours">
       <wvr-text-component value="Hours"></wvr-text-component>
     </a>
   </wvr-nav-li-component>
   <wvr-nav-li-component *ngIf="showTopNav('libraries')">
     <wvr-dropdown-component class="libraries"
       [btnType]="'link'"
-      [btnHref]="'https://library.tamu.edu/about/index.html'"
+      [btnHref]="'https://library.tamu.edu/about/'"
       [toggleOn]="'mouseover'"
       [menuXOffset]="'-65px'"
       [menuYOffset]="'45px'"
@@ -39,7 +39,7 @@
               </a>
             </div>
             <p>
-              <a href="//library.tamu.edu/about/directions/business-library.html" title="Parking Directions for Business Library and Collaboration Commons">
+              <a href="//library.tamu.edu/about/directions/business-library" title="Parking Directions for Business Library and Collaboration Commons">
                 <wvr-text-component value="Parking Directions"></wvr-text-component>
               </a>
               <wvr-text-component value=" / 979-845-2111"></wvr-text-component>
@@ -48,7 +48,7 @@
           <wvre-dropdown-menu-item>
             <div class="libraries-link"><a href="//cushing.library.tamu.edu" title="Go to Cushing Library website">Cushing Memorial Library &amp; Archives</a></div>
             <p>
-              <a href="//library.tamu.edu/about/directions/cushing-library.html" title="Parking Directions for Cushing Library">
+              <a href="//library.tamu.edu/about/directions/cushing-library" title="Parking Directions for Cushing Library">
                 <wvr-text-component value="Parking Directions"></wvr-text-component>
               </a>
               <wvr-text-component value=" / 979-845-1951"></wvr-text-component>
@@ -61,7 +61,7 @@
               </a>
             </div>
             <p>
-              <a href="//library.tamu.edu/about/directions/medical-sciences-library.html" title="Parking Directions for Medical Sciences Library">
+              <a href="//library.tamu.edu/about/directions/medical-sciences-library" title="Parking Directions for Medical Sciences Library">
                 <wvr-text-component value="Parking Directions"></wvr-text-component>
               </a>
               <wvr-text-component value=" / 979-845-7428"></wvr-text-component>
@@ -74,7 +74,7 @@
               </a>
             </div>
             <p>
-              <a href="//library.tamu.edu/about/directions/policy-sciences-economics-library.html" title="Parking Directions for Policy Sciences and Economics Library">
+              <a href="//library.tamu.edu/about/directions/policy-sciences-economics-library" title="Parking Directions for Policy Sciences and Economics Library">
                 <wvr-text-component value="Parking Directions"></wvr-text-component>
               </a>
               <wvr-text-component value=" / 979-862-3544"></wvr-text-component>
@@ -87,7 +87,7 @@
               </a>
             </div>
             <p>
-              <a href="//library.tamu.edu/about/directions/evans-library-annex.html" title="Parking Directions for Evans Library and Annex">
+              <a href="//library.tamu.edu/about/directions/evans-library-annex" title="Parking Directions for Evans Library and Annex">
                 <wvr-text-component value="Parking Directions"></wvr-text-component>
               </a>
               <wvr-text-component value=" / 979-845-3731"></wvr-text-component>
@@ -111,22 +111,22 @@
       </wvre-dropdown-btn>
       <wvre-dropdown-menu>
         <wvre-dropdown-menu-item>
-          <a href="//library.tamu.edu/faculty_info/index.html">
+          <a href="//library.tamu.edu/faculty_info/">
             <wvr-text-component value="Information for Faculty"></wvr-text-component>
           </a>
         </wvre-dropdown-menu-item>
         <wvre-dropdown-menu-item>
-          <a href="//library.tamu.edu/grad_info/index.html">
+          <a href="//library.tamu.edu/grad_info/">
             <wvr-text-component value="Graduate Student Resources"></wvr-text-component>
           </a>
         </wvre-dropdown-menu-item>
         <wvre-dropdown-menu-item>
-          <a href="//library.tamu.edu/undergrad_info/index.html">
+          <a href="//library.tamu.edu/undergrad_info/">
             <wvr-text-component value="Undergraduate Student Resources"></wvr-text-component>
           </a>
         </wvre-dropdown-menu-item>
         <wvre-dropdown-menu-item>
-          <a href="//library.tamu.edu/services/accessibility.html">
+          <a href="//library.tamu.edu/services/accessibility">
             <wvr-text-component value="Services for Individuals with Disabilities"></wvr-text-component>
           </a>
         </wvre-dropdown-menu-item>
@@ -141,7 +141,7 @@
           </a>
         </wvre-dropdown-menu-item>
         <wvre-dropdown-menu-item>
-          <a href="//library.tamu.edu/about/other_patrons.html">
+          <a href="//library.tamu.edu/about/other_patrons">
             <wvr-text-component value="Other Library Guests (Non-TAMU Affiliates)"></wvr-text-component>
           </a>
         </wvre-dropdown-menu-item>
@@ -181,7 +181,7 @@
           </wvre-dropdown-menu-item>
           <wvre-dropdown-menu-item>
             <tl-icon-component [set]="'bootstrap'" [name]="'arrow-right-circle'"></tl-icon-component>
-            <a href="//library.tamu.edu/about/phone.html" class="helpLink">
+            <a href="//library.tamu.edu/about/phone" class="helpLink">
               <wvr-text-component value=" Call us "></wvr-text-component>
             </a>
           </wvre-dropdown-menu-item>
@@ -193,7 +193,7 @@
           </wvre-dropdown-menu-item>
           <wvre-dropdown-menu-item>
             <tl-icon-component [set]="'bootstrap'" [name]="'arrow-right-circle'"></tl-icon-component>
-            <a href="https://askus.library.tamu.edu/contact/index" class="helpLink">
+            <a href="https://askus.library.tamu.edu/contact/" class="helpLink">
               <wvr-text-component value=" Email us "></wvr-text-component>
             </a>
           </wvre-dropdown-menu-item>
@@ -205,7 +205,7 @@
           </wvre-dropdown-menu-item>
           <wvre-dropdown-menu-item>
             <tl-icon-component [set]="'bootstrap'" [name]="'arrow-right-circle'"></tl-icon-component>
-            <a href="https://askus.library.tamu.edu/contact/index" class="helpLink">
+            <a href="https://askus.library.tamu.edu/contact/" class="helpLink">
               <wvr-text-component value=" Report a problem "></wvr-text-component>
             </a>
           </wvre-dropdown-menu-item>
