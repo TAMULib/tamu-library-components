@@ -38,7 +38,7 @@ export const TL_ELEMENTS: Array<WvrElementDesc> = [
   { component: TlDropDownMenuSectionComponent, selector: 'tl-dropdown-menu-section', lazy: true },
   { component: TlDropDownMenuComponent, selector: 'tl-dropdown-menu', lazy: true },
   { component: TlFooterComponent, selector: 'tl-footer', lazy: true },
-  { component: TlHeaderComponent, selector: 'tl-header', lazy: true },
+  { component: TlHeaderComponent, selector: 'tl-header', lazy: false },
   { component: TlIconComponent, selector: 'tl-icon', lazy: true },
   { component: TlItWorksComponent, selector: 'tl-it-works', lazy: true },
   { component: TlMegaMenuComponent, selector: 'tl-mega-menu', lazy: true },
