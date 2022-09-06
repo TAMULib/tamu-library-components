@@ -21,7 +21,7 @@
 
   wvr-nav-list-component {
     ::ng-deep {
-      ul {
+      [role=list] {
         height: auto;
       }
 

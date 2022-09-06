@@ -28,28 +28,28 @@
     }
 
     wvr-nav-list-component[top-navigation-mobile]
-      > ul
+      > [role="list"]
       > wvr-nav-li-component
-      > li
+      > [role="listitem"]
       > a,
     wvr-nav-list-component[top-navigation]
-      > ul
+      > [role="list"]
       > wvr-nav-li-component
-      > li
+      > [role="listitem"]
       > a {
       padding: 12px;
       color: var(--tl-white);
     }
 
     wvr-nav-list-component[top-navigation-mobile]
-      > ul
+      > [role="list"]
       > wvr-nav-li-component
-      > li
+      > [role="listitem"]
       > a:hover,
     wvr-nav-list-component[top-navigation]
-      > ul
+      > [role="list"]
       > wvr-nav-li-component
-      > li
+      > [role="listitem"]
       > a:hover {
       color: var(--tl-black);
     }
@@ -329,7 +329,7 @@
         }
       }
 
-      .mobile-menu > div > div > wvr-nav-list-component > wvre-nav-li > li > a {
+      .mobile-menu > div > div > wvr-nav-list-component > wvre-nav-li > [role="listitem"] > a {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -354,13 +354,13 @@
           border-right: none;
         }
 
-        ul {
+        [role="list"] {
           justify-content: space-evenly;
           flex-wrap: nowrap !important;
           flex-direction: column !important;
         }
 
-        li {
+        [role="listitem"] {
           justify-content: left !important;
 
           wvr-dropdown-component,
@@ -484,7 +484,7 @@
     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
     div.mobile-menu-content {
-      wvre-nav-li > li.nav-item {
+      wvre-nav-li > [role="listitem"].nav-item {
         a {
           white-space: nowrap;
         }
