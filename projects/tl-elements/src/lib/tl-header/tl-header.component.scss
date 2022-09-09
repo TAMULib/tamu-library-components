@@ -45,6 +45,16 @@
       > [role=menu]
       > wvr-nav-li-component
       > [role=menuitem]
+      > a:focus-within,
+    wvr-nav-list-component[top-navigation]
+      > [role=menu]
+      > wvr-nav-li-component
+      > [role=menuitem]
+      > a:focus-within,
+    wvr-nav-list-component[top-navigation-mobile]
+      > [role=menu]
+      > wvr-nav-li-component
+      > [role=menuitem]
       > a:hover,
     wvr-nav-list-component[top-navigation]
       > [role=menu]
@@ -116,6 +126,7 @@
           padding: 10px 20px;
         }
 
+        a:focus-within,
         a:hover {
           color: var(--secondary-default-bg);
         }
@@ -126,6 +137,7 @@
           color: var(--tl-white);
         }
 
+        .wvr-button:focus-within,
         .wvr-button:hover {
           color: var(--tl-black);
         }
@@ -149,6 +161,7 @@
           }
         }
 
+        wvre-dropdown-menu-item:focus-within > .helpLink,
         wvre-dropdown-menu-item:hover > .helpLink {
           background: var(--secondaryNeutral);
           border-radius: 5px;
@@ -185,6 +198,7 @@
     }
 
     wvr-nav-list-component[bottom-navigation]
+    wvr-nav-li-component.call-to-action:focus-within,
     wvr-nav-li-component.call-to-action:hover {
       a {
         color: var(--tl-white);
@@ -194,6 +208,7 @@
       }
     }
 
+    wvr-nav-list-component[top-navigation] .dropdown:focus-within,
     wvr-nav-list-component[top-navigation] .dropdown:hover {
       .wvr-button {
         color: var(--tl-black);
@@ -224,10 +239,12 @@
         align-items: center;
       }
 
+      .nav-item:focus-within > a wvre-text,
       .nav-item:hover > a wvre-text {
         color: var(--tl-white);
       }
 
+      :focus-within,
       :hover {
         span[button-content],
         svg {
@@ -335,6 +352,7 @@
         justify-content: flex-start;
         height: 65px;
         width: 100%;
+        color: var(--tl-black);
         background: var(--tl-deep-yellow);
         border-bottom: 1px solid var(--secondaryNeutral);
 
@@ -410,6 +428,7 @@
       tl-dropdown-menu,
       tl-mega-menu {
         width: 100%;
+        color: var(--tl-black);
         background: var(--tl-deep-yellow);
         overflow: hidden;
         border-bottom: var(--secondaryNeutral);
