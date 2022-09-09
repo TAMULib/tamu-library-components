@@ -201,7 +201,7 @@
     wvr-nav-li-component.call-to-action:focus-within,
     wvr-nav-li-component.call-to-action:hover {
       a {
-        color: var(--tl-white);
+        color: var(--tl-white) !important;
         tl-icon-component svg {
           fill: var(--tl-white);
         }
