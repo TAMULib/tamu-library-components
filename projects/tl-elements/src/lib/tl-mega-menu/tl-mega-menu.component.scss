@@ -45,6 +45,7 @@
     }
   }
 
+  wvr-dropdown-component:focus-within,
   wvr-dropdown-component:hover {
     ::ng-deep {
       .wvr-dropdown .dropdown {
@@ -105,6 +106,7 @@
           }
         }
 
+        a:focus-within,
         a:hover {
           border-bottom: none;
           wvre-text {
