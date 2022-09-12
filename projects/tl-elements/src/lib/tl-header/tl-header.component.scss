@@ -203,7 +203,7 @@
       a {
         color: var(--tl-white) !important;
         tl-icon-component svg {
-          fill: var(--tl-white);
+          fill: var(--tl-white) !important;
         }
       }
     }
