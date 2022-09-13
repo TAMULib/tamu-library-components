@@ -31,7 +31,7 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
   active = false;
 
   /** This property determines the delay in milliseconds the dropdown takes prior to display on mouse hover. */
-  @Input() openDelay = 500;
+  @Input() openDelay = 50;
 
   /** This returns customized text or the default value to be displayed on the mega menu View All button. */
   get viewAllButtonDisplayText(): string {
@@ -84,18 +84,15 @@ export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements Af
 
   /** This event listener on window resize event helps the header for proper display. */
   @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
-    /* istanbul ignore else*/
     if (!this.outOfHeader) {
       const nativeElem = this.eRef.nativeElement as HTMLElement;
       const header = document.querySelector('tl-header');
       if (!header) { return; }
       const bottomNav = header.shadowRoot.querySelector('div[bottom-navigation]');
-      /* istanbul ignore else*/
       if (bottomNav) {
         let wvrBtn;
         const frameReq = requestAnimationFrame(() => {
           wvrBtn = nativeElem.querySelector('wvr-button-component');
-          /* istanbul ignore else*/
           if (wvrBtn && bottomNav.children.length >= 2) {
             this.menuXOffset = (bottomNav.children[1] as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
             cancelAnimationFrame(frameReq);

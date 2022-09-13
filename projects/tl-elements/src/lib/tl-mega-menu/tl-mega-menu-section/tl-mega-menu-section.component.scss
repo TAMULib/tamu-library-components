@@ -65,6 +65,7 @@
           display: block;
         }
 
+        a:focus-within,
         a:hover {
           font-weight: bolder;
           color: var(--tl-white);

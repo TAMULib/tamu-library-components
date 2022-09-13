@@ -28,28 +28,38 @@
     }
 
     wvr-nav-list-component[top-navigation-mobile]
-      > [role="list"]
+      > [role=menu]
       > wvr-nav-li-component
-      > [role="listitem"]
+      > [role=menuitem]
       > a,
     wvr-nav-list-component[top-navigation]
-      > [role="list"]
+      > [role=menu]
       > wvr-nav-li-component
-      > [role="listitem"]
+      > [role=menuitem]
       > a {
       padding: 12px;
       color: var(--tl-white);
     }
 
     wvr-nav-list-component[top-navigation-mobile]
-      > [role="list"]
+      > [role=menu]
       > wvr-nav-li-component
-      > [role="listitem"]
+      > [role=menuitem]
+      > a:focus-within,
+    wvr-nav-list-component[top-navigation]
+      > [role=menu]
+      > wvr-nav-li-component
+      > [role=menuitem]
+      > a:focus-within,
+    wvr-nav-list-component[top-navigation-mobile]
+      > [role=menu]
+      > wvr-nav-li-component
+      > [role=menuitem]
       > a:hover,
     wvr-nav-list-component[top-navigation]
-      > [role="list"]
+      > [role=menu]
       > wvr-nav-li-component
-      > [role="listitem"]
+      > [role=menuitem]
       > a:hover {
       color: var(--tl-black);
     }
@@ -116,6 +126,7 @@
           padding: 10px 20px;
         }
 
+        a:focus-within,
         a:hover {
           color: var(--secondary-default-bg);
         }
@@ -126,6 +137,7 @@
           color: var(--tl-white);
         }
 
+        .wvr-button:focus-within,
         .wvr-button:hover {
           color: var(--tl-black);
         }
@@ -149,6 +161,7 @@
           }
         }
 
+        wvre-dropdown-menu-item:focus-within > .helpLink,
         wvre-dropdown-menu-item:hover > .helpLink {
           background: var(--secondaryNeutral);
           border-radius: 5px;
@@ -185,15 +198,17 @@
     }
 
     wvr-nav-list-component[bottom-navigation]
+    wvr-nav-li-component.call-to-action:focus-within,
     wvr-nav-li-component.call-to-action:hover {
       a {
-        color: var(--tl-white);
+        color: var(--tl-white) !important;
         tl-icon-component svg {
-          fill: var(--tl-white);
+          fill: var(--tl-white) !important;
         }
       }
     }
 
+    wvr-nav-list-component[top-navigation] .dropdown:focus-within,
     wvr-nav-list-component[top-navigation] .dropdown:hover {
       .wvr-button {
         color: var(--tl-black);
@@ -224,10 +239,12 @@
         align-items: center;
       }
 
+      .nav-item:focus-within > a wvre-text,
       .nav-item:hover > a wvre-text {
         color: var(--tl-white);
       }
 
+      :focus-within,
       :hover {
         span[button-content],
         svg {
@@ -329,12 +346,13 @@
         }
       }
 
-      .mobile-menu > div > div > wvr-nav-list-component > wvre-nav-li > [role="listitem"] > a {
+      .mobile-menu > div > div > wvr-nav-list-component > wvre-nav-li > [role=menuitem] > a {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         height: 65px;
         width: 100%;
+        color: var(--tl-black);
         background: var(--tl-deep-yellow);
         border-bottom: 1px solid var(--secondaryNeutral);
 
@@ -354,13 +372,13 @@
           border-right: none;
         }
 
-        [role="list"] {
+        [role=menu] {
           justify-content: space-evenly;
           flex-wrap: nowrap !important;
           flex-direction: column !important;
         }
 
-        [role="listitem"] {
+        [role=menuitem] {
           justify-content: left !important;
 
           wvr-dropdown-component,
@@ -410,6 +428,7 @@
       tl-dropdown-menu,
       tl-mega-menu {
         width: 100%;
+        color: var(--tl-black);
         background: var(--tl-deep-yellow);
         overflow: hidden;
         border-bottom: var(--secondaryNeutral);
@@ -484,7 +503,7 @@
     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
     div.mobile-menu-content {
-      wvre-nav-li > [role="listitem"].nav-item {
+      wvre-nav-li > [role=menuitem].nav-item {
         a {
           white-space: nowrap;
         }

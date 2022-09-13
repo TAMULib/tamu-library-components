@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git+https://github.com/TAMULib/tamu-library-components.git"
   },
-  "version": "2.0.1-rc.1",
+  "version": "2.0.1-rc.2",
   "private": false,
   "license": "MIT",
   "engines": {
@@ -77,7 +77,7 @@
     "@stomp/stompjs": "^6.1.2",
     "@tinymce/tinymce-angular": "^4.2.4",
     "@ungap/custom-elements": "^1.1.0",
-    "@wvr/elements": "2.0.0",
+    "@wvr/elements": "next",
     "bootstrap": "^4.6.2",
     "css-element-queries": "^1.2.3",
     "handlebars": "^4.7.7",
