@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.1] - 11-15-21
+## [2.0.1] - 09-15-22
 ### Resolves
 
 - Mobile Mega menu not expanding. (#334)
@@ -9,6 +9,11 @@
 - TL components should implement suppressTopNavList in 1x. (#394)
 - Verify that TAMU Library Components is showing icons in the mobile menu. (#395)
 - Some browsers, mobile menu expand/collapse icons does not appear all the way to the right. (#407)
+- ADA - Issue 3: Missing Skip navigation link. (#424)
+- Build components with Node 16 or greater. (#429)
+- Update deprecated karma coverage package. (TAMULib/weaver-components#306)
+- ADA - Buttons missing label and expand/collapse notification. (#423)
+- Issue 4: Focus indicator missing (#425)
 
 ## [2.0.0] - 10-29-21
 ### Resolves
