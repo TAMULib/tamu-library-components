@@ -26,6 +26,7 @@
             display: inline;
           }
 
+          a.menu-title:focus-within,
           a.menu-title:hover {
             text-decoration: none !important;
             color: var(--tl-white) !important;
@@ -45,6 +46,7 @@
     }
   }
 
+  wvr-dropdown-component:focus-within,
   wvr-dropdown-component:hover {
     ::ng-deep {
       .wvr-dropdown .dropdown {
@@ -106,6 +108,7 @@
             display: block;
           }
 
+          > a:focus-within,
           > a:hover {
             font-weight: inherit;
             color: inherit;
@@ -121,6 +124,7 @@
           }
         }
 
+        .section-content .navbar-nav tl-nav-li:focus-within,
         .section-content .navbar-nav tl-nav-li:hover {
           border-bottom: none;
           color: inherit;

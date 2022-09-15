@@ -29,7 +29,7 @@
       --footer-height: auto;
       --footer-height: auto;
       wvr-nav-list-component {
-        ul.flex-row {
+        [role=menu].flex-row {
           flex-direction: column !important;
         }
       }
