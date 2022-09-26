@@ -150,6 +150,10 @@
           a {
             padding: 8px 0px 8px 8px;
             width: 100%;
+            color: rgb(0, 100, 139);
+            &:hover {
+              color: rgb(0, 63, 88);
+            }
           }
 
           tl-icon-component svg {
