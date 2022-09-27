@@ -12,6 +12,11 @@
 @import '~@wvr/elements/styles/wvr-elements';
 @import '../projects/tl-elements/src/lib/shared/styles/tl-elements';
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
 }
