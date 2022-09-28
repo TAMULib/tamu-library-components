@@ -5,8 +5,7 @@
     "entryFile": "src/public-api.ts",
     "umdModuleIds": {
       "@wvr/elements": "elements",
-      "@tinymce/tinymce-angular": "tinymceAngular",
-      "ng-inline-svg": "ngInlineSvg"
+      "@tinymce/tinymce-angular": "tinymceAngular"
     }
   },
   "allowedNonPeerDependencies": []
