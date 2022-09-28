@@ -3,9 +3,10 @@
 :host {
   tl-icon-wrapper {
     display: inline-block;
+    margin-left: 5px;
   }
 
-  wvre-icon {
+  wvr-icon-component {
     --wvr-icon-color: inherit;
     --wvr-icon-size: inherit;
   }
