@@ -1,7 +1,7 @@
 import { Injector, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Store } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { storeDevtoolsInstrument } from '../environments/environment';
 import { TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 import { actions, AppConfig, APP_CONFIG, registerWeaverElements, RootState, ThemeVariants } from '@wvr/elements';
 import { themes } from '../../projects/tl-elements/src/lib/shared/themes';
@@ -13,10 +13,7 @@ const getTinyMCEScript = (appConfig: AppConfig): string => `${appConfig.assetsUr
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    StoreDevtoolsModule.instrument({
-      maxAge: 25, // retains last 25 states
-      logOnly: true // restrict extension to log-only mode
-    }),
+    ...storeDevtoolsInstrument,
     TLCoreModule,
     TLSharedModule
   ],
