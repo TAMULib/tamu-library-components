@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git+https://github.com/TAMULib/tamu-library-components.git"
   },
-  "version": "2.0.3",
+  "version": "2.0.4-rc.1",
   "private": false,
   "license": "MIT",
   "engines": {
@@ -61,6 +61,7 @@
   "dependencies": {
     "@angular/animations": "12.2.16",
     "@angular/elements": "12.2.16",
+    "@angular/forms": "12.2.16",
     "@angular/platform-browser-dynamic": "12.2.16",
     "@ng-bootstrap/ng-bootstrap": "10.0.0",
     "@ngrx/effects": "12.5.1",
@@ -68,7 +69,7 @@
     "@ngrx/store-devtools": "12.5.1",
     "@stomp/stompjs": "6.1.2",
     "@tinymce/tinymce-angular": "4.2.4",
-    "@wvr/elements": "2.0.3",
+    "@wvr/elements": "2.0.5-rc.1",
     "bootstrap": "4.6.2",
     "ng-lazyload-image": "9.1.3",
     "ngx-build-plus": "12.2.0",
@@ -113,6 +114,7 @@
     "ts-node": "10.9.1"
   },
   "overrides": {
+    "@angular/compiler": "12.2.16",
     "@angular/core": "12.2.16",
     "@types/eslint": "6.8.1",
     "chokidar": "3.5.3",

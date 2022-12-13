@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.0.4] - 12-09-22
+### Resolves
+
+- Update the version to fix dependency conflicts. (#452)
+
+## [2.0.3] - 10-12-22
+### Resolves
+
+- Follow a more consistent design across tamu-library-components and weaver-components. (#440)
+- Update URL for Crews in the footer. (#417)
+- Update help menu link colors. (#439)
+- Improve styles. (#443)
+- Set body and html height. (#437)
+- Correct selector and adjust wrapper left margin. (#447)
+- Redesign dependency list, reducing dependencies where possible. (#445) (#448)
+
+## [2.0.2] - 09-19-22
+### Resolves
+
+- Upgrade `@wvr/elements` dependency to 2.0.2.
+
 ## [2.0.1] - 09-15-22
 ### Resolves
 
