@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.4] - 12-13-22
+### Resolves
+
+- Docker build must use 16-slim rather than lts-slim.
+
 ## [2.0.4] - 12-09-22
 ### Resolves
 
