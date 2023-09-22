@@ -3,9 +3,9 @@
 ## [2.0.4] - 09-22-23
 ### Resolves
 
-- Remove the 'Other Library Guests (Non-TAMU Affiliates)' link from tl-header. (#461)
-- Snyk fix: upgrade tinymce from 6.2.0 to 6.3.1
-- Snyk fix: upgrade tslib from 2.4.0 to 2.4.1
+- Remove the 'Other Library Guests (Non-TAMU Affiliates)' link from tl-header. (#462)
+- Snyk fix: upgrade tinymce from 6.2.0 to 6.3.1 (#458)
+- Snyk fix: upgrade tslib from 2.4.0 to 2.4.1 (#460)
 - Docker build must use 16-slim rather than lts-slim.
 - Update the version to fix dependency conflicts. (#452)
 
