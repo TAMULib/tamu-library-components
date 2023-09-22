@@ -1,0 +1,900 @@
+<about name="TL Mega Menu">
+  <p>This component represents a complex dropdown menu.</p>
+  <p>The mega menu provides a menu that can contain menus within itself.</p>
+  <p>The mega menu also directly supports mobile views.</p>
+
+  <div>
+    <p>Each menu item is composed of a section described by a <code>tl-mega-menu-section</code> element.</p>
+    <p>Within the <code>tl-mega-menu-section</code> element there is expected to be a <code>tl-nav-li</code> element for containing the desired row data.</p>
+  </div>
+
+  <div>
+    <p>The following attributes are available:</p>
+    <ul>
+      <li><code>menu-title</code>: The title of the mega menu.</li>
+      <li><code>menu-width</code>: The width of the menu, supporting CSS width values.</li>
+      <li><code>open-delay</code>: A unit of time in seconds for how long to wait before responding to a mouse hover event.</li>
+      <li><code>out-of-header</code>: One of <code>true</code> or <code>false</code>.</li>
+      <li><code>view-all-button-text</code>: The text to display for the View All button.</li>
+      <li><code>view-all-href</code>: When provided a URL, a View All button is displayed using the given URL.</li>
+    </ul>
+  </div>
+</about>
+
+<example name="TL Mega Menu Basic">
+  <desciption>
+    The basic <code>tl-mega-menu</code> component with no customizations.
+  </desciption>
+  <snippet>
+
+    <tl-mega-menu menu-title="Services" view-all-href="/view-all" view-all-button-text="Customized View All Button" hidden-in-mobile="true" out-of-header="true">
+
+      <tl-mega-menu-section section-title="Section One">
+        <tl-nav-li>
+          <a href="/research/option1">
+            <wvre-text value="Option 1"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/research/option2">
+            <wvre-text value="Option 2"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/research/option3">
+            <wvre-text value="Option 3"></wvre-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+
+      <tl-mega-menu-section section-title="Section Two">
+        <tl-nav-li>
+          <a href="/services/option1">
+            <wvre-text value="Option 1"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/services/option2">
+            <wvre-text value="Option 2"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/services/option3">
+            <wvre-text value="Option 3"></wvre-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Three">
+        <tl-nav-li>
+          <a href="/research/option1">
+            <wvre-text value="Option 1"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/research/option2">
+            <wvre-text value="Option 2"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/research/option3">
+            <wvre-text value="Option 3"></wvre-text>
+          </a>
+        </tl-nav-li>
+
+    </tl-mega-menu-section></tl-mega-menu>
+
+  </snippet>
+<component-source>/* istanbul ignore file */
+
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
+import { debounce, wvrTimeout } from '@wvr/elements';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
+
+@Component({
+  selector: 'tl-mega-menu-component',
+  templateUrl: './tl-mega-menu.component.html',
+  styleUrls: ['./tl-mega-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
+
+  /** The default text value to be displayed for tl-mega menu title. */
+  @Input() menuTitle = 'Mega Menu';
+
+  /** This allows to provide href value for tl mega menu section href. */
+  @Input() viewAllHref;
+
+  /** The boolean variable enables proper header display on window resize. */
+  @Input() outOfHeader = false;
+
+  /** This property determines the mega menu dropdown x-offset. */
+  menuXOffset = 0;
+
+  /** This variable allows customizing the text value of View All button in the mega menu. */
+  @Input() viewAllButtonText: string;
+
+  active = false;
+
+  /** This property determines the delay in milliseconds the dropdown takes prior to display on mouse hover. */
+  @Input() openDelay = 50;
+
+  /** This returns customized text or the default value to be displayed on the mega menu View All button. */
+  get viewAllButtonDisplayText(): string {
+    return this.viewAllButtonText ? this.viewAllButtonText : `View All ${this.menuTitle}`;
+  }
+
+  /** Allows for the override of the --tl-mobile-display-max-height variable. */
+  @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight = '0px';
+
+  private readonly sections: Array<tlmegamenusectioncomponent>;
+
+  private sectionTitleHeight = 0;
+
+  variantTypes = ['button'];
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+    this.sections = new Array<tlmegamenusectioncomponent>();
+  }
+
+  /** This adjusts the dropdown menu x offset on page load. */
+  ngAfterContentInit(): void {
+    super.ngAfterContentInit();
+    wvrTimeout(() =&gt; {
+      this.calculateMenuXOffset();
+    });
+  }
+
+  addSection(section: TlMegaMenuSectionComponent): void {
+    this.sections.push(section);
+    this.sectionTitleHeight = section.getElementHeight() &gt; this.sectionTitleHeight
+      ? section.getElementHeight()
+      : this.sectionTitleHeight;
+  }
+
+  /** This toggles the display of mobile menu on click event. */
+  toggleMobileMenuOpen(): void {
+    this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionTitleHeight}px`;
+
+    if (this.active) {
+      this.sections.forEach(s =&gt; {
+        s.close();
+      });
+      this.active = false;
+    } else {
+      this.active = true;
+    }
+  }
+
+  /** This event listener on window resize event helps the header for proper display. */
+  @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
+    if (!this.outOfHeader) {
+      const nativeElem = this.eRef.nativeElement as HTMLElement;
+      const header = document.querySelector('tl-header');
+      if (!header) { return; }
+      const bottomNav = header.shadowRoot.querySelector('div[bottom-navigation]');
+      if (bottomNav) {
+        let wvrBtn;
+        const frameReq = requestAnimationFrame(() =&gt; {
+          wvrBtn = nativeElem.querySelector('wvr-button-component');
+          if (wvrBtn &amp;&amp; bottomNav.children.length &gt;= 2) {
+            this.menuXOffset = (bottomNav.children[1] as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
+            cancelAnimationFrame(frameReq);
+          }
+        });
+      }
+    }
+  }
+
+}
+</tlmegamenusectioncomponent></tlmegamenusectioncomponent></component-source><component-template><wvr-dropdown-component [themevariant]="'link'" [toggleon]="'mouseover'" menuxoffset="{{menuXOffset}}px" [menuyoffset]="'-2px'" [menuwidth]="'928px'" [btntextdecoration]="'none'" [btncolor]="'var(--tl-black)'" [btnfontweight]="'bolder'" [btncolorhover]="'var(--tl-black)'" [btntextdecorationhover]="'none'" [btnfontfamily]="'var(--tl-font-family-sans-serif)'" [ngclass]="{active: active}" [opendelay]="openDelay" ngbdropdownanchor="">
+  <template dropdown-button="">
+    <span (click)="toggleMobileMenuOpen()">
+      {{menuTitle}}
+      <tl-icon-component class="x-icon" [hiddeninmobile]="true" [set]="'bootstrap'" [name]="'caret-right-fill'" [size]="'11px'">
+      </tl-icon-component>
+      <tl-icon-component class="plus-icon" [set]="'bootstrap'" [name]="'plus'" [size]="'24px'">
+      </tl-icon-component>
+    </span>
+  </template>
+  <template dropdown-menu="">
+    <div class="tl-mega-menu-custom-top" *ngif="!isMobileLayout">
+      <div class="flex-fill align-self-stretch">
+        <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
+      </div>
+    </div>
+    <div class="mega-menu-sections d-flex justify-content-between flex-wrap" *ngif="!isMobileLayout">
+      <ng-container *ngtemplateoutlet="sections"></ng-container>
+    </div>
+    <div class="tl-mega-menu-custom-bottom" *ngif="!isMobileLayout">
+      <div class="flex-fill align-self-stretch">
+        <ng-content select="tl-mega-menu-custom[bottom-content]"></ng-content>
+      </div>
+    </div>
+    <div class="mega-menu-view-all container pt-2" *ngif="viewAllHref">
+      <tl-button-component [href]="viewAllHref" [themevariant]="'primary'">
+        <template button-content="">
+          <wvr-text-component [value]="viewAllButtonDisplayText"></wvr-text-component>
+        </template>
+      </tl-button-component>
+    </div>
+  </template>
+</wvr-dropdown-component>
+
+<div *ngif="isMobileLayout" class="mobile-display" [ngclass]="{active: active}">
+  <ng-container *ngtemplateoutlet="sections"></ng-container>
+  <tl-mega-menu-section [sectiontitle]="viewAllButtonDisplayText" [viewallhref]="viewAllHref"></tl-mega-menu-section>
+</div>
+
+<ng-template #sections="">
+  <ng-content select="tl-mega-menu-section"></ng-content>
+</ng-template>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+
+:host {
+  font-family: var(--tl-font-family-sans-serif);
+  --tl-mobile-display-max-height: 1500px;
+
+  .mega-menu-sections {
+    margin: 0px 20px;
+  }
+
+  .mega-menu-view-all {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  wvr-dropdown-component {
+    ::ng-deep {
+      @import "~@wvr/elements/styles/variables";
+      @import "~bootstrap/scss/bootstrap";
+      @import "~@wvr/elements/styles/mixins";
+      @import "~@wvr/elements/styles/overrides";
+      .wvr-dropdown .dropdown {
+        .btn.btn-link.dropdown-toggle,
+        .btn.btn-link:not(:disabled):not(.disabled).active,
+        .btn.btn-link:not(:disabled):not(.disabled):active {
+          text-decoration: none !important;
+          color: var(--tl-black) !important;
+        }
+
+        .btn {
+          width: 100%;
+
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component:focus-within,
+  wvr-dropdown-component:hover {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component.active {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-display {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    background: var(--tl-grey);
+
+    ::ng-deep {
+      tl-mega-menu-section-component,
+      tl-mega-menu-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+
+        a {
+          margin: 0px 15px 0px 0px;
+          padding: 20px 0px 0px 60px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+
+          wvre-text {
+            font-weight: 400;
+            padding: 0px;
+            margin: 0px;
+            border-bottom: 0.5px solid #e4e4e4;
+            display: flex;
+            height: 40px;
+            width: 97%;
+          }
+        }
+
+        a:focus-within,
+        a:hover {
+          border-bottom: none;
+          wvre-text {
+            border-bottom: none;
+          }
+        }
+
+        .section-title {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+          text-decoration: none;
+        }
+
+        a.mega-menu-view-all {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+        }
+      }
+    }
+  }
+
+  .mobile-display.active {
+    max-height: var(--tl-mobile-display-max-height);
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  ::ng-deep {
+    tl-button-component {
+      --tl-btn-border-radius: 0px;
+    }
+
+    .wvr-dropdown .dropdown {
+      wvr-button-component {
+        width: 100%;
+
+        tl-icon-component.plus-icon {
+          display: none;
+          float: right;
+        }
+
+        tl-icon-component.x-icon {
+          display: inline-block;
+        }
+      }
+
+      [ngbDropdownMenu] {
+        padding: 20px 0px;
+        border: 1px solid var(--tl-grey);
+        border-radius: 3px;
+        border-bottom: 12px solid var(--tl-deep-yellow);
+        box-shadow: 0px 2px 3px 1px var(--tl-grey);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    wvr-dropdown-component {
+      ::ng-deep {
+        .wvr-dropdown .dropdown {
+          .btn {
+            text-align: start !important;
+          }
+        }
+      }
+    }
+
+    ::ng-deep {
+      div[template="dropdown-menu"] {
+        display: none;
+      }
+
+      .wvr-dropdown .dropdown {
+        wvr-button-component {
+          tl-icon-component.plus-icon {
+            display: inline-block;
+          }
+
+          tl-icon-component.x-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+</component-scss></example>
+
+
+<example name="TL Mega Menu Custom">
+  <desciption>
+    The basic <code>tl-mega-menu</code> with custom content
+  </desciption>
+  <snippet>
+
+    <tl-mega-menu menu-title="Services" view-all-href="/view-all" view-all-button-text="Customized View All Button" hidden-in-mobile="true" out-of-header="true">
+      <tl-mega-menu-custom top-content="">
+          <div class="alert alert-primary" role="alert">
+            <wvre-text value="Primary Alert Message"></wvre-text>
+          </div>
+      </tl-mega-menu-custom>
+      <tl-mega-menu-custom top-content="">
+        <tl-it-works text="Custom Content in Mega Menu"></tl-it-works>
+      </tl-mega-menu-custom>
+      <tl-mega-menu-section>
+        <tl-mega-menu-custom>
+          <tl-it-works text="Custom Content in Section"></tl-it-works>
+        </tl-mega-menu-custom>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Two">
+        <tl-nav-li>
+          <a href="/research/option1">
+            <wvre-text value="Option 1"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/research/option2">
+            <wvre-text value="Option 2"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/research/option3">
+            <wvre-text value="Option 3"></wvre-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Three">
+        <tl-mega-menu-custom>
+          <wvre-text value="Custom Content Title"></wvre-text>
+          <p>
+            <wvre-text value="Custom content paragraph"></wvre-text>
+          </p>
+        </tl-mega-menu-custom>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Four">
+        <tl-nav-li>
+          <a href="/services/option1">
+            <wvre-text value="Option 1"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/services/option2">
+            <wvre-text value="Option 2"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/services/option3">
+            <wvre-text value="Option 3"></wvre-text>
+          </a>
+        </tl-nav-li>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Five">
+        <tl-nav-li>
+          <a href="/research/option1">
+            <wvre-text value="Option 1"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/research/option2">
+            <wvre-text value="Option 2"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-nav-li>
+          <a href="/research/option3">
+            <wvre-text value="Option 3"></wvre-text>
+          </a>
+        </tl-nav-li>
+        <tl-mega-menu-custom>
+          <!-- <h1><wvre-text value="Test Services"></wvre-text></h1> -->
+          <div class="alert alert-warning" role="alert">
+            <wvre-text value="Warning Alert Message (section-content)"></wvre-text>
+          </div>
+        </tl-mega-menu-custom>
+      </tl-mega-menu-section>
+      <tl-mega-menu-section section-title="Section Six">
+        <tl-mega-menu-custom>
+          <div class="container">
+            <wvre-text value="Section Content"></wvre-text>
+          </div>
+        </tl-mega-menu-custom>
+      </tl-mega-menu-section>
+      <tl-mega-menu-custom bottom-content="">
+        <div class="container">
+          <div class="alert alert-success" role="alert">
+            <wvre-text value="Success Alert Message (bottom-content)Success AlertSuccess AlertSuccess Alert"></wvre-text>
+          </div>
+        </div>
+      </tl-mega-menu-custom>
+    </tl-mega-menu>
+
+  </snippet>
+<component-source>/* istanbul ignore file */
+
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from '@angular/core';
+import { debounce, wvrTimeout } from '@wvr/elements';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { TlMegaMenuSectionComponent } from './tl-mega-menu-section/tl-mega-menu-section.component';
+
+@Component({
+  selector: 'tl-mega-menu-component',
+  templateUrl: './tl-mega-menu.component.html',
+  styleUrls: ['./tl-mega-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
+
+  /** The default text value to be displayed for tl-mega menu title. */
+  @Input() menuTitle = 'Mega Menu';
+
+  /** This allows to provide href value for tl mega menu section href. */
+  @Input() viewAllHref;
+
+  /** The boolean variable enables proper header display on window resize. */
+  @Input() outOfHeader = false;
+
+  /** This property determines the mega menu dropdown x-offset. */
+  menuXOffset = 0;
+
+  /** This variable allows customizing the text value of View All button in the mega menu. */
+  @Input() viewAllButtonText: string;
+
+  active = false;
+
+  /** This property determines the delay in milliseconds the dropdown takes prior to display on mouse hover. */
+  @Input() openDelay = 50;
+
+  /** This returns customized text or the default value to be displayed on the mega menu View All button. */
+  get viewAllButtonDisplayText(): string {
+    return this.viewAllButtonText ? this.viewAllButtonText : `View All ${this.menuTitle}`;
+  }
+
+  /** Allows for the override of the --tl-mobile-display-max-height variable. */
+  @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight = '0px';
+
+  private readonly sections: Array<tlmegamenusectioncomponent>;
+
+  private sectionTitleHeight = 0;
+
+  variantTypes = ['button'];
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+    this.sections = new Array<tlmegamenusectioncomponent>();
+  }
+
+  /** This adjusts the dropdown menu x offset on page load. */
+  ngAfterContentInit(): void {
+    super.ngAfterContentInit();
+    wvrTimeout(() =&gt; {
+      this.calculateMenuXOffset();
+    });
+  }
+
+  addSection(section: TlMegaMenuSectionComponent): void {
+    this.sections.push(section);
+    this.sectionTitleHeight = section.getElementHeight() &gt; this.sectionTitleHeight
+      ? section.getElementHeight()
+      : this.sectionTitleHeight;
+  }
+
+  /** This toggles the display of mobile menu on click event. */
+  toggleMobileMenuOpen(): void {
+    this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionTitleHeight}px`;
+
+    if (this.active) {
+      this.sections.forEach(s =&gt; {
+        s.close();
+      });
+      this.active = false;
+    } else {
+      this.active = true;
+    }
+  }
+
+  /** This event listener on window resize event helps the header for proper display. */
+  @HostListener('window:resize') @debounce() calculateMenuXOffset(): void {
+    if (!this.outOfHeader) {
+      const nativeElem = this.eRef.nativeElement as HTMLElement;
+      const header = document.querySelector('tl-header');
+      if (!header) { return; }
+      const bottomNav = header.shadowRoot.querySelector('div[bottom-navigation]');
+      if (bottomNav) {
+        let wvrBtn;
+        const frameReq = requestAnimationFrame(() =&gt; {
+          wvrBtn = nativeElem.querySelector('wvr-button-component');
+          if (wvrBtn &amp;&amp; bottomNav.children.length &gt;= 2) {
+            this.menuXOffset = (bottomNav.children[1] as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
+            cancelAnimationFrame(frameReq);
+          }
+        });
+      }
+    }
+  }
+
+}
+</tlmegamenusectioncomponent></tlmegamenusectioncomponent></component-source><component-template><wvr-dropdown-component [themevariant]="'link'" [toggleon]="'mouseover'" menuxoffset="{{menuXOffset}}px" [menuyoffset]="'-2px'" [menuwidth]="'928px'" [btntextdecoration]="'none'" [btncolor]="'var(--tl-black)'" [btnfontweight]="'bolder'" [btncolorhover]="'var(--tl-black)'" [btntextdecorationhover]="'none'" [btnfontfamily]="'var(--tl-font-family-sans-serif)'" [ngclass]="{active: active}" [opendelay]="openDelay" ngbdropdownanchor="">
+  <template dropdown-button="">
+    <span (click)="toggleMobileMenuOpen()">
+      {{menuTitle}}
+      <tl-icon-component class="x-icon" [hiddeninmobile]="true" [set]="'bootstrap'" [name]="'caret-right-fill'" [size]="'11px'">
+      </tl-icon-component>
+      <tl-icon-component class="plus-icon" [set]="'bootstrap'" [name]="'plus'" [size]="'24px'">
+      </tl-icon-component>
+    </span>
+  </template>
+  <template dropdown-menu="">
+    <div class="tl-mega-menu-custom-top" *ngif="!isMobileLayout">
+      <div class="flex-fill align-self-stretch">
+        <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>
+      </div>
+    </div>
+    <div class="mega-menu-sections d-flex justify-content-between flex-wrap" *ngif="!isMobileLayout">
+      <ng-container *ngtemplateoutlet="sections"></ng-container>
+    </div>
+    <div class="tl-mega-menu-custom-bottom" *ngif="!isMobileLayout">
+      <div class="flex-fill align-self-stretch">
+        <ng-content select="tl-mega-menu-custom[bottom-content]"></ng-content>
+      </div>
+    </div>
+    <div class="mega-menu-view-all container pt-2" *ngif="viewAllHref">
+      <tl-button-component [href]="viewAllHref" [themevariant]="'primary'">
+        <template button-content="">
+          <wvr-text-component [value]="viewAllButtonDisplayText"></wvr-text-component>
+        </template>
+      </tl-button-component>
+    </div>
+  </template>
+</wvr-dropdown-component>
+
+<div *ngif="isMobileLayout" class="mobile-display" [ngclass]="{active: active}">
+  <ng-container *ngtemplateoutlet="sections"></ng-container>
+  <tl-mega-menu-section [sectiontitle]="viewAllButtonDisplayText" [viewallhref]="viewAllHref"></tl-mega-menu-section>
+</div>
+
+<ng-template #sections="">
+  <ng-content select="tl-mega-menu-section"></ng-content>
+</ng-template>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+
+:host {
+  font-family: var(--tl-font-family-sans-serif);
+  --tl-mobile-display-max-height: 1500px;
+
+  .mega-menu-sections {
+    margin: 0px 20px;
+  }
+
+  .mega-menu-view-all {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  wvr-dropdown-component {
+    ::ng-deep {
+      @import "~@wvr/elements/styles/variables";
+      @import "~bootstrap/scss/bootstrap";
+      @import "~@wvr/elements/styles/mixins";
+      @import "~@wvr/elements/styles/overrides";
+      .wvr-dropdown .dropdown {
+        .btn.btn-link.dropdown-toggle,
+        .btn.btn-link:not(:disabled):not(.disabled).active,
+        .btn.btn-link:not(:disabled):not(.disabled):active {
+          text-decoration: none !important;
+          color: var(--tl-black) !important;
+        }
+
+        .btn {
+          width: 100%;
+
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component:focus-within,
+  wvr-dropdown-component:hover {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component.active {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-display {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    background: var(--tl-grey);
+
+    ::ng-deep {
+      tl-mega-menu-section-component,
+      tl-mega-menu-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+
+        a {
+          margin: 0px 15px 0px 0px;
+          padding: 20px 0px 0px 60px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+
+          wvre-text {
+            font-weight: 400;
+            padding: 0px;
+            margin: 0px;
+            border-bottom: 0.5px solid #e4e4e4;
+            display: flex;
+            height: 40px;
+            width: 97%;
+          }
+        }
+
+        a:focus-within,
+        a:hover {
+          border-bottom: none;
+          wvre-text {
+            border-bottom: none;
+          }
+        }
+
+        .section-title {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+          text-decoration: none;
+        }
+
+        a.mega-menu-view-all {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+        }
+      }
+    }
+  }
+
+  .mobile-display.active {
+    max-height: var(--tl-mobile-display-max-height);
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  ::ng-deep {
+    tl-button-component {
+      --tl-btn-border-radius: 0px;
+    }
+
+    .wvr-dropdown .dropdown {
+      wvr-button-component {
+        width: 100%;
+
+        tl-icon-component.plus-icon {
+          display: none;
+          float: right;
+        }
+
+        tl-icon-component.x-icon {
+          display: inline-block;
+        }
+      }
+
+      [ngbDropdownMenu] {
+        padding: 20px 0px;
+        border: 1px solid var(--tl-grey);
+        border-radius: 3px;
+        border-bottom: 12px solid var(--tl-deep-yellow);
+        box-shadow: 0px 2px 3px 1px var(--tl-grey);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    wvr-dropdown-component {
+      ::ng-deep {
+        .wvr-dropdown .dropdown {
+          .btn {
+            text-align: start !important;
+          }
+        }
+      }
+    }
+
+    ::ng-deep {
+      div[template="dropdown-menu"] {
+        display: none;
+      }
+
+      .wvr-dropdown .dropdown {
+        wvr-button-component {
+          tl-icon-component.plus-icon {
+            display: inline-block;
+          }
+
+          tl-icon-component.x-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+</component-scss></example>

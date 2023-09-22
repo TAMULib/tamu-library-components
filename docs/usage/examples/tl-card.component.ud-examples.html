@@ -1,0 +1,236 @@
+<about name="TL Card">
+  <p>This component represents a customizable container.</p>
+  <p>A card is broken up into multiple optional sections specified via an HTML <code>template</code> element.</p>
+  <p>A card can be used as a simple list or a simple menu.</p>
+  <p>A card can be conditionally collapsible.</p>
+
+  <div>
+    <p>The following may be specified as an attribute on a <code>template</code> element:</p>
+    <ul>
+      <li><code>card-header</code>: The card header, which may also be "clickable" if enabled.</li>
+      <li><code>card-image</code>: An image that spans across the card, immediately below the header.</li>
+      <li><code>card-list-top</code>: A list displayed above the body section.</li>
+      <li><code>card-title</code>: The card title, as the first sub-section within the body section.</li>
+      <li><code>card-subtitle</code>: The card sub-title, immediately below the title within the body section.</li>
+      <li><code>card-text</code>: The main content of the card, below the title and sub-title within the body section.</li>
+      <li><code>card-buttons</code>: Buttons made availble on the card, the last sub-section within the body section.</li>
+      <li><code>card-list-bottom</code>: A list displayed below the body section.</li>
+      <li><code>card-footer</code>: The card footer, at the very bottom.</li>
+    </ul>
+  </div>
+
+  <div>
+    <p>The following attributes are available:</p>
+    <ul>
+      <li><code>collapsed</code>: One of <code>click</code> or <code>none</code> (auto-updated and can be watched).</li>
+      <li><code>collapse-method</code>: One of <code>click</code> or <code>none</code>.</li>
+      <li><code>selector-prefix</code>: A name representing the prefix to select.</li>
+      <li><code>start-collapsed</code>: One of <code>true</code> or <code>false</code>.</li>
+      <li><code>text-center</code>: One of <code>true</code> or <code>false</code>.</li>
+      <li><code>theme-variant</code>: The name of a theme variant to use on the button.</li>
+      <li><code>panel-format</code>: One of <code>solid</code>, <code>outlined</code>, or <code>mixed</code>.</li>
+    </ul>
+  </div>
+</about>
+
+<example name="TL Card Basic">
+  <desciption>
+    The basic <code>tl-card</code> component.
+  </desciption>
+  <snippet>
+    <tl-card>
+      <template card-header="">
+        <wvre-text value="Card Header"></wvre-text>
+      </template>
+      <template card-image="">
+        <img src="assets/kitten2.jpeg">
+      </template>
+      <template card-title="">
+        <wvre-text value="Card Title1"></wvre-text>
+      </template>
+      <template card-content="">
+        <wvre-text value="Some quick example text to build on the card title and make up the bulk of the card's content."></wvre-text>
+      </template>
+      <template card-list-top="">
+        <wvre-list list-type="group-flush">
+          <template list-items="">
+            <wvre-list-item>
+              <wvre-text value="Top List Item 1"></wvre-text>
+            </wvre-list-item>
+            <wvre-list-item context="warning">
+              <wvre-text value="Top List Item 2"></wvre-text>
+            </wvre-list-item>
+            <wvre-list-item context="success">
+              <wvre-text value="Top List Item 3"></wvre-text>
+            </wvre-list-item>
+          </template>
+        </wvre-list>
+      </template>
+      <template card-links="">
+        <a href="www.google.com" class="card-link">
+          <wvre-text value="Google"></wvre-text>
+        </a>
+        <a href="www.gmail.com" class="card-link">
+          <wvre-text value="Gmail"></wvre-text>
+        </a>
+      </template>
+      <template card-buttons="">
+        <wvre-button theme-variant="secondary">
+          <template button-content="">
+            <wvre-text value="Go somewhere"></wvre-text>
+          </template>
+        </wvre-button>
+      </template>
+      <template card-footer="">
+        <wvre-text value="Card Footer"></wvre-text>
+      </template>
+    </tl-card>
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-card-component',
+  templateUrl: './tl-card.component.html',
+  styleUrls: ['./tl-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlCardComponent extends TamuAbstractBaseComponent {
+
+  /** Used to override the type of card. */
+  @Input() themeVariant;
+
+  /** Used to describe the format of card. */
+  @Input() panelFormat: 'solid' | 'outlined' | 'mixed';
+
+ /** Designate how to expand/collapse. */
+  @Input() collapseMethod: 'click' | 'none';
+
+  /** Designate the initial expanded/collapsed state. */
+  @Input() startCollapsed: boolean;
+
+  /** Designate the actual expanded/collapsed state. */
+  @Input() collapsed: 'true' | 'false';
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-card-component [themevariant]="themeVariant" [panelformat]="panelFormat" [selectorprefix]="'tl'" [collapsemethod]="collapseMethod" [startcollapsed]="startCollapsed" [collapsed]="collapsed">
+  <ng-content select="template" ngprojectas="template"></ng-content>
+</wvr-card-component>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+</component-scss></example>
+
+<example name="TL Card Panel">
+  <desciption>
+    The <code>tl-card</code> component implemented as a bootstrap 3 style panel.
+  </desciption>
+  <snippet>
+    <tl-card theme-variant="primary" panel-format="solid">
+      <template card-header="">
+        <wvre-text value="Panel Header"></wvre-text>
+      </template>
+      <template card-title="">
+        <wvre-text value="Panel Title"></wvre-text>
+      </template>
+      <wvre-text value="This is a basic panel body"></wvre-text>
+    </tl-card>
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-card-component',
+  templateUrl: './tl-card.component.html',
+  styleUrls: ['./tl-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlCardComponent extends TamuAbstractBaseComponent {
+
+  /** Used to override the type of card. */
+  @Input() themeVariant;
+
+  /** Used to describe the format of card. */
+  @Input() panelFormat: 'solid' | 'outlined' | 'mixed';
+
+ /** Designate how to expand/collapse. */
+  @Input() collapseMethod: 'click' | 'none';
+
+  /** Designate the initial expanded/collapsed state. */
+  @Input() startCollapsed: boolean;
+
+  /** Designate the actual expanded/collapsed state. */
+  @Input() collapsed: 'true' | 'false';
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-card-component [themevariant]="themeVariant" [panelformat]="panelFormat" [selectorprefix]="'tl'" [collapsemethod]="collapseMethod" [startcollapsed]="startCollapsed" [collapsed]="collapsed">
+  <ng-content select="template" ngprojectas="template"></ng-content>
+</wvr-card-component>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+</component-scss></example>
+
+<example name="Collapsible TL Card Panel">
+  <desciption>
+    The <code>tl-card</code> component implemented as collapsible and is collapsed by default.
+  </desciption>
+  <snippet>
+    <tl-card text-center="" collapse-method="click" start-collapsed="true" collapsed="true">
+      <template card-header="">
+        <wvre-text value="Collapsible Card Header"></wvre-text>
+      </template>
+      <template card-title="">
+        <wvre-text value="Collapsible Card Title"></wvre-text>
+      </template>
+      <template card-text="">
+        <wvre-text value="This is a basic card body"></wvre-text>
+      </template>
+      <template card-footer="">
+        <wvre-text value="Collapsible Card Footer"></wvre-text>
+      </template>
+    </tl-card>
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-card-component',
+  templateUrl: './tl-card.component.html',
+  styleUrls: ['./tl-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlCardComponent extends TamuAbstractBaseComponent {
+
+  /** Used to override the type of card. */
+  @Input() themeVariant;
+
+  /** Used to describe the format of card. */
+  @Input() panelFormat: 'solid' | 'outlined' | 'mixed';
+
+ /** Designate how to expand/collapse. */
+  @Input() collapseMethod: 'click' | 'none';
+
+  /** Designate the initial expanded/collapsed state. */
+  @Input() startCollapsed: boolean;
+
+  /** Designate the actual expanded/collapsed state. */
+  @Input() collapsed: 'true' | 'false';
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-card-component [themevariant]="themeVariant" [panelformat]="panelFormat" [selectorprefix]="'tl'" [collapsemethod]="collapseMethod" [startcollapsed]="startCollapsed" [collapsed]="collapsed">
+  <ng-content select="template" ngprojectas="template"></ng-content>
+</wvr-card-component>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+</component-scss></example>

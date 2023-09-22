@@ -1,0 +1,1084 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>tamu-library-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">tamu-library-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  TlDropDownMenuSectionComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+                <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterContentInit" target="_blank" >AfterContentInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.Default</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>tl-dropdown-menu-section-component</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./tl-dropdown-menu-section.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./tl-dropdown-menu-section.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#mobileLayout" >mobileLayout</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#parent" >parent</a>
+                            </li>
+                            <li>
+                                <a href="#wvrNavListComponentMaxHeight" >wvrNavListComponentMaxHeight</a>
+                            </li>
+                            <li>
+                                <a href="#_fontFamily" >_fontFamily</a>
+                            </li>
+                            <li>
+                                <a href="#_fontSize" >_fontSize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getElementHeight" >getElementHeight</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterContentInit" >ngAfterContentInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#inheritFontStyle" >inheritFontStyle</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class.mobile-layout" >class.mobile-layout</a>
+                            </li>
+                            <li>
+                                <a href="#style.--wvr-nav-list-component-max-height" >style.--wvr-nav-list-component-max-height</a>
+                            </li>
+                            <li>
+                                <a href="#style.--tl-font-family-sans-serif" >style.--tl-font-family-sans-serif</a>
+                            </li>
+                            <li>
+                                <a href="#style.--tl-font-size" >style.--tl-font-size</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(injector: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>injector</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inheritFontStyle"></a>
+                        <b>inheritFontStyle</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;true&quot; | &quot;false&quot;</code>
+
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:14</a></code>
+</div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="class.mobile-layout"></a>
+                    <span class="name">
+                        <span ><b>class.mobile-layout</b></span>
+                        <a href="#class.mobile-layout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.isMobileLayout</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Toggles the mobile-layout class on the root element.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.--wvr-nav-list-component-max-height"></a>
+                    <span class="name">
+                        <span ><b>style.--wvr-nav-list-component-max-height</b></span>
+                        <a href="#style.--wvr-nav-list-component-max-height"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.--tl-font-family-sans-serif"></a>
+                    <span class="name">
+                        <span ><b>style.--tl-font-family-sans-serif</b></span>
+                        <a href="#style.--tl-font-family-sans-serif"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-family-sans-serif)&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:12</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-font-family-sans-serif css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.--tl-font-size"></a>
+                    <span class="name">
+                        <span ><b>style.--tl-font-size</b></span>
+                        <a href="#style.--tl-font-size"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-size)&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:9</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-default-font-size css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getElementHeight"></a>
+                    <span class="name">
+                        <span ><b>getElementHeight</b></span>
+                        <a href="#getElementHeight"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getElementHeight()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the clientHeight of the element.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the height of the element, in pixels.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterContentInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterContentInit</b></span>
+                        <a href="#ngAfterContentInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterContentInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Perform after-initialization operations.</p>
+<p>This will add the section to the parent&#39;s component.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Perform initialization operations.</p>
+<p>This will identify the parent element.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mobileLayout"></a>
+                    <span class="name">
+                        <span ><b>mobileLayout</b></span>
+                        <a href="#mobileLayout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.isMobileLayout</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;class.mobile-layout&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Toggles the mobile-layout class on the root element.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>parent</b></span>
+                        <a href="#parent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/TlDropDownMenuComponent.html" target="_self" >TlDropDownMenuComponent</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="wvrNavListComponentMaxHeight"></a>
+                    <span class="name">
+                        <span ><b>wvrNavListComponentMaxHeight</b></span>
+                        <a href="#wvrNavListComponentMaxHeight"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.--wvr-nav-list-component-max-height&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown-menu/tl-dropdown-menu-section/tl-dropdown-menu-section.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fontFamily"></a>
+                    <span class="name">
+                        <span ><b>_fontFamily</b></span>
+                        <a href="#_fontFamily"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-family-sans-serif)&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.--tl-font-family-sans-serif&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:12</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-font-family-sans-serif css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fontSize"></a>
+                    <span class="name">
+                        <span ><b>_fontSize</b></span>
+                        <a href="#_fontSize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-size)&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.--tl-font-size&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:9</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-default-font-size css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, OnInit } from &#x27;@angular/core&#x27;;
+import { TamuAbstractBaseComponent } from &#x27;../../shared/tl-abstract-base.component&#x27;;
+import { TlDropDownMenuComponent } from &#x27;../tl-dropdown-menu.component&#x27;;
+
+@Component({
+  selector: &#x27;tl-dropdown-menu-section-component&#x27;,
+  templateUrl: &#x27;./tl-dropdown-menu-section.component.html&#x27;,
+  styleUrls: [&#x27;./tl-dropdown-menu-section.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlDropDownMenuSectionComponent extends TamuAbstractBaseComponent implements AfterContentInit, OnInit  {
+
+  private parent: TlDropDownMenuComponent;
+
+  /** Toggles the mobile-layout class on the root element. */
+  @HostBinding(&#x27;class.mobile-layout&#x27;) mobileLayout &#x3D; this.isMobileLayout;
+
+  /** Allows for the override of the --tl-mobile-display-wvr-nav-list-component-max-height variable. */
+  @HostBinding(&#x27;style.--wvr-nav-list-component-max-height&#x27;) wvrNavListComponentMaxHeight: string;
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+  /**
+   * Perform initialization operations.
+   *
+   * This will identify the parent element.
+   */
+  ngOnInit(): void {
+    super.ngOnInit();
+
+    const elem &#x3D; this.eRef.nativeElement as HTMLElement;
+    const parentElem &#x3D; elem.closest(&#x27;tl-dropdown-menu&#x27;);
+
+    if (parentElem) {
+      this.parent &#x3D; this.componentRegistry.getComponentByElement(parentElem as HTMLElement) as TlDropDownMenuComponent;
+    } else {
+      console.warn(&#x60;TlDropDownMenuSectionComponent (${this.id}) is not within a TlDropDownMenuComponent&#x60;);
+    }
+  }
+
+  /**
+   * Perform after-initialization operations.
+   *
+   * This will add the section to the parent&#x27;s component.
+   */
+  ngAfterContentInit(): void {
+    super.ngAfterContentInit();
+
+    setTimeout(() &#x3D;&gt; {
+      this.parent.addSection(this);
+    }, 1500);
+  }
+
+  /**
+   * Get the clientHeight of the element.
+   *
+   * @returns the height of the element, in pixels.
+   */
+  getElementHeight(): number {
+    return (this.eRef.nativeElement as HTMLElement).clientHeight;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;wvr-nav-list-component vertical&#x3D;&quot;true&quot; class&#x3D;&quot;section-content&quot; [ngClass]&#x3D;&quot;{ &#x27;mobile-layout&#x27;: isMobileLayout }&quot;&gt;
+  &lt;template nav-list-items&gt;
+    &lt;ng-content select&#x3D;&quot;tl-nav-li, tl-dropdown-menu-custom&quot; ngProjectAs&#x3D;&quot;wvr-nav-li&quot;&gt;&lt;/ng-content&gt;
+  &lt;/template&gt;
+&lt;/wvr-nav-list-component&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./tl-dropdown-menu-section.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../shared/styles/tl-variables.scss&quot;;
+
+:host {
+  width: 27%;
+  padding-bottom: 35px;
+
+  wvr-nav-list-component.mobile-layout {
+    display: inline-block;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in-out;
+  }
+
+  wvr-nav-list-component.mobile-layout.active {
+    max-height: var(--wvr-nav-list-component-max-height);
+    transition: max-height 1s ease-in-out;
+  }
+
+  p {
+    margin-bottom: 3px;
+  }
+
+  wvr-nav-list-component {
+    ::ng-deep {
+      [role&#x3D;menu] {
+        height: auto;
+      }
+
+      tl-nav-li {
+        padding: 4px 0px 6px 25px;
+        margin-bottom: 2px;
+        color: var(--tl-deep-grey);
+        font-weight: lighter;
+        width: 100%;
+        display: block;
+
+        &gt; a {
+          padding: 0px;
+          margin-bottom: 0x;
+          color: inherit;
+          font-weight: inherit;
+          width: 100%;
+          display: block;
+        }
+
+        &gt; a:hover {
+          font-weight: inherit;
+          color: inherit;
+          background: inherit;
+          text-decoration: none;
+        }
+      }
+
+      tl-nav-li:hover {
+        font-weight: bolder;
+        color: var(--tl-white);
+        background: var(--tl-deep-grey);
+        text-decoration: none;
+      }
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><wvr-nav-list-component vertical="true" class="section-content" [ngClass]="{ \'mobile-layout\': isMobileLayout }">  <template nav-list-items>    <ng-content select="tl-nav-li, tl-dropdown-menu-custom" ngProjectAs="wvr-nav-li"></ng-content>  </template></wvr-nav-list-component></div>'
+    var COMPONENTS = [{'name': 'TlAlertComponent', 'selector': 'tl-alert-component'},{'name': 'TlButtonComponent', 'selector': 'tl-button-component'},{'name': 'TlCardComponent', 'selector': 'tl-card-component'},{'name': 'TlDropDownComponent', 'selector': 'tl-dropdown-component'},{'name': 'TlDropDownMenuComponent', 'selector': 'tl-dropdown-menu-component'},{'name': 'TlDropDownMenuSectionComponent', 'selector': 'tl-dropdown-menu-section-component'},{'name': 'TlFooterComponent', 'selector': 'tl-footer-component'},{'name': 'TlHeaderComponent', 'selector': 'tl-header-component'},{'name': 'TlIconComponent', 'selector': 'tl-icon-component'},{'name': 'TlItWorksComponent', 'selector': 'tl-it-works-component'},{'name': 'TlMegaMenuComponent', 'selector': 'tl-mega-menu-component'},{'name': 'TlMegaMenuSectionComponent', 'selector': 'tl-mega-menu-section-component'},{'name': 'TlModalComponent', 'selector': 'tl-modal-component'},{'name': 'TlNavListComponent', 'selector': 'tl-nav-list-component'},{'name': 'TlTabComponent', 'selector': 'tl-tab-component'},{'name': 'TlTabsComponent', 'selector': 'tl-tabs-component'},{'name': 'TlThemesComponent', 'selector': 'tl-themes-component'},{'name': 'TlWysiwygComponent', 'selector': 'tl-wysiwyg-component'}];
+    var DIRECTIVES = [{'name': 'TamuAbstractBaseComponent', 'selector': ''}];
+    var ACTUAL_COMPONENT = {'name': 'TlDropDownMenuSectionComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TlDropDownMenuSectionComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

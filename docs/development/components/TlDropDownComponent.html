@@ -1,0 +1,1968 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>tamu-library-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">tamu-library-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  TlDropDownComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+                <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+    </p>
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.Default</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>tl-dropdown-component</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./tl-dropdown.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./tl-dropdown.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isOpen" >isOpen</a>
+                            </li>
+                            <li>
+                                <a href="#_fontFamily" >_fontFamily</a>
+                            </li>
+                            <li>
+                                <a href="#_fontSize" >_fontSize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#btnBorderRadius" >btnBorderRadius</a>
+                            </li>
+                            <li>
+                                <a href="#btnBoxShadowFocus" >btnBoxShadowFocus</a>
+                            </li>
+                            <li>
+                                <a href="#btnFontFamily" >btnFontFamily</a>
+                            </li>
+                            <li>
+                                <a href="#btnFontSize" >btnFontSize</a>
+                            </li>
+                            <li>
+                                <a href="#btnHref" >btnHref</a>
+                            </li>
+                            <li>
+                                <a href="#btnLineHeight" >btnLineHeight</a>
+                            </li>
+                            <li>
+                                <a href="#btnTextAlign" >btnTextAlign</a>
+                            </li>
+                            <li>
+                                <a href="#menuBackground" >menuBackground</a>
+                            </li>
+                            <li>
+                                <a href="#menuBorder" >menuBorder</a>
+                            </li>
+                            <li>
+                                <a href="#menuBorderDisplay" >menuBorderDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#menuBorderRadius" >menuBorderRadius</a>
+                            </li>
+                            <li>
+                                <a href="#menuBoxShadow" >menuBoxShadow</a>
+                            </li>
+                            <li>
+                                <a href="#menuFlexDirection" >menuFlexDirection</a>
+                            </li>
+                            <li>
+                                <a href="#menuItemMargin" >menuItemMargin</a>
+                            </li>
+                            <li>
+                                <a href="#menuPadding" >menuPadding</a>
+                            </li>
+                            <li>
+                                <a href="#menuWidth" >menuWidth</a>
+                            </li>
+                            <li>
+                                <a href="#menuXOffset" >menuXOffset</a>
+                            </li>
+                            <li>
+                                <a href="#menuYOffset" >menuYOffset</a>
+                            </li>
+                            <li>
+                                <a href="#toggleOn" >toggleOn</a>
+                            </li>
+                            <li>
+                                <a href="#inheritFontStyle" >inheritFontStyle</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#style.--tl-font-family-sans-serif" >style.--tl-font-family-sans-serif</a>
+                            </li>
+                            <li>
+                                <a href="#style.--tl-font-size" >style.--tl-font-size</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#btnBackground" >btnBackground</a>
+                                </li>
+                                <li>
+                                    <a href="#btnBackgroundActive" >btnBackgroundActive</a>
+                                </li>
+                                <li>
+                                    <a href="#btnBackgroundHover" >btnBackgroundHover</a>
+                                </li>
+                                <li>
+                                    <a href="#btnBorderColor" >btnBorderColor</a>
+                                </li>
+                                <li>
+                                    <a href="#btnBorderActive" >btnBorderActive</a>
+                                </li>
+                                <li>
+                                    <a href="#btnBorderFocus" >btnBorderFocus</a>
+                                </li>
+                                <li>
+                                    <a href="#btnBorderHover" >btnBorderHover</a>
+                                </li>
+                                <li>
+                                    <a href="#btnColor" >btnColor</a>
+                                </li>
+                                <li>
+                                    <a href="#btnColorActive" >btnColorActive</a>
+                                </li>
+                                <li>
+                                    <a href="#btnColorHover" >btnColorHover</a>
+                                </li>
+                                <li>
+                                    <a href="#btnTextDecoration" >btnTextDecoration</a>
+                                </li>
+                                <li>
+                                    <a href="#btnTextDecorationActive" >btnTextDecorationActive</a>
+                                </li>
+                                <li>
+                                    <a href="#btnTextDecorationFocus" >btnTextDecorationFocus</a>
+                                </li>
+                                <li>
+                                    <a href="#btnTextDecorationHover" >btnTextDecorationHover</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(injector: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:139</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>injector</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBorderRadius"></a>
+                        <b>btnBorderRadius</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:90</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to override the border radius of button in a dropdown</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBoxShadowFocus"></a>
+                        <b>btnBoxShadowFocus</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:92</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnFontFamily"></a>
+                        <b>btnFontFamily</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:110</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to override the button font family in a drop down</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnFontSize"></a>
+                        <b>btnFontSize</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:113</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to override the button font size in a drop down</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnHref"></a>
+                        <b>btnHref</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:13</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to convert the dropdown menu button into a link.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnLineHeight"></a>
+                        <b>btnLineHeight</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:116</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to override the line height of button in a drop down</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnTextAlign"></a>
+                        <b>btnTextAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:119</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to override the text alignment of button in a drop down</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuBackground"></a>
+                        <b>menuBackground</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:16</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop down menu background.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuBorder"></a>
+                        <b>menuBorder</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:19</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop down menu border.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuBorderDisplay"></a>
+                        <b>menuBorderDisplay</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:22</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop-down menu border display</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuBorderRadius"></a>
+                        <b>menuBorderRadius</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:25</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop down menu-border-radius.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuBoxShadow"></a>
+                        <b>menuBoxShadow</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:28</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop down menu box shadow.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuFlexDirection"></a>
+                        <b>menuFlexDirection</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:31</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop-down <code>menu-border-flexDirection</code></p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuItemMargin"></a>
+                        <b>menuItemMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:34</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the item margin in drop-down menu.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuPadding"></a>
+                        <b>menuPadding</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:37</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop-down menu padding</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuWidth"></a>
+                        <b>menuWidth</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:40</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop-down menu width</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuXOffset"></a>
+                        <b>menuXOffset</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:43</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop-down menu x offset.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuYOffset"></a>
+                        <b>menuYOffset</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;-6px&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:46</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the drop-down menu x offset.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleOn"></a>
+                        <b>toggleOn</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;click&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:49</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to define the event type which will display the dropdown menu.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inheritFontStyle"></a>
+                        <b>inheritFontStyle</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;true&quot; | &quot;false&quot;</code>
+
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:14</a></code>
+</div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.--tl-font-family-sans-serif"></a>
+                    <span class="name">
+                        <span ><b>style.--tl-font-family-sans-serif</b></span>
+                        <a href="#style.--tl-font-family-sans-serif"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-family-sans-serif)&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:12</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-font-family-sans-serif css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.--tl-font-size"></a>
+                    <span class="name">
+                        <span ><b>style.--tl-font-size</b></span>
+                        <a href="#style.--tl-font-size"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-size)&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:9</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-default-font-size css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isOpen"></a>
+                    <span class="name">
+                        <span ><b>isOpen</b></span>
+                        <a href="#isOpen"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Used to define the boolean value for the drop down</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fontFamily"></a>
+                    <span class="name">
+                        <span ><b>_fontFamily</b></span>
+                        <a href="#_fontFamily"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-family-sans-serif)&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.--tl-font-family-sans-serif&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:12</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-font-family-sans-serif css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fontSize"></a>
+                    <span class="name">
+                        <span ><b>_fontSize</b></span>
+                        <a href="#_fontSize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-size)&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.--tl-font-size&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:9</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-default-font-size css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBackground"></a>
+                        <span class="name"><b>btnBackground</b><a href="#btnBackground"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnBackground()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:55</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button background in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBackgroundActive"></a>
+                        <span class="name"><b>btnBackgroundActive</b><a href="#btnBackgroundActive"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnBackgroundActive()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:60</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button background active state in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBackgroundHover"></a>
+                        <span class="name"><b>btnBackgroundHover</b><a href="#btnBackgroundHover"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnBackgroundHover()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:65</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button background hover state in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBorderColor"></a>
+                        <span class="name"><b>btnBorderColor</b><a href="#btnBorderColor"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnBorderColor()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:70</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button border in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBorderActive"></a>
+                        <span class="name"><b>btnBorderActive</b><a href="#btnBorderActive"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnBorderActive()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:75</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button active state border in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBorderFocus"></a>
+                        <span class="name"><b>btnBorderFocus</b><a href="#btnBorderFocus"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnBorderFocus()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:80</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button focus state border in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnBorderHover"></a>
+                        <span class="name"><b>btnBorderHover</b><a href="#btnBorderHover"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnBorderHover()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:85</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button active state border in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnColor"></a>
+                        <span class="name"><b>btnColor</b><a href="#btnColor"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnColor()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:95</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button color in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnColorActive"></a>
+                        <span class="name"><b>btnColorActive</b><a href="#btnColorActive"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnColorActive()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:100</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button color active state in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnColorHover"></a>
+                        <span class="name"><b>btnColorHover</b><a href="#btnColorHover"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnColorHover()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:105</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the button color hover state in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnTextDecoration"></a>
+                        <span class="name"><b>btnTextDecoration</b><a href="#btnTextDecoration"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnTextDecoration()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:122</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the text decoration property of button in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnTextDecorationActive"></a>
+                        <span class="name"><b>btnTextDecorationActive</b><a href="#btnTextDecorationActive"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnTextDecorationActive()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:127</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the active state of button text decoration property in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnTextDecorationFocus"></a>
+                        <span class="name"><b>btnTextDecorationFocus</b><a href="#btnTextDecorationFocus"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnTextDecorationFocus()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:132</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the focus state of button text decoration property in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnTextDecorationHover"></a>
+                        <span class="name"><b>btnTextDecorationHover</b><a href="#btnTextDecorationHover"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>btnTextDecorationHover()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">projects/tl-elements/src/lib/tl-dropdown/tl-dropdown.component.ts:137</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Used to override the hover state of button text decoration property in a drop down</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from &#x27;@angular/core&#x27;;
+import { TamuAbstractBaseComponent } from &#x27;../shared/tl-abstract-base.component&#x27;;
+
+@Component({
+  selector: &#x27;tl-dropdown-component&#x27;,
+  templateUrl: &#x27;./tl-dropdown.component.html&#x27;,
+  styleUrls: [&#x27;./tl-dropdown.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlDropDownComponent extends TamuAbstractBaseComponent {
+
+  /** Used to convert the dropdown menu button into a link. */
+  @Input() btnHref;
+
+  /** Used to define the drop down menu background. */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-background&#x27;) @Input() menuBackground;
+
+  /** Used to define the drop down menu border. */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-border&#x27;) @Input() menuBorder;
+
+  /** Used to define the drop-down menu border display */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-border-display&#x27;) @Input() menuBorderDisplay;
+
+  /** Used to define the drop down menu-border-radius. */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-border-radius&#x27;) @Input() menuBorderRadius;
+
+  /** Used to define the drop down menu box shadow. */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-box-shadow&#x27;) @Input() menuBoxShadow;
+
+  /** Used to define the drop-down &#x60;menu-border-flexDirection&#x60; */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-flex-direction&#x27;) @Input() menuFlexDirection;
+
+  /** Used to define the item margin in drop-down menu. */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-item-margin&#x27;) @Input() menuItemMargin;
+
+  /** Used to define the drop-down menu padding */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-padding&#x27;) @Input() menuPadding;
+
+  /** Used to define the drop-down menu width */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-width&#x27;) @Input() menuWidth;
+
+  /** Used to define the drop-down menu x offset. */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-x-offset&#x27;) @Input() menuXOffset;
+
+  /** Used to define the drop-down menu x offset. */
+  @HostBinding(&#x27;style.--tl-dropdown-menu-y-offset&#x27;) @Input() menuYOffset &#x3D; &#x27;-6px&#x27;;
+
+  /** Used to define the event type which will display the dropdown menu. */
+  @Input() toggleOn &#x3D; &#x27;click&#x27;;
+
+  /** Used to define the boolean value for the drop down */
+  isOpen &#x3D; false;
+
+  /** Used to override the button background in a drop down */
+  get btnBackground(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-background)&#x60;;
+  }
+
+  /** Used to override the button background active state in a drop down */
+  get btnBackgroundActive(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-active-background)&#x60;;
+  }
+
+  /** Used to override the button background hover state in a drop down */
+  get btnBackgroundHover(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-hover-background)&#x60;;
+  }
+
+  /** Used to override the button border in a drop down */
+  get btnBorderColor(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-border)&#x60;;
+  }
+
+  /** Used to override the button active state border in a drop down */
+  get btnBorderActive(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-active-border)&#x60;;
+  }
+
+  /** Used to override the button focus state border in a drop down */
+  get btnBorderFocus(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-focus-border)&#x60;;
+  }
+
+  /** Used to override the button active state border in a drop down */
+  get btnBorderHover(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-hover-border)&#x60;;
+  }
+
+  /** Used to override the border radius of button in a dropdown */
+  @HostBinding(&#x27;style.--tl-btn-border-radius&#x27;) @Input() btnBorderRadius;
+
+  @HostBinding(&#x27;style.--tl-btn-focus-box-shadow&#x27;) @Input() btnBoxShadowFocus;
+
+  /** Used to override the button color in a drop down */
+  get btnColor(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-color)&#x60;;
+  }
+
+  /** Used to override the button color active state in a drop down */
+  get btnColorActive(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-active-color)&#x60;;
+  }
+
+  /** Used to override the button color hover state in a drop down */
+  get btnColorHover(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-hover-color)&#x60;;
+  }
+
+  /** Used to override the button font family in a drop down */
+  @HostBinding(&#x27;style.--tl-font-family-sans-serif&#x27;) @Input() btnFontFamily;
+
+  /** Used to override the button font size in a drop down */
+  @HostBinding(&#x27;style.--tl-btn-font-size&#x27;) @Input() btnFontSize;
+
+  /** Used to override the line height of button in a drop down */
+  @HostBinding(&#x27;style.--tl-btn-line-height&#x27;) @Input() btnLineHeight;
+
+  /** Used to override the text alignment of button in a drop down */
+  @HostBinding(&#x27;style.--tl-btn-text-align&#x27;) @Input() btnTextAlign;
+
+  /** Used to override the text decoration property of button in a drop down */
+  get btnTextDecoration(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-hover-color)&#x60;;
+  }
+
+  /** Used to override the active state of button text decoration property in a drop down */
+  get btnTextDecorationActive(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-hover-color)&#x60;;
+  }
+
+  /** Used to override the focus state of button text decoration property in a drop down */
+  get btnTextDecorationFocus(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-hover-color)&#x60;;
+  }
+
+  /** Used to override the hover state of button text decoration property in a drop down */
+  get btnTextDecorationHover(): string {
+    return &#x60;var(--tl-btn-${this.themeVariant}-hover-color)&#x60;;
+  }
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;wvr-dropdown-component
+  [btnHref]&#x3D;&quot;btnHref&quot;
+  [toggleOn]&#x3D;&quot;toggleOn&quot;
+  [themeVariant]&#x3D;&quot;themeVariant&quot;
+  [menuBackground]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-background)&#x27;&quot;
+  [menuBorder]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-border)&#x27;&quot;
+  [menuBorderRadius]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-border-radius)&#x27;&quot;
+  [menuBorderDisplay]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-border-display)&#x27;&quot;
+  [menuFlexDirection]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-flex-direction)&#x27;&quot;
+  [menuPadding]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-padding)&#x27;&quot;
+  [menuWidth]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-width)&#x27;&quot;
+  [menuXOffset]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-x-offset)&#x27;&quot;
+  [menuYOffset]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-y-offset)&#x27;&quot;
+  [menuItemMargin]&#x3D;&quot;&#x27;var(--tl-dropdown-menu-item-margin)&#x27;&quot;
+  [backgroundActive]&#x3D;&quot;btnBackgroundActive&quot;
+  [btnBorderColor]&#x3D;&quot;btnBorderColor&quot;
+  [btnBorderActive]&#x3D;&quot;btnBorderActive&quot;
+  [btnBorderFocus]&#x3D;&quot;btnBorderFocus&quot;
+  [btnBorderRadius]&#x3D;&quot;&#x27;var(--tl-btn-border-radius)&#x27;&quot;
+  [btnBoxShadowFocus]&#x3D;&quot;&#x27;var(--tl-btn-focus-box-shadow)&#x27;&quot;
+  [btnColorActive]&#x3D;&quot;btnColorActive&quot;
+  [fontFamily]&#x3D;&quot;&#x27;var(--tl-font-family-sans-serif)&#x27;&quot;
+  [fontSize]&#x3D;&quot;&#x27;var(--tl-btn-font-size)&#x27;&quot;
+  [lineHeight]&#x3D;&quot;&#x27;var(--tl-btn-line-height)&#x27;&quot;
+  [textAlign]&#x3D;&quot;&#x27;var(--tl-btn-text-align)&#x27;&quot;
+  [textDecoration]&#x3D;&quot;btnTextDecoration&quot;
+  [textDecorationActive]&#x3D;&quot;btnTextDecorationActive&quot;
+  [textDecorationFocus]&#x3D;&quot;btnTextDecorationFocus&quot;
+  [dropdownMenuDisplay]&#x3D;&quot;&#x27;static&#x27;&quot;
+  ngbDropdownAnchor&gt;
+  &lt;ng-content select&#x3D;&quot;template[dropdown-button]&quot; ngProjectAs&#x3D;&quot;template[dropdown-button]&quot;&gt;&lt;/ng-content&gt;
+  &lt;ng-content select&#x3D;&quot;template[dropdown-menu]&quot; ngProjectAs&#x3D;&quot;template[dropdown-menu]&quot;&gt;&lt;/ng-content&gt;
+&lt;/wvr-dropdown-component&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./tl-dropdown.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../shared/styles/tl-variables.scss&quot;;
+
+:host {
+
+  // dropdown menu properties
+  --tl-dropdown-menu-width: fit-content;
+  --tl-dropdown-menu-height: fit-content;
+  --tl-dropdown-menu-background: var(--tl-white);
+  --tl-dropdown-menu-border: 1px solid rgb(204, 204, 204);
+  --tl-dropdown-menu-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.17);
+  --tl-dropdown-menu-border-radius: 4px;
+
+  // drop down button properties
+  --tl-dropdown-button-width: 124px;
+  --tl-dropdown-button-height: 48px;
+  --tl-dropdown-button-border-radius: 4px;
+
+  // tl-dropdown properties
+  --tl-dropdown-menu-animation-speed: var(--wvr-dropdown-menu-animation-speed);
+  --tl-dropdown-menu-border-radius: 4px;
+  --tl-dropdown-menu-display: var(--wvr-dropdown-menu-display);
+  --tl-dropdown-menu-flex-direction: var(--wvr-dropdown-menu-flex-direction);
+  --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
+  --tl-dropdown-menu-width: var(--wvr-dropdown-menu-width);
+  --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
+  --tl-dropdown-menu-x-offset: var(--wvr-dropdown-menu-x-offset);
+  --tl-dropdown-menu-y-offset: var(--wvr-dropdown-menu-y-offset);
+  --tl-dropdown-menu-item-margin: var(--wvr-dropdown-menu-item-margin);
+
+  wvr-dropdown-component {
+    ::ng-deep {
+
+      wvr-dropdown-menu, .dropdown-menu {
+        box-shadow: var(--tl-dropdown-menu-box-shadow);
+        width: var(--tl-dropdown-menu-width);
+        height: var(--tl-dropdown-menu-height);
+        background: var(--tl-dropdown-menu-background);
+        border: var(--tl-dropdown-menu-border);
+      }
+
+      .dropdown-menu &gt; * {
+        box-shadow: none;
+        border: none;
+      }
+
+      .dropdown-menu wvr-dropdown-menu-item {
+        display: block;
+        padding: 10px;
+      }
+
+      .dropdown-menu wvr-dropdown-menu-item:hover {
+        background: var(--tl-grey);
+      }
+
+    }
+  }
+
+}
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><wvr-dropdown-component  [btnHref]="btnHref"  [toggleOn]="toggleOn"  [themeVariant]="themeVariant"  [menuBackground]="\'var(--tl-dropdown-menu-background)\'"  [menuBorder]="\'var(--tl-dropdown-menu-border)\'"  [menuBorderRadius]="\'var(--tl-dropdown-menu-border-radius)\'"  [menuBorderDisplay]="\'var(--tl-dropdown-menu-border-display)\'"  [menuFlexDirection]="\'var(--tl-dropdown-menu-flex-direction)\'"  [menuPadding]="\'var(--tl-dropdown-menu-padding)\'"  [menuWidth]="\'var(--tl-dropdown-menu-width)\'"  [menuXOffset]="\'var(--tl-dropdown-menu-x-offset)\'"  [menuYOffset]="\'var(--tl-dropdown-menu-y-offset)\'"  [menuItemMargin]="\'var(--tl-dropdown-menu-item-margin)\'"  [backgroundActive]="btnBackgroundActive"  [btnBorderColor]="btnBorderColor"  [btnBorderActive]="btnBorderActive"  [btnBorderFocus]="btnBorderFocus"  [btnBorderRadius]="\'var(--tl-btn-border-radius)\'"  [btnBoxShadowFocus]="\'var(--tl-btn-focus-box-shadow)\'"  [btnColorActive]="btnColorActive"  [fontFamily]="\'var(--tl-font-family-sans-serif)\'"  [fontSize]="\'var(--tl-btn-font-size)\'"  [lineHeight]="\'var(--tl-btn-line-height)\'"  [textAlign]="\'var(--tl-btn-text-align)\'"  [textDecoration]="btnTextDecoration"  [textDecorationActive]="btnTextDecorationActive"  [textDecorationFocus]="btnTextDecorationFocus"  [dropdownMenuDisplay]="\'static\'"  ngbDropdownAnchor>  <ng-content select="template[dropdown-button]" ngProjectAs="template[dropdown-button]"></ng-content>  <ng-content select="template[dropdown-menu]" ngProjectAs="template[dropdown-menu]"></ng-content></wvr-dropdown-component></div>'
+    var COMPONENTS = [{'name': 'TlAlertComponent', 'selector': 'tl-alert-component'},{'name': 'TlButtonComponent', 'selector': 'tl-button-component'},{'name': 'TlCardComponent', 'selector': 'tl-card-component'},{'name': 'TlDropDownComponent', 'selector': 'tl-dropdown-component'},{'name': 'TlDropDownMenuComponent', 'selector': 'tl-dropdown-menu-component'},{'name': 'TlDropDownMenuSectionComponent', 'selector': 'tl-dropdown-menu-section-component'},{'name': 'TlFooterComponent', 'selector': 'tl-footer-component'},{'name': 'TlHeaderComponent', 'selector': 'tl-header-component'},{'name': 'TlIconComponent', 'selector': 'tl-icon-component'},{'name': 'TlItWorksComponent', 'selector': 'tl-it-works-component'},{'name': 'TlMegaMenuComponent', 'selector': 'tl-mega-menu-component'},{'name': 'TlMegaMenuSectionComponent', 'selector': 'tl-mega-menu-section-component'},{'name': 'TlModalComponent', 'selector': 'tl-modal-component'},{'name': 'TlNavListComponent', 'selector': 'tl-nav-list-component'},{'name': 'TlTabComponent', 'selector': 'tl-tab-component'},{'name': 'TlTabsComponent', 'selector': 'tl-tabs-component'},{'name': 'TlThemesComponent', 'selector': 'tl-themes-component'},{'name': 'TlWysiwygComponent', 'selector': 'tl-wysiwyg-component'}];
+    var DIRECTIVES = [{'name': 'TamuAbstractBaseComponent', 'selector': ''}];
+    var ACTUAL_COMPONENT = {'name': 'TlDropDownComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TlDropDownComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

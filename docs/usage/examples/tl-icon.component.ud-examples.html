@@ -1,0 +1,72 @@
+<about name="TL Icon">
+  <p>This component represents an icon.</p>
+
+  <div>
+    <p>The following attributes are available:</p>
+    <ul>
+      <li><code>color</code>: A color to apply on the icon.</li>
+      <li><code>name</code>: The file name of the icon representing the file (without the file extension) under the icon set.</li>
+      <li><code>set</code>: The icon set in which to associate the icon.</li>
+      <li><code>size</code>: The size of the icon.</li>
+    </ul>
+  </div>
+</about>
+
+<example name="TL Icon Basic">
+  <desciption>
+    The basic <code>tl-icon</code> component with no customizations.
+  </desciption>
+  <snippet>
+
+    <tl-icon set="tl" name="weaver-w" color="#500000" size="34px" hidden-in-mobile="true"></tl-icon>
+
+    <tl-icon set="bootstrap" name="arrow-right-circle" size="32px" animate="{click: 'rotateToggle'}"></tl-icon>
+
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-icon-component',
+  templateUrl: './tl-icon.component.html',
+  styleUrls: ['./tl-icon.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlIconComponent extends TamuAbstractBaseComponent {
+
+  /** Used to define the icon set. */
+  @Input() set = 'tl';
+
+  /** Used to define the name for icon component.  */
+  @Input() name = 'tamu-logo';
+
+  /** Used to define the color for icon component.  */
+  @Input() color;
+
+  /** Used to define the size for icon component.  */
+  @Input() size;
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><tl-icon-wrapper #animationroot="">
+  <wvr-icon-component [color]="color" [name]="name" [set]="set" [size]="size">
+  </wvr-icon-component>
+</tl-icon-wrapper>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+
+:host {
+  tl-icon-wrapper {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  wvr-icon-component {
+    --wvr-icon-color: inherit;
+    --wvr-icon-size: inherit;
+  }
+}
+</component-scss></example>
