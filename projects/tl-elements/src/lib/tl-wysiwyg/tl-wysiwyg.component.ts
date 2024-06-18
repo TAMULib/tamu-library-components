@@ -12,6 +12,8 @@ export class TlWysiwygComponent extends TamuAbstractBaseComponent {
 
   @Input() emitEvent = '';
 
+  @Input() emitChangeEvent = '';
+
   /** Provide customization of WYSIWYG skin theme. */
   skin = 'oxide';
 
