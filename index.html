@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>TAMU Components Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://api.library.tamu.edu/tl-components/latest/assets/favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"?>
+  <style>
+    body {
+      transition: opacity 0.5s ease-in;
+    }
+
+    .wvr-components-loading {
+      opacity: 0;
+    }
+
+    .wvr-hidden,
+    [wvr-hide-content] {
+      display: none;
+    }
+
+    .index-container {
+      margin: 12px;
+      padding: 15px;
+      border-bottom: 1px solid grey;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="/tamu-library-components/docs/usage/assets/styles.css">
+</head>
+
+<body>
+  <tl-header></tl-header>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">
+        <wvre-text value="TAMU Components Documentation" inherit-font-style="false"></wvre-text>
+      </h1>
+      <tl-button href="/tamu-library-components/docs" theme-variant="info">
+        <wvre-text value="Documentation"></wvre-text>
+      </tl-button>
+      <tl-button href="/tamu-library-components/reports" theme-variant="success">
+        <wvre-text value="Reports"></wvre-text>
+      </tl-button>
+    </div>
+  </div>
+
+  <tl-footer>
+    <wvr-nav-li href="https://github.com/TAMULib/tamu-library-components">
+      <wvre-text value="Github"></wvre-text>
+    </wvr-nav-li>
+  </tl-footer>
+
+  <script defer src="/tamu-library-components/docs/usage/additional-scripts.js"></script>
+</body>
+
+</html>

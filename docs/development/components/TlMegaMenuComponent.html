@@ -1,0 +1,1730 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>tamu-library-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">tamu-library-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  TlMegaMenuComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+                <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterContentInit" target="_blank" >AfterContentInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.Default</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>tl-mega-menu-component</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./tl-mega-menu.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./tl-mega-menu.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#active" >active</a>
+                            </li>
+                            <li>
+                                <a href="#menuXOffset" >menuXOffset</a>
+                            </li>
+                            <li>
+                                <a href="#mobileDisplayMaxHeight" >mobileDisplayMaxHeight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#sections" >sections</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#sectionTitleHeight" >sectionTitleHeight</a>
+                            </li>
+                            <li>
+                                <a href="#variantTypes" >variantTypes</a>
+                            </li>
+                            <li>
+                                <a href="#_fontFamily" >_fontFamily</a>
+                            </li>
+                            <li>
+                                <a href="#_fontSize" >_fontSize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addSection" >addSection</a>
+                            </li>
+                            <li>
+                                <a href="#calculateMenuXOffset" >calculateMenuXOffset</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterContentInit" >ngAfterContentInit</a>
+                            </li>
+                            <li>
+                                <a href="#toggleMobileMenuOpen" >toggleMobileMenuOpen</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#menuTitle" >menuTitle</a>
+                            </li>
+                            <li>
+                                <a href="#openDelay" >openDelay</a>
+                            </li>
+                            <li>
+                                <a href="#outOfHeader" >outOfHeader</a>
+                            </li>
+                            <li>
+                                <a href="#viewAllButtonText" >viewAllButtonText</a>
+                            </li>
+                            <li>
+                                <a href="#viewAllHref" >viewAllHref</a>
+                            </li>
+                            <li>
+                                <a href="#inheritFontStyle" >inheritFontStyle</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#style.--tl-mobile-display-max-height" >style.--tl-mobile-display-max-height</a>
+                            </li>
+                            <li>
+                                <a href="#style.--tl-font-family-sans-serif" >style.--tl-font-family-sans-serif</a>
+                            </li>
+                            <li>
+                                <a href="#style.--tl-font-size" >style.--tl-font-size</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:resize" >window:resize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#viewAllButtonDisplayText" >viewAllButtonDisplayText</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(injector: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>injector</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="menuTitle"></a>
+                        <b>menuTitle</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;Mega Menu&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:17</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The default text value to be displayed for tl-mega menu title.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openDelay"></a>
+                        <b>openDelay</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>50</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:34</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This property determines the delay in milliseconds the dropdown takes prior to display on mouse hover.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="outOfHeader"></a>
+                        <b>outOfHeader</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:23</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The boolean variable enables proper header display on window resize.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewAllButtonText"></a>
+                        <b>viewAllButtonText</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:29</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This variable allows customizing the text value of View All button in the mega menu.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewAllHref"></a>
+                        <b>viewAllHref</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:20</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This allows to provide href value for tl mega menu section href.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inheritFontStyle"></a>
+                        <b>inheritFontStyle</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;true&quot; | &quot;false&quot;</code>
+
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4" colspan="2">
+                                    <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:14</a></code>
+</div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.--tl-mobile-display-max-height"></a>
+                    <span class="name">
+                        <span ><b>style.--tl-mobile-display-max-height</b></span>
+                        <a href="#style.--tl-mobile-display-max-height"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;0px&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-mobile-display-max-height variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.--tl-font-family-sans-serif"></a>
+                    <span class="name">
+                        <span ><b>style.--tl-font-family-sans-serif</b></span>
+                        <a href="#style.--tl-font-family-sans-serif"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-family-sans-serif)&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:12</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-font-family-sans-serif css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.--tl-font-size"></a>
+                    <span class="name">
+                        <span ><b>style.--tl-font-size</b></span>
+                        <a href="#style.--tl-font-size"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-size)&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:9</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-default-font-size css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="window:resize"></a>
+                    <span class="name">
+                        <span ><b>window:resize</b></span>
+                        <a href="#window:resize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>window:resize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This event listener on window resize event helps the header for proper display.</p>
+</div>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addSection"></a>
+                    <span class="name">
+                        <span ><b>addSection</b></span>
+                        <a href="#addSection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addSection(section: <a href="../components/TlMegaMenuSectionComponent.html" target="_self">TlMegaMenuSectionComponent</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>section</td>
+                                    <td>
+                                                <code><a href="../components/TlMegaMenuSectionComponent.html" target="_self" >TlMegaMenuSectionComponent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateMenuXOffset"></a>
+                    <span class="name">
+                        <span ><b>calculateMenuXOffset</b></span>
+                        <a href="#calculateMenuXOffset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculateMenuXOffset()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;window:resize&#x27;)<br />@debounce()<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This event listener on window resize event helps the header for proper display.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterContentInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterContentInit</b></span>
+                        <a href="#ngAfterContentInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterContentInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This adjusts the dropdown menu x offset on page load.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleMobileMenuOpen"></a>
+                    <span class="name">
+                        <span ><b>toggleMobileMenuOpen</b></span>
+                        <a href="#toggleMobileMenuOpen"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleMobileMenuOpen()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This toggles the display of mobile menu on click event.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="active"></a>
+                    <span class="name">
+                        <span ><b>active</b></span>
+                        <a href="#active"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="menuXOffset"></a>
+                    <span class="name">
+                        <span ><b>menuXOffset</b></span>
+                        <a href="#menuXOffset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This property determines the mega menu dropdown x-offset.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mobileDisplayMaxHeight"></a>
+                    <span class="name">
+                        <span ><b>mobileDisplayMaxHeight</b></span>
+                        <a href="#mobileDisplayMaxHeight"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;0px&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.--tl-mobile-display-max-height&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-mobile-display-max-height variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sections"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>sections</b></span>
+                        <a href="#sections"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/TlMegaMenuSectionComponent.html" target="_self" >Array&lt;TlMegaMenuSectionComponent&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sectionTitleHeight"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>sectionTitleHeight</b></span>
+                        <a href="#sectionTitleHeight"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="variantTypes"></a>
+                    <span class="name">
+                        <span ><b>variantTypes</b></span>
+                        <a href="#variantTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&#x27;button&#x27;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fontFamily"></a>
+                    <span class="name">
+                        <span ><b>_fontFamily</b></span>
+                        <a href="#_fontFamily"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-family-sans-serif)&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.--tl-font-family-sans-serif&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:12</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-font-family-sans-serif css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fontSize"></a>
+                    <span class="name">
+                        <span ><b>_fontSize</b></span>
+                        <a href="#_fontSize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;var(--tl-default-font-size)&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.--tl-font-size&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../directives/TamuAbstractBaseComponent.html" target="_self" >TamuAbstractBaseComponent</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../directives/TamuAbstractBaseComponent.html#source" target="_self" >TamuAbstractBaseComponent:9</a></code>
+</div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Allows for the override of the --tl-default-font-size css variable.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewAllButtonDisplayText"></a>
+                        <span class="name"><b>viewAllButtonDisplayText</b><a href="#viewAllButtonDisplayText"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>viewAllButtonDisplayText()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/tl-elements/src/lib/tl-mega-menu/tl-mega-menu.component.ts:37</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>This returns customized text or the default value to be displayed on the mega menu View All button.</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, HostListener, Injector, Input } from &#x27;@angular/core&#x27;;
+import { debounce, wvrTimeout } from &#x27;@wvr/elements&#x27;;
+import { TamuAbstractBaseComponent } from &#x27;../shared/tl-abstract-base.component&#x27;;
+import { TlMegaMenuSectionComponent } from &#x27;./tl-mega-menu-section/tl-mega-menu-section.component&#x27;;
+
+@Component({
+  selector: &#x27;tl-mega-menu-component&#x27;,
+  templateUrl: &#x27;./tl-mega-menu.component.html&#x27;,
+  styleUrls: [&#x27;./tl-mega-menu.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlMegaMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
+
+  /** The default text value to be displayed for tl-mega menu title. */
+  @Input() menuTitle &#x3D; &#x27;Mega Menu&#x27;;
+
+  /** This allows to provide href value for tl mega menu section href. */
+  @Input() viewAllHref;
+
+  /** The boolean variable enables proper header display on window resize. */
+  @Input() outOfHeader &#x3D; false;
+
+  /** This property determines the mega menu dropdown x-offset. */
+  menuXOffset &#x3D; 0;
+
+  /** This variable allows customizing the text value of View All button in the mega menu. */
+  @Input() viewAllButtonText: string;
+
+  active &#x3D; false;
+
+  /** This property determines the delay in milliseconds the dropdown takes prior to display on mouse hover. */
+  @Input() openDelay &#x3D; 50;
+
+  /** This returns customized text or the default value to be displayed on the mega menu View All button. */
+  get viewAllButtonDisplayText(): string {
+    return this.viewAllButtonText ? this.viewAllButtonText : &#x60;View All ${this.menuTitle}&#x60;;
+  }
+
+  /** Allows for the override of the --tl-mobile-display-max-height variable. */
+  @HostBinding(&#x27;style.--tl-mobile-display-max-height&#x27;) mobileDisplayMaxHeight &#x3D; &#x27;0px&#x27;;
+
+  private readonly sections: Array&lt;TlMegaMenuSectionComponent&gt;;
+
+  private sectionTitleHeight &#x3D; 0;
+
+  variantTypes &#x3D; [&#x27;button&#x27;];
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+    this.sections &#x3D; new Array&lt;TlMegaMenuSectionComponent&gt;();
+  }
+
+  /** This adjusts the dropdown menu x offset on page load. */
+  ngAfterContentInit(): void {
+    super.ngAfterContentInit();
+    wvrTimeout(() &#x3D;&gt; {
+      this.calculateMenuXOffset();
+    });
+  }
+
+  addSection(section: TlMegaMenuSectionComponent): void {
+    this.sections.push(section);
+    this.sectionTitleHeight &#x3D; section.getElementHeight() &gt; this.sectionTitleHeight
+      ? section.getElementHeight()
+      : this.sectionTitleHeight;
+  }
+
+  /** This toggles the display of mobile menu on click event. */
+  toggleMobileMenuOpen(): void {
+    this.mobileDisplayMaxHeight &#x3D; &#x60;${this.sections.length * this.sectionTitleHeight}px&#x60;;
+
+    if (this.active) {
+      this.sections.forEach(s &#x3D;&gt; {
+        s.close();
+      });
+      this.active &#x3D; false;
+    } else {
+      this.active &#x3D; true;
+    }
+  }
+
+  /** This event listener on window resize event helps the header for proper display. */
+  @HostListener(&#x27;window:resize&#x27;) @debounce() calculateMenuXOffset(): void {
+    if (!this.outOfHeader) {
+      const nativeElem &#x3D; this.eRef.nativeElement as HTMLElement;
+      const header &#x3D; document.querySelector(&#x27;tl-header&#x27;);
+      if (!header) { return; }
+      const bottomNav &#x3D; header.shadowRoot.querySelector(&#x27;div[bottom-navigation]&#x27;);
+      if (bottomNav) {
+        let wvrBtn;
+        const frameReq &#x3D; requestAnimationFrame(() &#x3D;&gt; {
+          wvrBtn &#x3D; nativeElem.querySelector(&#x27;wvr-button-component&#x27;);
+          if (wvrBtn &amp;&amp; bottomNav.children.length &gt;&#x3D; 2) {
+            this.menuXOffset &#x3D; (bottomNav.children[1] as HTMLElement).offsetLeft - nativeElem.parentElement.offsetLeft;
+            cancelAnimationFrame(frameReq);
+          }
+        });
+      }
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;wvr-dropdown-component
+  [themeVariant]&#x3D;&quot;&#x27;link&#x27;&quot;
+  [toggleOn]&#x3D;&quot;&#x27;mouseover&#x27;&quot;
+  menuXOffset&#x3D;&quot;{{menuXOffset}}px&quot;
+  [menuYOffset]&#x3D;&quot;&#x27;-2px&#x27;&quot;
+  [menuWidth]&#x3D;&quot;&#x27;928px&#x27;&quot;
+  [btnTextDecoration]&#x3D;&quot;&#x27;none&#x27;&quot;
+  [btnColor]&#x3D;&quot;&#x27;var(--tl-black)&#x27;&quot;
+  [btnFontWeight]&#x3D;&quot;&#x27;bolder&#x27;&quot;
+  [btnColorHover]&#x3D;&quot;&#x27;var(--tl-black)&#x27;&quot;
+  [btnTextDecorationHover]&#x3D;&quot;&#x27;none&#x27;&quot;
+  [btnFontFamily]&#x3D;&quot;&#x27;var(--tl-font-family-sans-serif)&#x27;&quot;
+  [ngClass]&#x3D;&quot;{active: active}&quot;
+  [openDelay]&#x3D;&quot;openDelay&quot;
+  ngbDropdownAnchor&gt;
+  &lt;template dropdown-button&gt;
+    &lt;span (click)&#x3D;&quot;toggleMobileMenuOpen()&quot;&gt;
+      {{menuTitle}}
+      &lt;tl-icon-component
+        class&#x3D;&quot;x-icon&quot;
+        [hiddenInMobile]&#x3D;&quot;true&quot;
+        [set]&#x3D;&quot;&#x27;bootstrap&#x27;&quot;
+        [name]&#x3D;&quot;&#x27;caret-right-fill&#x27;&quot;
+        [size]&#x3D;&quot;&#x27;11px&#x27;&quot;&gt;
+      &lt;/tl-icon-component&gt;
+      &lt;tl-icon-component
+        class&#x3D;&quot;plus-icon&quot;
+        [set]&#x3D;&quot;&#x27;bootstrap&#x27;&quot;
+        [name]&#x3D;&quot;&#x27;plus&#x27;&quot;
+        [size]&#x3D;&quot;&#x27;24px&#x27;&quot;&gt;
+      &lt;/tl-icon-component&gt;
+    &lt;/span&gt;
+  &lt;/template&gt;
+  &lt;template dropdown-menu&gt;
+    &lt;div class&#x3D;&quot;tl-mega-menu-custom-top&quot; *ngIf&#x3D;&quot;!isMobileLayout&quot;&gt;
+      &lt;div class&#x3D;&quot;flex-fill align-self-stretch&quot;&gt;
+        &lt;ng-content select&#x3D;&quot;tl-mega-menu-custom[top-content]&quot;&gt;&lt;/ng-content&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;mega-menu-sections d-flex justify-content-between flex-wrap&quot; *ngIf&#x3D;&quot;!isMobileLayout&quot;&gt;
+      &lt;ng-container *ngTemplateOutlet&#x3D;&quot;sections&quot;&gt;&lt;/ng-container&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;tl-mega-menu-custom-bottom&quot; *ngIf&#x3D;&quot;!isMobileLayout&quot;&gt;
+      &lt;div class&#x3D;&quot;flex-fill align-self-stretch&quot;&gt;
+        &lt;ng-content select&#x3D;&quot;tl-mega-menu-custom[bottom-content]&quot;&gt;&lt;/ng-content&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;mega-menu-view-all container pt-2&quot; *ngIf&#x3D;&quot;viewAllHref&quot;&gt;
+      &lt;tl-button-component [href]&#x3D;&quot;viewAllHref&quot; [themeVariant]&#x3D;&quot;&#x27;primary&#x27;&quot;&gt;
+        &lt;template button-content&gt;
+          &lt;wvr-text-component [value]&#x3D;&quot;viewAllButtonDisplayText&quot;&gt;&lt;/wvr-text-component&gt;
+        &lt;/template&gt;
+      &lt;/tl-button-component&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/wvr-dropdown-component&gt;
+
+&lt;div *ngIf&#x3D;&quot;isMobileLayout&quot; class&#x3D;&quot;mobile-display&quot; [ngClass]&#x3D;&quot;{active: active}&quot;&gt;
+  &lt;ng-container *ngTemplateOutlet&#x3D;&quot;sections&quot;&gt;&lt;/ng-container&gt;
+  &lt;tl-mega-menu-section [sectionTitle]&#x3D;&quot;viewAllButtonDisplayText&quot; [viewAllHref]&#x3D;&quot;viewAllHref&quot;&gt;&lt;/tl-mega-menu-section&gt;
+&lt;/div&gt;
+
+&lt;ng-template #sections&gt;
+  &lt;ng-content select&#x3D;&quot;tl-mega-menu-section&quot;&gt;&lt;/ng-content&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./tl-mega-menu.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../shared/styles/tl-variables.scss&quot;;
+
+:host {
+  font-family: var(--tl-font-family-sans-serif);
+  --tl-mobile-display-max-height: 1500px;
+
+  .mega-menu-sections {
+    margin: 0px 20px;
+  }
+
+  .mega-menu-view-all {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  wvr-dropdown-component {
+    ::ng-deep {
+      @import &quot;~@wvr/elements/styles/variables&quot;;
+      @import &quot;~bootstrap/scss/bootstrap&quot;;
+      @import &quot;~@wvr/elements/styles/mixins&quot;;
+      @import &quot;~@wvr/elements/styles/overrides&quot;;
+      .wvr-dropdown .dropdown {
+        .btn.btn-link.dropdown-toggle,
+        .btn.btn-link:not(:disabled):not(.disabled).active,
+        .btn.btn-link:not(:disabled):not(.disabled):active {
+          text-decoration: none !important;
+          color: var(--tl-black) !important;
+        }
+
+        .btn {
+          width: 100%;
+
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component:focus-within,
+  wvr-dropdown-component:hover {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component.active {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-display {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    background: var(--tl-grey);
+
+    ::ng-deep {
+      tl-mega-menu-section-component,
+      tl-mega-menu-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+
+        a {
+          margin: 0px 15px 0px 0px;
+          padding: 20px 0px 0px 60px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+
+          wvre-text {
+            font-weight: 400;
+            padding: 0px;
+            margin: 0px;
+            border-bottom: 0.5px solid #e4e4e4;
+            display: flex;
+            height: 40px;
+            width: 97%;
+          }
+        }
+
+        a:focus-within,
+        a:hover {
+          border-bottom: none;
+          wvre-text {
+            border-bottom: none;
+          }
+        }
+
+        .section-title {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+          text-decoration: none;
+        }
+
+        a.mega-menu-view-all {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+        }
+      }
+    }
+  }
+
+  .mobile-display.active {
+    max-height: var(--tl-mobile-display-max-height);
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  ::ng-deep {
+    tl-button-component {
+      --tl-btn-border-radius: 0px;
+    }
+
+    .wvr-dropdown .dropdown {
+      wvr-button-component {
+        width: 100%;
+
+        tl-icon-component.plus-icon {
+          display: none;
+          float: right;
+        }
+
+        tl-icon-component.x-icon {
+          display: inline-block;
+        }
+      }
+
+      [ngbDropdownMenu] {
+        padding: 20px 0px;
+        border: 1px solid var(--tl-grey);
+        border-radius: 3px;
+        border-bottom: 12px solid var(--tl-deep-yellow);
+        box-shadow: 0px 2px 3px 1px var(--tl-grey);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    wvr-dropdown-component {
+      ::ng-deep {
+        .wvr-dropdown .dropdown {
+          .btn {
+            text-align: start !important;
+          }
+        }
+      }
+    }
+
+    ::ng-deep {
+      div[template&#x3D;&quot;dropdown-menu&quot;] {
+        display: none;
+      }
+
+      .wvr-dropdown .dropdown {
+        wvr-button-component {
+          tl-icon-component.plus-icon {
+            display: inline-block;
+          }
+
+          tl-icon-component.x-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><wvr-dropdown-component  [themeVariant]="\'link\'"  [toggleOn]="\'mouseover\'"  menuXOffset="{{menuXOffset}}px"  [menuYOffset]="\'-2px\'"  [menuWidth]="\'928px\'"  [btnTextDecoration]="\'none\'"  [btnColor]="\'var(--tl-black)\'"  [btnFontWeight]="\'bolder\'"  [btnColorHover]="\'var(--tl-black)\'"  [btnTextDecorationHover]="\'none\'"  [btnFontFamily]="\'var(--tl-font-family-sans-serif)\'"  [ngClass]="{active: active}"  [openDelay]="openDelay"  ngbDropdownAnchor>  <template dropdown-button>    <span (click)="toggleMobileMenuOpen()">      {{menuTitle}}      <tl-icon-component        class="x-icon"        [hiddenInMobile]="true"        [set]="\'bootstrap\'"        [name]="\'caret-right-fill\'"        [size]="\'11px\'">      </tl-icon-component>      <tl-icon-component        class="plus-icon"        [set]="\'bootstrap\'"        [name]="\'plus\'"        [size]="\'24px\'">      </tl-icon-component>    </span>  </template>  <template dropdown-menu>    <div class="tl-mega-menu-custom-top" *ngIf="!isMobileLayout">      <div class="flex-fill align-self-stretch">        <ng-content select="tl-mega-menu-custom[top-content]"></ng-content>      </div>    </div>    <div class="mega-menu-sections d-flex justify-content-between flex-wrap" *ngIf="!isMobileLayout">      <ng-container *ngTemplateOutlet="sections"></ng-container>    </div>    <div class="tl-mega-menu-custom-bottom" *ngIf="!isMobileLayout">      <div class="flex-fill align-self-stretch">        <ng-content select="tl-mega-menu-custom[bottom-content]"></ng-content>      </div>    </div>    <div class="mega-menu-view-all container pt-2" *ngIf="viewAllHref">      <tl-button-component [href]="viewAllHref" [themeVariant]="\'primary\'">        <template button-content>          <wvr-text-component [value]="viewAllButtonDisplayText"></wvr-text-component>        </template>      </tl-button-component>    </div>  </template></wvr-dropdown-component><div *ngIf="isMobileLayout" class="mobile-display" [ngClass]="{active: active}">  <ng-container *ngTemplateOutlet="sections"></ng-container>  <tl-mega-menu-section [sectionTitle]="viewAllButtonDisplayText" [viewAllHref]="viewAllHref"></tl-mega-menu-section></div><ng-template #sections>  <ng-content select="tl-mega-menu-section"></ng-content></ng-template></div>'
+    var COMPONENTS = [{'name': 'TlAlertComponent', 'selector': 'tl-alert-component'},{'name': 'TlButtonComponent', 'selector': 'tl-button-component'},{'name': 'TlCardComponent', 'selector': 'tl-card-component'},{'name': 'TlDropDownComponent', 'selector': 'tl-dropdown-component'},{'name': 'TlDropDownMenuComponent', 'selector': 'tl-dropdown-menu-component'},{'name': 'TlDropDownMenuSectionComponent', 'selector': 'tl-dropdown-menu-section-component'},{'name': 'TlFooterComponent', 'selector': 'tl-footer-component'},{'name': 'TlHeaderComponent', 'selector': 'tl-header-component'},{'name': 'TlIconComponent', 'selector': 'tl-icon-component'},{'name': 'TlItWorksComponent', 'selector': 'tl-it-works-component'},{'name': 'TlMegaMenuComponent', 'selector': 'tl-mega-menu-component'},{'name': 'TlMegaMenuSectionComponent', 'selector': 'tl-mega-menu-section-component'},{'name': 'TlModalComponent', 'selector': 'tl-modal-component'},{'name': 'TlNavListComponent', 'selector': 'tl-nav-list-component'},{'name': 'TlTabComponent', 'selector': 'tl-tab-component'},{'name': 'TlTabsComponent', 'selector': 'tl-tabs-component'},{'name': 'TlThemesComponent', 'selector': 'tl-themes-component'},{'name': 'TlWysiwygComponent', 'selector': 'tl-wysiwyg-component'}];
+    var DIRECTIVES = [{'name': 'TamuAbstractBaseComponent', 'selector': ''}];
+    var ACTUAL_COMPONENT = {'name': 'TlMegaMenuComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TlMegaMenuComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

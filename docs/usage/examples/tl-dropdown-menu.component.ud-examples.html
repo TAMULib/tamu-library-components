@@ -1,0 +1,684 @@
+<about name="TL Dropdown Menu">
+  <p>This component represents a dropdown menu.</p>
+  <p>This is a special case of a dropdown design to have the same internal structure as <code>tl-mega-menu</code>.</p>
+  <p>This should be considered a simplified <code>tl-mega-menu</code>.</p>
+
+  <div>
+    <p>Each menu item is composed of a section described by a <code>tl-dropdown-menu-section</code> element.</p>
+    <p>Within the <code>tl-dropdown-menu-section</code> element there is expected to be a <code>tl-nav-li</code> element for containing the desired row data.</p>
+  </div>
+
+  <div>
+    <p>The following attributes are available:</p>
+    <ul>
+      <li><code>menu-title</code>: The title of the dropdown menu.</li>
+      <li><code>menu-width</code>: The width of the menu, supporting CSS width values.</li>
+      <li><code>open-delay</code>: A unit of time in seconds for how long to wait before responding to a mouse hover event.</li>
+    </ul>
+  </div>
+</about>
+
+<example name="Example Dropdown Basic">
+  <desciption>
+    The basic <code>tl-dropdown-menu</code> component with no customizations.
+  </desciption>
+  <snippet>
+
+  <tl-dropdown-menu menu-title="Example Dropdown">
+    <tl-dropdown-menu-section>
+      <tl-nav-li>
+        <a href="/research/option1">
+          <wvre-text value="Option 1"></wvre-text>
+        </a>
+      </tl-nav-li>
+    </tl-dropdown-menu-section>
+    <tl-dropdown-menu-section>
+      <tl-nav-li>
+        <a href="/research/option2">
+          <wvre-text value="Option 2"></wvre-text>
+        </a>
+      </tl-nav-li>
+    </tl-dropdown-menu-section>
+    <tl-dropdown-menu-section>
+      <tl-nav-li>
+        <a href="/research/option3">
+          <wvre-text value="Option 3"></wvre-text>
+        </a>
+      </tl-nav-li>
+    </tl-dropdown-menu-section>
+  </tl-dropdown-menu>
+  </snippet>
+<component-source>/* istanbul ignore file */
+
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { TlDropDownMenuSectionComponent } from './tl-dropdown-menu-section/tl-dropdown-menu-section.component';
+
+@Component({
+  selector: 'tl-dropdown-menu-component',
+  templateUrl: './tl-dropdown-menu.component.html',
+  styleUrls: ['./tl-dropdown-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlDropDownMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
+
+  /** The default text value to be displayed as the menu title. */
+  @Input() menuTitle = 'Dropdown Menu';
+
+  /** Designate the menu width. */
+  @Input() menuWidth = 'auto';
+
+  /** Determine the delay in milliseconds the dropdown takes prior to display on mouse hover. */
+  @Input() openDelay = 500;
+
+  /** Allows for the override of the --tl-mobile-display-max-height variable. */
+  @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight = '0px';
+
+  /** Designate whether the menu is opened or closed. */
+  active = false;
+
+  /** The height of to use for each section. */
+  private sectionHeight = 0;
+
+  /** A container for all menu sections attached to this menu. */
+  private readonly sections: Array<tldropdownmenusectioncomponent> = [];
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+  /**
+   * Append a section to the menu.
+   *
+   * The section title height will be auto-adjusted based on the added section.
+   *
+   * @param The section to append.
+   */
+  addSection(section: TlDropDownMenuSectionComponent): void {
+    this.sections.push(section);
+
+    const height = section.getElementHeight();
+    if (height &gt; this.sectionHeight) {
+      this.sectionHeight = height;
+    }
+  }
+
+  /**
+   * Toggles the mobile view menu open or closed.
+   */
+  toggleMobileMenuOpen(): void {
+    this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionHeight}px`;
+    this.active = !this.active;
+  }
+
+}
+</tldropdownmenusectioncomponent></component-source><component-template><wvr-dropdown-component [themevariant]="'link'" [toggleon]="'mouseover'" [menuyoffset]="'-2px'" [menuwidth]="menuWidth" [btntextdecoration]="'none'" [btncolor]="'var(--tl-black)'" [btnfontweight]="'bolder'" [btncolorhover]="'var(--tl-black)'" [btntextdecorationhover]="'none'" [btnfontfamily]="'var(--tl-font-family-sans-serif)'" [ngclass]="{active: active}" [opendelay]="openDelay" ngbdropdownanchor="">
+  <template dropdown-button="">
+    <span (click)="toggleMobileMenuOpen()">
+      {{menuTitle}}
+      <tl-icon-component class="x-icon" [hiddeninmobile]="true" [set]="'bootstrap'" [name]="'caret-right-fill'" [size]="'11px'">
+      </tl-icon-component>
+      <tl-icon-component class="plus-icon" [set]="'bootstrap'" [name]="'plus'" [size]="'24px'">
+      </tl-icon-component>
+    </span>
+  </template>
+  <template dropdown-menu="">
+    <div *ngif="!isMobileLayout" class="dropdown-menu-custom-top">
+      <div>
+        <ng-content select="tl-dropdown-menu-custom[top-content]"></ng-content>
+      </div>
+    </div>
+    <div *ngif="!isMobileLayout" class="dropdown-menu-sections">
+      <ng-container *ngtemplateoutlet="sections"></ng-container>
+    </div>
+    <div *ngif="!isMobileLayout" class="dropdown-menu-custom-bottom">
+      <div>
+        <ng-content select="tl-dropdown-menu-custom[bottom-content]"></ng-content>
+      </div>
+    </div>
+  </template>
+</wvr-dropdown-component>
+
+<div *ngif="isMobileLayout" class="mobile-display" [ngclass]="{active: active}">
+  <ng-container *ngtemplateoutlet="sections"></ng-container>
+</div>
+
+<ng-template #sections="">
+  <ng-content select="tl-dropdown-menu-section"></ng-content>
+</ng-template>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+
+:host {
+  font-family: var(--tl-font-family-sans-serif);
+  --tl-mobile-display-max-height: 1500px;
+
+  .dropdown-menu-sections {
+    margin: 0px 0px;
+  }
+
+  wvr-dropdown-component {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn.btn-link.dropdown-toggle,
+        .btn.btn-link:not(:disabled):not(.disabled).active,
+        .btn.btn-link:not(:disabled):not(.disabled):active {
+          text-decoration: none !important;
+          color: var(--tl-black) !important;
+        }
+
+        .btn {
+          width: 100%;
+
+          .menu-title {
+            display: inline;
+          }
+
+          a.menu-title:focus-within,
+          a.menu-title:hover {
+            text-decoration: none !important;
+            color: var(--tl-white) !important;
+          }
+
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component:focus-within,
+  wvr-dropdown-component:hover {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component.active {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-display {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    background: var(--tl-grey);
+
+    ::ng-deep {
+      tl-dropdown-menu-section-component,
+      tl-dropdown-menu-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+
+        .section-content .navbar-nav tl-nav-li {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+          text-decoration: none;
+
+          &gt; a {
+            padding: 0px;
+            margin-bottom: 0x;
+            color: inherit;
+            font-weight: inherit;
+            width: 100%;
+            display: block;
+          }
+
+          &gt; a:focus-within,
+          &gt; a:hover {
+            font-weight: inherit;
+            color: inherit;
+            background: inherit;
+            text-decoration: none;
+          }
+
+          wvre-text {
+            display: flex;
+            font-weight: 300;
+            padding: 0px;
+            margin: 0px;
+          }
+        }
+
+        .section-content .navbar-nav tl-nav-li:focus-within,
+        .section-content .navbar-nav tl-nav-li:hover {
+          border-bottom: none;
+          color: inherit;
+          background-color: inherit;
+
+          border-bottom: 0.5px solid #e4e4e4;
+        }
+      }
+    }
+  }
+
+  .mobile-display.active {
+    max-height: var(--tl-mobile-display-max-height);
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  ::ng-deep {
+    tl-button-component {
+      --tl-btn-border-radius: 0px;
+    }
+
+    .wvr-dropdown .dropdown {
+      wvr-button-component {
+        width: 100%;
+
+        tl-icon-component.plus-icon {
+          display: none;
+          float: right;
+        }
+
+        tl-icon-component.x-icon {
+          display: inline-block;
+        }
+      }
+
+      [ngbDropdownMenu] {
+        padding: 20px 0px;
+        border: 1px solid var(--tl-grey);
+        border-radius: 3px;
+        border-bottom: 12px solid var(--tl-deep-yellow);
+        box-shadow: 0px 2px 3px 1px var(--tl-grey);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    wvr-dropdown-component {
+      ::ng-deep {
+        .wvr-dropdown .dropdown {
+          .btn {
+            text-align: start !important;
+          }
+        }
+      }
+    }
+
+    ::ng-deep {
+      div[template="dropdown-menu"] {
+        display: none;
+      }
+
+      .wvr-dropdown .dropdown {
+        wvr-button-component {
+          tl-icon-component.plus-icon {
+            display: inline-block;
+          }
+
+          tl-icon-component.x-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+</component-scss></example>
+
+<example name="Example Dropdown Customized">
+  <desciption>
+    The basic <code>tl-dropdown-menu</code> component with a set width for the sections and hidden in mobile enabled.
+  </desciption>
+  <snippet>
+  <tl-dropdown-menu menu-title="Alternate Dropdown" menu-width="200px" hidden-in-mobile="true">
+    <tl-dropdown-menu-section>
+      <tl-nav-li>
+        <a href="/research/option1">
+          <wvre-text value="Option 1"></wvre-text>
+        </a>
+      </tl-nav-li>
+    </tl-dropdown-menu-section>
+    <tl-dropdown-menu-section>
+      <tl-nav-li>
+        <a href="/research/option2">
+          <wvre-text value="Option 2"></wvre-text>
+        </a>
+      </tl-nav-li>
+    </tl-dropdown-menu-section>
+    <tl-dropdown-menu-section>
+      <tl-nav-li>
+        <a href="/research/option3">
+          <wvre-text value="Option 3"></wvre-text>
+        </a>
+      </tl-nav-li>
+    </tl-dropdown-menu-section>
+  </tl-dropdown-menu>
+  </snippet>
+<component-source>/* istanbul ignore file */
+
+import { AfterContentInit, ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+import { TlDropDownMenuSectionComponent } from './tl-dropdown-menu-section/tl-dropdown-menu-section.component';
+
+@Component({
+  selector: 'tl-dropdown-menu-component',
+  templateUrl: './tl-dropdown-menu.component.html',
+  styleUrls: ['./tl-dropdown-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlDropDownMenuComponent extends TamuAbstractBaseComponent implements AfterContentInit {
+
+  /** The default text value to be displayed as the menu title. */
+  @Input() menuTitle = 'Dropdown Menu';
+
+  /** Designate the menu width. */
+  @Input() menuWidth = 'auto';
+
+  /** Determine the delay in milliseconds the dropdown takes prior to display on mouse hover. */
+  @Input() openDelay = 500;
+
+  /** Allows for the override of the --tl-mobile-display-max-height variable. */
+  @HostBinding('style.--tl-mobile-display-max-height') mobileDisplayMaxHeight = '0px';
+
+  /** Designate whether the menu is opened or closed. */
+  active = false;
+
+  /** The height of to use for each section. */
+  private sectionHeight = 0;
+
+  /** A container for all menu sections attached to this menu. */
+  private readonly sections: Array<tldropdownmenusectioncomponent> = [];
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+  /**
+   * Append a section to the menu.
+   *
+   * The section title height will be auto-adjusted based on the added section.
+   *
+   * @param The section to append.
+   */
+  addSection(section: TlDropDownMenuSectionComponent): void {
+    this.sections.push(section);
+
+    const height = section.getElementHeight();
+    if (height &gt; this.sectionHeight) {
+      this.sectionHeight = height;
+    }
+  }
+
+  /**
+   * Toggles the mobile view menu open or closed.
+   */
+  toggleMobileMenuOpen(): void {
+    this.mobileDisplayMaxHeight = `${this.sections.length * this.sectionHeight}px`;
+    this.active = !this.active;
+  }
+
+}
+</tldropdownmenusectioncomponent></component-source><component-template><wvr-dropdown-component [themevariant]="'link'" [toggleon]="'mouseover'" [menuyoffset]="'-2px'" [menuwidth]="menuWidth" [btntextdecoration]="'none'" [btncolor]="'var(--tl-black)'" [btnfontweight]="'bolder'" [btncolorhover]="'var(--tl-black)'" [btntextdecorationhover]="'none'" [btnfontfamily]="'var(--tl-font-family-sans-serif)'" [ngclass]="{active: active}" [opendelay]="openDelay" ngbdropdownanchor="">
+  <template dropdown-button="">
+    <span (click)="toggleMobileMenuOpen()">
+      {{menuTitle}}
+      <tl-icon-component class="x-icon" [hiddeninmobile]="true" [set]="'bootstrap'" [name]="'caret-right-fill'" [size]="'11px'">
+      </tl-icon-component>
+      <tl-icon-component class="plus-icon" [set]="'bootstrap'" [name]="'plus'" [size]="'24px'">
+      </tl-icon-component>
+    </span>
+  </template>
+  <template dropdown-menu="">
+    <div *ngif="!isMobileLayout" class="dropdown-menu-custom-top">
+      <div>
+        <ng-content select="tl-dropdown-menu-custom[top-content]"></ng-content>
+      </div>
+    </div>
+    <div *ngif="!isMobileLayout" class="dropdown-menu-sections">
+      <ng-container *ngtemplateoutlet="sections"></ng-container>
+    </div>
+    <div *ngif="!isMobileLayout" class="dropdown-menu-custom-bottom">
+      <div>
+        <ng-content select="tl-dropdown-menu-custom[bottom-content]"></ng-content>
+      </div>
+    </div>
+  </template>
+</wvr-dropdown-component>
+
+<div *ngif="isMobileLayout" class="mobile-display" [ngclass]="{active: active}">
+  <ng-container *ngtemplateoutlet="sections"></ng-container>
+</div>
+
+<ng-template #sections="">
+  <ng-content select="tl-dropdown-menu-section"></ng-content>
+</ng-template>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+
+:host {
+  font-family: var(--tl-font-family-sans-serif);
+  --tl-mobile-display-max-height: 1500px;
+
+  .dropdown-menu-sections {
+    margin: 0px 0px;
+  }
+
+  wvr-dropdown-component {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn.btn-link.dropdown-toggle,
+        .btn.btn-link:not(:disabled):not(.disabled).active,
+        .btn.btn-link:not(:disabled):not(.disabled):active {
+          text-decoration: none !important;
+          color: var(--tl-black) !important;
+        }
+
+        .btn {
+          width: 100%;
+
+          .menu-title {
+            display: inline;
+          }
+
+          a.menu-title:focus-within,
+          a.menu-title:hover {
+            text-decoration: none !important;
+            color: var(--tl-white) !important;
+          }
+
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component:focus-within,
+  wvr-dropdown-component:hover {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.x-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  wvr-dropdown-component.active {
+    ::ng-deep {
+      .wvr-dropdown .dropdown {
+        .btn {
+          tl-icon-component.plus-icon svg {
+            transition: transform 0.25s ease-in-out;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-display {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    background: var(--tl-grey);
+
+    ::ng-deep {
+      tl-dropdown-menu-section-component,
+      tl-dropdown-menu-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+
+        .section-content .navbar-nav tl-nav-li {
+          cursor: pointer;
+          margin: 0px 15px 0px 30px;
+          padding: 20px 0px;
+          text-align: start;
+          color: var(--tl-black);
+          font-size: 17px;
+          font-family: var(--tl-font-family-sans-serif);
+          font-weight: 300;
+          border-bottom: 0.5px solid #e4e4e4;
+          text-decoration: none;
+
+          &gt; a {
+            padding: 0px;
+            margin-bottom: 0x;
+            color: inherit;
+            font-weight: inherit;
+            width: 100%;
+            display: block;
+          }
+
+          &gt; a:focus-within,
+          &gt; a:hover {
+            font-weight: inherit;
+            color: inherit;
+            background: inherit;
+            text-decoration: none;
+          }
+
+          wvre-text {
+            display: flex;
+            font-weight: 300;
+            padding: 0px;
+            margin: 0px;
+          }
+        }
+
+        .section-content .navbar-nav tl-nav-li:focus-within,
+        .section-content .navbar-nav tl-nav-li:hover {
+          border-bottom: none;
+          color: inherit;
+          background-color: inherit;
+
+          border-bottom: 0.5px solid #e4e4e4;
+        }
+      }
+    }
+  }
+
+  .mobile-display.active {
+    max-height: var(--tl-mobile-display-max-height);
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  ::ng-deep {
+    tl-button-component {
+      --tl-btn-border-radius: 0px;
+    }
+
+    .wvr-dropdown .dropdown {
+      wvr-button-component {
+        width: 100%;
+
+        tl-icon-component.plus-icon {
+          display: none;
+          float: right;
+        }
+
+        tl-icon-component.x-icon {
+          display: inline-block;
+        }
+      }
+
+      [ngbDropdownMenu] {
+        padding: 20px 0px;
+        border: 1px solid var(--tl-grey);
+        border-radius: 3px;
+        border-bottom: 12px solid var(--tl-deep-yellow);
+        box-shadow: 0px 2px 3px 1px var(--tl-grey);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    wvr-dropdown-component {
+      ::ng-deep {
+        .wvr-dropdown .dropdown {
+          .btn {
+            text-align: start !important;
+          }
+        }
+      }
+    }
+
+    ::ng-deep {
+      div[template="dropdown-menu"] {
+        display: none;
+      }
+
+      .wvr-dropdown .dropdown {
+        wvr-button-component {
+          tl-icon-component.plus-icon {
+            display: inline-block;
+          }
+
+          tl-icon-component.x-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+</component-scss></example>

@@ -1,0 +1,290 @@
+<about name="TL Dropdown">
+  <p>This component represents a simple button with a dropdown.</p>
+  <p>A dropdown may respond on events such as click and hover.</p>
+
+  <div>
+    <p>The following may be specified as an attribute on a <code>template</code> element:</p>
+    <ul>
+      <li><code>dropdown-button</code>: The dropdown button itself.</li>
+      <li><code>dropdown-menu</code>: The content display when a dropdown is expanded.</li>
+    </ul>
+  </div>
+
+  <div>
+    <p>The following attributes are available:</p>
+    <ul>
+      <li><code>btn-background</code>: A button background value.</li>
+      <li><code>btn-background-active</code>: A button background value, when active.</li>
+      <li><code>btn-background-hover</code>: A button background value, when hover.</li>
+      <li><code>btn-border-active</code>: A button border value, when active.</li>
+      <li><code>btn-border-color</code>: A button border color value.</li>
+      <li><code>btn-border-focus</code>: A button border value, when focus.</li>
+      <li><code>btn-border-hover</code>: A button border value, when hover.</li>
+      <li><code>btn-border-radius</code>: A button border radius value.</li>
+      <li><code>btn-box-shadow-focus</code>: A button box shadow, when focus.</li>
+      <li><code>btn-color</code>: A button color value.</li>
+      <li><code>btn-color-active</code>: A button color value, when active.</li>
+      <li><code>btn-color-hover</code>: A button color value, when hover.</li>
+      <li><code>btn-cursor</code>: A button cursor value.</li>
+      <li><code>btn-font-family</code>: A button font-family value.</li>
+      <li><code>btn-href</code>: A URL for the button.</li>
+      <li><code>btn-line-height</code>: A button line-height value.</li>
+      <li><code>btn-size</code>: A button size value.</li>
+      <li><code>btn-text-decoration</code>: A button text decoration value.</li>
+      <li><code>btn-text-decoration-active</code>: A button text decoration value, when active.</li>
+      <li><code>btn-text-decoration-focus</code>: A button text decoration value, when focus.</li>
+      <li><code>btn-text-decoration-hover</code>: A button text decoration value, when hover.</li>
+      <li><code>btn-type</code>: A button type value.</li>
+      <li><code>btn-vertical-align</code>: A button vertical alignment value.</li>
+      <li><code>menu-animation-speed</code>: A unit of time in seconds for how fast the expand or collapsed animation operates.</li>
+      <li><code>menu-border</code>: A menu border value.</li>
+      <li><code>menu-border-display</code>: A menu border display value.</li>
+      <li><code>menu-border-radius</code>: A menu border radius value.</li>
+      <li><code>menu-flex-direction</code>: A menu flex direction value.</li>
+      <li><code>menu-item-margin</code>: A menu item margin value.</li>
+      <li><code>menu-padding</code>: A menu padding value.</li>
+      <li><code>menu-theme-variant</code>: The name of a theme variant to use on the dropdown.</li>
+      <li><code>menu-width</code>: A menu width value.</li>
+      <li><code>menu-x-offset</code>: A menu x-offset value.</li>
+      <li><code>menu-y-offset</code>: A menu y-offset value.</li>
+      <li><code>placement</code>: A value representing where to place the menu on expand.</li>
+      <li><code>toggle-on</code>: One of <code>click</code> or <code>mouseover</code>.</li>
+      <li><code>openDelay</code>: A unit of time in milliseconds for how long to wait before auto-expanding.</li>
+      <li><code>theme-variant</code>: The name of a theme variant to use for the dropdown.</li>
+    </ul>
+  </div>
+</about>
+
+<example name="TL Drop Down Basic">
+  <desciption>
+    The basic <code>tl-dropdown</code> component with no customizations.
+  </desciption>
+  <snippet>
+    <tl-dropdown btn-type="primary" hidden-in-mobile="true">
+      <template dropdown-button="">
+        <wvre-text value="Primary Dropdown"></wvre-text>
+      </template>
+      <template dropdown-menu="">
+        <wvre-dropdown-menu-item>
+          <wvre-text value="Drop Down Item 1"></wvre-text>
+        </wvre-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
+          <wvre-text value="Drop Down Item 2"></wvre-text>
+        </wvre-dropdown-menu-item>
+        <wvre-dropdown-menu-item>
+          <wvre-text value="Drop Down Item 3"></wvre-text>
+        </wvre-dropdown-menu-item>
+      </template>
+    </tl-dropdown>
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, HostBinding, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-dropdown-component',
+  templateUrl: './tl-dropdown.component.html',
+  styleUrls: ['./tl-dropdown.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlDropDownComponent extends TamuAbstractBaseComponent {
+
+  /** Used to convert the dropdown menu button into a link. */
+  @Input() btnHref;
+
+  /** Used to define the drop down menu background. */
+  @HostBinding('style.--tl-dropdown-menu-background') @Input() menuBackground;
+
+  /** Used to define the drop down menu border. */
+  @HostBinding('style.--tl-dropdown-menu-border') @Input() menuBorder;
+
+  /** Used to define the drop-down menu border display */
+  @HostBinding('style.--tl-dropdown-menu-border-display') @Input() menuBorderDisplay;
+
+  /** Used to define the drop down menu-border-radius. */
+  @HostBinding('style.--tl-dropdown-menu-border-radius') @Input() menuBorderRadius;
+
+  /** Used to define the drop down menu box shadow. */
+  @HostBinding('style.--tl-dropdown-menu-box-shadow') @Input() menuBoxShadow;
+
+  /** Used to define the drop-down `menu-border-flexDirection` */
+  @HostBinding('style.--tl-dropdown-menu-flex-direction') @Input() menuFlexDirection;
+
+  /** Used to define the item margin in drop-down menu. */
+  @HostBinding('style.--tl-dropdown-menu-item-margin') @Input() menuItemMargin;
+
+  /** Used to define the drop-down menu padding */
+  @HostBinding('style.--tl-dropdown-menu-padding') @Input() menuPadding;
+
+  /** Used to define the drop-down menu width */
+  @HostBinding('style.--tl-dropdown-menu-width') @Input() menuWidth;
+
+  /** Used to define the drop-down menu x offset. */
+  @HostBinding('style.--tl-dropdown-menu-x-offset') @Input() menuXOffset;
+
+  /** Used to define the drop-down menu x offset. */
+  @HostBinding('style.--tl-dropdown-menu-y-offset') @Input() menuYOffset = '-6px';
+
+  /** Used to define the event type which will display the dropdown menu. */
+  @Input() toggleOn = 'click';
+
+  /** Used to define the boolean value for the drop down */
+  isOpen = false;
+
+  /** Used to override the button background in a drop down */
+  get btnBackground(): string {
+    return `var(--tl-btn-${this.themeVariant}-background)`;
+  }
+
+  /** Used to override the button background active state in a drop down */
+  get btnBackgroundActive(): string {
+    return `var(--tl-btn-${this.themeVariant}-active-background)`;
+  }
+
+  /** Used to override the button background hover state in a drop down */
+  get btnBackgroundHover(): string {
+    return `var(--tl-btn-${this.themeVariant}-hover-background)`;
+  }
+
+  /** Used to override the button border in a drop down */
+  get btnBorderColor(): string {
+    return `var(--tl-btn-${this.themeVariant}-border)`;
+  }
+
+  /** Used to override the button active state border in a drop down */
+  get btnBorderActive(): string {
+    return `var(--tl-btn-${this.themeVariant}-active-border)`;
+  }
+
+  /** Used to override the button focus state border in a drop down */
+  get btnBorderFocus(): string {
+    return `var(--tl-btn-${this.themeVariant}-focus-border)`;
+  }
+
+  /** Used to override the button active state border in a drop down */
+  get btnBorderHover(): string {
+    return `var(--tl-btn-${this.themeVariant}-hover-border)`;
+  }
+
+  /** Used to override the border radius of button in a dropdown */
+  @HostBinding('style.--tl-btn-border-radius') @Input() btnBorderRadius;
+
+  @HostBinding('style.--tl-btn-focus-box-shadow') @Input() btnBoxShadowFocus;
+
+  /** Used to override the button color in a drop down */
+  get btnColor(): string {
+    return `var(--tl-btn-${this.themeVariant}-color)`;
+  }
+
+  /** Used to override the button color active state in a drop down */
+  get btnColorActive(): string {
+    return `var(--tl-btn-${this.themeVariant}-active-color)`;
+  }
+
+  /** Used to override the button color hover state in a drop down */
+  get btnColorHover(): string {
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
+  }
+
+  /** Used to override the button font family in a drop down */
+  @HostBinding('style.--tl-font-family-sans-serif') @Input() btnFontFamily;
+
+  /** Used to override the button font size in a drop down */
+  @HostBinding('style.--tl-btn-font-size') @Input() btnFontSize;
+
+  /** Used to override the line height of button in a drop down */
+  @HostBinding('style.--tl-btn-line-height') @Input() btnLineHeight;
+
+  /** Used to override the text alignment of button in a drop down */
+  @HostBinding('style.--tl-btn-text-align') @Input() btnTextAlign;
+
+  /** Used to override the text decoration property of button in a drop down */
+  get btnTextDecoration(): string {
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
+  }
+
+  /** Used to override the active state of button text decoration property in a drop down */
+  get btnTextDecorationActive(): string {
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
+  }
+
+  /** Used to override the focus state of button text decoration property in a drop down */
+  get btnTextDecorationFocus(): string {
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
+  }
+
+  /** Used to override the hover state of button text decoration property in a drop down */
+  get btnTextDecorationHover(): string {
+    return `var(--tl-btn-${this.themeVariant}-hover-color)`;
+  }
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-dropdown-component [btnhref]="btnHref" [toggleon]="toggleOn" [themevariant]="themeVariant" [menubackground]="'var(--tl-dropdown-menu-background)'" [menuborder]="'var(--tl-dropdown-menu-border)'" [menuborderradius]="'var(--tl-dropdown-menu-border-radius)'" [menuborderdisplay]="'var(--tl-dropdown-menu-border-display)'" [menuflexdirection]="'var(--tl-dropdown-menu-flex-direction)'" [menupadding]="'var(--tl-dropdown-menu-padding)'" [menuwidth]="'var(--tl-dropdown-menu-width)'" [menuxoffset]="'var(--tl-dropdown-menu-x-offset)'" [menuyoffset]="'var(--tl-dropdown-menu-y-offset)'" [menuitemmargin]="'var(--tl-dropdown-menu-item-margin)'" [backgroundactive]="btnBackgroundActive" [btnbordercolor]="btnBorderColor" [btnborderactive]="btnBorderActive" [btnborderfocus]="btnBorderFocus" [btnborderradius]="'var(--tl-btn-border-radius)'" [btnboxshadowfocus]="'var(--tl-btn-focus-box-shadow)'" [btncoloractive]="btnColorActive" [fontfamily]="'var(--tl-font-family-sans-serif)'" [fontsize]="'var(--tl-btn-font-size)'" [lineheight]="'var(--tl-btn-line-height)'" [textalign]="'var(--tl-btn-text-align)'" [textdecoration]="btnTextDecoration" [textdecorationactive]="btnTextDecorationActive" [textdecorationfocus]="btnTextDecorationFocus" [dropdownmenudisplay]="'static'" ngbdropdownanchor="">
+  <ng-content select="template[dropdown-button]" ngprojectas="template[dropdown-button]"></ng-content>
+  <ng-content select="template[dropdown-menu]" ngprojectas="template[dropdown-menu]"></ng-content>
+</wvr-dropdown-component>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+
+:host {
+
+  // dropdown menu properties
+  --tl-dropdown-menu-width: fit-content;
+  --tl-dropdown-menu-height: fit-content;
+  --tl-dropdown-menu-background: var(--tl-white);
+  --tl-dropdown-menu-border: 1px solid rgb(204, 204, 204);
+  --tl-dropdown-menu-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.17);
+  --tl-dropdown-menu-border-radius: 4px;
+
+  // drop down button properties
+  --tl-dropdown-button-width: 124px;
+  --tl-dropdown-button-height: 48px;
+  --tl-dropdown-button-border-radius: 4px;
+
+  // tl-dropdown properties
+  --tl-dropdown-menu-animation-speed: var(--wvr-dropdown-menu-animation-speed);
+  --tl-dropdown-menu-border-radius: 4px;
+  --tl-dropdown-menu-display: var(--wvr-dropdown-menu-display);
+  --tl-dropdown-menu-flex-direction: var(--wvr-dropdown-menu-flex-direction);
+  --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
+  --tl-dropdown-menu-width: var(--wvr-dropdown-menu-width);
+  --tl-dropdown-menu-padding: var(--wvr-dropdown-menu-padding);
+  --tl-dropdown-menu-x-offset: var(--wvr-dropdown-menu-x-offset);
+  --tl-dropdown-menu-y-offset: var(--wvr-dropdown-menu-y-offset);
+  --tl-dropdown-menu-item-margin: var(--wvr-dropdown-menu-item-margin);
+
+  wvr-dropdown-component {
+    ::ng-deep {
+
+      wvr-dropdown-menu, .dropdown-menu {
+        box-shadow: var(--tl-dropdown-menu-box-shadow);
+        width: var(--tl-dropdown-menu-width);
+        height: var(--tl-dropdown-menu-height);
+        background: var(--tl-dropdown-menu-background);
+        border: var(--tl-dropdown-menu-border);
+      }
+
+      .dropdown-menu &gt; * {
+        box-shadow: none;
+        border: none;
+      }
+
+      .dropdown-menu wvr-dropdown-menu-item {
+        display: block;
+        padding: 10px;
+      }
+
+      .dropdown-menu wvr-dropdown-menu-item:hover {
+        background: var(--tl-grey);
+      }
+
+    }
+  }
+
+}
+
+
+</component-scss></example>

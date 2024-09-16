@@ -1,0 +1,340 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>tamu-library-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">tamu-library-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="changelog">Changelog</h1>
+<h2 id="205---09-12-24">[2.0.5] - 09-12-24</h2>
+<h3 id="resolves">Resolves</h3>
+<ul>
+<li>Adding galveston link. (#468)</li>
+<li>Update the version to fix dependency conflicts.</li>
+</ul>
+<h2 id="204---09-22-23">[2.0.4] - 09-22-23</h2>
+<h3 id="resolves-1">Resolves</h3>
+<ul>
+<li>Remove the &#39;Other Library Guests (Non-TAMU Affiliates)&#39; link from tl-header. (#462)</li>
+<li>Snyk fix: upgrade tinymce from 6.2.0 to 6.3.1 (#458)</li>
+<li>Snyk fix: upgrade tslib from 2.4.0 to 2.4.1 (#460)</li>
+<li>Docker build must use 16-slim rather than lts-slim.</li>
+<li>Update the version to fix dependency conflicts. (#452)</li>
+</ul>
+<h2 id="203---10-12-22">[2.0.3] - 10-12-22</h2>
+<h3 id="resolves-2">Resolves</h3>
+<ul>
+<li>Follow a more consistent design across tamu-library-components and weaver-components. (#440)</li>
+<li>Update URL for Crews in the footer. (#417)</li>
+<li>Update help menu link colors. (#439)</li>
+<li>Improve styles. (#443)</li>
+<li>Set body and html height. (#437)</li>
+<li>Correct selector and adjust wrapper left margin. (#447)</li>
+<li>Redesign dependency list, reducing dependencies where possible. (#445) (#448)</li>
+</ul>
+<h2 id="202---09-19-22">[2.0.2] - 09-19-22</h2>
+<h3 id="resolves-3">Resolves</h3>
+<ul>
+<li>Upgrade <code>@wvr/elements</code> dependency to 2.0.2.</li>
+</ul>
+<h2 id="201---09-15-22">[2.0.1] - 09-15-22</h2>
+<h3 id="resolves-4">Resolves</h3>
+<ul>
+<li>Mobile Mega menu not expanding. (#334)</li>
+<li>Tamu Library Components should define a consistent link color by theme. (#385)</li>
+<li>The mobile menu slide out tray continues to allow links to be clicked on when closed. (#389)</li>
+<li>TL components should implement suppressTopNavList in 1x. (#394)</li>
+<li>Verify that TAMU Library Components is showing icons in the mobile menu. (#395)</li>
+<li>Some browsers, mobile menu expand/collapse icons does not appear all the way to the right. (#407)</li>
+<li>ADA - Issue 3: Missing Skip navigation link. (#424)</li>
+<li>Build components with Node 16 or greater. (#429)</li>
+<li>Update deprecated karma coverage package. (TAMULib/weaver-components#306)</li>
+<li>ADA - Buttons missing label and expand/collapse notification. (#423)</li>
+<li>Issue 4: Focus indicator missing (#425)</li>
+</ul>
+<h2 id="200---10-29-21">[2.0.0] - 10-29-21</h2>
+<h3 id="resolves-5">Resolves</h3>
+<ul>
+<li>tl- and wvre- Tabs should allow form elements. (#321)</li>
+<li>Refactor components for consistency. (#325)</li>
+<li>Fix npm link scripts between weaver-components and tamu-library-components. (#329)</li>
+<li>The TAMUWYSIWYGComponent should be extended to support initial content and saving of the data. (#335)</li>
+<li>Tamu Components should support the TL Dropdown within the TL Header Bottom Nav, with mobile support. (#336)</li>
+<li>TAMU Header should support the suppression of the top navigation links, both complete suppression and discriminate. (#337)</li>
+<li>Tamu Library Components should extract CSS to avoid the removal of deprecated style strategy. (#339)</li>
+<li>TL Components should utilize the latest version of Weaver Content projection. (#348)</li>
+<li>TL-Header and TL-MegaMenu should not be circularly referent. (#352)</li>
+<li>TL-Components should compile using the Ivy partial compiler option. (#353)</li>
+<li>Navigation subsections not expanding in mobile view (#367)</li>
+<li>In some browsers at some sizes, the footer will shudder/flicker due to loop involving scrollbar (#369)</li>
+<li>The TL Tabs should support the toggling and coloring of the top border of tabs. (#361)</li>
+<li>TL Card Should Support Expand/Collapse on Card Header click. (#375)</li>
+<li>Mega Menu action button is not being themed maroon. (#368)</li>
+</ul>
+<h2 id="1110---06-04-21">[1.11.0] - 06-04-21</h2>
+<h3 id="resolves-6">Resolves</h3>
+<ul>
+<li>Tl components should offer the same build script support offered by Weaver Components (#309)</li>
+<li>Tl components should build without warnings (#310)</li>
+<li>Lighthouse requires node 12. (#315)</li>
+</ul>
+<h2 id="1100---05-12-21">[1.10.0] - 05-12-21</h2>
+<h3 id="resolves-7">Resolves</h3>
+<ul>
+<li>ngRX actions not firing on the tl-wysiwyg component. (#285)</li>
+<li>Tl Header Should Utilize the weaver default variant instead of button. (#300)</li>
+<li>Tl Footer Should Utilize the weaver default variant instead of button. (#301)</li>
+<li>TL Header should use brand-secondary-neutral for the bottom nav background. (#306)</li>
+</ul>
+<h2 id="191---05-05-21">[1.9.1] - 05-05-21</h2>
+<h3 id="resolves-8">Resolves</h3>
+<ul>
+<li>Sets bottom nav background color to secondaryNeutral.</li>
+</ul>
+<h2 id="190---04-23-21">[1.9.0] - 04-23-21</h2>
+<h3 id="resolves-9">Resolves</h3>
+<ul>
+<li>TAMU Library Component should expose the weaver modal component. (#270)</li>
+<li>tl-modal should support the toggling of the modal launch button. (#290)</li>
+<li>TL Components should offer a tl-themes components.(#281)</li>
+<li>TLThemes should provide a csrrs theme.(#282)</li>
+<li>The TL Header should support re-theming via the themes supplied by the TL Themes component.(#283)</li>
+<li>TL-components mega menu dropdown should have a longer debounce on hover before triggering the open.(#284)</li>
+<li>The TL Footer should support re-theming via the themes supplied by the TL Themes component.(#286)</li>
+</ul>
+<h2 id="180---03-31-21">[1.8.0] - 03-31-21</h2>
+<h3 id="resolves-10">Resolves</h3>
+<ul>
+<li>The tl-header display not accurate on iPad. (#256)</li>
+<li>Tamu Library Components should expose the Weaver WYSIWYG component. (#271)</li>
+<li>Links in the information for dropdown are causing 404s. (#273)</li>
+<li>The mouse hover reaction time for the menu should be set to 0.5s. (#275)</li>
+</ul>
+<h2 id="173---1-14-21">[1.7.3] - 1-14-21</h2>
+<h3 id="resolves-11">Resolves</h3>
+<ul>
+<li>Converts Hours dropdown into a link</li>
+</ul>
+<h2 id="172---1-5-21">[1.7.2] - 1-5-21</h2>
+<h3 id="resolves-12">Resolves</h3>
+<ul>
+<li>Patches iPhone bug</li>
+</ul>
+<h2 id="170---12-18-20">[1.7.0] - 12-18-20</h2>
+<h3 id="resolves-13">Resolves</h3>
+<ul>
+<li>&#39;Give to the Libraries&#39; item to be added in the bottom navidgation section in tl-header (#254)</li>
+<li>TL Components should utilize externals to reduce bundle size. (#117)</li>
+<li>Remove scss, rendered unnecessary by the recent theme features. (#276)</li>
+<li>Remove scss, rendered unnecessary by the recent theme features. (#239)</li>
+<li>Library hours disappear when moving from mobile layout to desktop layout. This also happens with the icons in the help dropdown. (#238)</li>
+<li>Dropdown buttons and buttons exhibit different theming behavior (#241)</li>
+<li>TL Components Documentation and Report pages should use theme-variant as opposed to theme-varient (#245)</li>
+<li>TL Usage Documentation should use wvr ud scripts (#236)</li>
+<li>FIx Mega Menu resize test. (#240)</li>
+</ul>
+<h2 id="160---11-20-20">[1.6.0] - 11-20-20</h2>
+<h3 id="resolves-14">Resolves</h3>
+<ul>
+<li>Updated to Angular 11</li>
+<li>Tamu components should bring in all icons on build, from an icon manifest. (#152)</li>
+<li>config.json doesn&#39;t load inside iframe. (#205)</li>
+<li>Handlebars templating for retrieved data should be supported by tl components. (#221)</li>
+<li>TL Mega Menu should remain open when clicked. (#224)</li>
+<li>TL Components and should support an extensible list of branded colors. (Primary, secondary, danger, warning... etc). (#225)</li>
+<li>Refactor color usage across tl components to use branded color list, and include fallback support. (#226)</li>
+</ul>
+<h2 id="150---11-02-20">[1.5.0] - 11-02-20</h2>
+<h3 id="resolves-15">Resolves</h3>
+<ul>
+<li>The last nav-list-item of tamu-header component is not visible on Firefox (mobile view). (#197)</li>
+<li>TL Components should provide a branded tl-card component. (#200)</li>
+<li>TL Components should provide a branded tl-panel component. (#201)</li>
+<li>TL Components should expose wvr-usage docs. (#202)</li>
+<li>TL Components should be refactored to use the wvre slector and the wvr-*-component selector. (#204)</li>
+<li>Lato font not being read into mega menu component. (#217)</li>
+<li>The tl-header should use the configured asset path for the header logo. (#220)</li>
+<li>Remove drop shadow from mega menu section titles. (#223)</li>
+</ul>
+<h2 id="142---10-08-20">[1.4.2] - 10-08-20</h2>
+<h3 id="resolves-16">Resolves</h3>
+<ul>
+<li>Updated travis deploy branch</li>
+</ul>
+<h2 id="141---10-08-20">[1.4.1] - 10-08-20</h2>
+<h3 id="resolves-17">Resolves</h3>
+<ul>
+<li>Text wrap on mega menu fixed (#188)</li>
+</ul>
+<h2 id="140---10-08-20">[1.4.0] - 10-08-20</h2>
+<h3 id="resolves-18">Resolves</h3>
+<ul>
+<li>TAMU library components should provide an alert component. (#181)</li>
+<li>There should be TAMU branded designs for alerts. (#182)</li>
+<li>Tl Components should offer a tl-tabs wrapper around the wvr-tabs component. (#183)</li>
+<li>The mega menu within the mobile menu should work on firefox and safari. (#186)</li>
+<li>The section items in the mega menu should not have bottom borders. (#187)</li>
+<li>The text-wrap property of the mega menu causes an undesirable flicker when expanding collapsing. (#188)</li>
+<li>Ensure tl component compatibility with the new wvr list template. (#194)</li>
+</ul>
+<h2 id="130---09-24-20">[1.3.0] - 09-24-20</h2>
+<h3 id="resolves-19">Resolves</h3>
+<ul>
+<li>Header styles should match design documents. (bug) (#150)</li>
+<li>Header should be functional and display properly on page load. (bug) (#151)</li>
+<li>The Mega menu should only open downward. (#154)</li>
+<li>The Mega Menu dropdown chevron should maintain its rotation state as long as the dropdown is open. (bug) (#155)</li>
+<li>The Mega Menu should provide a tl-mega-menu-content element. (#156)</li>
+<li>A mega menu should conditionally display in mobile view. (#157)</li>
+<li>The Mega Menu should allow for the override of the text on the &quot;View All&quot; Button. (#158)</li>
+<li>The Mega Menu suppress the &quot;View All&quot; button if an href is not provided. (#159)</li>
+<li>The Mega Menu should be able to be included in the Header&#39;s bottom navigation. (#160)</li>
+<li>Hours Content should be updated. (#161)</li>
+<li>The hover state for text in the Header Components&#39; bottom navigation should be whit. (#179)</li>
+<li>Non Mega Menu Bottom Nav Items should appear with the same styles as mega menu, - the rotating &quot;X&quot;, when in mobile. (#180)</li>
+</ul>
+<h2 id="110---07-16-20">[1.1.0] - 07-16-20</h2>
+<h3 id="resolves-20">Resolves</h3>
+<ul>
+<li>There should be a complete list of all needed TAMU library components. (#23)</li>
+<li>TL Components should provide a tl-button component. (#63)</li>
+<li>Fix console error when using wvr-dropdown. (#94)</li>
+<li>tl-dropdown toggle-on=&quot;click&quot; needs revision. (#104)</li>
+<li>Tl-dropdown should support wvr-button. (#106)</li>
+<li>Font-size in tl-header needs update. (#109)</li>
+<li>TL Header Logo should have a link to library.tamu.edu. (#111)</li>
+<li>The hover color of the text for dropdowns in the top nav should be black. (#118)</li>
+</ul>
+<h2 id="101---07-16-20">[1.0.1] - 07-16-20</h2>
+<h3 id="resolves-21">Resolves</h3>
+<ul>
+<li>Update CDN in tamu-component (#98)</li>
+<li>TL Components should have branded modal designs (#89)</li>
+<li>Fix tl-dropdown component : z-index overlaps (#95)</li>
+</ul>
+<h2 id="100---06-11-20">[1.0.0] - 06-11-20</h2>
+<h3 id="resolves-22">Resolves</h3>
+<ul>
+<li>TL Components should have a <code>tl-dropdown</code> (#61)</li>
+<li>TL Components should have branded button designs (#62)</li>
+<li>TL Components should have CI hooks for lighthouse  (#64)</li>
+<li>tl-header should add url for addressing attribute page-title-url (#66)</li>
+<li>Utilize tl-drop-down in tl-header (#82)</li>
+</ul>
+<h2 id="005---05-14-20">[0.0.5] - 05-14-20</h2>
+<h3 id="resolves-23">Resolves</h3>
+<ul>
+<li>Tl-header should have a mobile and tablet layout design (#20)</li>
+<li>Tamu-library-components should have specified accessibility design standards (#21)</li>
+<li>Tamu-library-components should have a drop down component design (#22)</li>
+<li>The tl-navlist component should utilize Shadowdom encapsulation (#47)</li>
+<li>TL Header should have border divisions between top-nav links (#50)</li>
+<li>TL Header should have border divisions between top-nav and title-row (#51)</li>
+<li>TL Components should optionally allow the inheritance of font styling from global styles (#56)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'changelog.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<about name="TL Tabs">
+  <p>This component represents a tabs.</p>
+
+  <p>A navigation list is a special type of list fine-tuned for being used in navigating a page.</p>
+
+  <div>
+    <p>The following may be specified as an attribute on a <code>template</code> element:</p>
+    <ul>
+      <li><code>tab-content</code>: The content to display in a single tab and may have the following attributes:
+        <ul>
+          <li><code>tab-text</code>: The content to display as the name of the tab (on the tab).</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</about>
+
+<example name="TL Tabs Basic">
+  <desciption>
+    The basic <code>tl-tabs</code> component.
+  </desciption>
+  <snippet>
+    <tl-tabs>
+      <template tab-content="" tab-text="TL Tab One">
+        <div class="jumbotron">
+          <h3><wvre-text value="First Tab Header"></wvre-text></h3>
+          <wvre-text value="My First Tab Content"></wvre-text>
+        </div>
+      </template>
+      <template tab-content="" tab-text="TL Tab Two">
+        <div class="jumbotron">
+          <h3><wvre-text value="Second Tab Header"></wvre-text></h3>
+          <wvre-text value="My Second Tab Content"></wvre-text>
+        </div>
+      </template>
+      <template tab-content="" tab-text="TL Tab Three">
+        <div class="jumbotron">
+          <h3><wvre-text value="Third Tab Header"></wvre-text></h3>
+          <wvre-text value="My Third Tab Content"></wvre-text>
+        </div>
+      </template>
+    </tl-tabs>
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, Injector } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-tabs-component',
+  templateUrl: './tl-tabs.component.html',
+  styleUrls: ['./tl-tabs.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlTabsComponent extends TamuAbstractBaseComponent {
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-tabs-component>
+  <ng-content select="template[tab-content]" ngprojectas="template[tab-content]"></ng-content>
+</wvr-tabs-component>
+</component-template><component-scss>@import '~@wvr/elements/styles/variables';
+
+:host {
+
+  wvr-tabs-component {
+    ::ng-deep {
+      a.nav-link {
+        color: #00648B;
+        text-decoration: none;
+      }
+      a.nav-link:hover {
+        color: #003F58;
+      }
+    }
+  }
+
+  &amp; ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
+    .nav-link {
+      border-width: 5px 1px 1px 1px;
+      border-radius: 0px;
+    }
+
+    .nav-link:not(.active) {
+      border-color: var(--secondaryNeutral);
+      border-bottom-color: transparent;
+    }
+
+    .nav-link.active,
+    .nav-link:not(.active):hover {
+      border-color: var(--primary);
+      border-bottom-color: transparent;
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &amp;:is([inactive-tab-theme="#{$color}"]) ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
+      .nav-link:not(.active):is([inactive-tab-theme=""]),
+      .nav-link:not(.active):is([inactive-tab-theme=""]):active,
+      .nav-link:not(.active):is([inactive-tab-theme=""]):focus,
+      .nav-link:not(.active):is([inactive-tab-theme=""]):hover {
+        border-color: var(--#{$color}) !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+
+    &amp;:is([active-tab-theme="#{$color}"]) ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
+      .nav-link.active:is([active-tab-theme=""]),
+      .nav-link.active:is([active-tab-theme=""]):active,
+      .nav-link.active:is([active-tab-theme=""]):focus,
+      .nav-link.active:is([active-tab-theme=""]):hover {
+        border-color: var(--#{$color}) !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+
+    &amp; ::ng-deep wvr-tabs-component .nav-tabs .nav-item {
+      .nav-link:is([inactive-tab-theme="#{$color}"]):not(.active),
+      .nav-link:is([inactive-tab-theme="#{$color}"]):not(.active):active,
+      .nav-link:is([inactive-tab-theme="#{$color}"]):not(.active):focus,
+      .nav-link:is([inactive-tab-theme="#{$color}"]):not(.active):hover,
+      .nav-link.active:is([active-tab-theme="#{$color}"]),
+      .nav-link.active:is([active-tab-theme="#{$color}"]):active,
+      .nav-link.active:is([active-tab-theme="#{$color}"]):focus,
+      .nav-link.active:is([active-tab-theme="#{$color}"]):hover {
+        border-color: var(--#{$color}) !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+  }
+
+}
+</component-scss></example>

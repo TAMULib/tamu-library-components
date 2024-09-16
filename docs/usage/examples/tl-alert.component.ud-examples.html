@@ -1,0 +1,131 @@
+<about name="TL Alert">
+  <p>This component represents an alert.</p>
+  <p>An alert may be closed automatically, on event, or not closable at all.</p>
+
+  <div>
+    <p>The following attributes are available:</p>
+    <ul>
+      <li><code>alert-type</code>: One of <code>basic</code>, <code>custom</code>, or <code>self-closing</code>.</li>
+      <li><code>closeable</code>: One of <code>true</code> or <code>false</code>.</li>
+      <li><code>closeTimer</code>: A unit of time in milliseconds for how long to wait before auto-closing.</li>
+      <li><code>theme-variant</code>: The name of a theme variant to use for the alert.</li>
+    </ul>
+  </div>
+</about>
+
+<example name="TL Alert Basic">
+  <desciption>
+    The basic <code>tl-alert</code> component with no customizations.
+  </desciption>
+  <snippet>
+    <tl-alert alert-class="primary" alert-type="basic">
+      <template alert-content="">
+        <wvre-text value="A simple primary alert."></wvre-text>
+      </template>
+    </tl-alert>
+  </snippet>
+<component-source>import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
+import { TamuAbstractBaseComponent } from '../shared/tl-abstract-base.component';
+
+@Component({
+  selector: 'tl-alert-component',
+  templateUrl: './tl-alert.component.html',
+  styleUrls: ['./tl-alert.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
+})
+export class TlAlertComponent extends TamuAbstractBaseComponent {
+
+  /** Used to override the theme variant. */
+  @Input() themeVariant;
+
+  /** Used to override the type of alert.  */
+  @Input() alertType: 'basic' | 'self-closing' | 'custom';
+
+  /** Used to override if close button has to be present for an alert.  */
+  @Input() closeable: 'true' | 'false' = 'true';
+
+  @Input() closeTimer;
+
+  // tslint:disable-next-line:unnecessary-constructor
+  constructor(injector: Injector) {
+    super(injector);
+  }
+
+}
+</component-source><component-template><wvr-alert-component [alerttype]="alertType" [themevariant]="themeVariant" [closeable]="closeable" [closetimer]="closeTimer">
+  <ng-content select="template" ngprojectas="template"></ng-content>
+</wvr-alert-component>
+</component-template><component-scss>@import "../shared/styles/tl-variables.scss";
+
+:host {
+
+  wvr-alert-component {
+    ::ng-deep {
+      .alert {
+        border-radius: 0;
+      }
+
+      .btn.btn-danger.close:hover,
+      .btn.btn-dark.close:hover,
+      .btn.btn-info.close:hover,
+      .btn.btn-light.close:hover,
+      .btn.btn-primary.close:hover,
+      .btn.btn-secondary.close:hover,
+      .btn.btn-success.close:hover,
+      .btn.btn-warning.close:hover {
+        color: var(--tl-black);
+        text-decoration: none;
+        background: transparent;
+        opacity: .75;
+      }
+
+      .btn.btn-danger.close:focus,
+      .btn.btn-dark.close:focus,
+      .btn.btn-info.close:focus,
+      .btn.btn-light.close:focus,
+      .btn.btn-primary.close:focus,
+      .btn.btn-secondary.close:focus,
+      .btn.btn-success.close:focus,
+      .btn.btn-warning.close:focus {
+        opacity: .75;
+        color: var(--tl-black);
+        background: transparent;
+        // border: 0.12rem solid var(--tl-black);
+        top: -2px;
+      }
+
+      .btn.btn-danger.close:focus,
+      .btn.btn-dark.close:focus,
+      .btn.btn-info.close:focus,
+      .btn.btn-light.close:focus,
+      .btn.btn-primary.close:focus,
+      .btn.btn-secondary.close:focus,
+      .btn.btn-success.close:focus,
+      .btn.btn-warning.close:focus {
+        box-shadow: none;
+      }
+
+      .btn.btn-danger.close:active,
+      .btn.btn-danger.close.active,
+      .btn.btn-dark.close:active,
+      .btn.btn-dark.close.active,
+      .btn.btn-info.close:active,
+      .btn.btn-info.close.active,
+      .btn.btn-light.close:active,
+      .btn.btn-light.close.active,
+      .btn.btn-primary.close:active,
+      .btn.btn-primary.close.active,
+      .btn.btn-secondary.close:active,
+      .btn.btn-secondary.close.active,
+      .btn.btn-success.close:active,
+      .btn.btn-success.close.active,
+      .btn.btn-warning.close:active,
+      .btn.btn-warning.close.active {
+        color: var(--tl-black);
+        background: transparent;
+      }
+
+    }
+  }
+}
+</component-scss></example>
