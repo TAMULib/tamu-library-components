@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.5] - 09-12-24
+### Resolves
+
+- Adding galveston link. (#468)
+- Update the version to fix dependency conflicts.
+
 ## [2.0.4] - 09-22-23
 ### Resolves
 
