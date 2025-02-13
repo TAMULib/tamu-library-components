@@ -9,6 +9,8 @@
 
 # TAMU Library Components
 
+Copyright © 2020-2025 Texas A&M University Libraries under the [MIT](LICENSE).
+
 TAMU Library Components is an extension both on top of and perpendicular to [Weaver Components](https://github.com/TAMULib/weaver-components).
 This either extends components, providing custom styles, or provides entirely new components.
 
