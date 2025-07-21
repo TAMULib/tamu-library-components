@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.6] - 07-21-25
+### Resolves
+
+- Updates BLCC references to WCL in tl-header
+
 ## [2.0.5] - 09-12-24
 ### Resolves
 
