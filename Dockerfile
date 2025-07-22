@@ -6,7 +6,7 @@ ARG NPM_REGISTRY=upstream
 ARG NODE_ENV=development
 
 # Node stage.
-FROM node:16-slim as build
+FROM node:18-slim as build
 ARG USER_ID
 ARG USER_NAME
 ARG SOURCE_DIR
@@ -14,6 +14,7 @@ ARG NPM_REGISTRY
 ARG NODE_ENV
 
 ENV NODE_ENV=$NODE_ENV
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # Create the user and group (use a high ID to attempt to avoid conflicts).
 RUN groupadd --non-unique -g $USER_ID $USER_NAME && \
