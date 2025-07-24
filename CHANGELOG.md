@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.7] - 07-24-25
+### Resolves
+
+- Removes Satellite Campus and School visitor links from tl-header
+- Updates Off Campus Access link in tl-footer
+
 ## [2.0.6] - 07-22-25
 ### Resolves
 
