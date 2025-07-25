@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.7] - 07-24-25
+## [2.0.7] - 07-25-25
 ### Resolves
 
 - Removes Satellite Campus and School visitor links from tl-header
