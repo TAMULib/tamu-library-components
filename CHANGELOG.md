@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.8] - 10-14-25
+### Resolves
+
+- Updates parking links for MSL, WCL, Cushing, and PSEL
+
 ## [2.0.7] - 07-25-25
 ### Resolves
 
