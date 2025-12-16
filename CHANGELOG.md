@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.9] - 12-11-25
+### Resolves
+
+- Updates tl-header Help Links
+
 ## [2.0.8] - 10-14-25
 ### Resolves
 
