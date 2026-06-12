@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.10] - 06-12-26
+### Resolves
+
+- Updates tl-header with PSEL closing info
+
 ## [2.0.9] - 12-11-25
 ### Resolves
 
