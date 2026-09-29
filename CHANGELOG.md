@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.11] - 09-29-26
+### Resolves
+
+- Updates tl-header and tl-footer with current URLs
+
 ## [2.0.10] - 06-12-26
 ### Resolves
 
