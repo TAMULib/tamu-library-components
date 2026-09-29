@@ -23,7 +23,7 @@ export class TlFooterComponent extends TamuAbstractBaseComponent implements OnCh
     { href: 'https://howdy.tamu.edu/uPortal/normal/render.uP', value: 'howdy.tamu.edu' },
     { href: 'https://library.tamu.edu/services/e-resources', value: 'Off-Campus Access' },
     { href: 'http://tamu.edu/', value: 'Texas A& M University' },
-    { href: 'http://library.tamu.edu/about/compliance.html', value: 'Site Policies' },
+    { href: 'https://library.tamu.edu/about/policies/compliance.html', value: 'Site Policies' },
     { href: 'https://library.tamu.edu/services/accessibility.html', value: 'Accessibility' },
     { href: 'https://txcrews.org/', value: 'Texas CREWS' },
     { href: 'https://askus.library.tamu.edu/contact/index', value: 'Comments' },
