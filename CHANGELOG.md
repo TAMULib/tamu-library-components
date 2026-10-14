@@ -4,6 +4,7 @@
 ### Resolves
 
 - Updates tl-header and tl-footer with current URLs
+- Removes PSEL references from tl-header dropdown
 
 ## [2.0.10] - 06-12-26
 ### Resolves
